@@ -3,7 +3,8 @@ import React from 'react'
 function USman() {
   return (
     <div>
-      <h3>Usmans</h3>
+      <h3>Usman</h3>
+      <p>Lorem</p>
     </div>
   )
 }
