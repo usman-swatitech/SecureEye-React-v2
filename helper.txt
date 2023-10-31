@@ -1,0 +1,2 @@
+npm install bootstrap@5             // bootstrap 05
+npm install react-router-dom        // routes
