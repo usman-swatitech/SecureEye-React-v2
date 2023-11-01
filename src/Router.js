@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import Splash from './View/Splash';
+import Home from './View/Home';
 
 import { Routes, Route } from 'react-router-dom';
 
@@ -7,7 +7,7 @@ const AppRouter = () => {
   return (
     <Fragment>
       <Routes>
-        <Route path="/" element={<Splash />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </Fragment>
   );
