@@ -4,7 +4,6 @@ import * as images from '../Constant/images';
 const Splash = () => {
   return (
     <Fragment>
-
       <div className="appContainer">
         <div className="splashbackground">
           <div className='splashBG'>
