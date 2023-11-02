@@ -1,0 +1,134 @@
+.background-image-2 {
+    background-image: url('assets/Background-signup.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  @media screen and (max-width: 576px) {
+    .background-image-2 {
+      background-image: url('assets/Background-signup.png');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  .logo-1 {
+    width: 249px;
+    height: 120.92px;
+  }
+  .logo-2 {
+    width: 197px;
+    height: 95.67px;
+  }
+  @media screen and (max-width: 768px) {
+    .logo-1 {
+      width: 179px;
+      height: 80.92px;
+    }
+  }
+  .custom-input-1 {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    width: 100%;
+  }
+  .custom-input-1::placeholder {
+    color: white;
+  }
+  .custom-input-2 {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    width: 92%;
+  }
+  .custom-input-2::placeholder {
+    color: white;
+  }
+  .outside-btn {
+    background: #00fffb;
+    clip-path: polygon(
+      6% 0%,
+      75% 0%,
+      100% 0%,
+      100% 65%,
+      93% 100%,
+      0% 100%,
+      0% 75%,
+      0% 50%
+    );
+  }
+  .inside-btn {
+    clip-path: polygon(
+      7% 0%,
+      75% 0%,
+      100% 0%,
+      100% 58%,
+      92% 100%,
+      0% 100%,
+      0% 75%,
+      0% 58%
+    );
+  
+    border: 3px solid #00fffb;
+  }
+  .sign-btn {
+    width: 100%;
+    clip-path: polygon(
+      5% 0%,
+      75% 0%,
+      100% 0%,
+      100% 65%,
+      96% 100%,
+      0% 100%,
+      0% 75%,
+      0% 50%
+    );
+    clip-path: polygon(
+      5% 0%,
+      75% 0%,
+      100% 0%,
+      100% 65%,
+      96% 100%,
+      0% 100%,
+      0% 75%,
+      0% 50%
+    );
+    background-color: #00161e;
+    border: 1px solid black;
+    color: #00fffb;
+  }
+  .sign-btn:hover {
+    width: 100%;
+    background-color: #00fffb;
+    border: 1px solid #00fffb;
+    color: black;
+  }
+  .otp-span {
+    color: var(--main-text-color);
+  }
+  .otp-p {
+    font-size: 14px;
+    color: var(--main-p-color);
+  }
+  .signup-box {
+    border-bottom: 3px solid var(--main-underline-color);
+  }
+  .signup-psw-icon {
+    background-color: var(--main-black-color);
+    border: 1px solid var(--main-black-color);
+  }
+  

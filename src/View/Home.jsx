@@ -1,28 +1,26 @@
-import React, { useState, useEffect } from "react";
-import SplashScreen from "./Splash";
-import Sidebar from "../components/common/Sidebar";
-import Test from "../components/Test";
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const App = () => {
-  const [showSplash, setShowSplash] = useState(true);
+  const loginKey = localStorage.getItem('myKey');
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowSplash(false);
-    }, 10); // Display for 3 seconds
-    return () => clearTimeout(timer);
-  }, []);
+    if (!loginKey) {
+      navigate('/signin');
+    }
+  }, [loginKey, navigate]);
+
+  if (!loginKey) {
+    return null;
+  }
 
   return (
-    <>
-      {showSplash ? (
-        <SplashScreen />
-      ) : (
-        <div className="main-wrapper">
-          <Test />
-        </div>
-      )}
-    </>
+    <div className='main-content'>
+      <div className='frame-container'>
+      </div>
+    </div>
   );
 };
-export default App;
+
+export default App;
