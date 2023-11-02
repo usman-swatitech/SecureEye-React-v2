@@ -1,4 +1,11 @@
 // BRand logo
+import brandLogo from "../assets/secureeyeLogo.png";
+// Splash Screen
+import splashBackground from "../assets/Splash/splashbg.png";
+import secureEyeText from "../assets/Splash/logo.png";
+import sidebg from "../assets/images/Subtract.png";
+export default brandLogo;
+
 import brandLogo from '../assets/secureeyeLogo.png'
 
 // Splash Screen 

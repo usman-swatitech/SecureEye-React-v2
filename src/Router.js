@@ -1,3 +1,10 @@
+import React, { Fragment } from "react";
+
+import { Routes, Route } from "react-router-dom";
+import Home from "./View/Home";
+const AppRouter = () => {
+  return (
+
 import React  from 'react';
 import Home from './View/Home';
 import Splash from './View/Splash';
@@ -8,6 +15,7 @@ import EmailVerified from './View/EmailVerification';
 import { Routes, Route } from 'react-router-dom';
 const AppRouter = () => {
   return (
+ 
       <Routes>
         <Route path="/" element={<Splash />} />
         <Route path="/home" element={<Home />} />
@@ -16,6 +24,7 @@ const AppRouter = () => {
         <Route path="/otpverification" element={<OtpVerification />} />
         <Route path="/emailverified" element={<EmailVerified />} />
       </Routes>
+ 
   );
 };
 
