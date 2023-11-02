@@ -7,6 +7,7 @@ import secureEyeText from '../assets/Splash/logo.png'
 
 // Frame Tab
 import frameTab from '../assets/frameTab.png';
+import logoWithText from "../assets/Splash/logo.png";
 
 // signup page
 import bLogo from '../assets/svg/Logo-1.svg';
@@ -17,4 +18,4 @@ import hiddenIcn from '../assets/svg/hide.svg';
 import unHideIcn from '../assets/svg/unHide.svg';
 
 export default brandLogo;
-export {splashBackground,secureEyeText,frameTab,bLogo,userIcon,userLock,cubeDesign,hiddenIcn,unHideIcn}; 
+export {splashBackground,secureEyeText,frameTab,bLogo,userIcon,userLock,cubeDesign,hiddenIcn,unHideIcn,logoWithText}; 
