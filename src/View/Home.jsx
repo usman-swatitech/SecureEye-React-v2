@@ -1,13 +1,13 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import SplashScreen from './Splash';
-
+import * as images from '../Constant/images'
 const App = () => {
   const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSplash(false);
-    }, 2000); // Display for 3 seconds
+    }, 2800); // Display for 3 seconds
     return () => clearTimeout(timer);
   }, []);
 
@@ -17,7 +17,10 @@ const App = () => {
         <SplashScreen />
       ) : (
         <Fragment>
-            <h1>Home screen</h1>
+          <div className=''>
+            <div class="frame-container">
+            </div>
+          </div>
         </Fragment>
       )}
     </div>

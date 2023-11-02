@@ -4,7 +4,7 @@ import * as images from '../Constant/images';
 const Splash = () => {
   return (
     <Fragment>
-      <div className="appContainer">
+      {/* <div className="appContainer">
         <div className="splashbackground">
           <div className='splashBG'>
             <div class="d-flex align-items-center justify-content-center heightVH">
@@ -14,6 +14,9 @@ const Splash = () => {
             </div>
           </div>
         </div>
+      </div> */}
+      <div className="splashBox">
+        <span className="splashImg"> <img className='splashBrandLogo' src={images.secureEyeText} alt='BrandLogo'/></span>
       </div>
     </Fragment>
   )
