@@ -3,6 +3,7 @@ import { navlinks } from "../../Constant/links";
 import { logoWithText } from "../../Constant/images";
 import Avatar from "./Avatar";
 import profileDp from "../../assets/images/avatar.png";
+
 const Sidebar = () => {
   const [links, setLinks] = useState(navlinks);
   const [activeIndex, setaAtiveIndex] = useState(0);

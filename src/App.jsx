@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React  from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import "./aziz.css";

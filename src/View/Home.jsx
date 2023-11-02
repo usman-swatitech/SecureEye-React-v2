@@ -1,24 +1,24 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Test from '../Component/Test';
 
 const App = () => {
   const loginKey = localStorage.getItem('myKey');
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!loginKey) {
+    if (loginKey) {
       navigate('/signin');
     }
   }, [loginKey, navigate]);
 
-  if (!loginKey) {
+  if (loginKey) {
     return null;
   }
 
   return (
-    <div className='main-content'>
-      <div className='frame-container'>
-      </div>
+    <div className='bg-danger'>
+      <Test/>
     </div>
   );
 };

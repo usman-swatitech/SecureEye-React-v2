@@ -35,7 +35,7 @@ export const navlinks = [
   {
     activeIcon: activeBlockSvg,
     nonActiveIcon: blockSvg,
-    label: "/department",
+    path: "/department",
     label: "Department",
     isActive: false,
   },
