@@ -1,7 +1,14 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'sportyXlight';
+  }
+  :root {
+    --main-text-color: #00fffb;
+    --main-p-color: #666666;
+    --main-underline-color: #00fffb38;
+    --main-black-color: #000;
   }
 @font-face {
     font-family: 'sportyReg';
@@ -165,13 +172,20 @@ body {
   
 
   .frame-container {
+   
+    background-image: url('./assets/frameTab.png');
     position: relative;
     width: 100%; 
-    background-image: url('./assets/frameTab.png');
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
     height: 100vh;
-    background-attachment: fixed
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
-  
-  
+  .cursor-pointer
+  {
+    cursor: pointer;
+  }

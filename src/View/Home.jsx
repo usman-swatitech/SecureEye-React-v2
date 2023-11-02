@@ -1,28 +1,24 @@
-import React, { useState, useEffect, Fragment } from 'react';
-import SplashScreen from './Splash';
-import * as images from '../Constant/images'
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 const App = () => {
-  const [showSplash, setShowSplash] = useState(true);
+  const loginKey = localStorage.getItem('myKey');
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowSplash(false);
-    }, 2800); // Display for 3 seconds
-    return () => clearTimeout(timer);
-  }, []);
+    if (!loginKey) {
+      navigate('/signin');
+    }
+  }, [loginKey, navigate]);
+
+  if (!loginKey) {
+    return null;
+  }
 
   return (
-    <div>
-      {showSplash ? (
-        <SplashScreen />
-      ) : (
-        <Fragment>
-          <div className=''>
-            <div class="frame-container">
-            </div>
-          </div>
-        </Fragment>
-      )}
+    <div className='main-content'>
+      <div className='frame-container'>
+      </div>
     </div>
   );
 };
