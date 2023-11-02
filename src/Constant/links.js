@@ -1,0 +1,56 @@
+import {
+  activeHomeSvg,
+  searchSvg,
+  blockSvg,
+  workSvg,
+  activeBlockSvg,
+  activeUserSvg,
+  nonActiveHomeSvg,
+  nonActiveUserSvg,
+  activeWorkSvg,
+  nonActiveSettingsSvg,
+} from "./svgs";
+export const navlinks = [
+  {
+    activeIcon: activeHomeSvg,
+    nonActiveIcon: nonActiveHomeSvg,
+    path: "/",
+    label: "Home",
+    isActive: true,
+  },
+  {
+    activeIcon: searchSvg,
+    nonActiveIcon: searchSvg,
+    path: "/search",
+    label: "Search",
+    isActive: false,
+  },
+  {
+    activeIcon: activeUserSvg,
+    nonActiveIcon: nonActiveUserSvg,
+    path: "/employee",
+    label: "Employee",
+    isActive: false,
+  },
+  {
+    activeIcon: activeBlockSvg,
+    nonActiveIcon: blockSvg,
+    label: "/department",
+    label: "Department",
+    isActive: false,
+  },
+  {
+    activeIcon: activeWorkSvg,
+    nonActiveIcon: workSvg,
+    path: "/working",
+    label: "Working",
+    isActive: false,
+  },
+  {
+    activeIcon: nonActiveSettingsSvg,
+    nonActiveIcon: nonActiveSettingsSvg,
+    path: "/settings",
+    label: "Settings",
+    isActive: false,
+  },
+];

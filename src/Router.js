@@ -1,16 +1,14 @@
-import React  from 'react';
- 
-import { Suspense,lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Splash from './View/Splash';
-const Home = lazy(()=>import('./View/Home'));
+import React, { Fragment } from "react";
+
+import { Routes, Route } from "react-router-dom";
+import Home from "./View/Home";
 const AppRouter = () => {
   return (
-    <Suspense fallback={<Splash />}>
+    <Fragment>
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
-    </Suspense>
+    </Fragment>
   );
 };
 
