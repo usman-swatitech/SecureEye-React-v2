@@ -124,12 +124,51 @@
   position: relative;
   display: flex;
   width: auto;
-  max-width: 1200px;
+  max-width: 1100px;
   min-width: 300px;
 }
 .innerWrapper .content {
   position: absolute;
-  left: 30px;
+  left: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
 }
+.content .section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+  top: 14px;
+}
+/* search component css goes here.. */
+
+.input-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  background-color: rgb(9, 12, 17);
+
+  width: 62%;
+  min-width: 100px;
+  height: 45px;
+  padding: 0 20px;
+  clip-path: polygon(0% 0%, 95% 0%, 100% 39%, 100% 85%, 0% 85%, 0% 82%);
+}
+
+.input-div input {
+  /* position: absolute; */
+  height: 100%;
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+/* search component code ends here... */
 
 /* test div css */
