@@ -1,10 +1,24 @@
-import React, { Fragment } from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import * as images from '../Constant/images';
 
 const Splash = () => {
-  return(
-    <Fragment>
-      <h1 className='text-danger'>Splash</h1>
-    </Fragment>
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate('/home'); 
+    }, 3000); 
+
+    return () => clearTimeout(timer);
+  }, [navigate]);
+  return (
+    <div className='bg-dark'>
+      <div className="splashBox">
+        <span className="splashImg"> <img className='splashBrandLogo' src={images.secureEyeText} alt='BrandLogo'/>
+        </span>
+      </div>
+    </div>
   )
 }
 
