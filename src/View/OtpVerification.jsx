@@ -6,11 +6,15 @@ import Button from '../Component/Common/ButtonShap';
 function OtpVerification() {
 
   const navigate = useNavigate();
+  const [otpValue,setOTPvalue] = useState('');
   const [isTimerRunning, setIsTimerRunning] = useState(false);
   const [currentTime, setCurrentTime] = useState(10);
 
+  const handleChange = (e) => {
+    setOTPvalue(e.target.value)
+  }
+  console.log(otpValue)
   const handlerConfirmOTP = () => {
-
     navigate('/home');
   }
   const HandleGetOTP = () => {
@@ -53,6 +57,9 @@ function OtpVerification() {
                       type='email'
                       className='custom-input-1'
                       placeholder='ENTER OTP'
+                      name='otpValue'
+                      value={otpValue}
+                      onChange={handleChange}
                     />
                   </div>
 

@@ -7,12 +7,12 @@ const App = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (loginKey) {
+    if (!loginKey) {
       navigate('/signin');
     }
   }, [loginKey, navigate]);
 
-  if (loginKey) {
+  if (!loginKey) {
     return null;
   }
 
