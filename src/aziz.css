@@ -169,6 +169,14 @@
   border: none;
 }
 
+.input-div .search-icon {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.input-div .search-icon:hover {
+  transform: scale(1.2);
+}
+
 /* search component code ends here... */
 
 /* test div css */

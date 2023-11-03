@@ -3,7 +3,7 @@ import { searchComponentSearchSvg } from "../../Constant/svgs";
 const Search = () => {
   return (
     <div className="input-div">
-      <span>{searchComponentSearchSvg}</span>
+      <span className="search-icon">{searchComponentSearchSvg}</span>
       <input
         type="text"
         placeholder="SEARCH HERE"
