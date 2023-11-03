@@ -1,7 +1,7 @@
 import React from "react";
 import frame from "../assets/images/frame.png";
-import Sidebar from "./Common/Sidebar";
-import Search from "./Common/Search";
+import Sidebar from "../Component/Common/Sidebar";
+import Search from "../Component/Common/Search";
 const Test = () => {
   return (
     <div className="test-div" style={{ backgroundColor: "rgb(0,3,10)" }}>
