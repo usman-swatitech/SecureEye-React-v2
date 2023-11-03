@@ -9,10 +9,12 @@ const App = () => {
   useEffect(() => {
     if (loginKey) {
       navigate("/signin");
+    if (!loginKey) {
+      navigate('/signin');
     }
   }, [loginKey, navigate]);
 
-  if (loginKey) {
+  if (!loginKey) {
     return null;
   }
 

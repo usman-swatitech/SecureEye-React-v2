@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as images from '../Constant/images';
 import Button from '../Component/Common/ButtonShap';
 
 function EmailVerification () {
+
+  const [userEmailVerified,setUserEmailVerified] = useState('');
   const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setUserEmailVerified(e.target.value);
+  }
+  console.log(userEmailVerified)
   const handlerOTP = () => {
     navigate('/otpverification')
   }
@@ -28,6 +35,9 @@ function EmailVerification () {
                       type='email'
                       className='custom-input-1'
                       placeholder='ENTER YOUR EMAIL'
+                      value={userEmailVerified}
+                      name='userEmailVerified'
+                      onChange={handleChange}
                     />
                   </div>
 

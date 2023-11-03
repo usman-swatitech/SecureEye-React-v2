@@ -4,6 +4,8 @@ const Search = () => {
   return (
     <div className="input-div">
       <span className="search-icon">{searchComponentSearchSvg}</span>
+=======
+      <span>{searchComponentSearchSvg}</span>
       <input
         type="text"
         placeholder="SEARCH HERE"
