@@ -89,7 +89,6 @@ body {
     position: relative;
     top: 0;
     padding: 4px;
-    
     opacity: 0;
     z-index: 3;
     animation-fill-mode: forwards;
@@ -187,4 +186,81 @@ body {
   .cursor-pointer
   {
     cursor: pointer;
+  }
+
+  #swal2-title{
+    color: #fff !important;
+  }
+  #swal2-html-container{
+    color:  #fff !important;
+  }
+  div:where(.swal2-container) div:where(.swal2-popup)
+  {
+    background-color: #212529 !important;
+    /* background-image: url('./assets//Rectangle.png') !important;
+    background-size: cover; */
+  }
+  div:where(.swal2-icon).swal2-error {
+    border-color: #00fffb !important;
+  }
+  div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line] {
+    background-color: #00fffb !important;
+  }
+
+  .swal2-actions
+  {
+    background: #00fffb !important;
+    clip-path: polygon(
+      6% 0%,
+      75% 0%,
+      100% 0%,
+      100% 65%,
+      93% 100%,
+      0% 100%,
+      0% 75%,
+      0% 50%
+    );
+  }
+  .swal2-loader {
+    clip-path: polygon(
+      7% 0%,
+      75% 0%,
+      100% 0%,
+      100% 58%,
+      92% 100%,
+      0% 100%,
+      0% 75%,
+      0% 58%
+    );
+  
+    border: 3px solid #00fffb !important;
+  }
+  div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
+  width: 200px !important;
+  clip-path: polygon(
+    5% 0%,
+    75% 0%,
+    100% 0%,
+    100% 65%,
+    96% 100%,
+    0% 100%,
+    0% 75%,
+    0% 50%
+  );
+  clip-path: polygon(
+    5% 0%,
+    75% 0%,
+    100% 0%,
+    100% 65%,
+    96% 100%,
+    0% 100%,
+    0% 75%,
+    0% 50%
+  );
+  background-color: #212529!important;
+  border: 1px solid !important;
+  color: #00fffb !important;
+  }
+  .swal2-confirm  {
+    /* width: 200px !important; */
   }
