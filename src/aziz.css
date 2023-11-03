@@ -1,3 +1,7 @@
+:root {
+  --primary: #00fffb;
+}
+
 /* Test Commit */
 /* home screen */
 .main-wrapper {
@@ -47,7 +51,7 @@
   left: 0;
   height: 36px;
   width: 3px;
-  background-color: #00fffb;
+  background-color: var(--primary);
   border-radius: 0 4px 4px 0;
 }
 
@@ -71,7 +75,7 @@
   border-radius: 15px;
 }
 .icon-active {
-  background-color: #00fffb;
+  background-color: var(--primary);
   width: 70px;
   height: 52px;
   display: flex;
@@ -169,6 +173,86 @@
   border: none;
 }
 
-/* search component code ends here... */
+.input-div .search-icon {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.input-div .search-icon:hover {
+  transform: scale(1.2);
+}
 
+/* search component code ends here... */
+/* action bar css  */
+.action-bar {
+  position: relative;
+  top: 55px;
+  height: auto;
+  width: 90%;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.action-bar .left-portion {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.action-bar .left-portion .actionbar-icons {
+  height: 46px;
+  width: 76px;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.action-bar .right-portion {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.right-portion .main-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  background-color: rgb(0, 21, 27);
+  border: 7px solid black;
+  border-style: double;
+}
+.right-portion .plus-circle {
+  position: absolute;
+  height: 70%;
+  width: 70%;
+  border-radius: 50%;
+  background-color: rgb(0, 37, 43);
+  display: grid;
+  place-content: center;
+}
+/* divider css */
+.divider {
+  position: relative;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 50px;
+  margin: 0 -10px;
+  /* background-color: red; */
+}
+.divider .bars {
+  width: 30px;
+  height: 1.2px;
+  background-color: #13151c;
+}
+.divider .bar-startend {
+  width: 20px;
+}
+/* action bar css ends here. */
 /* test div css */

@@ -3,6 +3,8 @@ import { searchComponentSearchSvg } from "../../Constant/svgs";
 const Search = () => {
   return (
     <div className="input-div">
+      <span className="search-icon">{searchComponentSearchSvg}</span>
+=======
       <span>{searchComponentSearchSvg}</span>
       <input
         type="text"
