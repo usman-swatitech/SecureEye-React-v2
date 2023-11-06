@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as images from '../Constant/images';
 import Button from '../Component/Common/ButtonShap';
+import SweatAlert from '../helperFun/SweatAlertFun';
 
 function OtpVerification() {
 
@@ -15,7 +16,13 @@ function OtpVerification() {
   }
   console.log(otpValue)
   const handlerConfirmOTP = () => {
-    navigate('/home');
+    if(otpValue === '1111') {
+      navigate('/home');
+    }
+    else
+    {
+      SweatAlert('Enter Valid OTP');
+    }
   }
   const HandleGetOTP = () => {
     setCurrentTime(10);
@@ -70,7 +77,7 @@ function OtpVerification() {
                 </div>
               </div>
 
-              <div className='row justify-content-md-center mt-5 pt-3'>
+              <div className='row justify-content-center mt-5 pt-3'>
 
                 <div className='col-10' onClick={handlerConfirmOTP}>
                   <Button name='VERIFY & SIGN UP' />
