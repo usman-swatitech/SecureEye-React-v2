@@ -5,24 +5,17 @@ import Test from "../Component/Test";
 const App = () => {
   const loginKey = localStorage.getItem("myKey");
   const navigate = useNavigate();
-
+  alert("haf");
   useEffect(() => {
     if (loginKey) {
       navigate("/signin");
-    if (!loginKey) {
-      navigate('/signin');
     }
   }, [loginKey, navigate]);
 
-  if (!loginKey) {
+  if (loginKey) {
     return null;
   }
-
-  return (
-    <div className="bg-danger">
-      <Test />
-    </div>
-  );
+  return <Test />;
 };
 
 export default App;
