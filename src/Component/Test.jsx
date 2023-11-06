@@ -1,7 +1,10 @@
 import React from "react";
 import frame from "../assets/images/frame.png";
-import Sidebar from "./Common/Sidebar";
-// import Search from "./Common/Search";
+import Search from "./Common/Search";
+import ActionBar from "./Common/ActionBar";
+import Divider from "./Common/Divider";
+import Sidebar from "../Component/Common/Sidebar";
+
 const Test = () => {
   return (
     <div className="test-div" style={{ backgroundColor: "rgb(0,3,10)" }}>
@@ -9,8 +12,13 @@ const Test = () => {
         <img src={frame} alt="frame" />
         <div className="content">
           <Sidebar />
-          <div className="section">
-            {/* <Search /> */}
+          <div className="section d-flex">
+            <div>
+              <Search />
+            </div>
+
+            <ActionBar />
+            <Divider />
           </div>
         </div>
       </div>

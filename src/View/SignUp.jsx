@@ -1,18 +1,32 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import * as images from '../Constant/images';
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import * as images from '../Constant/images'
 import Button from '../Component/Common/ButtonShap'
 
 function SignUp () {
-  const [password, setPassword] = useState('')
+  const [signInput, setSignInput] = useState({
+    userEmail: '',
+    userPhone: '',
+    userPassword: '',
+    userConfirmPassword: ''
+  })
   const [showPassword, setShowPassword] = useState(false)
-  const navigate = useNavigate();
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+
+  const navigate = useNavigate()
+  console.log(signInput)
+
+  const handleChange = e => {
+    const { name, value } = e.target
+    setSignInput(preState => ({
+      ...preState,
+      [name]: value
+    }))
+  }
+
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword)
   }
-
-  const [confirmPassword, setConfirmPassword] = useState('')
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
 
   const toggleConfirmPasswordVisibility = () => {
     setShowConfirmPassword(!showConfirmPassword)
@@ -32,7 +46,7 @@ function SignUp () {
               <div className='signup-box mt-4'>
                 <div className='d-flex'>
                   <div className='pt-2'>
-                    <img src={images.userIcon} alt="UserIcon" />
+                    <img src={images.userIcon} alt='UserIcon' />
                   </div>
 
                   <div className='w-100'>
@@ -40,12 +54,15 @@ function SignUp () {
                       type='email'
                       className='custom-input-1'
                       placeholder='EMAIL'
+                      name='userEmail'
+                      value={signInput.userEmail}
+                      onChange={handleChange}
                     />
                   </div>
 
                   <div className=' d-flex flex-column align-items-start justify-content-end pb-1'>
                     <div style={{ flexGrow: '1' }}></div>
-                    <img src={images.cubeDesign} alt="CubeDesign" />
+                    <img src={images.cubeDesign} alt='CubeDesign' />
                   </div>
                 </div>
               </div>
@@ -53,7 +70,7 @@ function SignUp () {
               <div className='signup-box mt-4'>
                 <div className='d-flex'>
                   <div className='pt-2'>
-                    <img src={images.userLock} alt="UserLock" />
+                    <img src={images.userLock} alt='UserLock' />
                   </div>
 
                   <div className='w-100'>
@@ -61,12 +78,15 @@ function SignUp () {
                       type='phone'
                       className='custom-input-1'
                       placeholder='PHONE NUMBER'
+                      name='userPhone'
+                      value={signInput.userPhone}
+                      onChange={handleChange}
                     />
                   </div>
 
                   <div className=' d-flex flex-column align-items-start justify-content-end pb-1'>
                     <div style={{ flexGrow: '1' }}></div>
-                    <img src={images.cubeDesign} alt="CubeDesign" />
+                    <img src={images.cubeDesign} alt='CubeDesign' />
                   </div>
                 </div>
               </div>
@@ -74,7 +94,7 @@ function SignUp () {
               <div className='signup-box mt-4'>
                 <div className='d-flex'>
                   <div className='pt-2'>
-                  <img src={images.userLock} alt="UserLock" />
+                    <img src={images.userLock} alt='UserLock' />
                   </div>
 
                   <div className='input-group'>
@@ -82,8 +102,9 @@ function SignUp () {
                       type={showPassword ? 'text' : 'password'}
                       className='custom-input-2'
                       placeholder='PASSWORD'
-                      value={password}
-                      onChange={e => setPassword(e.target.value)}
+                      value={signInput.userPassword}
+                      name='userPassword'
+                      onChange={handleChange}
                     />
                     <div className='input-group-append'>
                       <button
@@ -91,17 +112,18 @@ function SignUp () {
                         type='button'
                         onClick={togglePasswordVisibility}
                       >
-                        {
-                          (showPassword)? <img src={images.unHideIcn} alt="UserLock" /> :
-                          <img src={images.hiddenIcn} alt="UserLock" />
-                        }
+                        {showPassword ? (
+                          <img src={images.unHideIcn} alt='UserLock' />
+                        ) : (
+                          <img src={images.hiddenIcn} alt='UserLock' />
+                        )}
                       </button>
                     </div>
                   </div>
 
                   <div className='d-flex flex-column align-items-start justify-content-end pb-1'>
                     <div style={{ flexGrow: '1' }}></div>
-                    <img src={images.cubeDesign} alt="CubeDesign" />
+                    <img src={images.cubeDesign} alt='CubeDesign' />
                   </div>
                 </div>
               </div>
@@ -109,7 +131,7 @@ function SignUp () {
               <div className='signup-box mt-4'>
                 <div className='d-flex'>
                   <div className='pt-2'>
-                  <img src={images.userLock} alt="UserLock" />
+                    <img src={images.userLock} alt='UserLock' />
                   </div>
 
                   <div className='input-group'>
@@ -117,8 +139,9 @@ function SignUp () {
                       type={showConfirmPassword ? 'text' : 'password'}
                       className='custom-input-2'
                       placeholder='CONFIRM PASSWORD'
-                      value={confirmPassword}
-                      onChange={e => setConfirmPassword(e.target.value)}
+                      name='userConfirmPassword'
+                      value={signInput.userConfirmPassword}
+                      onChange={handleChange}
                     />
                     <div className='input-group-append'>
                       <button
@@ -126,21 +149,22 @@ function SignUp () {
                         type='button'
                         onClick={toggleConfirmPasswordVisibility}
                       >
-                        {
-                          (showConfirmPassword)? <img src={images.unHideIcn} alt="UserLock" /> :
-                          <img src={images.hiddenIcn} alt="UserLock" />
-                        }
+                        {showConfirmPassword ? (
+                          <img src={images.unHideIcn} alt='UserLock' />
+                        ) : (
+                          <img src={images.hiddenIcn} alt='UserLock' />
+                        )}
                       </button>
                     </div>
                   </div>
 
                   <div className=' d-flex flex-column align-items-start justify-content-end pb-1'>
                     <div style={{ flexGrow: '1' }}></div>
-                    <img src={images.cubeDesign} alt="CubeDesign" />
+                    <img src={images.cubeDesign} alt='CubeDesign' />
                   </div>
                 </div>
               </div>
-              <div className='row justify-content-md-center mt-5'>
+              <div className='row justify-content-center mt-5'>
                 <div className='col-10' onClick={handlerSignUp}>
                   <Button name='SIGN UP' />
                 </div>

@@ -1,10 +1,16 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import * as images from '../Constant/images';
-import Button from '../Component/Common/ButtonShap';
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import * as images from '../Constant/images'
+import Button from '../Component/Common/ButtonShap'
 
 function EmailVerification () {
-  const navigate = useNavigate();
+  const [userEmailVerified, setUserEmailVerified] = useState('')
+  const navigate = useNavigate()
+
+  const handleChange = e => {
+    setUserEmailVerified(e.target.value)
+  }
+  console.log(userEmailVerified)
   const handlerOTP = () => {
     navigate('/otpverification')
   }
@@ -20,7 +26,7 @@ function EmailVerification () {
               <div className='signup-box mt-5'>
                 <div className='d-flex'>
                   <div className='pt-2'>
-                     <img src={images.userIcon} alt="UserIcon" />
+                    <img src={images.userIcon} alt='UserIcon' />
                   </div>
 
                   <div className='w-100'>
@@ -28,17 +34,20 @@ function EmailVerification () {
                       type='email'
                       className='custom-input-1'
                       placeholder='ENTER YOUR EMAIL'
+                      value={userEmailVerified}
+                      name='userEmailVerified'
+                      onChange={handleChange}
                     />
                   </div>
 
                   <div className=' d-flex flex-column align-items-start justify-content-end pb-1'>
                     <div style={{ flexGrow: '1' }}></div>
-                    <img src={images.cubeDesign} alt="CubeDesign" />
+                    <img src={images.cubeDesign} alt='CubeDesign' />
                   </div>
                 </div>
               </div>
 
-              <div className='row justify-content-md-center mt-5 pt-3'>
+              <div className='row justify-content-center mt-5 pt-3'>
                 <div className='col-10' onClick={handlerOTP}>
                   <Button name='GET OTP' />
                 </div>
