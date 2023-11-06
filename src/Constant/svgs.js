@@ -426,3 +426,45 @@ export const plusSvg = (
     />
   </svg>
 );
+
+export const cameraFrameSvg = (
+  <svg
+    width="219"
+    height="156"
+    viewBox="0 0 219 156"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      x="8"
+      y="39.4443"
+      width="203.605"
+      height="109.84"
+      fill="#85D2F9"
+      fill-opacity="0.06"
+    />
+    <path
+      d="M1 144.451V154.854V155.821H1.88703H12.2895L8.82201 154.854H1.88703V147.999L1 144.451Z"
+      fill="#00FFFB"
+    />
+    <path
+      d="M206.63 155.821H217.032H217.919V154.854V144.451L217.032 147.999V154.854H210.097L206.63 155.821Z"
+      fill="#00FFFB"
+    />
+    <path
+      d="M217.92 1H1V155.666H217.92V1Z"
+      stroke="#00FFFB"
+      stroke-width="0.5"
+      stroke-miterlimit="10"
+    />
+    <path d="M210.985 32.8584H7.69385V33.0197H210.985V32.8584Z" fill="white" />
+    <path
+      d="M12.2895 1H1.88703H1V1.88704V12.2895L1.88703 8.82202V1.88704H8.82201L12.2895 1Z"
+      fill="#00FFFB"
+    />
+    <path
+      d="M218 12.2895V1.88704V1H217.113H206.711L210.178 1.88704H217.113V8.82202L218 12.2895Z"
+      fill="#00FFFB"
+    />
+  </svg>
+);

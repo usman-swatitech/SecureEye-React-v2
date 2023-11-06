@@ -4,6 +4,8 @@ import Search from "./Common/Search";
 import ActionBar from "./Common/ActionBar";
 import Divider from "./Common/Divider";
 import Sidebar from "../Component/Common/Sidebar";
+import CameraLayout from "./Common/CameraLayout";
+import Cards from "../Test/Cards";
 
 const Test = () => {
   return (
@@ -19,6 +21,17 @@ const Test = () => {
 
             <ActionBar />
             <Divider />
+            <div className="cameras-layout">
+              <Cards />
+              <Cards />
+              <Cards />
+              <Cards />
+              <Cards />
+              <Cards />
+              <Cards />
+              <Cards />
+              <Cards />
+            </div>
           </div>
         </div>
       </div>
