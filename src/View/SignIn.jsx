@@ -106,7 +106,7 @@ function SignIn () {
                 </div>
               </div>
 
-              <div className='row justify-content-md-center mt-5'>
+              <div className='row justify-content-center mt-5'>
                 <div className=' col-10' onClick={handlerSignIn}>
                   <Button name='SIGN IN' />
                 </div>

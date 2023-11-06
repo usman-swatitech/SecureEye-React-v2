@@ -1,35 +1,35 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'sportyXlight';
-  }
-  :root {
-    --main-text-color: #00fffb;
-    --main-p-color: #666666;
-    --main-underline-color: #00fffb38;
-    --main-black-color: #000;
-  }
-@font-face {
-    font-family: 'sportyReg';
-    src: url('./assets/font/sporty-pro-regular.otf');
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'sportyXlight';
+}
+:root {
+  --main-text-color: #00fffb;
+  --main-p-color: #666666;
+  --main-underline-color: #00fffb38;
+  --main-black-color: #000;
+  --main-white-color: #fff;
 }
 @font-face {
-    font-family: 'sportyXlight';
-    src: url('./assets/font/sporty-pro-xlight.otf');
+  font-family: 'sportyReg';
+  src: url('./assets/font/sporty-pro-regular.otf');
 }
 @font-face {
-    font-family: 'sportyThinXP';
-    src: url('./assets/font/sporty-pro-thin-xp.otf');
+  font-family: 'sportyXlight';
+  src: url('./assets/font/sporty-pro-xlight.otf');
 }
 @font-face {
-    font-family: 'sportyThin';
-    src: url('./assets/font/sporty-pro-thin.otf');
+  font-family: 'sportyThinXP';
+  src: url('./assets/font/sporty-pro-thin-xp.otf');
+}
+@font-face {
+  font-family: 'sportyThin';
+  src: url('./assets/font/sporty-pro-thin.otf');
 }
 body {
-    font-family: 'sportyXlight';
+  font-family: 'sportyXlight';
 }
-
 
 /* ------------ Splas screen Start ------------- */
 /* .appContainer {
@@ -59,205 +59,174 @@ body {
 } */
 
 .splashBrandLogo {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 .splashBox {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background-image: url('./assets/Splash/splashbg.png');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100vw;
-    animation: lift 1s ease-in-out;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-image: url('./assets/Splash/splashbg.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  animation: lift 1s ease-in-out;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+.bg-dark {
+  background-color: #000 !important;
+}
+.splashImg {
+  font-size: 81px;
+  color: #fff;
+  text-align: center;
+  font-family: 'Lexend Deca', sans-serif;
+  animation: wave 0.4s, jump 3.1s;
+  position: relative;
+  top: 0;
+  padding: 4px;
+  opacity: 0;
+  z-index: 3;
+  animation-fill-mode: forwards;
+}
+
+.splashBox span:nth-of-type(1) {
+  animation: wave 0.4s, jump 3.1s ease-in-out alternate 0.05s;
+}
+
+.splashBox span:nth-of-type(2) {
+  animation: wave 0.4s, jump 3.1s ease-in-out alternate 0.1s;
+}
+
+.splashBox span:nth-of-type(3) {
+  animation: wave 0.4s, jump 3.1s ease-in-out alternate 0.15s;
+}
+
+.splashBox span:nth-of-type(4) {
+  animation: wave 0.4s, jump 3.1s ease-in-out alternate 0.2s;
+}
+
+.splashBox span:nth-of-type(5) {
+  animation: wave 0.4s, jump 3.1s ease-in-out alternate 0.25s;
+}
+
+.splashBox span:nth-of-type(6) {
+  animation: wave 0.4s, jump 3.1s ease-in-out alternate 0.3s;
+}
+
+@keyframes wave {
+  0% {
+    top: 0%;
   }
-  .bg-dark{
-    background-color: #000 !important;
+  100% {
+    top: 100%;
   }
-  .splashImg {
-    font-size: 81px;
-    color: #fff;
-    text-align: center;
-    font-family: "Lexend Deca", sans-serif;
-    animation: wave 0.4s, jump 3.1s;
-    position: relative;
-    top: 0;
-    padding: 4px;
+}
+
+@keyframes jump {
+  0% {
+    transform: translate3d(0, 0, 0);
     opacity: 0;
-    z-index: 3;
-    animation-fill-mode: forwards;
   }
-  
-  .splashBox span:nth-of-type(1) {
-       animation: wave 0.4s, jump 3.1s ease-in-out alternate 0.05s;
+  90% {
+    transform: translate3d(0, -16%, 0);
+    opacity: 1;
   }
-  
-  .splashBox span:nth-of-type(2) {
-    
-    animation: wave 0.4s, jump 3.1s ease-in-out alternate 0.1s;
+  100% {
+    transform: translate3d(0, -32%, 0);
+    opacity: 1;
   }
-  
-  .splashBox span:nth-of-type(3) {
-    
-    animation: wave 0.4s, jump 3.1s ease-in-out alternate 0.15s;
-  }
-  
-  .splashBox span:nth-of-type(4) {
-    
-    animation: wave 0.4s, jump 3.1s ease-in-out alternate 0.2s;
-  }
-  
-  .splashBox span:nth-of-type(5) {
-    
-    animation: wave 0.4s, jump 3.1s ease-in-out alternate 0.25s;
-  }
-  
-  .splashBox span:nth-of-type(6) {
-       animation: wave 0.4s, jump 3.1s ease-in-out alternate 0.3s;
-  }
-  
-  @keyframes wave {
-    0% {
-      top: 0%;
-    }
-    100% {
-      top: 100%;
-    }
-  }
-  
-  @keyframes jump {
-    0% {
-      transform: translate3d(0, 0, 0);
-      opacity: 0;
-    }
-    90% {
-      transform: translate3d(0, -16%, 0);
-      opacity: 1;
-    }
-    100% {
-      transform: translate3d(0, -32%, 0);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes lift {
-    0% {
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
-      visibility: visible;
-    }
-    100% {
-      transform: translate3d(0, -100%, 0);
-      opacity: 1;
-      visibility: hidden;
-    }
-  }
-  
-  @keyframes appear {
-    0% {
-      visibility: hidden;
-    }
-    100% {
-      visibility: visible;
-    }
-  }
-  
+}
 
-  .frame-container {
-   
-    background-image: url('./assets/frameTab.png');
-    position: relative;
-    width: 100%; 
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+@keyframes lift {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    visibility: visible;
   }
-  .cursor-pointer
-  {
-    cursor: pointer;
+  100% {
+    transform: translate3d(0, -100%, 0);
+    opacity: 1;
+    visibility: hidden;
   }
+}
 
-  #swal2-title{
-    color: #fff !important;
+@keyframes appear {
+  0% {
+    visibility: hidden;
   }
-  #swal2-html-container{
-    color:  #fff !important;
+  100% {
+    visibility: visible;
   }
-  div:where(.swal2-container) div:where(.swal2-popup)
-  {
-    background-color: #212529 !important;
-    /* background-image: url('./assets//Rectangle.png') !important;
+}
+
+.frame-container {
+  background-image: url('./assets/frameTab.png');
+  position: relative;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+#swal2-title {
+  color: #fff !important;
+}
+#swal2-html-container {
+  color: #fff !important;
+}
+div:where(.swal2-container) div:where(.swal2-popup) {
+  background-color: #212529 !important;
+  /* background-image: url('./assets//Rectangle.png') !important;
     background-size: cover; */
-  }
-  div:where(.swal2-icon).swal2-error {
-    border-color: #00fffb !important;
-  }
-  div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line] {
-    background-color: #00fffb !important;
-  }
+}
+div:where(.swal2-icon).swal2-error {
+  border-color: #00fffb !important;
+}
+div:where(.swal2-icon).swal2-error [class^='swal2-x-mark-line'] {
+  background-color: #00fffb !important;
+}
 
-  .swal2-actions
-  {
-    background: #00fffb !important;
-    clip-path: polygon(
-      6% 0%,
-      75% 0%,
-      100% 0%,
-      100% 65%,
-      93% 100%,
-      0% 100%,
-      0% 75%,
-      0% 50%
-    );
-  }
-  .swal2-loader {
-    clip-path: polygon(
-      7% 0%,
-      75% 0%,
-      100% 0%,
-      100% 58%,
-      92% 100%,
-      0% 100%,
-      0% 75%,
-      0% 58%
-    );
-  
-    border: 3px solid #00fffb !important;
-  }
-  div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
+.swal2-actions {
+  background: #00fffb !important;
+  clip-path: polygon(
+    10% 0%,
+    75% 0%,
+    100% 0%,
+    100% 60%,
+    90% 100%,
+    0% 100%,
+    0% 75%,
+    0% 50%
+  );
+}
+.swal2-loader {
+  border: 3px solid #00fffb !important;
+}
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   width: 200px !important;
   clip-path: polygon(
-    5% 0%,
-    75% 0%,
+    10% 0%,
     100% 0%,
-    100% 65%,
-    96% 100%,
+    100% 55%,
+    90% 100%,
     0% 100%,
     0% 75%,
-    0% 50%
+    0% 55%
   );
-  clip-path: polygon(
-    5% 0%,
-    75% 0%,
-    100% 0%,
-    100% 65%,
-    96% 100%,
-    0% 100%,
-    0% 75%,
-    0% 50%
-  );
-  background-color: #212529!important;
+  background-color: #212529 !important;
   border: 1px solid !important;
   color: #00fffb !important;
-  }
+}

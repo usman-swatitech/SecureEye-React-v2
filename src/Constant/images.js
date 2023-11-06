@@ -8,7 +8,7 @@ import secureEyeText from '../assets/Splash/logo.png'
 // Frame Tab
 import frameTab from '../assets/frameTab.png';
 import logoWithText from "../assets/Splash/logo.png";
-import cctvViewImg from '../assets/ScreenViev.png'
+import cctvViewImg from '../assets/ScreenViev.png';
 
 // signup page
 import bLogo from '../assets/svg/Logo-1.svg';
@@ -18,5 +18,12 @@ import cubeDesign from '../assets/svg/cubeDes.svg';
 import hiddenIcn from '../assets/svg/hide.svg';
 import unHideIcn from '../assets/svg/unHide.svg';
 
+// Dashboard Inside Modal
+import cameraName from '../assets/svg/cameraName.svg'
+import ipAddress from '../assets/svg/ipAddress.svg'
+import location from '../assets/svg/location.svg'
+import port from '../assets/svg/port.svg'
+import nightVision from '../assets/svg/nightVision.svg'
+
 export default brandLogo;
-export {splashBackground,secureEyeText,frameTab,bLogo,userIcon,userLock,cubeDesign,hiddenIcn,unHideIcn,logoWithText,cctvViewImg}; 
+export {splashBackground,secureEyeText,frameTab,bLogo,userIcon,userLock,cubeDesign,hiddenIcn,unHideIcn,logoWithText,cctvViewImg,cameraName,ipAddress,location,port,nightVision};

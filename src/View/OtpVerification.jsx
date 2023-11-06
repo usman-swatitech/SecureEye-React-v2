@@ -77,7 +77,7 @@ function OtpVerification() {
                 </div>
               </div>
 
-              <div className='row justify-content-md-center mt-5 pt-3'>
+              <div className='row justify-content-center mt-5 pt-3'>
 
                 <div className='col-10' onClick={handlerConfirmOTP}>
                   <Button name='VERIFY & SIGN UP' />
