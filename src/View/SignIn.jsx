@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as images from '../Constant/images';
-import sweetAlert from '../helperFun/SweatAlert'
-import Button from '../Component/Common/ButtonShap'
+import sweetAlert from '../helperFun/SweatAlertFun';
+import Button from '../Component/Common/ButtonShap';
 
 function SignIn () {
   const[signInput,setSignInput] = useState({userName:'',userPassword:''})

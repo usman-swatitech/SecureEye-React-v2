@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { json, useNavigate } from 'react-router-dom';
 import * as images from '../Constant/images';
 import Button from '../Component/Common/ButtonShap'
+import sweetAlert from '../helperFun/SweatAlertFun';
 
 function SignUp () {
   const [signInput,setSignInput] = useState({userEmail:'',userPhone:'',userPassword:'',userConfirmPassword:''});
@@ -25,8 +26,27 @@ function SignUp () {
   const toggleConfirmPasswordVisibility = () => {
     setShowConfirmPassword(!showConfirmPassword)
   }
-  const handlerSignUp = () => {
-    navigate('/emailverified')
+  const handlerSignUp = async() => {
+    const {userEmail,userPhone,userPassword,userConfirmPassword} = signInput;
+    // if (userEmail === '' || userPhone === '' || userPassword === '' || userConfirmPassword === '') {
+    //   sweetAlert("Something is missing");
+    // } 
+    // else if (userPassword !== userConfirmPassword) {
+    //   sweetAlert("Password not matched");
+    // }
+    //  else {
+      const responce = await fetch('http://localhost:5000/demo',{
+        method: 'POST',
+        body:JSON.stringify(signInput),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      const result = await responce.json();
+      console.log(result);
+      // navigate('/emailverified');
+    // }
+    
   }
 
   return (

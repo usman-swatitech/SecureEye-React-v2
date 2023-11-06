@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as images from '../Constant/images';
 import Button from '../Component/Common/ButtonShap';
+import SweatAlert from '../helperFun/SweatAlertFun';
 
 function EmailVerification () {
 
@@ -13,7 +14,13 @@ function EmailVerification () {
   }
   console.log(userEmailVerified)
   const handlerOTP = () => {
-    navigate('/otpverification')
+    if(userEmailVerified === '')
+    {
+      SweatAlert('Email is not empty');
+    }
+    else {
+      navigate('/otpverification')
+    }
   }
 
   return (

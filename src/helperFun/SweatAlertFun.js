@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2';
 
-const displayErrorAlert = (text) => {
+const SweatAlert = (text) => {
     Swal.fire({
         icon: 'error',
         title: 'Oops...',
@@ -9,4 +9,4 @@ const displayErrorAlert = (text) => {
     });
 };
 
-export default displayErrorAlert;
+export default SweatAlert;
