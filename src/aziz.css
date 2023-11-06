@@ -8,21 +8,51 @@
   height: auto;
   width: 100%;
 }
+/* 
+SCROLLBAR OF CAMERAS
+*/
+.cameras-layout {
+  /* Set the width and height of the scrollbar */
+  scrollbar-width: thin; /* "thin" makes it thinner, "auto" for the browser default */
+  /* scrollbar-color: var(--primary) var(--primary); Scrollbar thumb and track color */
+
+  /* Customize the scrollbar track (background) */
+  &::-webkit-scrollbar {
+    width: 10px; /* You can adjust the width as needed */
+  }
+
+  /* Customize the scrollbar thumb (the draggable part) */
+  &::-webkit-scrollbar-thumb {
+    background-color: whitesmoke; /* Change the scrollbar thumb color */
+    border-radius: 6px; /* Add rounded corners to the scrollbar thumb */
+    height: 60px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Change the thumb color on hover */
+  }
+
+  /* Customize the scrollbar track (background) */
+  &::-webkit-scrollbar-track {
+    background-color: var(--primary); /* Change the scrollbar track color */
+  }
+}
 
 /* sidebar css starts here... */
 .sidebar-inner {
-  position: absolute;
-  height: 110%;
-  width: 100%;
+  position: relative;
+  height: 100vh;
+  width: 70px;
   background-color: rgb(0, 16, 22);
   clip-path: polygon(0% 3%, 15% 0%, 100% 0%, 100% 85%, 17% 85%, 0% 82%);
   display: flex;
   flex-direction: column;
+  margin: 30px 40px;
 }
 
 .sidebar-inner .sidebar-logo {
   height: 39px;
-  width: 80px;
+  width: 60px;
   object-fit: contain;
   position: relative;
   margin-left: auto;
@@ -55,20 +85,9 @@
   border-radius: 0 4px 4px 0;
 }
 
-/* new sidebar */
-.sidebar-outer {
-  position: relative;
-  padding: 18px 0;
-  top: 0;
-  left: 0;
-  height: 92vh;
-  background-color: transparent;
-  width: 116px;
-  display: flex;
-}
 .icon {
-  width: 70px;
-  height: 52px;
+  width: 40px;
+  height: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,12 +95,12 @@
 }
 .icon-active {
   background-color: var(--primary);
-  width: 70px;
-  height: 52px;
+  width: 40px;
+  height: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 15px;
+  border-radius: 6px;
 }
 .sidebar-inner .last-col {
   position: relative;
@@ -128,7 +147,7 @@
   position: relative;
   display: flex;
   width: auto;
-  max-width: 1100px;
+  /* max-width: 1100px; */
   min-width: 300px;
 }
 .innerWrapper .content {
@@ -153,13 +172,13 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  position: absolute;
+  /* position: relative; */
   background-color: rgb(9, 12, 17);
-
-  width: 62%;
+  width: 63%;
   min-width: 100px;
   height: 45px;
   padding: 0 20px;
+  margin-top: 28px;
   clip-path: polygon(0% 0%, 95% 0%, 100% 39%, 100% 85%, 0% 85%, 0% 82%);
 }
 
@@ -184,14 +203,10 @@
 /* search component code ends here... */
 /* action bar css  */
 .action-bar {
-  position: relative;
-  top: 55px;
+  top: 5px;
   height: auto;
   width: 90%;
   padding: 0 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 .action-bar .left-portion {
   display: flex;
@@ -199,17 +214,16 @@
   align-items: center;
 }
 .action-bar .left-portion .actionbar-icons {
-  height: 46px;
-  width: 76px;
+  height: 30px;
+  width: 40px;
   background-color: var(--primary);
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
-.action-bar .right-portion {
-  display: flex;
-  gap: 6px;
-  align-items: center;
+.action-bar .right-portion p {
+  margin: auto;
 }
 
 .right-portion .main-circle {
@@ -255,4 +269,92 @@
   width: 20px;
 }
 /* action bar css ends here. */
+
+/* Camera Layout css */
+.cameras-layout {
+  position: relative;
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 91%;
+  gap: 10px;
+  max-height: 260px;
+  overflow-y: scroll;
+}
+.main-camera-wrapper {
+  position: relative;
+  width: 20%;
+  height: 122px;
+  background-image: url("./assets/images/layout3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+
+  flex-direction: column;
+  padding: 4px 2px;
+  gap: 5px;
+}
+.main-camera-wrapper h4 {
+  font-size: 12px;
+  color: white;
+  text-align: start;
+  margin: 2px 4px;
+}
+.main-camera-wrapper .camera-divider {
+  /* position: absolute; */
+  position: relative;
+  margin: 0 auto;
+  height: 1px;
+  width: 90%;
+
+  background-color: #ffffff;
+}
+.main-camera-wrapper .camera-src {
+  position: relative;
+  /* top: 2px; */
+  height: 100%;
+  width: 100%;
+}
+.main-camera-wrapper .camera-src video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+/* Camera Layout css ends here */
 /* test div css */
+
+.camera-cards {
+  background-image: url("./assets/images/layout4.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 156;
+  width: 217px;
+  /* border: 1px solid yellow; */
+}
+.rootLayoutImage {
+  width: 95%;
+  height: 99vh;
+  object-fit: 100% 100%;
+  min-width: 500px;
+}
+/* position: relative;
+height: 100vh;
+width: 70px;
+background-color: rgb(0, 16, 22);
+clip-path: polygon(0% 3%, 15% 0%, 100% 0%, 100% 85%, 17% 85%, 0% 82%);
+display: flex;
+flex-direction: column;
+margin: 30px 40px; */
+@media (min-width: 1100px) {
+  .sidebar-inner {
+    margin: 30px 50px;
+  }
+}
+@media (max-width: 920px) {
+  .sidebar-inner {
+    margin: 30px 40px;
+  }
+}

@@ -16,45 +16,43 @@ const Sidebar = () => {
     setLinks(updatedItems);
   };
   return (
-    <div className="sidebar-outer">
-      <div className="sidebar-inner">
-        <img src={logoWithText} alt="logo" className="sidebar-logo" />
-        <div className="links-wrapper">
-          {links.map((link, index) =>
-            index < 5 ? (
-              <div
-                className="link"
-                key={index}
-                style={{
-                  borderTopRightRadius: "5px",
-                  borderBottomRightRadius: "5px",
-                }}
-                onClick={() => {
-                  handleActive(index);
-                }}
-              >
-                <div className={link.isActive ? "line" : null}></div>
-                <span className={link.isActive ? "icon-active" : "icon"}>
-                  {link.isActive ? link.activeIcon : link.nonActiveIcon}
-                </span>
-              </div>
-            ) : (
-              <div
-                className="last-col"
-                onClick={() => {
-                  handleActive(index);
-                }}
-                key={index}
-              >
-                <div className={link.isActive ? "line" : null}></div>
-                <span className={link.isActive ? "icon-active" : "icon"}>
-                  {link.isActive ? link.activeIcon : link.nonActiveIcon}
-                </span>
-              </div>
-            )
-          )}
-          <Avatar image={profileDp} />
-        </div>
+    <div className="sidebar-inner">
+      <img src={logoWithText} alt="logo" className="sidebar-logo" />
+      <div className="links-wrapper">
+        {links.map((link, index) =>
+          index < 5 ? (
+            <div
+              className="link"
+              key={index}
+              style={{
+                borderTopRightRadius: "5px",
+                borderBottomRightRadius: "5px",
+              }}
+              onClick={() => {
+                handleActive(index);
+              }}
+            >
+              <div className={link.isActive ? "line" : null}></div>
+              <span className={link.isActive ? "icon-active" : "icon"}>
+                {link.isActive ? link.activeIcon : link.nonActiveIcon}
+              </span>
+            </div>
+          ) : (
+            <div
+              className="last-col"
+              onClick={() => {
+                handleActive(index);
+              }}
+              key={index}
+            >
+              <div className={link.isActive ? "line" : null}></div>
+              <span className={link.isActive ? "icon-active" : "icon"}>
+                {link.isActive ? link.activeIcon : link.nonActiveIcon}
+              </span>
+            </div>
+          )
+        )}
+        <Avatar image={profileDp} />
       </div>
     </div>
   );
