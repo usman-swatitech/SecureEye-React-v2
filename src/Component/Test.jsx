@@ -1,6 +1,5 @@
 import React from "react";
 import frame from "../assets/images/frame.png";
-
 import Search from "./Common/Search";
 import ActionBar from "./Common/ActionBar";
 import Divider from "./Common/Divider";

@@ -5,7 +5,6 @@ import Test from "../Component/Test";
 const App = () => {
   const loginKey = localStorage.getItem("myKey");
   const navigate = useNavigate();
-  alert("haf");
   useEffect(() => {
     if (loginKey) {
       navigate("/signin");
