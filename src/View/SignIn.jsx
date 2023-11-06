@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as images from '../Constant/images';
-import sweetAlert from '../helperFun/SweatAlert'
-import Button from '../Component/Common/ButtonShap'
+import sweetAlert from '../helperFun/SweatAlertFun';
+import Button from '../Component/Common/ButtonShap';
 
 function SignIn () {
   const[signInput,setSignInput] = useState({userName:'',userPassword:''})
@@ -106,7 +106,7 @@ function SignIn () {
                 </div>
               </div>
 
-              <div className='row justify-content-md-center mt-5'>
+              <div className='row justify-content-center mt-5'>
                 <div className=' col-10' onClick={handlerSignIn}>
                   <Button name='SIGN IN' />
                 </div>

@@ -2,28 +2,53 @@ import {
   activeHomeSvg,
   activeBlockSvg,
   activeFac,
-  plusSvg,
-} from "../../Constant/svgs";
+  plusSvg
+} from '../../Constant/svgs'
+import CameraModal from './CameraModal'
 
 const ActionBar = () => {
   return (
-    <div className="action-bar d-flex flex-lg-row flex-column justify-content-between  position-relative top-30">
-      <div className="left-portion d-flex gap-4">
-        <span className="actionbar-icons">{activeHomeSvg}</span>
-        <span className="actionbar-icons">{activeBlockSvg}</span>
-        <span className="actionbar-icons">{activeFac}</span>
+    <>
+      <div className='action-bar d-flex flex-lg-row flex-column justify-content-between  position-relative top-30'>
+        <div className='left-portion'>
+          <span className='actionbar-icons'>{activeHomeSvg}</span>
+          <span className='actionbar-icons'>{activeBlockSvg}</span>
+          <span className='actionbar-icons'>{activeFac}</span>
+        </div>
+        <button
+          type='button'
+          className='modal_btn'
+          data-bs-toggle='modal'
+          data-bs-target='#addCameraModal'
+        >
+          <div className='right-portion d-flex'>
+            <div className='main-circle'>
+              <div className='plus-circle'>
+                <span>{plusSvg}</span>
+              </div>
+            </div>
+
+            <h4 className='fs-6 text-white mt-2'>Add New Camera</h4>
+          </div>
+        </button>
       </div>
-      <div className="right-portion d-flex align-items-center">
-        <div className="main-circle">
-          <div className="plus-circle">
-            <span>{plusSvg}</span>
+
+      <div
+        className='modal fade'
+        id='addCameraModal'
+      >
+        <div className='modal-dialog modal-lg'>
+          <div
+            className='modal-content bg-dark'
+          >
+            <div className='modal-body'>
+              <CameraModal />
+            </div>
           </div>
         </div>
-
-        <p className="fs-6 text-white text-nowrap">Add New Camera</p>
       </div>
-    </div>
-  );
-};
+    </>
+  )
+}
 
-export default ActionBar;
+export default ActionBar
