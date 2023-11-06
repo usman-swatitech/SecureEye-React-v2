@@ -1,9 +1,10 @@
 import React from "react";
 import frame from "../assets/images/frame.png";
+import Search from "./Common/Search";
 import ActionBar from "./Common/ActionBar";
 import Divider from "./Common/Divider";
 import Sidebar from "../Component/Common/Sidebar";
-import Search from "../Component/Common/Search";
+
 const Test = () => {
   return (
     <div className="test-div" style={{ backgroundColor: "rgb(0,3,10)" }}>
