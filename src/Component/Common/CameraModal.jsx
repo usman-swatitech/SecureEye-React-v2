@@ -238,7 +238,7 @@ function CameraModal () {
             </div>
 
             <div className='row justify-content-center mt-5'>
-              <div className='col-10' onClick={handlerSignUp}>
+              <div className='col-10' data-bs-dismiss="modal" aria-label="Close">
                 <Button name='add camera' />
               </div>
             </div>
