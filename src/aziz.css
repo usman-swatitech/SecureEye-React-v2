@@ -10,24 +10,10 @@
 }
 /* Customize the scrollbar for webkit-based browsers */
 /* Track (the background) */
-::-webkit-scrollbar {
-  width: 10px; /* Adjust the width as needed */
-}
-
-/* Handle (the thumb) */
-::-webkit-scrollbar-thumb {
-  background: var(--primary); /* Change the color to blue */
-}
 
 /* Handle on hover */
 
 /* Track on hover */
-::-webkit-scrollbar-track:hover {
-  background: rgb(13, 31, 42); /* Change the track color on hover, if desired */
-}
-::-webkit-scrollbar-track {
-  background: rgb(13, 31, 42);
-}
 
 /* 
 SCROLLBAR OF CAMERAS
