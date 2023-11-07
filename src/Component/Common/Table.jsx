@@ -7,17 +7,6 @@ function Table() {
         <div className="row">
           <div className="col-lg-12 col-md-12 col-sm-12">
             <div className="p-0">
-              <p
-                style={{
-                  fontSize: "18px",
-                  fontWeight: "200",
-                  lineHeight: "22px",
-                  color: "var(--main-white-color)",
-                }}
-              >
-                Employee Information
-              </p>
-
               {/* ends */}
               <div className="table-responsive">
                 <table className="table table-borderless mt-4">

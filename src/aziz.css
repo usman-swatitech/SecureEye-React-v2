@@ -19,7 +19,10 @@
 SCROLLBAR OF CAMERAS
 */
 
-.cameras-layout {
+.cameras-layout,
+.cards-layout,
+.table-layout,
+.table-layout-2 {
   scrollbar-width: thin;
 
   /* Customize the scrollbar track (background) */
@@ -284,8 +287,8 @@ SCROLLBAR OF CAMERAS
   flex-direction: row;
   width: 91%;
   gap: 10px;
-  max-height: 400px;
-  overflow-y: scroll;
+  /* max-height: 400px;
+  overflow-y: scroll; */
 }
 .main-camera-wrapper {
   position: relative;
@@ -345,6 +348,57 @@ SCROLLBAR OF CAMERAS
   object-fit: 100% 100%;
   min-width: 500px;
 }
+/* single screen camera*/
+.single-camera-frame {
+  position: relative;
+  margin: 0 auto;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  /* max-width: 800px; */
+}
+.frame-inner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.frame-inner video {
+  /* position: relative; */
+  width: auto;
+  height: 250px;
+  object-fit: cover;
+}
+.cards-layout {
+  height: 30%;
+  max-height: 30%;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+}
+.table-layout {
+  height: 12%;
+  max-height: auto;
+  overflow-y: scroll;
+  flex-grow: 1;
+}
+.table-layout-2 {
+  height: 10%;
+  max-height: auto;
+  overflow-y: scroll;
+}
+/* .single-camera-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+/* end of single camera */
 /* usman table css */
 .dashboard_td {
   color: var(--main-text-color);
@@ -439,5 +493,32 @@ SCROLLBAR OF CAMERAS
 @media (max-width: 920px) {
   .sidebar-inner {
     margin: 30px 40px;
+  }
+  .single-camera-frame {
+    width: 300px;
+  }
+  .single-camera-frame .frame-inner video {
+    max-width: 300px;
+  }
+}
+@media (min-height: 200px) {
+  .table-layout,
+  .table-layout-2 {
+    height: 12%;
+    max-height: 12%;
+  }
+}
+@media (min-height: 600px) {
+  .table-layout,
+  .table-layout-2 {
+    height: 40%;
+    max-height: 40%;
+  }
+}
+@media (min-height: 1000px) {
+  .table-layout,
+  .table-layout-2 {
+    height: 40%;
+    max-height: 40%;
   }
 }
