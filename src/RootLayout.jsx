@@ -9,6 +9,7 @@ import {
   EmployeeLayout,
   SettingsLayout,
   SearchLayout,
+  SingleScreenLayout,
 } from "./Layouts/index";
 import { Store } from "./context/Context";
 const RootLayout = () => {
@@ -27,6 +28,8 @@ const RootLayout = () => {
         return <SettingsLayout />;
       case "SearchLayout":
         return <SearchLayout />;
+      case "SingleScreenLayout":
+        return <SingleScreenLayout />;
       default:
         return <HomeLayout />;
     }
