@@ -3,18 +3,22 @@ import { navlinks } from "../../Constant/links";
 import { logoWithText } from "../../Constant/images";
 import Avatar from "./Avatar";
 import profileDp from "../../assets/images/avatar.png";
-
+import { Store } from "../../context/Context";
 const Sidebar = () => {
+  const { currentLayout, setCurrentLayout } = Store();
+  console.log(currentLayout);
   const [links, setLinks] = useState(navlinks);
   const [activeIndex, setaAtiveIndex] = useState(0);
-  const handleActive = (index) => {
+  const handleActive = (index, newLayout) => {
     setaAtiveIndex(index);
     const updatedItems = links.map((item, i) => ({
       ...item,
       isActive: i === index,
     }));
     setLinks(updatedItems);
+    setCurrentLayout(newLayout);
   };
+
   return (
     <div className="sidebar-inner">
       <img src={logoWithText} alt="logo" className="sidebar-logo" />
@@ -29,7 +33,7 @@ const Sidebar = () => {
                 borderBottomRightRadius: "5px",
               }}
               onClick={() => {
-                handleActive(index);
+                handleActive(index, link.layout);
               }}
             >
               <div className={link.isActive ? "line" : null}></div>
@@ -41,7 +45,7 @@ const Sidebar = () => {
             <div
               className="last-col"
               onClick={() => {
-                handleActive(index);
+                handleActive(index, link.layout);
               }}
               key={index}
             >

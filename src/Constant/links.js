@@ -17,6 +17,7 @@ export const navlinks = [
     path: "/",
     label: "Home",
     isActive: true,
+    layout: "HomeLayout",
   },
   {
     activeIcon: searchSvg,
@@ -24,6 +25,7 @@ export const navlinks = [
     path: "/search",
     label: "Search",
     isActive: false,
+    layout: "SearchLayout",
   },
   {
     activeIcon: activeUserSvg,
@@ -31,6 +33,7 @@ export const navlinks = [
     path: "/employee",
     label: "Employee",
     isActive: false,
+    layout: "EmployeeLayout",
   },
   {
     activeIcon: activeBlockSvg,
@@ -38,6 +41,7 @@ export const navlinks = [
     path: "/department",
     label: "Department",
     isActive: false,
+    layout: "DepartmentLayout",
   },
   {
     activeIcon: activeWorkSvg,
@@ -45,6 +49,7 @@ export const navlinks = [
     path: "/working",
     label: "Working",
     isActive: false,
+    layout: "WorkingLayout",
   },
   {
     activeIcon: nonActiveSettingsSvg,
@@ -52,5 +57,6 @@ export const navlinks = [
     path: "/settings",
     label: "Settings",
     isActive: false,
+    layout: "SettingsLayout",
   },
 ];
