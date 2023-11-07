@@ -9,6 +9,7 @@ import {
   EmployeeLayout,
   SettingsLayout,
   SearchLayout,
+  SingleScreenLayout,
 } from "./Layouts/index";
 import { Store } from "./context/Context";
 const RootLayout = () => {
@@ -27,12 +28,17 @@ const RootLayout = () => {
         return <SettingsLayout />;
       case "SearchLayout":
         return <SearchLayout />;
+      case "SingleScreenLayout":
+        return <SingleScreenLayout />;
       default:
         return <HomeLayout />;
     }
   };
   return (
-    <div className="layout-new w-100 h-auto position-relative d-flex justify-content-start justify-content-md-center bg-black p-2">
+    <div
+      className="layout-new w-100 h-auto position-relative d-flex justify-content-start justify-content-md-center bg-black m-0"
+      style={{ overflow: "hidden", paddingTop: "12px", paddingBottom: "12px" }}
+    >
       <img src={frame} alt="bg-cover" className="rootLayoutImage" />
       <div className="position-absolute top-0 d-flex  w-100 px-4">
         <Sidebar />
