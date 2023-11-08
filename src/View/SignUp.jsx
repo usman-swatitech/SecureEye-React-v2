@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { json, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import * as images from '../Constant/images';
 import Button from '../Component/Common/ButtonShap'
 import sweetAlert from '../helperFun/SweatAlertFun';
+import {successSweatAlert} from '../helperFun/SweatAlertFun';
 
 function SignUp () {
   const [signInput,setSignInput] = useState({userEmail:'',userPhone:'',userPassword:'',userConfirmPassword:''});
@@ -35,16 +36,17 @@ function SignUp () {
       sweetAlert("Password not matched");
     }
      else {
-      const responce = await fetch('http://localhost:5000/demo',{
-        method: 'POST',
-        body:JSON.stringify(signInput),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-      const result = await responce.json();
-      console.log(result);
-      // navigate('/emailverified');
+      // const responce = await fetch('http://localhost:5000/demo',{
+      //   method: 'POST',
+      //   body:JSON.stringify(signInput),
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //   }
+      // });
+      // const result = await responce.json();
+      // console.log(result);
+      successSweatAlert('Your Signup was Successsful')
+      navigate('/emailverified');
     }
     
   }

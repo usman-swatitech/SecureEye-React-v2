@@ -223,6 +223,16 @@ div:where(.swal2-icon).swal2-error [class^='swal2-x-mark-line'] {
     0% 50%
   );
 }
+div:where(.swal2-icon).swal2-success .swal2-success-ring{
+  border: .25em solid rgba(0, 255, 251,.3) !important;
+}
+div:where(.swal2-icon).swal2-success [class^=swal2-success-line]{
+  background-color: #00fffb !important;
+}
+div:where(.swal2-icon).swal2-success {
+  border-color: #00fffb !important;
+  color: #00fffb !important;
+}
 .swal2-loader {
   border: 3px solid #00fffb !important;
 }
@@ -355,3 +365,33 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   flex-grow: 1;
 }
 /* ---------Employee Component Style End --------- */
+.modal-content
+{
+  display: block !important;
+}
+.modal-header {
+  justify-content: center;
+  color: #fff;
+  border-bottom: none;
+  margin-top: 10px;
+}
+.modal-footer {
+  border-top: none;
+  justify-content: center;
+}
+.modal-content {
+  
+  border: 1px solid var(--main-text-color);
+  border-radius: 0%;
+  background-color: #000;
+}
+.modal-body{
+  max-height: 550px;
+  overflow-y: auto;
+}
+.outside-btn{
+  width: 50%;
+}
+.mt-1-2{
+  margin-top: 12px;
+}
