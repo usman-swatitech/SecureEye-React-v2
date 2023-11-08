@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import frame from "../assets/images/layout3.png";
+import React from "react";
 import video from "../assets/mp4/test.mp4";
 import { Store } from "../context/Context";
 const Cards = () => {
   const { setCurrentLayout } = Store();
   return (
     <div
-      className="card camera-cards bg-transparent py-0.5 px-0 p-0 cursor-pointer"
+      className="card camera-cards bg-transparent py-0.5 px-0 p-0 "
       onClick={() => {
         setCurrentLayout("SingleScreenLayout");
       }}
@@ -16,7 +15,12 @@ const Cards = () => {
         <div
           style={{ height: "0.5px", width: "100%", backgroundColor: "#dadde3" }}
         ></div>
-        <video autoPlay loop muted className="card-img-top rounded-0 mt-2">
+        <video
+          autoPlay
+          loop
+          muted
+          className="card-img-top rounded-0 mt-2 cursor-pointer"
+        >
           <source src={video} />
         </video>
       </div>

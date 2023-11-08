@@ -55,7 +55,8 @@ SCROLLBAR OF CAMERAS
   clip-path: polygon(0% 3%, 15% 0%, 100% 0%, 100% 85%, 17% 85%, 0% 82%);
   display: flex;
   flex-direction: column;
-  margin: 30px 40px;
+  left: 20px;
+  top: 20px;
 }
 
 .sidebar-inner .sidebar-logo {
@@ -182,11 +183,11 @@ SCROLLBAR OF CAMERAS
   gap: 10px;
   /* position: relative; */
   background-color: rgb(9, 12, 17);
-  width: 63%;
-  min-width: 100px;
+  width: 60%;
+  min-width: 80px;
   height: 45px;
   padding: 0 20px;
-  margin-top: 28px;
+  margin-top: 0;
   clip-path: polygon(0% 0%, 95% 0%, 100% 39%, 100% 85%, 0% 85%, 0% 82%);
 }
 
@@ -285,7 +286,7 @@ SCROLLBAR OF CAMERAS
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 91%;
+  width: 100%;
   gap: 10px;
   /* max-height: 400px;
   overflow-y: scroll; */
@@ -381,6 +382,7 @@ SCROLLBAR OF CAMERAS
   overflow-y: scroll;
   display: flex;
   flex-wrap: wrap;
+  gap: 15px;
 }
 .table-layout {
   height: 12%;
@@ -389,7 +391,7 @@ SCROLLBAR OF CAMERAS
   flex-grow: 1;
 }
 .table-layout-2 {
-  height: 10%;
+  /* height: 10%; */
   max-height: auto;
   overflow-y: scroll;
 }
@@ -485,7 +487,7 @@ SCROLLBAR OF CAMERAS
   right: 0;
 }
 /* usman css table ends here */
-@media (min-width: 1100px) {
+/* @media (min-width: 1100px) {
   .sidebar-inner {
     margin: 30px 50px;
   }
@@ -500,7 +502,7 @@ SCROLLBAR OF CAMERAS
   .single-camera-frame .frame-inner video {
     max-width: 300px;
   }
-}
+} */
 @media (min-height: 200px) {
   .table-layout,
   .table-layout-2 {

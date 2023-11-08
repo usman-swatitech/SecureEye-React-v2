@@ -9,7 +9,13 @@ const SingleScreenLayout = () => {
         <img src={frame} al="frame" className="single-camera-frame" />
         <div className="frame-inner">
           <label className="text-white ms-3 pb-1">CAMERA 01</label>
-          <video autoPlay loop muted className="w-100">
+          <video
+            autoPlay
+            loop
+            muted
+            className="w-100"
+            onContextMenu={(e) => e.preventDefault()}
+          >
             <source src={video} />
           </video>
         </div>
@@ -24,7 +30,7 @@ const SingleScreenLayout = () => {
       >
         Employee Information
       </label>
-      <div className="table-layout-2">
+      <div className="table-layout-2 flex-1">
         <Table />
       </div>
     </section>
