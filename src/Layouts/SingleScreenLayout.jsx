@@ -4,7 +4,10 @@ import Table from "../Component/Common/Table";
 import frame from "../Component/frames/frame.png";
 const SingleScreenLayout = () => {
   return (
-    <section className="h-auto w-100 d-flex flex-column position-relative gap-2">
+    <section
+      className="h-auto w-100 d-flex flex-column position-relative gap-2"
+      style={{ paddingRight: "30px" }}
+    >
       <div className="single-camera-frame crads-layout">
         <img src={frame} al="frame" className="single-camera-frame" />
         <div className="frame-inner ">
