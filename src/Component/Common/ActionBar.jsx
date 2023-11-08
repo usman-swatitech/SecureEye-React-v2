@@ -1,18 +1,14 @@
-import {
-  activeHomeSvg,
-  activeBlockSvg,
-  activeFac,
-  plusSvg,
-} from "../../Constant/svgs";
+import React from "react";
+import { myHomeSvg, myBlockSvg, activeFac, plusSvg } from "../../Constant/svgs";
 import CameraModal from "./CameraModal";
 
 const ActionBar = () => {
   return (
     <>
-      <div className="action-bar d-flex flex-lg-row gap-3 flex-column   justify-content-between  position-relative top-30">
-        <div className="left-portion d-flex justify-content-center">
-          <span className="actionbar-icons">{activeHomeSvg}</span>
-          <span className="actionbar-icons">{activeBlockSvg}</span>
+      <div className="action-bar d-flex flex-lg-row flex-column justify-content-between  position-relative top-30">
+        <div className="left-portion">
+          <span className="actionbar-icons">{myHomeSvg}</span>
+          <span className="actionbar-icons">{myBlockSvg}</span>
           <span className="actionbar-icons">{activeFac}</span>
         </div>
         <button
@@ -21,7 +17,7 @@ const ActionBar = () => {
           data-bs-toggle="modal"
           data-bs-target="#addCameraModal"
         >
-          <div className="right-portion d-flex gap-2 justify-content-center justify-content-md-start">
+          <div className="right-portion d-flex">
             <div className="main-circle">
               <div className="plus-circle">
                 <span>{plusSvg}</span>

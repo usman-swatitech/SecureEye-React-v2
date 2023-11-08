@@ -4,12 +4,23 @@
   box-sizing: border-box;
   font-family: 'sportyXlight';
 }
+.text-primary {
+  color: #00fffb !important;
+}
+.bg_lightGreen{
+  background-color: #00262B;
+}
+.bg-primary {
+  background-color: #00fffb !important;
+}
 :root {
   --main-text-color: #00fffb;
   --main-p-color: #666666;
   --main-underline-color: #00fffb38;
   --main-black-color: #000;
   --main-white-color: #fff;
+  --bs-primary: #00fffb;
+
 }
 @font-face {
   font-family: 'sportyReg';
@@ -324,5 +335,23 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
 }
 .dashboard_td {
   color: var(--main-text-color) !important;
+}
+.employeeHeading{
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 22px;
+  color: var(--main-white-color);
+}
+.bg_level {
+  background-color: #00151B;
+}
+.svgWithText {
+  background-color: var(--main-text-color);
+  display : flex;
+  justify-content: center;
+  align-items : center;
+}
+.flexGrows{
+  flex-grow: 1;
 }
 /* ---------Employee Component Style End --------- */

@@ -75,7 +75,7 @@ function SignUp () {
                   </div>
 
                   <div className=' d-flex flex-column align-items-start justify-content-end pb-1'>
-                    <div style={{ flexGrow: '1' }}></div>
+                    <div flexGrows></div>
                     <img src={images.cubeDesign} alt="CubeDesign" />
                   </div>
                 </div>
@@ -99,7 +99,7 @@ function SignUp () {
                   </div>
 
                   <div className=' d-flex flex-column align-items-start justify-content-end pb-1'>
-                    <div style={{ flexGrow: '1' }}></div>
+                    <div flexGrows></div>
                     <img src={images.cubeDesign} alt="CubeDesign" />
                   </div>
                 </div>
@@ -135,7 +135,7 @@ function SignUp () {
                   </div>
 
                   <div className='d-flex flex-column align-items-start justify-content-end pb-1'>
-                    <div style={{ flexGrow: '1' }}></div>
+                    <div flexGrows></div>
                     <img src={images.cubeDesign} alt="CubeDesign" />
                   </div>
                 </div>
@@ -171,7 +171,7 @@ function SignUp () {
                   </div>
 
                   <div className=' d-flex flex-column align-items-start justify-content-end pb-1'>
-                    <div style={{ flexGrow: '1' }}></div>
+                    <div flexGrows></div>
                     <img src={images.cubeDesign} alt="CubeDesign" />
                   </div>
                 </div>
