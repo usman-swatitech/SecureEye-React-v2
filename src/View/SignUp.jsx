@@ -1,26 +1,21 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import * as images from '../Constant/images'
+import React, { useState } from 'react';
+import { json, useNavigate } from 'react-router-dom';
+import * as images from '../Constant/images';
 import Button from '../Component/Common/ButtonShap'
+import sweetAlert from '../helperFun/SweatAlertFun';
 
 function SignUp () {
-  const [signInput, setSignInput] = useState({
-    userEmail: '',
-    userPhone: '',
-    userPassword: '',
-    userConfirmPassword: ''
-  })
-  const [showPassword, setShowPassword] = useState(false)
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+  const [signInput,setSignInput] = useState({userEmail:'',userPhone:'',userPassword:'',userConfirmPassword:''});
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   console.log(signInput)
-
-  const handleChange = e => {
-    const { name, value } = e.target
+  
+  const handleChange = (e) => {
+    const {name,value} = e.target;
     setSignInput(preState => ({
-      ...preState,
-      [name]: value
+      ...preState, [name]: value
     }))
   }
 
@@ -31,8 +26,27 @@ function SignUp () {
   const toggleConfirmPasswordVisibility = () => {
     setShowConfirmPassword(!showConfirmPassword)
   }
-  const handlerSignUp = () => {
-    navigate('/emailverified')
+  const handlerSignUp = async() => {
+    const {userEmail,userPhone,userPassword,userConfirmPassword} = signInput;
+    if (userEmail === '' || userPhone === '' || userPassword === '' || userConfirmPassword === '') {
+      sweetAlert("Something is missing");
+    } 
+    else if (userPassword !== userConfirmPassword) {
+      sweetAlert("Password not matched");
+    }
+     else {
+      const responce = await fetch('http://localhost:5000/demo',{
+        method: 'POST',
+        body:JSON.stringify(signInput),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      const result = await responce.json();
+      console.log(result);
+      // navigate('/emailverified');
+    }
+    
   }
 
   return (
@@ -46,7 +60,7 @@ function SignUp () {
               <div className='signup-box mt-4'>
                 <div className='d-flex'>
                   <div className='pt-2'>
-                    <img src={images.userIcon} alt='UserIcon' />
+                    <img src={images.userIcon} alt="UserIcon" />
                   </div>
 
                   <div className='w-100'>
@@ -61,8 +75,8 @@ function SignUp () {
                   </div>
 
                   <div className=' d-flex flex-column align-items-start justify-content-end pb-1'>
-                    <div style={{ flexGrow: '1' }}></div>
-                    <img src={images.cubeDesign} alt='CubeDesign' />
+                    <div flexGrows></div>
+                    <img src={images.cubeDesign} alt="CubeDesign" />
                   </div>
                 </div>
               </div>
@@ -70,7 +84,7 @@ function SignUp () {
               <div className='signup-box mt-4'>
                 <div className='d-flex'>
                   <div className='pt-2'>
-                    <img src={images.userLock} alt='UserLock' />
+                    <img src={images.userLock} alt="UserLock" />
                   </div>
 
                   <div className='w-100'>
@@ -85,8 +99,8 @@ function SignUp () {
                   </div>
 
                   <div className=' d-flex flex-column align-items-start justify-content-end pb-1'>
-                    <div style={{ flexGrow: '1' }}></div>
-                    <img src={images.cubeDesign} alt='CubeDesign' />
+                    <div flexGrows></div>
+                    <img src={images.cubeDesign} alt="CubeDesign" />
                   </div>
                 </div>
               </div>
@@ -94,7 +108,7 @@ function SignUp () {
               <div className='signup-box mt-4'>
                 <div className='d-flex'>
                   <div className='pt-2'>
-                    <img src={images.userLock} alt='UserLock' />
+                  <img src={images.userLock} alt="UserLock" />
                   </div>
 
                   <div className='input-group'>
@@ -112,18 +126,17 @@ function SignUp () {
                         type='button'
                         onClick={togglePasswordVisibility}
                       >
-                        {showPassword ? (
-                          <img src={images.unHideIcn} alt='UserLock' />
-                        ) : (
-                          <img src={images.hiddenIcn} alt='UserLock' />
-                        )}
+                        {
+                          (showPassword)? <img src={images.unHideIcn} alt="UserLock" /> :
+                          <img src={images.hiddenIcn} alt="UserLock" />
+                        }
                       </button>
                     </div>
                   </div>
 
                   <div className='d-flex flex-column align-items-start justify-content-end pb-1'>
-                    <div style={{ flexGrow: '1' }}></div>
-                    <img src={images.cubeDesign} alt='CubeDesign' />
+                    <div flexGrows></div>
+                    <img src={images.cubeDesign} alt="CubeDesign" />
                   </div>
                 </div>
               </div>
@@ -131,7 +144,7 @@ function SignUp () {
               <div className='signup-box mt-4'>
                 <div className='d-flex'>
                   <div className='pt-2'>
-                    <img src={images.userLock} alt='UserLock' />
+                  <img src={images.userLock} alt="UserLock" />
                   </div>
 
                   <div className='input-group'>
@@ -149,18 +162,17 @@ function SignUp () {
                         type='button'
                         onClick={toggleConfirmPasswordVisibility}
                       >
-                        {showConfirmPassword ? (
-                          <img src={images.unHideIcn} alt='UserLock' />
-                        ) : (
-                          <img src={images.hiddenIcn} alt='UserLock' />
-                        )}
+                        {
+                          (showConfirmPassword)? <img src={images.unHideIcn} alt="UserLock" /> :
+                          <img src={images.hiddenIcn} alt="UserLock" />
+                        }
                       </button>
                     </div>
                   </div>
 
                   <div className=' d-flex flex-column align-items-start justify-content-end pb-1'>
-                    <div style={{ flexGrow: '1' }}></div>
-                    <img src={images.cubeDesign} alt='CubeDesign' />
+                    <div flexGrows></div>
+                    <img src={images.cubeDesign} alt="CubeDesign" />
                   </div>
                 </div>
               </div>
@@ -170,7 +182,6 @@ function SignUp () {
                 </div>
               </div>
             </div>
-            <div className='col-lg-4 col-md-3 col-sm-12'></div>
           </div>
         </div>
       </div>

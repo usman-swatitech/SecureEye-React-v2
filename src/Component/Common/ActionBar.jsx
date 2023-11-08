@@ -1,25 +1,21 @@
-import {
-  activeHomeSvg,
-  activeBlockSvg,
-  activeFac,
-  plusSvg
-} from '../../Constant/svgs'
+import React from 'react'
+import {myHomeSvg, myBlockSvg, activeFac, plusSvg } from '../../Constant/svgs'
 import CameraModal from './CameraModal'
 
 const ActionBar = () => {
   return (
     <>
-      <div className='action-bar'>
+      <div className='action-bar d-flex flex-lg-row flex-column justify-content-between  position-relative top-30'>
         <div className='left-portion'>
-          <span className='actionbar-icons'>{activeHomeSvg}</span>
-          <span className='actionbar-icons'>{activeBlockSvg}</span>
+          <span className='actionbar-icons'>{myHomeSvg}</span>
+          <span className='actionbar-icons'>{myBlockSvg}</span>
           <span className='actionbar-icons'>{activeFac}</span>
         </div>
         <button
           type='button'
-          class='modal_btn'
+          className='modal_btn'
           data-bs-toggle='modal'
-          data-bs-target='#exampleModal'
+          data-bs-target='#addCameraModal'
         >
           <div className='right-portion d-flex'>
             <div className='main-circle'>
@@ -34,18 +30,14 @@ const ActionBar = () => {
       </div>
 
       <div
-        class='modal fade'
-        id='exampleModal'
-        tabindex='-1'
-        aria-labelledby='exampleModalLabel'
-        aria-hidden='true'
+        className='modal fade'
+        id='addCameraModal'
       >
-        <div class='modal-dialog modal-lg'>
+        <div className='modal-dialog modal-lg'>
           <div
-            class='modal-content'
-            style={{ backgroundColor: 'var(--main-black-color)' }}
+            className='modal-content bg-dark'
           >
-            <div class='modal-body'>
+            <div className='modal-body'>
               <CameraModal />
             </div>
           </div>

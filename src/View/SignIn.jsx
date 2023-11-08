@@ -1,19 +1,19 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import * as images from '../Constant/images'
-import sweetAlert from '../helperFun/SweatAlert'
-import Button from '../Component/Common/ButtonShap'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import * as images from '../Constant/images';
+import sweetAlert from '../helperFun/SweatAlertFun';
+import Button from '../Component/Common/ButtonShap';
 
 function SignIn () {
-  const [signInput, setSignInput] = useState({ userName: '', userPassword: '' })
+  const[signInput,setSignInput] = useState({userName:'',userPassword:''})
   const [showPassword, setShowPassword] = useState(false)
-  const navigate = useNavigate()
-  console.log(signInput)
-  const handleChange = e => {
-    const { name, value } = e.target
-    setSignInput(prevState => ({
+  const navigate = useNavigate();
+  console.log(signInput);
+  const handleChange = (e) =>{
+    const {name, value} = e.target;
+    setSignInput(prevState =>({
       ...prevState,
-      [name]: value
+      [name]:value
     }))
   }
   const togglePasswordVisibility = () => {
@@ -24,19 +24,19 @@ function SignIn () {
   }
 
   const handlerSignIn = () => {
-    const { userName, userPassword } = signInput
-
+    const { userName, userPassword } = signInput;
+  
     if (userName === '' && userPassword === '') {
-      sweetAlert('Name & Password are not empty')
+      sweetAlert("Name & Password are not empty");
     } else if (userName === '') {
-      sweetAlert('Name is not empty')
+      sweetAlert("Name is not empty");
     } else if (userPassword === '') {
-      sweetAlert('Password is not empty')
+      sweetAlert("Password is not empty");
     } else {
-      navigate('/home')
+      navigate('/home');
     }
-  }
-
+  };
+    
   return (
     <>
       <div className='background-image-2'>
@@ -48,7 +48,7 @@ function SignIn () {
               <div className='signup-box mt-5'>
                 <div className='d-flex'>
                   <div className='pt-2'>
-                    <img src={images.userIcon} alt='UserIcon' />
+                     <img src={images.userIcon} alt="UserIcon" />
                   </div>
 
                   <div className='w-100'>
@@ -63,8 +63,8 @@ function SignIn () {
                   </div>
 
                   <div className=' d-flex flex-column align-items-start justify-content-end pb-1'>
-                    <div style={{ flexGrow: '1' }}></div>
-                    <img src={images.cubeDesign} alt='CubeDesign' />
+                    <div flexGrows></div>
+                    <img src={images.cubeDesign} alt="CubeDesign" />
                   </div>
                 </div>
               </div>
@@ -72,7 +72,7 @@ function SignIn () {
               <div className='signup-box mt-5'>
                 <div className='d-flex'>
                   <div className='pt-2'>
-                    <img src={images.userLock} alt='UserLock' />
+                    <img src={images.userLock} alt="UserLock" />
                   </div>
 
                   <div className='input-group'>
@@ -90,18 +90,18 @@ function SignIn () {
                         type='button'
                         onClick={togglePasswordVisibility}
                       >
-                        {showPassword ? (
-                          <img src={images.unHideIcn} alt='UserLock' />
-                        ) : (
-                          <img src={images.hiddenIcn} alt='UserLock' />
-                        )}
+                        {
+                          (showPassword)? <img src={images.unHideIcn} alt="UserLock" /> :
+                          <img src={images.hiddenIcn} alt="UserLock" />
+                        }
+                        
                       </button>
                     </div>
                   </div>
 
                   <div className=' d-flex flex-column align-items-start justify-content-end pb-1'>
-                    <div style={{ flexGrow: '1' }}></div>
-                    <img src={images.cubeDesign} alt='CubeDesign' />
+                    <div flexGrows></div>
+                    <img src={images.cubeDesign} alt="CubeDesign" />
                   </div>
                 </div>
               </div>
@@ -112,14 +112,10 @@ function SignIn () {
                 </div>
                 <div className=' col-10 mt-4'>
                   <p className='opt-p pt-4 text-uppercase '>
-                    Dodn’t have an account?{' '}
-                    <span
-                      className='otp-span cursor-pointer'
-                      onClick={handlerSignUp}
-                    >
-                      SignUp
-                    </span>
-                  </p>
+                        Dodn’t have an account? <span className='otp-span cursor-pointer' onClick={handlerSignUp}>
+                          SignUp
+                        </span>
+                    </p>
                 </div>
               </div>
             </div>

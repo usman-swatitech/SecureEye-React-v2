@@ -67,7 +67,7 @@ function CameraModal () {
                 </div>
 
                 <div className=' d-flex flex-column align-items-start justify-content-end pb-1'>
-                  <div style={{ flexGrow: '1' }}></div>
+                  <div flexGrows></div>
                   <img src={images.cubeDesign} alt='CubeDesign' />
                 </div>
               </div>
@@ -91,7 +91,7 @@ function CameraModal () {
                 </div>
 
                 <div className=' d-flex flex-column align-items-start justify-content-end pb-1'>
-                  <div style={{ flexGrow: '1' }}></div>
+                  <div flexGrows></div>
                   <img src={images.cubeDesign} alt='CubeDesign' />
                 </div>
               </div>
@@ -115,7 +115,7 @@ function CameraModal () {
                 </div>
 
                 <div className=' d-flex flex-column align-items-start justify-content-end pb-1'>
-                  <div style={{ flexGrow: '1' }}></div>
+                  <div flexGrows></div>
                   <img src={images.cubeDesign} alt='CubeDesign' />
                 </div>
               </div>
@@ -139,7 +139,7 @@ function CameraModal () {
                 </div>
 
                 <div className=' d-flex flex-column align-items-start justify-content-end pb-1'>
-                  <div style={{ flexGrow: '1' }}></div>
+                  <div flexGrows></div>
                   <img src={images.cubeDesign} alt='CubeDesign' />
                 </div>
               </div>
@@ -170,7 +170,7 @@ function CameraModal () {
                 </div>
 
                 <div className='d-flex flex-column align-items-start justify-content-end pb-1'>
-                  <div style={{ flexGrow: '1' }}></div>
+                  <div flexGrows></div>
                   <img src={images.cubeDesign} alt='CubeDesign' />
                 </div>
               </div>
@@ -194,7 +194,7 @@ function CameraModal () {
                 </div>
 
                 <div className=' d-flex flex-column align-items-start justify-content-end pb-1'>
-                  <div style={{ flexGrow: '1' }}></div>
+                  <div flexGrows></div>
                   <img src={images.cubeDesign} alt='CubeDesign' />
                 </div>
               </div>
@@ -231,14 +231,14 @@ function CameraModal () {
                 </div>
 
                 <div className='d-flex flex-column align-items-start justify-content-end pb-1'>
-                  <div style={{ flexGrow: '1' }}></div>
+                  <div flexGrows></div>
                   <img src={images.cubeDesign} alt='CubeDesign' />
                 </div>
               </div>
             </div>
 
             <div className='row justify-content-center mt-5'>
-              <div className='col-10' onClick={handlerSignUp}>
+              <div className='col-10' data-bs-dismiss="modal" aria-label="Close">
                 <Button name='add camera' />
               </div>
             </div>

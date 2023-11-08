@@ -1,18 +1,26 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import * as images from '../Constant/images'
-import Button from '../Component/Common/ButtonShap'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import * as images from '../Constant/images';
+import Button from '../Component/Common/ButtonShap';
+import SweatAlert from '../helperFun/SweatAlertFun';
 
 function EmailVerification () {
-  const [userEmailVerified, setUserEmailVerified] = useState('')
-  const navigate = useNavigate()
 
-  const handleChange = e => {
-    setUserEmailVerified(e.target.value)
+  const [userEmailVerified,setUserEmailVerified] = useState('');
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setUserEmailVerified(e.target.value);
   }
   console.log(userEmailVerified)
   const handlerOTP = () => {
-    navigate('/otpverification')
+    if(userEmailVerified === '')
+    {
+      SweatAlert('Email is not empty');
+    }
+    else {
+      navigate('/otpverification')
+    }
   }
 
   return (
@@ -26,7 +34,7 @@ function EmailVerification () {
               <div className='signup-box mt-5'>
                 <div className='d-flex'>
                   <div className='pt-2'>
-                    <img src={images.userIcon} alt='UserIcon' />
+                     <img src={images.userIcon} alt="UserIcon" />
                   </div>
 
                   <div className='w-100'>
@@ -41,8 +49,8 @@ function EmailVerification () {
                   </div>
 
                   <div className=' d-flex flex-column align-items-start justify-content-end pb-1'>
-                    <div style={{ flexGrow: '1' }}></div>
-                    <img src={images.cubeDesign} alt='CubeDesign' />
+                    <div flexGrows></div>
+                    <img src={images.cubeDesign} alt="CubeDesign" />
                   </div>
                 </div>
               </div>
