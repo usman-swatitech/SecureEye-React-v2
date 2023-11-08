@@ -216,7 +216,7 @@ SCROLLBAR OF CAMERAS
   top: 0;
   height: auto;
   width: 90%;
-  padding: 0 10px;
+  /* padding: 0 10px; */
 }
 .action-bar .left-portion {
   display: flex;
