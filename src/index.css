@@ -199,9 +199,19 @@ body {
   color: #fff !important;
 }
 div:where(.swal2-container) div:where(.swal2-popup) {
-  background-color: #212529 !important;
-  /* background-image: url('./assets//Rectangle.png') !important;
-    background-size: cover; */
+  /* background-color: #212529 !important; */
+  border: 1px solid  #00fffb !important;
+  background-image: url('./assets/Background-signup.png') !important;
+    background-size: cover !important;
+}
+div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class$=left] {
+  background-color: #000 !important;
+}
+div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class$=right]{
+  background-color: #000 !important;
+}
+div:where(.swal2-icon).swal2-success .swal2-success-fix{
+  background-color: #000 !important;
 }
 div:where(.swal2-icon).swal2-error {
   border-color: #00fffb !important;
@@ -373,7 +383,7 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   justify-content: center;
   color: #fff;
   border-bottom: none;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 .modal-footer {
   border-top: none;
@@ -382,16 +392,26 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
 .modal-content {
   
   border: 1px solid var(--main-text-color);
-  border-radius: 0%;
+  border-radius: 10px;
   background-color: #000;
+  background-image: url('./assets/Background-signup.png');
+  background-size: cover;
+}
+.text-gray {
+  color: gray !important;
 }
 .modal-body{
-  max-height: 550px;
-  overflow-y: auto;
+  width: 65%;
+  margin: auto;
 }
-.outside-btn{
+.modalBtn .outside-btn {
   width: 50%;
 }
 .mt-1-2{
   margin-top: 12px;
+}
+.screenBoxStyle{
+  border: 1px solid #00fffb;
+  padding: 30px;
+  border-radius: 10px;
 }

@@ -10,7 +10,7 @@ import { Routes, Route } from 'react-router-dom';
 const AppRouter = () => {
   return (
       <Routes>
-        <Route path="/" element={<Splash />} />
+        <Route path="/" element={<SignIn />} />
         <Route path="/home" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp/>} />

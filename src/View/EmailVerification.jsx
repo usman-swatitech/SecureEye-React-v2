@@ -16,7 +16,7 @@ function EmailVerification () {
   const handlerOTP = () => {
     if(userEmailVerified === '')
     {
-      SweatAlert('Email is not empty');
+      SweatAlert('Email is empty');
     }
     else {
       navigate('/otpverification')
@@ -27,9 +27,8 @@ function EmailVerification () {
     <>
       <div className='background-image-2'>
         <div className='container text-center'>
-          <div className='row g-0'>
-            <div className='col-lg-4 col-md-3 col-sm-12'></div>
-            <div className='col-lg-4 col-md-6 col-sm-12'>
+          <div className='row g-0  justify-content-center'>
+            <div className='screenBoxStyle col-lg-5 col-md-6 col-sm-12'>
               <img src={images.bLogo} alt='logo' className='logo-2' />
               <div className='signup-box mt-5'>
                 <div className='d-flex'>
@@ -61,7 +60,6 @@ function EmailVerification () {
                 </div>
               </div>
             </div>
-            <div className='col-lg-4 col-md-3 col-sm-12'></div>
           </div>
         </div>
       </div>

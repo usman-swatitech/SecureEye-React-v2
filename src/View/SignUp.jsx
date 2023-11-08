@@ -33,7 +33,7 @@ function SignUp () {
       sweetAlert("Something is missing");
     } 
     else if (userPassword !== userConfirmPassword) {
-      sweetAlert("Password not matched");
+      sweetAlert("Password is not matched");
     }
      else {
       // const responce = await fetch('http://localhost:5000/demo',{
@@ -55,9 +55,8 @@ function SignUp () {
     <>
       <div className='background-image-2'>
         <div className='container text-center'>
-          <div className='row g-0'>
-            <div className='col-lg-4 col-md-3 col-sm-12'></div>
-            <div className='col-lg-4 col-md-6 col-sm-12'>
+          <div className='row g-0 justify-content-center'>
+            <div className='screenBoxStyle col-lg-5 col-md-6 col-sm-12'>
               <img src={images.bLogo} alt='logo' className='logo-2' />
               <div className='signup-box mt-4'>
                 <div className='d-flex'>

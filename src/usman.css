@@ -1,8 +1,6 @@
 .background-image-2 {
   background-image: url('assets/Background-signup.png');
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   height: 100vh;
   display: flex;
   align-items: center;

@@ -27,11 +27,11 @@ function SignIn () {
     const { userName, userPassword } = signInput;
   
     if (userName === '' && userPassword === '') {
-      sweetAlert("Name & Password are not empty");
+      sweetAlert("Name & Password is empty");
     } else if (userName === '') {
-      sweetAlert("Name is not empty");
+      sweetAlert("Name is empty");
     } else if (userPassword === '') {
-      sweetAlert("Password is not empty");
+      sweetAlert("Password is empty");
     } else {
       navigate('/home');
     }
@@ -41,9 +41,8 @@ function SignIn () {
     <>
       <div className='background-image-2'>
         <div className='container text-center'>
-          <div className='row g-0'>
-            <div className='col-lg-4 col-md-3 col-sm-12'></div>
-            <div className='col-lg-4 col-md-6 col-sm-12'>
+          <div className='row g-0 justify-content-center'>
+            <div className='screenBoxStyle col-lg-5 col-md-6 col-sm-12'>
               <img src={images.bLogo} alt='logo' className='logo-2' />
               <div className='signup-box mt-5'>
                 <div className='d-flex'>
@@ -111,8 +110,8 @@ function SignIn () {
                   <Button name='SIGN IN' />
                 </div>
                 <div className=' col-10 mt-4'>
-                  <p className='opt-p pt-4 text-uppercase '>
-                        Dodn’t have an account? <span className='otp-span cursor-pointer' onClick={handlerSignUp}>
+                  <p className='opt-p pt-4 text-uppercase text-gray'>
+                        Don’t have an account? <span className='otp-span cursor-pointer' onClick={handlerSignUp}>
                           SignUp
                         </span>
                     </p>

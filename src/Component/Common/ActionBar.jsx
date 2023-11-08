@@ -31,7 +31,7 @@ const ActionBar = () => {
     const {cameraName,ipAddress,port,location,userName,nightVision,userPassword} = addCamera;
 
     if(cameraName ==='' || ipAddress==='' || port==='' || location==='' || nightVision==='' || userName === '' || userPassword ===''){
-      SweatAlert("Missing Something");
+      SweatAlert("Something is missing");
     }
     else {
       setAddCamera({
@@ -79,7 +79,7 @@ return (
           <CameraModal addCamera={addCamera} setAddCamera={handleInputChange} />
         </Modal.Body>
         <Modal.Footer>
-          <span variant="secondary" className='mt-2 w-100 d-flex justify-content-center' onClick={handleAddCamera} ><ButtonSubmit name='add camera'/></span>
+          <span variant="secondary" className='modalBtn mt-2 w-100 d-flex justify-content-center' onClick={handleAddCamera} ><ButtonSubmit name='add camera'/></span>
         </Modal.Footer>
       </Modal>
     </>
