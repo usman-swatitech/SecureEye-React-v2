@@ -7,24 +7,31 @@ const SingleScreenLayout = () => {
     <section className="h-auto w-100 d-flex flex-column position-relative gap-2">
       <div className="single-camera-frame crads-layout">
         <img src={frame} al="frame" className="single-camera-frame" />
-        <div className="frame-inner">
+        <div className="frame-inner ">
           <label className="text-white ms-3 pb-1">CAMERA 01</label>
-          <video autoPlay loop muted className="w-100">
+          <video
+            autoPlay
+            loop
+            muted
+            className="w-100"
+            onContextMenu={(e) => e.preventDefault()}
+          >
             <source src={video} />
           </video>
         </div>
       </div>
-      <label
+      <p
         style={{
           fontSize: "18px",
           fontWeight: "200",
           lineHeight: "22px",
           color: "var(--main-white-color)",
         }}
+        className="emp-p-tag"
       >
         Employee Information
-      </label>
-      <div className="table-layout-2">
+      </p>
+      <div className="table-layout-2 flex-1">
         <Table />
       </div>
     </section>

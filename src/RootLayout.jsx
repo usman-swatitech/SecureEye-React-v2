@@ -2,6 +2,7 @@ import Sidebar from "./Component/Common/Sidebar";
 import Search from "./Component/Common/Search";
 import ActionBar from "./Component/Common/ActionBar";
 import frame from "./assets/images/frame.png";
+import "./test.css";
 import {
   HomeLayout,
   DepartmentLayout,
@@ -12,6 +13,7 @@ import {
   SingleScreenLayout,
 } from "./Layouts/index";
 import { Store } from "./context/Context";
+import Divider from "./Component/Common/Divider";
 const RootLayout = () => {
   const { currentLayout } = Store();
   const RenderComponents = () => {
@@ -35,12 +37,34 @@ const RootLayout = () => {
     }
   };
   return (
-    <div
-      className="layout-new w-100 h-auto position-relative d-flex justify-content-start justify-content-md-center bg-black m-0"
+    <section className="w-100 bg-black position-relative main-wrapper">
+      {/* <div className="abs-div">abs div</div> */}
+
+      <div className="second-div" style={{ zIndex: "9999" }}>
+        <img src={frame} alt="bg-cover" className="bg-cover" />
+        <Sidebar />
+        <div className="content-area">
+          <Search />
+          <ActionBar />
+          <Divider />
+          <div className="cameras-layout">{RenderComponents()}</div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default RootLayout;
+
+// Test Commit
+
+{
+  /* <div
+      className="layout-new w-100  position-relative d-flex justify-content-start justify-content-md-center bg-black m-0"
       style={{ overflow: "hidden", paddingTop: "12px", paddingBottom: "12px" }}
     >
       <img src={frame} alt="bg-cover" className="rootLayoutImage" />
-      <div className="position-absolute top-0 d-flex  w-100 px-4">
+      <div className="position-absolute top-0 d-flex  w-100 px-4 main-wrapper">
         <Sidebar />
         <div className="d-flex flex-column w-100 ">
           <Search />
@@ -48,10 +72,5 @@ const RootLayout = () => {
           <div className="cameras-layout">{RenderComponents()}</div>
         </div>
       </div>
-    </div>
-  );
-};
-
-export default RootLayout;
-
-// Test Commit
+    </div> */
+}

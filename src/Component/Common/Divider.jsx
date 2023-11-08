@@ -1,8 +1,8 @@
 import React from "react";
-let key = "Kp3Gq9XwTzV8dA6sCfEhRb212345";
+let key = "Kp3Gq9XwTzV8dA6sCfEhRb2123456";
 let divs = key.split("");
 const Divider = () => (
-  <div className="divider">
+  <div className="bars-wrapper">
     {divs.map((_, index) => (
       <div
         key={index}

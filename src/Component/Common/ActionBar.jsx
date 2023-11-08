@@ -48,8 +48,7 @@ const ActionBar = () => {
       setShow(false)
     }
   }
-
-  return (
+return (
     <>
       <div className='action-bar d-flex flex-lg-row flex-column justify-content-between  position-relative top-30'>
         <div className='left-portion'>
@@ -85,6 +84,7 @@ const ActionBar = () => {
       </Modal>
     </>
   )
-}
+  
+};
 
-export default ActionBar
+export default ActionBar;
