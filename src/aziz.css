@@ -184,10 +184,11 @@ SCROLLBAR OF CAMERAS
   /* position: relative; */
   background-color: rgb(9, 12, 17);
   width: 60%;
-  min-width: 80px;
+  min-width: 70%;
+  /* min-width: 55%; for small screens */
   height: 45px;
-  padding: 0 20px;
-  margin-top: 0;
+  padding: 10px 20px;
+  margin-top: 10px;
   clip-path: polygon(0% 0%, 95% 0%, 100% 39%, 100% 85%, 0% 85%, 0% 82%);
 }
 
@@ -212,7 +213,7 @@ SCROLLBAR OF CAMERAS
 /* search component code ends here... */
 /* action bar css  */
 .action-bar {
-  top: 5px;
+  top: 0;
   height: auto;
   width: 90%;
   padding: 0 10px;
@@ -257,9 +258,9 @@ SCROLLBAR OF CAMERAS
   place-content: center;
 }
 /* divider css */
-.divider {
+.bars-wrapper {
   position: relative;
-  top: 50px;
+  /* top: 50px; */
   left: 0;
   width: 100%;
   display: flex;
@@ -269,12 +270,13 @@ SCROLLBAR OF CAMERAS
   margin: 0 -10px;
   /* background-color: red; */
 }
-.divider .bars {
+.bars-wrapper .bars {
   width: 30px;
   height: 1.2px;
-  background-color: #13151c;
+  /* background-color: var(--primary);   */
+  background-color: rgba(255, 255, 255, 0.2);
 }
-.divider .bar-startend {
+.bars-wrapper .bar-startend {
   width: 20px;
 }
 /* action bar css ends here. */
@@ -282,7 +284,7 @@ SCROLLBAR OF CAMERAS
 /* Camera Layout css */
 .cameras-layout {
   position: relative;
-  margin: 20px 0;
+  /* margin: 20px 0; */
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -318,7 +320,7 @@ SCROLLBAR OF CAMERAS
   height: 1px;
   width: 90%;
 
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
 }
 .main-camera-wrapper .camera-src {
   position: relative;
@@ -360,6 +362,7 @@ SCROLLBAR OF CAMERAS
   align-items: center;
 
   width: 100%;
+  max-width: 100%;
   /* max-width: 800px; */
 }
 .frame-inner {
@@ -375,6 +378,10 @@ SCROLLBAR OF CAMERAS
   width: auto;
   height: 250px;
   object-fit: cover;
+  width: 100%;
+}
+.emp-p-tag {
+  margin-left: 0;
 }
 .cards-layout {
   height: 30%;
@@ -383,12 +390,13 @@ SCROLLBAR OF CAMERAS
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+  flex: 1;
 }
 .table-layout {
   height: 12%;
   max-height: auto;
   overflow-y: scroll;
-  flex-grow: 1;
+  flex: 1;
 }
 .table-layout-2 {
   /* height: 10%; */
@@ -487,40 +495,52 @@ SCROLLBAR OF CAMERAS
   right: 0;
 }
 /* usman css table ends here */
-/* @media (min-width: 1100px) {
-  .sidebar-inner {
-    margin: 30px 50px;
-  }
-}
-@media (max-width: 920px) {
-  .sidebar-inner {
-    margin: 30px 40px;
-  }
+
+@media screen and (max-width: 768px) {
   .single-camera-frame {
-    width: 300px;
+    margin: 0 0;
+    max-width: 80%;
   }
-  .single-camera-frame .frame-inner video {
-    max-width: 300px;
+  .input-div {
+    width: 55%;
+    min-width: 20%;
   }
-} */
-@media (min-height: 200px) {
-  .table-layout,
-  .table-layout-2 {
+  .frame-inner {
+    width: 80%;
+  }
+  .emp-p-tag {
+    margin-left: 30px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .sidebar-inner {
+    top: 25px;
+    left: 30px;
+  }
+  .table-layout {
     height: 12%;
-    max-height: 12%;
+    max-height: auto;
+    overflow-y: scroll;
+    flex: 1;
   }
 }
-@media (min-height: 600px) {
-  .table-layout,
-  .table-layout-2 {
-    height: 40%;
-    max-height: 40%;
+@media screen and (min-width: 1025px) {
+  .sidebar-inner {
+    top: 22px;
+    left: 35px;
+  }
+  .table-layout {
+    height: auto;
+    overflow: scroll;
+    max-height: 90%;
   }
 }
-@media (min-height: 1000px) {
-  .table-layout,
-  .table-layout-2 {
-    height: 40%;
-    max-height: 40%;
+@media screen and (min-width: 2000px) {
+  .sidebar-inner {
+    margin-left: 40px;
+    top: 35px;
+  }
+  .content-area {
+    margin-left: 30px;
   }
 }

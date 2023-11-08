@@ -5,8 +5,11 @@ import CameraModal from "./CameraModal";
 const ActionBar = () => {
   return (
     <>
-      <div className="action-bar d-flex flex-lg-row flex-column justify-content-between  position-relative top-30">
-        <div className="left-portion">
+      <div
+        className="action-bar d-flex flex-lg-row flex-column 
+       justify-content-between gap-2   position-relative"
+      >
+        <div className="left-portion ms-4 ms-md-0">
           <span className="actionbar-icons">{myHomeSvg}</span>
           <span className="actionbar-icons">{myBlockSvg}</span>
           <span className="actionbar-icons">{activeFac}</span>

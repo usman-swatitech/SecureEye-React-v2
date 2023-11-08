@@ -6,7 +6,7 @@ import profileDp from "../../assets/images/avatar.png";
 import { Store } from "../../context/Context";
 const Sidebar = () => {
   const { currentLayout, setCurrentLayout } = Store();
-  console.log(currentLayout);
+
   const [links, setLinks] = useState(navlinks);
   const [activeIndex, setaAtiveIndex] = useState(0);
   const handleActive = (index, newLayout) => {
@@ -21,7 +21,12 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar-inner">
-      <img src={logoWithText} alt="logo" className="sidebar-logo" />
+      <img
+        src={logoWithText}
+        alt="logo"
+        className="sidebar-logo cursor-pointer"
+        onClick={() => setCurrentLayout("HomeLayout")}
+      />
       <div className="links-wrapper">
         {links.map((link, index) =>
           index < 5 ? (

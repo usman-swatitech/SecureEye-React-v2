@@ -13,6 +13,7 @@ import {
   SingleScreenLayout,
 } from "./Layouts/index";
 import { Store } from "./context/Context";
+import Divider from "./Component/Common/Divider";
 const RootLayout = () => {
   const { currentLayout } = Store();
   const RenderComponents = () => {
@@ -45,6 +46,7 @@ const RootLayout = () => {
         <div className="content-area">
           <Search />
           <ActionBar />
+          <Divider />
           <div className="cameras-layout">{RenderComponents()}</div>
         </div>
       </div>
