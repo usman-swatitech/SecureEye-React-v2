@@ -11,7 +11,7 @@
 .second-div {
   position: relative;
   height: 100%;
-  width: 1000%;
+  width: 100%;
   /* background-color: red; */
   overflow: hidden;
   display: flex;

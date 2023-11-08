@@ -40,7 +40,7 @@ const RootLayout = () => {
     <section className="w-100 bg-black position-relative main-wrapper">
       {/* <div className="abs-div">abs div</div> */}
 
-      <div className="second-div" style={{ zIndex: "9999" }}>
+      <div className="second-div">
         <img src={frame} alt="bg-cover" className="bg-cover" />
         <Sidebar />
         <div className="content-area">
