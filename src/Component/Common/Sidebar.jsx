@@ -20,14 +20,14 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="sidebar-inner">
+    <div className="sidebar_inner">
       <img
         src={logoWithText}
         alt="logo"
-        className="sidebar-logo cursor-pointer"
+        className="sidebar_logo cursor-pointer"
         onClick={() => setCurrentLayout("HomeLayout")}
       />
-      <div className="links-wrapper">
+      <div className="links_wrapper">
         {links.map((link, index) =>
           index < 5 ? (
             <div
@@ -42,7 +42,7 @@ const Sidebar = () => {
               }}
             >
               <div className={link.isActive ? "line" : null}></div>
-              <span className={link.isActive ? "icon-active" : "icon"}>
+              <span className={link.isActive ? "icon_active" : "icon"}>
                 {link.isActive ? link.activeIcon : link.nonActiveIcon}
               </span>
             </div>
