@@ -332,7 +332,7 @@ SCROLLBAR OF CAMERAS
   overflow: hidden;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .root_layout_inner_wrapper {
