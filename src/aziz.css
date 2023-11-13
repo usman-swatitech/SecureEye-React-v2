@@ -46,7 +46,7 @@ SCROLLBAR OF CAMERAS
 .sidebar_inner {
   /* position: relative; */
   /* margin: auto; */
-  height: 100vh;
+  height: 103vh;
   width: 70%;
   background-color: rgb(0, 16, 22);
   clip-path: polygon(0% 3%, 15% 0%, 100% 0%, 100% 85%, 17% 85%, 0% 82%);
@@ -214,7 +214,7 @@ SCROLLBAR OF CAMERAS
 .action_bar {
   top: 0;
   height: 100%;
-  margin: 0 10px;
+  /* margin: 0 10px; */
 }
 .action_bar .left_portion {
   display: flex;
@@ -339,7 +339,7 @@ SCROLLBAR OF CAMERAS
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  height: 156;
+  /* height: 156; */
   width: 240px;
   /* border: 1px solid yellow; */
 }
@@ -388,7 +388,7 @@ SCROLLBAR OF CAMERAS
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 15px;
+  /* gap: 10px; */
   flex: 1;
 }
 .table-layout {
@@ -513,7 +513,8 @@ SCROLLBAR OF CAMERAS
     max-width: 80%;
   } */
   .input_div {
-    width: 55%;
+    width: 68%;
+    margin-top: 10px;
     min-width: 20%;
   }
   /* .frame_inner {
@@ -557,12 +558,12 @@ SCROLLBAR OF CAMERAS
 }
 .single_screen_view {
   height: 72vh;
-  padding: 20px;
+  padding: 0 10px 0 0;
   border-radius: 0 0 25px 0;
   width: 100%;
 }
 .scrren_cctv_sty {
-  height: 40vh;
+  height: 45vh;
   background-color: black;
 }
 .scrren_cctv_tabel_sty {

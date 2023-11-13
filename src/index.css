@@ -440,6 +440,7 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
 .tabIcons{
   height: 8vh;
   padding-right: 15px;
+  padding-left: 2px;
   background-color: black;
 }
 .viewComponents{
@@ -454,18 +455,170 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   margin-bottom: 10px;
 }
 .cctv_ameras{
-  height: 40vh;
+  height: 48vh;
   background-color: black;
   overflow-y: auto;
 }
 .EmployeeInformation{
   height: 8vh;
-  padding-top: 15px;
+  /* padding-top: 15px; */
+  display: grid;
+  align-items: center;
   color: #fff;
 }
 .alert_table{
-  height: 25vh;
+  height: 20vh;
   background-color: black;
   overflow: auto;
   border-radius: 0 0 20px 0px;
+}
+
+.main-wrapper {
+  padding: 10px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Extra small devices (phones) */
+
+@media only screen and (max-width: 600px) {
+  .container, .container-sm{
+    width: 100% !important;
+  }
+  .camera_cards{
+    width: 30%;
+  }
+}
+
+/* Small devices (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .camera_cards{
+    width: 32%;
+  }
+}
+
+/* Medium devices (desktops) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .camera_cards{
+
+    width: 32%;
+  }
+}
+
+/* Large devices (large desktops) */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .camera_cards{
+    width: 24%;
+  }
+}
+
+/* Extra large devices (extra large desktops) */
+@media only screen and (min-width: 1201px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
+    max-width: 100%;
+  }
+  .camera_cards{
+    width: 19.5%;
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
