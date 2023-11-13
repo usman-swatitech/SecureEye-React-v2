@@ -138,41 +138,6 @@ SCROLLBAR OF CAMERAS
 
 /* test div css  */
 
-.test-div {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  padding: 20px 70px;
-  overflow: hidden;
-}
-.test-div img {
-  width: 100%;
-  height: 94vh;
-  position: absolute;
-}
-.innerWrapper {
-  position: relative;
-  display: flex;
-  width: auto;
-  /* max-width: 1100px; */
-  min-width: 300px;
-}
-.innerWrapper .content {
-  position: absolute;
-  left: 40px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  gap: 25px;
-}
-.content .section {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  position: relative;
-  top: 14px;
-}
 /* search component css goes here.. */
 
 .input_div {
@@ -291,48 +256,6 @@ SCROLLBAR OF CAMERAS
   /* max-height: 400px;
   overflow-y: scroll; */
 }
-.main-camera-wrapper {
-  position: relative;
-  width: 20%;
-  height: 122px;
-  background-image: url("./assets/images/layout3.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: flex;
-
-  flex-direction: column;
-  padding: 4px 2px;
-  gap: 5px;
-}
-.main-camera-wrapper h4 {
-  font-size: 12px;
-  color: white;
-  text-align: start;
-  margin: 2px 4px;
-}
-.main-camera-wrapper .camera-divider {
-  /* position: absolute; */
-  position: relative;
-  margin: 0 auto;
-  height: 1px;
-  width: 90%;
-
-  /* background-color: #ffffff; */
-}
-.main-camera-wrapper .camera-src {
-  position: relative;
-  /* top: 2px; */
-  height: 100%;
-  width: 100%;
-}
-.main-camera-wrapper .camera-src video {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-/* Camera Layout css ends here */
-/* test div css */
 
 .camera_cards {
   background-image: url("./assets/images/layout4.png");
@@ -391,17 +314,7 @@ SCROLLBAR OF CAMERAS
   /* gap: 10px; */
   flex: 1;
 }
-.table-layout {
-  height: 12%;
-  max-height: auto;
-  overflow-y: scroll;
-  flex: 1;
-}
-.table-layout-2 {
-  /* height: 10%; */
-  max-height: auto;
-  overflow-y: scroll;
-}
+
 /* .single_camera_frame {
   position: absolute;
   top: 0;
@@ -409,6 +322,41 @@ SCROLLBAR OF CAMERAS
 } */
 /* end of single camera */
 /* usman table css */
+
+/* <--------Main Root layout css code, copied from test.css----------------> */
+/* these classes can only be found in RootLayout.jsx component.. */
+.main_wrapper {
+  height: 100vh;
+  width: 45px;
+  /* padding: 20px 40px; */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.root_layout_inner_wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+  overflow: hidden;
+  display: flex;
+  gap: 50px;
+
+  /* gap: 5px; */
+  /* justify-content: center; */
+}
+.bg_cover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* object-fit: cover; */
+  object-position: center center;
+  /* margin: 0 auto; */
+}
+
+/* end of test.css code */
 .dashboard_td {
   color: var(--main-text-color);
   font-size: 12px;
@@ -470,30 +418,13 @@ SCROLLBAR OF CAMERAS
     0% 0%
   );
 }
-.custom-box {
-  width: 200px;
-  height: 200px;
-  background-color: #333; /* Background color for the div */
-  /* Position the ::before and ::after pseudo-elements at the top left and bottom right corners */
-  position: relative;
-}
-.custom-box::before,
-.custom-box::after {
-  content: "";
-  position: absolute;
-  width: 5px; /* Border size for the corners */
-  height: 5px; /* Border size for the corners */
-  background-color: #fff; /* Border color for the corners */
-}
-.custom-box::before {
-  top: 0;
-  left: 0;
-}
-.custom-box::after {
-  bottom: 0;
-  right: 0;
-}
+
 /* usman css table ends here */
+
+/* overriding react modal default css */
+.fade {
+  overflow: hidden !important;
+}
 
 /* Employee route css starts here */
 .table_header {
@@ -520,21 +451,13 @@ SCROLLBAR OF CAMERAS
   /* .frame_inner {
     width: 80%;
   } */
-  .emp-p-tag {
-    margin-left: 30px;
-  }
+  /*
 }
 @media screen and (max-width: 1024px) {
   /* .sidebar_inner {
     top: 25px;
     left: 30px;
   } */
-  .table-layout {
-    height: 12%;
-    max-height: auto;
-    overflow-y: scroll;
-    flex: 1;
-  }
 }
 @media screen and (min-width: 1025px) {
   /* .sidebar_inner {
@@ -552,9 +475,6 @@ SCROLLBAR OF CAMERAS
     margin-left: 40px;
     top: 35px;
   } */
-  .content-area {
-    margin-left: 30px;
-  }
 }
 .single_screen_view {
   height: 72vh;

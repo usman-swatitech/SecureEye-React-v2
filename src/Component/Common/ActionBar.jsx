@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { myHomeSvg, myBlockSvg, activeFac, plusSvg } from "../../Constant/svgs";
 import CameraModal from "./CameraModal";
 import ButtonSubmit from "./ButtonShap";
@@ -7,9 +7,13 @@ import SweatAlert, { successSweatAlert } from "../../helperFun/SweatAlertFun";
 
 const ActionBar = () => {
   const [show, setShow] = useState(false);
-  const handleShow = () => setShow(true);
-  const handleClose = () => setShow(false);
+  const handleShow = () => {
+    setShow(true);
+  };
 
+  const handleClose = () => setShow(false);
+  const modalRef = document.getElementsByClassName("fade");
+  // modalRef.classList.add("overflow: hidden");
   const [addCamera, setAddCamera] = useState({
     cameraName: "",
     ipAddress: "",
@@ -90,6 +94,7 @@ const ActionBar = () => {
           </div>
         </button>
       </div>
+
       <Modal show={show} onHide={handleClose} size="lg" centered>
         <Modal.Header>
           <Modal.Title>Add New Camera</Modal.Title>
