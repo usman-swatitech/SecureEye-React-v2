@@ -496,6 +496,17 @@ SCROLLBAR OF CAMERAS
 }
 /* usman css table ends here */
 
+/* Employee route css starts here */
+.table_header {
+  height: 20vh;
+}
+.emloyee_table {
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+
+/* Employee route css ends here.. */
+
 @media screen and (max-width: 768px) {
   .single-camera-frame {
     margin: 0 0;
