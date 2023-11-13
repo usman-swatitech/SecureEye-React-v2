@@ -57,7 +57,7 @@ function SignUp () {
       // });
       // const result = await responce.json();
       // console.log(result);
-      successSweatAlert('Your Signup was Successsful')
+      successSweatAlert('registration completed successfully')
       navigate('/emailverified');
     }
     
