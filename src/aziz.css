@@ -402,6 +402,7 @@ SCROLLBAR OF CAMERAS
   max-height: auto;
   overflow-y: scroll;
 }
+
 /* .single_camera_frame {
   position: absolute;
   top: 0;
@@ -494,6 +495,11 @@ SCROLLBAR OF CAMERAS
   right: 0;
 }
 /* usman css table ends here */
+
+/* overriding react modal default css */
+.fade {
+  overflow: hidden !important;
+}
 
 /* Employee route css starts here */
 .table_header {
