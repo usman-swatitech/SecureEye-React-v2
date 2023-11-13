@@ -25,13 +25,31 @@ const ActionBar = () => {
   const handleInputChange = (name, value) => {
     setAddCamera({ ...addCamera, [name]: value });
   };
-  console.log("ee",addCamera);
+  // console.log("ee",addCamera);
 
   const handleAddCamera = () => {
     const {cameraName,ipAddress,port,location,userName,nightVision,userPassword} = addCamera;
 
-    if(cameraName ==='' || ipAddress==='' || port==='' || location==='' || nightVision==='' || userName === '' || userPassword ===''){
-      SweatAlert("Something is missing");
+    if( cameraName === ''){
+      SweatAlert("Camera Name is empty")
+    }
+    else if( ipAddress === ''){
+      SweatAlert("ipAddress is empty")
+    }
+    else if( port === ''){
+      SweatAlert("port is empty")
+    }
+    else if( location === ''){
+      SweatAlert("location is empty")
+    }
+    else if( nightVision === ''){
+      SweatAlert("nightVision is empty")
+    }
+    else if( userName === ''){
+      SweatAlert("userName is empty")
+    }
+    else if( userPassword === ''){
+      SweatAlert("userPassword is empty")
     }
     else {
       setAddCamera({

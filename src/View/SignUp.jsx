@@ -29,9 +29,21 @@ function SignUp () {
   }
   const handlerSignUp = async() => {
     const {userEmail,userPhone,userPassword,userConfirmPassword} = signInput;
-    if (userEmail === '' || userPhone === '' || userPassword === '' || userConfirmPassword === '') {
-      sweetAlert("Something is missing");
+    if (userEmail === '' && userPhone === '' && userPassword === '' && userConfirmPassword === '') {
+      sweetAlert("All Inputfield is empty");
     } 
+    else if( userEmail === ''){
+      sweetAlert("Email is empty")
+    }
+    else if( userPhone === ''){
+      sweetAlert("Phone is empty")
+    }
+    else if( userPassword === ''){
+      sweetAlert("Password is empty")
+    }
+    else if( userConfirmPassword === ''){
+      sweetAlert("Confirm Password is empty")
+    }
     else if (userPassword !== userConfirmPassword) {
       sweetAlert("Password is not matched");
     }
