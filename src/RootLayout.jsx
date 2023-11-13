@@ -2,7 +2,6 @@ import Sidebar from "./Component/Common/Sidebar";
 import Search from "./Component/Common/Search";
 import ActionBar from "./Component/Common/ActionBar";
 import frame from "./assets/images/frame.png";
-import "./test.css";
 import {
   HomeLayout,
   DepartmentLayout,
