@@ -6,7 +6,7 @@ import profileDp from "../../assets/images/avatar.png";
 import { Store } from "../../context/Context";
 const Sidebar = () => {
   const { currentLayout, setCurrentLayout } = Store();
-  console.log(currentLayout);
+
   const [links, setLinks] = useState(navlinks);
   const [activeIndex, setaAtiveIndex] = useState(0);
   const handleActive = (index, newLayout) => {
@@ -20,9 +20,16 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="sidebar-inner">
-      <img src={logoWithText} alt="logo" className="sidebar-logo" />
-      <div className="links-wrapper">
+    <div className="sidebar_inner">
+      <img
+        src={logoWithText}
+        alt="logo"
+        className="sidebar_logo cursor-pointer"
+        onClick={() => {
+          handleActive(0, "HomeLayout");
+        }}
+      />
+      <div className="links_wrapper">
         {links.map((link, index) =>
           index < 5 ? (
             <div
@@ -37,7 +44,7 @@ const Sidebar = () => {
               }}
             >
               <div className={link.isActive ? "line" : null}></div>
-              <span className={link.isActive ? "icon-active" : "icon"}>
+              <span className={link.isActive ? "icon_active" : "icon"}>
                 {link.isActive ? link.activeIcon : link.nonActiveIcon}
               </span>
             </div>

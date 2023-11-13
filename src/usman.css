@@ -1,8 +1,6 @@
 .background-image-2 {
   background-image: url('assets/Background-signup.png');
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -150,7 +148,7 @@
 }
 
 .modal_box {
-  border: 1px solid var(--main-text-color);
+  /* border: 1px solid var(--main-text-color); */
 }
 .custom_checkbox_modal {
   display: inline-block;

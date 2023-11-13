@@ -1,6 +1,6 @@
 // import './dashboard.css'
 
-function Table() {
+function Table({ heading }) {
   return (
     <>
       <div className="container bg-dark">
@@ -10,27 +10,11 @@ function Table() {
               <table className="table table-borderless mt-1">
                 <thead>
                   <tr>
-                    <th scope="col" className="dashboard_th">
-                      Employee Name
-                    </th>
-                    <th scope="col" className="dashboard_th">
-                      Employee id
-                    </th>
-                    <th scope="col" className="dashboard_th">
-                      Level Access
-                    </th>
-                    <th scope="col" className="dashboard_th">
-                      Status
-                    </th>
-                    <th scope="col" className="dashboard_th">
-                      Check-in
-                    </th>
-                    <th scope="col" className="dashboard_th">
-                      Check-out
-                    </th>
-                    <th scope="col" className="dashboard_th">
-                      Check-out
-                    </th>
+                    {heading.map((label, index) => (
+                      <th key={index} scope="col" className="dashboard_th">
+                        {label}
+                      </th>
+                    ))}
                   </tr>
                 </thead>
                 <tbody className="">
@@ -44,7 +28,7 @@ function Table() {
                     <td className="dashboard_td">16:29:04</td>
                     <td className="dashboard_td">16:29:04</td>
                   </tr>
-                  <tr>
+                  {/* <tr>
                     <td className="dashboard_td_1">john doe</td>
                     <td className="dashboard_td_1">sw264</td>
                     <td className="dashboard_td_1">-</td>
@@ -53,7 +37,7 @@ function Table() {
                     <td className="dashboard_td_1">16:29:04</td>
                     <td className="dashboard_td_1">16:29:04</td>
                     <td className="dashboard_td_1">16:29:04</td>
-                  </tr>
+                  </tr> */}
 
                   <tr>
                     <td className="dashboard_td">john doe</td>
@@ -65,7 +49,7 @@ function Table() {
                     <td className="dashboard_td">16:29:04</td>
                     <td className="dashboard_td">16:29:04</td>
                   </tr>
-                  <tr>
+                  {/* <tr>
                     <td className="dashboard_td_1">john doe</td>
                     <td className="dashboard_td_1">sw264</td>
                     <td className="dashboard_td_1">-</td>
@@ -74,7 +58,7 @@ function Table() {
                     <td className="dashboard_td_1">16:29:04</td>
                     <td className="dashboard_td_1">16:29:04</td>
                     <td className="dashboard_td_1">16:29:04</td>
-                  </tr>
+                  </tr> */}
 
                   <tr>
                     <td className="dashboard_td">john doe</td>
@@ -86,7 +70,7 @@ function Table() {
                     <td className="dashboard_td">16:29:04</td>
                     <td className="dashboard_td">16:29:04</td>
                   </tr>
-                  <tr>
+                  {/* <tr>
                     <td className="dashboard_td_1">john doe</td>
                     <td className="dashboard_td_1">sw264</td>
                     <td className="dashboard_td_1">-</td>
@@ -95,7 +79,7 @@ function Table() {
                     <td className="dashboard_td_1">16:29:04</td>
                     <td className="dashboard_td_1">16:29:04</td>
                     <td className="dashboard_td_1">16:29:04</td>
-                  </tr>
+                  </tr> */}
 
                   <tr>
                     <td className="dashboard_td">john doe</td>
@@ -107,7 +91,7 @@ function Table() {
                     <td className="dashboard_td">16:29:04</td>
                     <td className="dashboard_td">16:29:04</td>
                   </tr>
-                  <tr>
+                  {/* <tr>
                     <td className="dashboard_td_1">john doe</td>
                     <td className="dashboard_td_1">sw264</td>
                     <td className="dashboard_td_1">-</td>
@@ -116,7 +100,7 @@ function Table() {
                     <td className="dashboard_td_1">16:29:04</td>
                     <td className="dashboard_td_1">16:29:04</td>
                     <td className="dashboard_td_1">16:29:04</td>
-                  </tr>
+                  </tr> */}
 
                   <tr>
                     <td className="dashboard_td">john doe</td>
@@ -127,16 +111,6 @@ function Table() {
                     <td className="dashboard_td">16:29:04</td>
                     <td className="dashboard_td">16:29:04</td>
                     <td className="dashboard_td">16:29:04</td>
-                  </tr>
-                  <tr>
-                    <td className="dashboard_td_1">john doe</td>
-                    <td className="dashboard_td_1">sw264</td>
-                    <td className="dashboard_td_1">-</td>
-                    <td className="dashboard_td_1">Detected</td>
-
-                    <td className="dashboard_td_1">16:29:04</td>
-                    <td className="dashboard_td_1">16:29:04</td>
-                    <td className="dashboard_td_1">16:29:04</td>
                   </tr>
                 </tbody>
               </table>

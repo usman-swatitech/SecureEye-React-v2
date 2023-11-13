@@ -6,7 +6,6 @@
 /* home screen */
 .main-wrapper {
   height: auto;
-  width: 100%;
 }
 /* Customize the scrollbar for webkit-based browsers */
 /* Track (the background) */
@@ -19,10 +18,7 @@
 SCROLLBAR OF CAMERAS
 */
 
-.cameras-layout,
-.cards-layout,
-.table-layout,
-.table-layout-2 {
+.scrollbar_style {
   scrollbar-width: thin;
 
   /* Customize the scrollbar track (background) */
@@ -47,18 +43,21 @@ SCROLLBAR OF CAMERAS
 }
 
 /* sidebar css starts here... */
-.sidebar-inner {
-  position: relative;
-  height: 100vh;
-  width: 70px;
+.sidebar_inner {
+  /* position: relative; */
+  /* margin: auto; */
+  height: 103vh;
+  width: 70%;
   background-color: rgb(0, 16, 22);
   clip-path: polygon(0% 3%, 15% 0%, 100% 0%, 100% 85%, 17% 85%, 0% 82%);
   display: flex;
   flex-direction: column;
-  margin: 30px 40px;
+  /* left: 20px; */
+  margin-top: 8%;
+  margin-left: 25%;
 }
 
-.sidebar-inner .sidebar-logo {
+.sidebar_inner .sidebar_logo {
   height: 39px;
   width: 60px;
   object-fit: contain;
@@ -66,7 +65,7 @@ SCROLLBAR OF CAMERAS
   margin-left: auto;
   margin-right: auto;
 }
-.sidebar-inner .links-wrapper {
+.sidebar_inner .links_wrapper {
   position: relative;
   width: 100%;
   display: flex;
@@ -75,7 +74,7 @@ SCROLLBAR OF CAMERAS
   align-items: center;
   top: 40px;
 }
-.sidebar-inner .links-wrapper .link {
+.sidebar_inner .links_wrapper .link {
   position: relative;
   cursor: pointer;
   width: 100%;
@@ -101,7 +100,7 @@ SCROLLBAR OF CAMERAS
   align-items: center;
   border-radius: 15px;
 }
-.icon-active {
+.icon_active {
   background-color: var(--primary);
   width: 40px;
   height: 32px;
@@ -110,7 +109,7 @@ SCROLLBAR OF CAMERAS
   align-items: center;
   border-radius: 6px;
 }
-.sidebar-inner .last-col {
+.sidebar_inner .last-col {
   position: relative;
   cursor: pointer;
   width: 100%;
@@ -120,7 +119,7 @@ SCROLLBAR OF CAMERAS
   align-items: center;
   top: 35px;
 }
-.avatar-frame {
+.avatar_frame {
   position: relative;
   top: 40px;
   height: 30px;
@@ -129,7 +128,7 @@ SCROLLBAR OF CAMERAS
   padding: 2px;
   cursor: pointer;
 }
-.avatar-frame .avatar-frame-image {
+.avatar_frame .avatar_frame_image {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -139,58 +138,25 @@ SCROLLBAR OF CAMERAS
 
 /* test div css  */
 
-.test-div {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  padding: 20px 70px;
-  overflow: hidden;
-}
-.test-div img {
-  width: 100%;
-  height: 94vh;
-  position: absolute;
-}
-.innerWrapper {
-  position: relative;
-  display: flex;
-  width: auto;
-  /* max-width: 1100px; */
-  min-width: 300px;
-}
-.innerWrapper .content {
-  position: absolute;
-  left: 40px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  gap: 25px;
-}
-.content .section {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  position: relative;
-  top: 14px;
-}
 /* search component css goes here.. */
 
-.input-div {
+.input_div {
   display: flex;
   align-items: center;
   gap: 10px;
   /* position: relative; */
   background-color: rgb(9, 12, 17);
-  width: 63%;
-  min-width: 100px;
-  height: 45px;
-  padding: 0 20px;
-  margin-top: 28px;
+  max-width: 68%;
+  /* min-width: 70%; */
+  /* min-width: 55%; for small screens */
+  height: 100%;
+  padding: 10px 20px;
+  /* margin: 10px; */
+  /* margin-top: 10px; */
   clip-path: polygon(0% 0%, 95% 0%, 100% 39%, 100% 85%, 0% 85%, 0% 82%);
 }
 
-.input-div input {
+.input_div input {
   /* position: absolute; */
   height: 100%;
   width: 100%;
@@ -200,28 +166,27 @@ SCROLLBAR OF CAMERAS
   border: none;
 }
 
-.input-div .search-icon {
+.input_div .search_icon {
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
-.input-div .search-icon:hover {
+.input_div .search_icon:hover {
   transform: scale(1.2);
 }
 
 /* search component code ends here... */
 /* action bar css  */
-.action-bar {
-  top: 5px;
-  height: auto;
-  width: 90%;
-  padding: 0 10px;
+.action_bar {
+  top: 0;
+  height: 100%;
+  /* margin: 0 10px; */
 }
-.action-bar .left-portion {
+.action_bar .left_portion {
   display: flex;
   gap: 5px;
   align-items: center;
 }
-.action-bar .left-portion .actionbar-icons {
+.action_bar .left_portion .actionbar_icons {
   height: 30px;
   width: 40px;
   background-color: var(--primary);
@@ -230,11 +195,11 @@ SCROLLBAR OF CAMERAS
   align-items: center;
   cursor: pointer;
 }
-.action-bar .right-portion p {
+.action_bar .right_portion p {
   margin: auto;
 }
 
-.right-portion .main-circle {
+.right_portion .main_circle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -246,7 +211,7 @@ SCROLLBAR OF CAMERAS
   border: 7px solid black;
   border-style: double;
 }
-.right-portion .plus-circle {
+.right_portion .plus_circle {
   position: absolute;
   height: 70%;
   width: 70%;
@@ -256,9 +221,9 @@ SCROLLBAR OF CAMERAS
   place-content: center;
 }
 /* divider css */
-.divider {
+.bars-wrapper {
   position: relative;
-  top: 50px;
+  /* top: 50px; */
   left: 0;
   width: 100%;
   display: flex;
@@ -268,78 +233,37 @@ SCROLLBAR OF CAMERAS
   margin: 0 -10px;
   /* background-color: red; */
 }
-.divider .bars {
+.bars-wrapper .bars {
   width: 30px;
   height: 1.2px;
-  background-color: #13151c;
+  /* background-color: var(--primary);   */
+  background-color: rgba(255, 255, 255, 0.2);
 }
-.divider .bar-startend {
+.bars-wrapper .bar-startend {
   width: 20px;
 }
 /* action bar css ends here. */
 
 /* Camera Layout css */
-.cameras-layout {
+.cameras_layout {
   position: relative;
-  margin: 20px 0;
+  /* margin: 20px 0; */
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 91%;
+  width: 100%;
   gap: 10px;
   /* max-height: 400px;
   overflow-y: scroll; */
 }
-.main-camera-wrapper {
-  position: relative;
-  width: 20%;
-  height: 122px;
-  background-image: url("./assets/images/layout3.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: flex;
 
-  flex-direction: column;
-  padding: 4px 2px;
-  gap: 5px;
-}
-.main-camera-wrapper h4 {
-  font-size: 12px;
-  color: white;
-  text-align: start;
-  margin: 2px 4px;
-}
-.main-camera-wrapper .camera-divider {
-  /* position: absolute; */
-  position: relative;
-  margin: 0 auto;
-  height: 1px;
-  width: 90%;
-
-  background-color: #ffffff;
-}
-.main-camera-wrapper .camera-src {
-  position: relative;
-  /* top: 2px; */
-  height: 100%;
-  width: 100%;
-}
-.main-camera-wrapper .camera-src video {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-/* Camera Layout css ends here */
-/* test div css */
-
-.camera-cards {
+.camera_cards {
   background-image: url("./assets/images/layout4.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  height: 156;
-  width: 217px;
+  /* height: 156; */
+  width: 240px;
   /* border: 1px solid yellow; */
 }
 .rootLayoutImage {
@@ -349,19 +273,20 @@ SCROLLBAR OF CAMERAS
   min-width: 500px;
 }
 /* single screen camera*/
-.single-camera-frame {
+.single_camera_frame {
   position: relative;
   margin: 0 auto;
-  height: 300px;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 
   width: 100%;
+  max-width: 100%;
   /* max-width: 800px; */
 }
-.frame-inner {
+.frame_inner {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -369,37 +294,69 @@ SCROLLBAR OF CAMERAS
   flex-direction: column;
   padding: 10px;
 }
-.frame-inner video {
+.frame_inner video {
   /* position: relative; */
   width: auto;
-  height: 250px;
+  height: 88%;
   object-fit: cover;
+  width: 100%;
 }
-.cards-layout {
-  height: 30%;
-  max-height: 30%;
-  overflow-y: scroll;
+.emp-p-tag {
+  margin-left: 0;
+}
+.cards_layout {
+  /* height: 30%; */
+  /* max-height: 30%; */
+  /* overflow-y: scroll; */
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
+  /* gap: 10px; */
+  flex: 1;
 }
-.table-layout {
-  height: 12%;
-  max-height: auto;
-  overflow-y: scroll;
-  flex-grow: 1;
-}
-.table-layout-2 {
-  height: 10%;
-  max-height: auto;
-  overflow-y: scroll;
-}
-/* .single-camera-frame {
+
+/* .single_camera_frame {
   position: absolute;
   top: 0;
   left: 0;
 } */
 /* end of single camera */
 /* usman table css */
+
+/* <--------Main Root layout css code, copied from test.css----------------> */
+/* these classes can only be found in RootLayout.jsx component.. */
+.main_wrapper {
+  height: 100vh;
+  width: 45px;
+  /* padding: 20px 40px; */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.root_layout_inner_wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+  overflow: hidden;
+  display: flex;
+  gap: 50px;
+
+  /* gap: 5px; */
+  /* justify-content: center; */
+}
+.bg_cover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* object-fit: cover; */
+  object-position: center center;
+  /* margin: 0 auto; */
+}
+
+/* end of test.css code */
 .dashboard_td {
   color: var(--main-text-color);
   font-size: 12px;
@@ -461,64 +418,76 @@ SCROLLBAR OF CAMERAS
     0% 0%
   );
 }
-.custom-box {
-  width: 200px;
-  height: 200px;
-  background-color: #333; /* Background color for the div */
-  /* Position the ::before and ::after pseudo-elements at the top left and bottom right corners */
-  position: relative;
-}
-.custom-box::before,
-.custom-box::after {
-  content: "";
-  position: absolute;
-  width: 5px; /* Border size for the corners */
-  height: 5px; /* Border size for the corners */
-  background-color: #fff; /* Border color for the corners */
-}
-.custom-box::before {
-  top: 0;
-  left: 0;
-}
-.custom-box::after {
-  bottom: 0;
-  right: 0;
-}
+
 /* usman css table ends here */
-@media (min-width: 1100px) {
-  .sidebar-inner {
-    margin: 30px 50px;
+
+/* overriding react modal default css */
+.fade {
+  overflow: hidden !important;
+}
+
+/* Employee route css starts here */
+.table_header {
+  height: 12vh;
+}
+.emloyee_table {
+  height: 53vh;
+  border-radius: 0 0 25px 0;
+  overflow-y: auto;
+}
+
+/* Employee route css ends here.. */
+
+@media screen and (max-width: 768px) {
+  /* .single_camera_frame {
+    margin: 0 0;
+    max-width: 80%;
+  } */
+  .input_div {
+    width: 68%;
+    margin-top: 10px;
+    min-width: 20%;
+  }
+  /* .frame_inner {
+    width: 80%;
+  } */
+  /*
+}
+@media screen and (max-width: 1024px) {
+  /* .sidebar_inner {
+    top: 25px;
+    left: 30px;
+  } */
+}
+@media screen and (min-width: 1025px) {
+  /* .sidebar_inner {
+    top: 22px;
+    left: 35px;
+  } */
+  .table-layout {
+    height: auto;
+    overflow: scroll;
+    max-height: 90%;
   }
 }
-@media (max-width: 920px) {
-  .sidebar-inner {
-    margin: 30px 40px;
-  }
-  .single-camera-frame {
-    width: 300px;
-  }
-  .single-camera-frame .frame-inner video {
-    max-width: 300px;
-  }
+@media screen and (min-width: 2000px) {
+  /* .sidebar_inner {
+    margin-left: 40px;
+    top: 35px;
+  } */
 }
-@media (min-height: 200px) {
-  .table-layout,
-  .table-layout-2 {
-    height: 12%;
-    max-height: 12%;
-  }
+.single_screen_view {
+  height: 72vh;
+  padding: 0 10px 0 0;
+  border-radius: 0 0 25px 0;
+  width: 100%;
 }
-@media (min-height: 600px) {
-  .table-layout,
-  .table-layout-2 {
-    height: 40%;
-    max-height: 40%;
-  }
+.scrren_cctv_sty {
+  height: 45vh;
+  background-color: black;
 }
-@media (min-height: 1000px) {
-  .table-layout,
-  .table-layout-2 {
-    height: 40%;
-    max-height: 40%;
-  }
+.scrren_cctv_tabel_sty {
+  height: 22vh;
+  overflow-y: auto;
+  background-color: black;
 }

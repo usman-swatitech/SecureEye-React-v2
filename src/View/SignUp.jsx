@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { json, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import * as images from '../Constant/images';
 import Button from '../Component/Common/ButtonShap'
 import sweetAlert from '../helperFun/SweatAlertFun';
+import {successSweatAlert} from '../helperFun/SweatAlertFun';
 
 function SignUp () {
   const [signInput,setSignInput] = useState({userEmail:'',userPhone:'',userPassword:'',userConfirmPassword:''});
@@ -28,23 +29,36 @@ function SignUp () {
   }
   const handlerSignUp = async() => {
     const {userEmail,userPhone,userPassword,userConfirmPassword} = signInput;
-    if (userEmail === '' || userPhone === '' || userPassword === '' || userConfirmPassword === '') {
-      sweetAlert("Something is missing");
+    if (userEmail === '' && userPhone === '' && userPassword === '' && userConfirmPassword === '') {
+      sweetAlert("All Inputfield is empty");
     } 
+    else if( userEmail === ''){
+      sweetAlert("Email is empty")
+    }
+    else if( userPhone === ''){
+      sweetAlert("Phone is empty")
+    }
+    else if( userPassword === ''){
+      sweetAlert("Password is empty")
+    }
+    else if( userConfirmPassword === ''){
+      sweetAlert("Confirm Password is empty")
+    }
     else if (userPassword !== userConfirmPassword) {
-      sweetAlert("Password not matched");
+      sweetAlert("Password is not matched");
     }
      else {
-      const responce = await fetch('http://localhost:5000/demo',{
-        method: 'POST',
-        body:JSON.stringify(signInput),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-      const result = await responce.json();
-      console.log(result);
-      // navigate('/emailverified');
+      // const responce = await fetch('http://localhost:5000/demo',{
+      //   method: 'POST',
+      //   body:JSON.stringify(signInput),
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //   }
+      // });
+      // const result = await responce.json();
+      // console.log(result);
+      successSweatAlert('registration completed successfully')
+      navigate('/emailverified');
     }
     
   }
@@ -53,9 +67,8 @@ function SignUp () {
     <>
       <div className='background-image-2'>
         <div className='container text-center'>
-          <div className='row g-0'>
-            <div className='col-lg-4 col-md-3 col-sm-12'></div>
-            <div className='col-lg-4 col-md-6 col-sm-12'>
+          <div className='row g-0 justify-content-center'>
+            <div className='screenBoxStyle col-lg-5 col-md-6 col-sm-12'>
               <img src={images.bLogo} alt='logo' className='logo-2' />
               <div className='signup-box mt-4'>
                 <div className='d-flex'>

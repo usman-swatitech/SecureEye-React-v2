@@ -47,9 +47,8 @@ function OtpVerification() {
     <>
       <div className='background-image-2'>
         <div className='container text-center'>
-          <div className='row g-0'>
-            <div className='col-lg-4 col-md-3 col-sm-12'></div>
-            <div className='col-lg-4 col-md-6 col-sm-12'>
+          <div className='row g-0  justify-content-center'>
+            <div className='screenBoxStyle col-lg-5 col-md-6 col-sm-12'>
               <img src={images.bLogo} alt='logo' className='logo-2' />
               <div
                 className='signup-box mt-5'
@@ -83,15 +82,14 @@ function OtpVerification() {
                   <Button name='VERIFY & SIGN UP' />
                 </div>
                 {(!isTimerRunning) ? 
-                    <p className='opt-p pt-4 text-uppercase '>
-                        Didn’t Received <span className='otp-span cursor-pointer' onClick={HandleGetOTP}>Resend ?</span>
+                    <p className='opt-p pt-4 text-uppercase text-gray'>
+                        Didn’t Receive an OTP <span className='otp-span cursor-pointer' onClick={HandleGetOTP}>Resend ?</span>
                     </p>
                     :
-                    <p className='text-white pt-4'>Remaining Time <span className='otp-span'>{currentTime}</span></p>
+                    <p className='text-white pt-4'>Resend OTP <span className='otp-span'>{currentTime} sec</span></p>
                   }
               </div>
             </div>
-            <div className='col-lg-4 col-md-3 col-sm-12'></div>
           </div>
         </div>
       </div>

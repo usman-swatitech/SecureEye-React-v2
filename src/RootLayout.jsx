@@ -12,6 +12,7 @@ import {
   SingleScreenLayout,
 } from "./Layouts/index";
 import { Store } from "./context/Context";
+// import Divider from "./Component/Common/Divider";
 const RootLayout = () => {
   const { currentLayout } = Store();
   const RenderComponents = () => {
@@ -35,23 +36,30 @@ const RootLayout = () => {
     }
   };
   return (
-    <div
-      className="layout-new w-100 h-auto position-relative d-flex justify-content-start justify-content-md-center bg-black m-0"
-      style={{ overflow: "hidden", paddingTop: "12px", paddingBottom: "12px" }}
-    >
-      <img src={frame} alt="bg-cover" className="rootLayoutImage" />
-      <div className="position-absolute top-0 d-flex  w-100 px-4">
-        <Sidebar />
-        <div className="d-flex flex-column w-100 ">
-          <Search />
-          <ActionBar />
-          <div className="cameras-layout">{RenderComponents()}</div>
+    <section className="w-100 bg-black position-relative main_wrapper ">
+      {/* <div className="abs-div">abs div</div> */}
+
+      <div className="second-div root_layout_inner_wrapper">
+        <img src={frame} alt="bg-cover" className="bg_cover" />
+        <div className="main_screenView d-flex justify-content-center">
+          <div className="sideBarView">
+            <Sidebar />
+          </div>
+          <div className="mainComponentView">
+            <div className="searchBar">
+              <Search />
+            </div>
+            <div className="tabIcons">
+              <ActionBar />
+            </div>
+            <div className="viewComponents">
+              <div className="cameras_layout">{RenderComponents()}</div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
 export default RootLayout;
-
-// Test Commit

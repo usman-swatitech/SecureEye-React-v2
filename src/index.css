@@ -199,9 +199,19 @@ body {
   color: #fff !important;
 }
 div:where(.swal2-container) div:where(.swal2-popup) {
-  background-color: #212529 !important;
-  /* background-image: url('./assets//Rectangle.png') !important;
-    background-size: cover; */
+  /* background-color: #212529 !important; */
+  border: 1px solid  #00fffb !important;
+  background-image: url('./assets/Background-signup.png') !important;
+    background-size: cover !important;
+}
+div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class$=left] {
+  background-color: #000 !important;
+}
+div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class$=right]{
+  background-color: #000 !important;
+}
+div:where(.swal2-icon).swal2-success .swal2-success-fix{
+  background-color: #000 !important;
 }
 div:where(.swal2-icon).swal2-error {
   border-color: #00fffb !important;
@@ -222,6 +232,16 @@ div:where(.swal2-icon).swal2-error [class^='swal2-x-mark-line'] {
     0% 75%,
     0% 50%
   );
+}
+div:where(.swal2-icon).swal2-success .swal2-success-ring{
+  border: .25em solid rgba(0, 255, 251,.3) !important;
+}
+div:where(.swal2-icon).swal2-success [class^=swal2-success-line]{
+  background-color: #00fffb !important;
+}
+div:where(.swal2-icon).swal2-success {
+  border-color: #00fffb !important;
+  color: #00fffb !important;
 }
 .swal2-loader {
   border: 3px solid #00fffb !important;
@@ -355,3 +375,250 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   flex-grow: 1;
 }
 /* ---------Employee Component Style End --------- */
+.modal-content
+{
+  display: block !important;
+}
+.modal-header {
+  justify-content: center;
+  color: #fff;
+  border-bottom: none;
+  /* margin-top: 10px; */
+}
+.modal-footer {
+  border-top: none;
+  justify-content: center;
+}
+.modal-content {
+  
+  border: 1px solid var(--main-text-color);
+  border-radius: 10px;
+  background-color: #000;
+  background-image: url('./assets/Background-signup.png');
+  background-size: cover;
+}
+.text-gray {
+  color: gray !important;
+}
+.modal-body{
+  width: 65%;
+  margin: auto;
+}
+.modalBtn .outside-btn {
+  width: 50%;
+}
+.mt-1-2{
+  margin-top: 12px;
+}
+.screenBoxStyle{
+  border: 1px solid #00fffb;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* ----------Home------------ */
+.main_screenView{
+  width: 100%;
+  background: black;
+  margin: 1%;
+  height: 100vh;
+}
+.sideBarView{
+  width: 10%;
+  background-color: black;
+  height: 100vh;
+}
+.mainComponentView{
+  width: 90%;
+  background-color: black;
+  height: 100vh;
+}
+.searchBar{
+  height: 8vh;
+  background-color: black;
+}
+.tabIcons{
+  height: 8vh;
+  padding-right: 15px;
+  padding-left: 2px;
+  background-color: black;
+}
+.viewComponents{
+  height: 80vh;
+  background-color: black;
+  margin-bottom: 10px;
+}
+.main_home_screen{
+  height: 100vh;
+  /* background-color: red; */
+  width: 100%;
+  margin-bottom: 10px;
+}
+.cctv_ameras{
+  height: 48vh;
+  background-color: black;
+  overflow-y: auto;
+}
+.EmployeeInformation{
+  height: 8vh;
+  /* padding-top: 15px; */
+  display: grid;
+  align-items: center;
+  color: #fff;
+}
+.alert_table{
+  height: 20vh;
+  background-color: black;
+  overflow: auto;
+  border-radius: 0 0 20px 0px;
+}
+
+.main-wrapper {
+  padding: 10px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Extra small devices (phones) */
+
+@media only screen and (max-width: 600px) {
+  .container, .container-sm{
+    width: 100% !important;
+  }
+  .camera_cards{
+    width: 30%;
+  }
+}
+
+/* Small devices (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .camera_cards{
+    width: 32%;
+  }
+}
+
+/* Medium devices (desktops) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .camera_cards{
+
+    width: 32%;
+  }
+}
+
+/* Large devices (large desktops) */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .camera_cards{
+    width: 24%;
+  }
+}
+
+/* Extra large devices (extra large desktops) */
+@media only screen and (min-width: 1201px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
+    max-width: 100%;
+  }
+  .camera_cards{
+    width: 19.5%;
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
