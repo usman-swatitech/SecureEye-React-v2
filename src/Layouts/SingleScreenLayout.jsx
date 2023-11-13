@@ -36,27 +36,27 @@ const SingleScreenLayout = () => {
     //   </div>
     // </section>
     <section className="single_screen_view">
-    <div className="scrren_cctv_sty">
-    <div className="single-camera-frame crads-layout">
-        <img src={frame} al="frame" className="single-camera-frame" />
-        <div className="frame-inner ">
-          <label className="text-white ms-3 pb-1">CAMERA 01</label>
-          <video
-            autoPlay
-            loop
-            muted
-            className="w-100"
-            onContextMenu={(e) => e.preventDefault()}
-          >
-            <source src={video} />
-          </video>
+      <div className="scrren_cctv_sty">
+        <div className="single_camera_frame cards_layout">
+          <img src={frame} al="frame" className="single_camera_frame" />
+          <div className="frame_inner">
+            <label className="text-white ms-3 pb-1">CAMERA 01</label>
+            <video
+              autoPlay
+              loop
+              muted
+              className="w-100"
+              onContextMenu={(e) => e.preventDefault()}
+            >
+              <source src={video} />
+            </video>
+          </div>
         </div>
       </div>
-    </div>
-    <label className="EmployeeInformation">Employee Information</label>
-    <div className="scrren_cctv_tabel_sty scrollbar_style">
-    <Table />
-    </div>
+      <label className="EmployeeInformation">Employee Information</label>
+      <div className="scrren_cctv_tabel_sty scrollbar_style">
+        <Table />
+      </div>
     </section>
   );
 };
