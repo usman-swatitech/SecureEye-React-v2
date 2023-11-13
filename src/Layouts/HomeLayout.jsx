@@ -36,7 +36,7 @@ const HomeLayout = () => {
     // </section>
     <section className="main_home_screen">
       <div className="cctv_ameras scrollbar_style">
-        <div className="cards-layout ">
+        <div className="cards_layout ">
           <Cards />
           <Cards />
           <Cards />
@@ -53,7 +53,7 @@ const HomeLayout = () => {
       </div>
       <label className="EmployeeInformation">Employee Information</label>
       <div className="alert_table scrollbar_style">
-      <Table />
+        <Table />
       </div>
     </section>
   );

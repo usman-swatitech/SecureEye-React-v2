@@ -5,7 +5,7 @@ const Cards = () => {
   const { setCurrentLayout } = Store();
   return (
     <div
-      className="card camera-cards bg-transparent py-0.5 px-0 p-0 "
+      className="card camera_cards bg-transparent py-0.5 px-0 p-0 "
       onClick={() => {
         setCurrentLayout("SingleScreenLayout");
       }}
