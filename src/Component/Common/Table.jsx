@@ -1,6 +1,6 @@
 // import './dashboard.css'
 
-function Table() {
+function Table({ heading }) {
   return (
     <>
       <div className="container bg-dark">
@@ -10,27 +10,11 @@ function Table() {
               <table className="table table-borderless mt-1">
                 <thead>
                   <tr>
-                    <th scope="col" className="dashboard_th">
-                      Employee Name
-                    </th>
-                    <th scope="col" className="dashboard_th">
-                      Employee id
-                    </th>
-                    <th scope="col" className="dashboard_th">
-                      Level Access
-                    </th>
-                    <th scope="col" className="dashboard_th">
-                      Status
-                    </th>
-                    <th scope="col" className="dashboard_th">
-                      Check-in
-                    </th>
-                    <th scope="col" className="dashboard_th">
-                      Check-out
-                    </th>
-                    <th scope="col" className="dashboard_th">
-                      Check-out
-                    </th>
+                    {heading.map((label, index) => (
+                      <th key={index} scope="col" className="dashboard_th">
+                        {label}
+                      </th>
+                    ))}
                   </tr>
                 </thead>
                 <tbody className="">

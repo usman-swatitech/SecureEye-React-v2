@@ -1,6 +1,6 @@
 import React from "react";
-import video from "../assets/mp4/test.mp4";
-import { Store } from "../context/Context";
+import video from "../../assets/mp4/test.mp4";
+import { Store } from "../../context/Context";
 const Cards = () => {
   const { setCurrentLayout } = Store();
   return (
@@ -10,7 +10,7 @@ const Cards = () => {
         setCurrentLayout("SingleScreenLayout");
       }}
     >
-      <div className="card-body rounded-0 p-2">
+      <div className="card-body rounded-0 py-2">
         <p className="card-title p-0 m-0 text-sm text-white">CAMERA 01</p>
         <div
           style={{ height: "0.5px", width: "100%", backgroundColor: "#dadde3" }}
@@ -25,7 +25,6 @@ const Cards = () => {
         </video>
       </div>
     </div>
-    // <div className="camera-cards"></div>
   );
 };
 

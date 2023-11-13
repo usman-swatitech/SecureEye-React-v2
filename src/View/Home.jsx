@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
-import Dashboard from "../Component/Dashboard";
 import RootLayout from "../RootLayout";
 
 const App = () => {
