@@ -300,10 +300,6 @@ SCROLLBAR OF CAMERAS
   height: 88%;
   object-fit: cover;
   width: 100%;
-}
-.emp-p-tag {
-  margin-left: 0;
-}
 .cards_layout {
   /* height: 30%; */
   /* max-height: 30%; */
@@ -332,7 +328,7 @@ SCROLLBAR OF CAMERAS
   overflow: hidden;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .root_layout_inner_wrapper {
