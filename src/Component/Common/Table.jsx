@@ -128,16 +128,6 @@ function Table() {
                     <td className="dashboard_td">16:29:04</td>
                     <td className="dashboard_td">16:29:04</td>
                   </tr>
-                  <tr>
-                    <td className="dashboard_td_1">john doe</td>
-                    <td className="dashboard_td_1">sw264</td>
-                    <td className="dashboard_td_1">-</td>
-                    <td className="dashboard_td_1">Detected</td>
-
-                    <td className="dashboard_td_1">16:29:04</td>
-                    <td className="dashboard_td_1">16:29:04</td>
-                    <td className="dashboard_td_1">16:29:04</td>
-                  </tr>
                 </tbody>
               </table>
             </div>

@@ -354,7 +354,7 @@ SCROLLBAR OF CAMERAS
 .single-camera-frame {
   position: relative;
   margin: 0 auto;
-  height: 300px;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -375,7 +375,7 @@ SCROLLBAR OF CAMERAS
 .frame-inner video {
   /* position: relative; */
   width: auto;
-  height: 250px;
+  height: 88%;
   object-fit: cover;
   width: 100%;
 }
@@ -498,11 +498,12 @@ SCROLLBAR OF CAMERAS
 
 /* Employee route css starts here */
 .table_header {
-  height: 20vh;
+  height: 12vh;
 }
 .emloyee_table {
-  max-height: 50vh;
-  overflow-y: scroll;
+  height: 53vh;
+  border-radius: 0 0 25px 0;
+  overflow-y: auto;
 }
 
 /* Employee route css ends here.. */
@@ -554,4 +555,19 @@ SCROLLBAR OF CAMERAS
   .content-area {
     margin-left: 30px;
   }
+}
+.single_screen_view{
+  height: 72vh;
+  padding: 20px;
+  border-radius: 0 0 25px 0;
+  width: 100%;
+}
+.scrren_cctv_sty{
+  height: 40vh;
+  background-color: black;
+}
+.scrren_cctv_tabel_sty{
+  height: 22vh;
+  overflow-y: auto;
+  background-color: black;
 }
