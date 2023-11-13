@@ -25,7 +25,9 @@ const Sidebar = () => {
         src={logoWithText}
         alt="logo"
         className="sidebar_logo cursor-pointer"
-        onClick={() => setCurrentLayout("HomeLayout")}
+        onClick={() => {
+          handleActive(0, "HomeLayout");
+        }}
       />
       <div className="links_wrapper">
         {links.map((link, index) =>
