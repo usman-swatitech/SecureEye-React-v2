@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { searchComponentSearchSvg, searchComponentSearchBrightSvg } from "../../Constant/svgs";
+import {
+  searchComponentSearchSvg,
+  searchComponentSearchBrightSvg,
+} from "../../Constant/svgs";
 
 const Search = () => {
   const [isFocused, setIsFocused] = useState(false);
@@ -13,14 +16,14 @@ const Search = () => {
   };
 
   return (
-    <div className="input-div">
-      <span className="search-icon">
+    <div className="input_div">
+      <span className="search_icon">
         {isFocused ? searchComponentSearchBrightSvg : searchComponentSearchSvg}
       </span>
       <input
         type="text"
         placeholder="SEARCH HERE"
-        className="search-input"
+        className="search_input"
         name="search"
         onFocus={handleFocus}
         onBlur={handleBlur}
