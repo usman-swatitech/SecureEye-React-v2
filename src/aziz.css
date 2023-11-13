@@ -19,10 +19,7 @@
 SCROLLBAR OF CAMERAS
 */
 
-.cameras-layout,
-.cards-layout,
-.table-layout,
-.table-layout-2 {
+.scrollbar_style {
   scrollbar-width: thin;
 
   /* Customize the scrollbar track (background) */
@@ -48,15 +45,17 @@ SCROLLBAR OF CAMERAS
 
 /* sidebar css starts here... */
 .sidebar-inner {
-  position: relative;
+  /* position: relative; */
+  /* margin: auto; */
   height: 100vh;
-  width: 70px;
+  width: 70%;
   background-color: rgb(0, 16, 22);
   clip-path: polygon(0% 3%, 15% 0%, 100% 0%, 100% 85%, 17% 85%, 0% 82%);
   display: flex;
   flex-direction: column;
-  left: 20px;
-  top: 20px;
+  /* left: 20px; */
+  margin-top: 8%;
+  margin-left: 25%;
 }
 
 .sidebar-inner .sidebar-logo {
@@ -183,12 +182,13 @@ SCROLLBAR OF CAMERAS
   gap: 10px;
   /* position: relative; */
   background-color: rgb(9, 12, 17);
-  width: 60%;
-  min-width: 70%;
+  max-width: 68%;
+  /* min-width: 70%; */
   /* min-width: 55%; for small screens */
-  height: 45px;
+  height: 100%;
   padding: 10px 20px;
-  margin-top: 10px;
+  /* margin: 10px; */
+  /* margin-top: 10px; */
   clip-path: polygon(0% 0%, 95% 0%, 100% 39%, 100% 85%, 0% 85%, 0% 82%);
 }
 
@@ -214,9 +214,8 @@ SCROLLBAR OF CAMERAS
 /* action bar css  */
 .action-bar {
   top: 0;
-  height: auto;
-  width: 90%;
-  /* padding: 0 10px; */
+  height: 100%;
+  margin: 0 10px;
 }
 .action-bar .left-portion {
   display: flex;
@@ -384,10 +383,11 @@ SCROLLBAR OF CAMERAS
   margin-left: 0;
 }
 .cards-layout {
-  height: 30%;
-  max-height: 30%;
-  overflow-y: scroll;
+  /* height: 30%; */
+  /* max-height: 30%; */
+  /* overflow-y: scroll; */
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 15px;
   flex: 1;
@@ -513,10 +513,10 @@ SCROLLBAR OF CAMERAS
   }
 }
 @media screen and (max-width: 1024px) {
-  .sidebar-inner {
+  /* .sidebar-inner {
     top: 25px;
     left: 30px;
-  }
+  } */
   .table-layout {
     height: 12%;
     max-height: auto;
@@ -525,10 +525,10 @@ SCROLLBAR OF CAMERAS
   }
 }
 @media screen and (min-width: 1025px) {
-  .sidebar-inner {
+  /* .sidebar-inner {
     top: 22px;
     left: 35px;
-  }
+  } */
   .table-layout {
     height: auto;
     overflow: scroll;
@@ -536,10 +536,10 @@ SCROLLBAR OF CAMERAS
   }
 }
 @media screen and (min-width: 2000px) {
-  .sidebar-inner {
+  /* .sidebar-inner {
     margin-left: 40px;
     top: 35px;
-  }
+  } */
   .content-area {
     margin-left: 30px;
   }

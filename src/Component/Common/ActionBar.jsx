@@ -50,7 +50,7 @@ const ActionBar = () => {
   }
 return (
     <>
-      <div className='action-bar d-flex flex-lg-row flex-column justify-content-between  position-relative top-30'>
+      <div className='action-bar d-flex justify-content-between'>
         <div className='left-portion'>
           <span className='actionbar-icons'>{myHomeSvg}</span>
           <span className='actionbar-icons'>{myBlockSvg}</span>

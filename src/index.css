@@ -415,3 +415,57 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   padding: 30px;
   border-radius: 10px;
 }
+
+/* ----------Home------------ */
+.main_screenView{
+  width: 100%;
+  background: black;
+  margin: 1%;
+  height: 100vh;
+}
+.sideBarView{
+  width: 10%;
+  background-color: black;
+  height: 100vh;
+}
+.mainComponentView{
+  width: 90%;
+  background-color: black;
+  height: 100vh;
+}
+.searchBar{
+  height: 8vh;
+  background-color: black;
+}
+.tabIcons{
+  height: 8vh;
+  padding-right: 15px;
+  background-color: black;
+}
+.viewComponents{
+  height: 80vh;
+  background-color: black;
+  margin-bottom: 10px;
+}
+.main_home_screen{
+  height: 100vh;
+  /* background-color: red; */
+  width: 100%;
+  margin-bottom: 10px;
+}
+.cctv_ameras{
+  height: 40vh;
+  background-color: black;
+  overflow-y: auto;
+}
+.EmployeeInformation{
+  height: 8vh;
+  padding-top: 15px;
+  color: #fff;
+}
+.alert_table{
+  height: 25vh;
+  background-color: black;
+  overflow: auto;
+  border-radius: 0 0 20px 0px;
+}
