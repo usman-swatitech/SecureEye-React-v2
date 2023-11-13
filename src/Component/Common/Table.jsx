@@ -28,7 +28,7 @@ function Table({ heading }) {
                     <td className="dashboard_td">16:29:04</td>
                     <td className="dashboard_td">16:29:04</td>
                   </tr>
-                  <tr>
+                  {/* <tr>
                     <td className="dashboard_td_1">john doe</td>
                     <td className="dashboard_td_1">sw264</td>
                     <td className="dashboard_td_1">-</td>
@@ -37,7 +37,7 @@ function Table({ heading }) {
                     <td className="dashboard_td_1">16:29:04</td>
                     <td className="dashboard_td_1">16:29:04</td>
                     <td className="dashboard_td_1">16:29:04</td>
-                  </tr>
+                  </tr> */}
 
                   <tr>
                     <td className="dashboard_td">john doe</td>
@@ -49,7 +49,7 @@ function Table({ heading }) {
                     <td className="dashboard_td">16:29:04</td>
                     <td className="dashboard_td">16:29:04</td>
                   </tr>
-                  <tr>
+                  {/* <tr>
                     <td className="dashboard_td_1">john doe</td>
                     <td className="dashboard_td_1">sw264</td>
                     <td className="dashboard_td_1">-</td>
@@ -58,7 +58,7 @@ function Table({ heading }) {
                     <td className="dashboard_td_1">16:29:04</td>
                     <td className="dashboard_td_1">16:29:04</td>
                     <td className="dashboard_td_1">16:29:04</td>
-                  </tr>
+                  </tr> */}
 
                   <tr>
                     <td className="dashboard_td">john doe</td>
@@ -70,7 +70,7 @@ function Table({ heading }) {
                     <td className="dashboard_td">16:29:04</td>
                     <td className="dashboard_td">16:29:04</td>
                   </tr>
-                  <tr>
+                  {/* <tr>
                     <td className="dashboard_td_1">john doe</td>
                     <td className="dashboard_td_1">sw264</td>
                     <td className="dashboard_td_1">-</td>
@@ -79,7 +79,7 @@ function Table({ heading }) {
                     <td className="dashboard_td_1">16:29:04</td>
                     <td className="dashboard_td_1">16:29:04</td>
                     <td className="dashboard_td_1">16:29:04</td>
-                  </tr>
+                  </tr> */}
 
                   <tr>
                     <td className="dashboard_td">john doe</td>
@@ -91,7 +91,7 @@ function Table({ heading }) {
                     <td className="dashboard_td">16:29:04</td>
                     <td className="dashboard_td">16:29:04</td>
                   </tr>
-                  <tr>
+                  {/* <tr>
                     <td className="dashboard_td_1">john doe</td>
                     <td className="dashboard_td_1">sw264</td>
                     <td className="dashboard_td_1">-</td>
@@ -100,7 +100,7 @@ function Table({ heading }) {
                     <td className="dashboard_td_1">16:29:04</td>
                     <td className="dashboard_td_1">16:29:04</td>
                     <td className="dashboard_td_1">16:29:04</td>
-                  </tr>
+                  </tr> */}
 
                   <tr>
                     <td className="dashboard_td">john doe</td>
