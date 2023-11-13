@@ -75,7 +75,6 @@
 //     </div> */
 // }
 
-
 ////kashif
 import Sidebar from "./Component/Common/Sidebar";
 import Search from "./Component/Common/Search";
@@ -116,24 +115,24 @@ const RootLayout = () => {
     }
   };
   return (
-    <section className="w-100 bg-black position-relative main-wrapper">
+    <section className="w-100 bg-black position-relative main-wrapper ">
       {/* <div className="abs-div">abs div</div> */}
 
       <div className="second-div root_layout_inner_wrapper">
         <img src={frame} alt="bg-cover" className="bg-cover" />
         <div className="main_screenView d-flex justify-content-center">
           <div className="sideBarView">
-          <Sidebar />
+            <Sidebar />
           </div>
           <div className="mainComponentView">
             <div className="searchBar">
-            <Search />
+              <Search />
             </div>
             <div className="tabIcons">
-            <ActionBar />
+              <ActionBar />
             </div>
             <div className="viewComponents">
-              <div className="cameras-layout">{RenderComponents()}</div>
+              <div className="cameras_layout">{RenderComponents()}</div>
             </div>
           </div>
         </div>
