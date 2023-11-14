@@ -4,15 +4,6 @@
   box-sizing: border-box;
   font-family: 'sportyXlight';
 }
-.text-primary {
-  color: #00fffb !important;
-}
-.bg_lightGreen{
-  background-color: #00262B;
-}
-.bg-primary {
-  background-color: #00fffb !important;
-}
 :root {
   --main-text-color: #00fffb;
   --main-p-color: #666666;
@@ -38,36 +29,25 @@
   font-family: 'sportyThin';
   src: url('./assets/font/sporty-pro-thin.otf');
 }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.text-primary {
+  color: #00fffb !important;
+}
+.bg_lightGreen{
+  background-color: #00262B;
+}
+.bg-primary {
+  background-color: #00fffb !important;
+}
 body {
   font-family: 'sportyXlight';
 }
 
 /* ------------ Splas screen Start ------------- */
-/* .appContainer {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-.splashbackground {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-}
-.splashBG {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('./assets/Splash/splashbg.png');
-    background-size: cover;
-    background-position: center;
-}
-
-.heightVH {
-    height: 100vh;
-} */
 
 .splashBrandLogo {
   width: 100%;
@@ -202,7 +182,7 @@ div:where(.swal2-container) div:where(.swal2-popup) {
   /* background-color: #212529 !important; */
   border: 1px solid  #00fffb !important;
   background-image: url('./assets/Background-signup.png') !important;
-    background-size: cover !important;
+  background-size: cover !important;
 }
 div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class$=left] {
   background-color: #000 !important;
@@ -473,9 +453,6 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   border-radius: 0 0 20px 0px;
 }
 
-.main-wrapper {
-  padding: 10px !important;
-}
 
 
 
@@ -609,4 +586,6 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
     max-width: 100%;
   }
   .camera_cards{
-    width: 19.5%;}}
+    width: 19.5%;
+  }
+}
