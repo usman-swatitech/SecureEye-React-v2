@@ -100,8 +100,8 @@ SCROLLBAR OF CAMERAS
   top: 2%;
   height: 103vh;
   width: 65%;
-  background-color: rgb(9, 12, 17) !important;
-  clip-path: polygon(0% 3%, 15% 0%, 100% 0%, 100% 85%, 17% 85%, 0% 82%);
+  background-color: rgb(15, 20, 29) ;
+  clip-path: polygon(0% 3%, 35% 0%, 100% 0%, 100% 85%, 33% 85%, 0% 82%);
   display: flex;
   flex-direction: column;
   padding: 10px 2px;
@@ -114,7 +114,7 @@ SCROLLBAR OF CAMERAS
   flex-direction: column;
   justify-content: space-between;
   padding: 30px 0;
-  /* align-items: center; */
+  align-items: center;
 }
 .navigation {
   width: 100%;
@@ -132,7 +132,7 @@ SCROLLBAR OF CAMERAS
   top: -20%;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+  align-items: center;
 }
 .link {
   cursor: pointer;
@@ -149,7 +149,7 @@ SCROLLBAR OF CAMERAS
   align-items: center;
   gap: 10px;
   /* position: relative; */
-  background-color: rgb(9, 12, 17);
+  background-color: rgb(15, 20, 29);
   max-width: 68%;
   /* min-width: 70%; */
   /* min-width: 55%; for small screens */
@@ -197,7 +197,7 @@ SCROLLBAR OF CAMERAS
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  cursor: pointer !important;
 }
 .action_bar .right_portion p {
   margin: auto;

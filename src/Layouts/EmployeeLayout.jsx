@@ -6,11 +6,10 @@ const EmployeeLayout = () => {
   return (
     <div className="container bg-dark">
       <div className="row">
-        <div className="col-lg-12 col-md-12 col-sm-12">
-          <div className="">
+        <div className="col-lg-12 col-md-12 col-sm-12 px-0">
             <p className="employeeHeading">Employee Information</p>
             <div className="row table_header">
-              <div className="col-lg-6 col-md-6 col-sm-12">
+              <div className="col-lg-6 col-md-6 col-sm-6">
                 <div className="row g-0">
                   <div className="col-lg-2 col-md-2 col-sm-12 m-0 p-0">
                     <div className="svgWithText pt-2 pb-2">
@@ -87,7 +86,7 @@ const EmployeeLayout = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6 col-md-6 col-sm-12">
+              <div className="col-lg-6 col-md-6 col-sm-6">
                 <div className="row g-0">
                   <div className="col-lg-2 col-md-2 col-sm-12 m-0 p-0">
                     <div className="svgWithText pt-2 pb-2">
@@ -168,7 +167,6 @@ const EmployeeLayout = () => {
             <div className="emloyee_table scrollbar_style">
               <Table heading={singleScreenTableHeading}/>
             </div>
-          </div>
         </div>
       </div>
     </div>
