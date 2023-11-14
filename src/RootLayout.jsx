@@ -12,6 +12,7 @@ import {
   SingleScreenLayout,
 } from "./Layouts/index";
 import { Store } from "./context/Context";
+import TestSidebar from "./Test/TestSidebar";
 // import Divider from "./Component/Common/Divider";
 const RootLayout = () => {
   const { currentLayout } = Store();
