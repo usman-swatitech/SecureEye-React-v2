@@ -1,5 +1,6 @@
 import React from "react";
 import Table from "../Component/Common/Table";
+import { singleScreenTableHeading } from "../Constant/table";
 
 const EmployeeLayout = () => {
   return (
@@ -165,7 +166,7 @@ const EmployeeLayout = () => {
               </div>
             </div>
             <div className="emloyee_table scrollbar_style">
-              <Table />
+              <Table heading={singleScreenTableHeading}/>
             </div>
           </div>
         </div>

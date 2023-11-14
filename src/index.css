@@ -589,3 +589,9 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
     width: 19.5%;
   }
 }
+.sticky-header {
+  position: sticky ;
+  top: 0;
+  background-color: #333; /* adjust the background color as needed */
+  z-index: 100;
+}

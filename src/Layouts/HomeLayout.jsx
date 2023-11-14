@@ -1,6 +1,7 @@
 import Table from "../Component/Common/Table";
 import Cards from "../Component/Common/Cards";
 import { homeTableHeading } from "../Constant/table";
+
 const HomeLayout = () => {
   return (
     <section className="main_home_screen">

@@ -1,6 +1,7 @@
-// import './dashboard.css'
+import React from "react";
 
-function Table({ heading }) {
+const Table = (props) => {
+  const {heading} = props;
   return (
     <>
       <div className="container bg-dark">
@@ -8,7 +9,7 @@ function Table({ heading }) {
           <div className="col-lg-12 col-md-12 col-sm-12 p-0">
             <div className="table-responsive">
               <table className="table table-borderless mt-1">
-                <thead>
+                <thead className="sticky-header">
                   <tr>
                     {heading.map((label, index) => (
                       <th key={index} scope="col" className="dashboard_th">
