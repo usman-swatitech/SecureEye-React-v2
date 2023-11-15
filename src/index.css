@@ -396,7 +396,7 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   align-items: center;
 }
 
-.flexGrows {
+.flexGrows{
   flex-grow: 1;
 }
 
@@ -420,6 +420,7 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
 .modal-content {
 
   border: 1px solid var(--main-text-color);
+  background-position: center;
   border-radius: 10px;
   background-color: #000;
   background-image: url('./assets/Background-signup.png');
@@ -633,10 +634,13 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   .table_header {
     height: 32vh;
   }
-
+  .background-image-2 {
+    background-position: center;
+  }
   .emloyee_table {
     height: 33vh;
   }
+  
 }
 
 @media only screen and (min-width: 481px) and (max-width: 600px) {
@@ -645,7 +649,9 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   .container-sm {
     width: 100% !important;
   }
-
+  .background-image-2 {
+    background-position: center;
+  }
   .camera_cards {
     width: 30%;
   }
@@ -657,7 +663,7 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   .emloyee_table {
     height: 33vh;
   }
-
+  
 }
 
 /* Small devices (tablets) */
@@ -665,18 +671,28 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   .camera_cards {
     width: 32%;
   }
-
+  .background-image-2 {
+    background-image: url('assets/Background-signup-sm.png');
+  }
   .container,
   .container-sm {
     max-width: 100% !important;
   }
+  
 }
 
 /* Medium devices (desktops) */
 @media only screen and (min-width: 769px) and (max-width: 992px) {
   .camera_cards {
-
     width: 32%;
+  }
+  .background-image-2 {
+    background-image: url('assets/Background-signup-sm.png');
+  }
+  
+  .modal
+  {
+    --bs-modal-width: 575px;
   }
 }
 
@@ -684,6 +700,9 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
   .camera_cards {
     width: 24%;
+  }
+  .modal-content{
+    background-position: unset;
   }
 }
 
@@ -698,7 +717,9 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   .container-xxl {
     max-width: 100%;
   }
-
+  .modal-content{
+    background-position: unset;
+  }
   .camera_cards {
     width: 19.5%;
   }

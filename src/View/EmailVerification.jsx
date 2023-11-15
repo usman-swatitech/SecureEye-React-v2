@@ -28,7 +28,7 @@ function EmailVerification () {
       <div className='background-image-2'>
         <div className='container text-center'>
           <div className='row g-0  justify-content-center'>
-            <div className='screenBoxStyle col-lg-5 col-md-6 col-sm-12'>
+            <div className='screenBoxStyle col-xl-5 col-lg-6 col-md-8 col-sm-12'>
               <img src={images.bLogo} alt='logo' className='logo-2' />
               <div className='signup-box mt-5'>
                 <div className='d-flex'>
@@ -48,7 +48,7 @@ function EmailVerification () {
                   </div>
 
                   <div className=' d-flex flex-column align-items-start justify-content-end pb-1'>
-                    <div flexGrows></div>
+                    <div className='flexGrows'></div>
                     <img src={images.cubeDesign} alt="CubeDesign" />
                   </div>
                 </div>
