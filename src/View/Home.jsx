@@ -1,6 +1,12 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import RootLayout from "../RootLayout";
+import Sidebar from "../Component/Common/Sidebar";
+import Search from "../Component/Common/Search";
+import ActionBar from "../Component/Common/ActionBar";
+import * as images from '../Constant/images';
+import {HomeLayout,DepartmentLayout,WorkingLayout,EmployeeLayout,SettingsLayout,SearchLayout,SingleScreenLayout,
+} from "../HomeLayouts/index";
+import { Store } from "../ContextAPI/Context";
 
 const App = () => {
   const loginKey = localStorage.getItem("myKey");
@@ -14,7 +20,54 @@ const App = () => {
   if (loginKey) {
     return null;
   }
-  return <RootLayout />;
+  const { currentLayout } = Store();
+  const RenderComponents = () => {
+    switch (currentLayout) {
+      case "HomeLayout":
+        return <HomeLayout />;
+      case "EmployeeLayout":
+        return <EmployeeLayout />;
+      case "WorkingLayout":
+        return <WorkingLayout />;
+      case "DepartmentLayout":
+        return <DepartmentLayout />;
+      case "SettingsLayout":
+        return <SettingsLayout />;
+      case "SearchLayout":
+        return <SearchLayout />;
+      case "SingleScreenLayout":
+        return <SingleScreenLayout />;
+      default:
+        return <HomeLayout />;
+    }
+  };
+  return (
+    <>
+      <section className="w-100 bg-black position-relative main_wrapper ">
+      {/* <div className="abs-div">abs div</div> */}
+
+      <div className="second-div root_layout_inner_wrapper">
+        <img src={images.homeFrame} alt="bg-cover" className="bg_cover" />
+        <div className="main_screenView d-flex justify-content-center">
+          <div className="sideBarView">
+            <Sidebar />
+          </div>
+          <div className="mainComponentView">
+            <div className="searchBar">
+              <Search />
+            </div>
+            <div className="tabIcons">
+              <ActionBar />
+            </div>
+            <div className="viewComponents">
+              <div className="cameras_layout">{RenderComponents()}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </>
+  );
 };
 
 export default App;

@@ -17,7 +17,7 @@ function OtpVerification() {
   console.log(otpValue)
   const handlerConfirmOTP = () => {
     if(otpValue === '1111') {
-      navigate('/home');
+      navigate('/');
     }
     else
     {

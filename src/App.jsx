@@ -4,7 +4,7 @@ import "./aziz.css";
 import "./usman.css";
 import "./index.css";
 import Routes from "./Router";
-import { AppContextProvider } from "./context/Context";
+import { AppContextProvider } from "./ContextAPI/Context";
 const App = () => {
   return (
     <AppContextProvider>

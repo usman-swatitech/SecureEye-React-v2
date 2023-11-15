@@ -1,15 +1,15 @@
 import { useState } from "react";
-import { navlinks } from "../../Constant/links";
+import { navlinks } from "../../Constant/sidbarLinks";
 import { logoWithText } from "../../Constant/images";
 import Avatar from "./Avatar";
 import profileDp from "../../assets/images/avatar.png";
-import { Store } from "../../context/Context";
+import { Store } from "../../ContextAPI/Context";
 const Sidebar = () => {
   const { setCurrentLayout } = Store();
   const [links, setLinks] = useState(navlinks);
-  const [activeIndex, setActiveIndex] = useState(0);
+  // const [activeIndex, setActiveIndex] = useState(0);
   const handleActive = (index, newLayout) => {
-    setActiveIndex(index);
+    // setActiveIndex(index);
     const updatedItems = links.map((item, i) => ({
       ...item,
       isActive: i === index,

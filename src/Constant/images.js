@@ -9,6 +9,8 @@ import secureEyeText from '../assets/Splash/logo.png'
 import frameTab from '../assets/frameTab.png';
 import logoWithText from "../assets/Splash/logo.png";
 import cctvViewImg from '../assets/ScreenViev.png';
+import homeFrame from '../assets/images/frame.png'
+import screenFrame from '../assets/screenframe.png'
 
 // signup page
 import bLogo from '../assets/svg/Logo-1.svg';
@@ -26,4 +28,4 @@ import port from '../assets/svg/port.svg'
 import nightVision from '../assets/svg/nightVision.svg'
 
 export default brandLogo;
-export {splashBackground,secureEyeText,frameTab,bLogo,userIcon,userLock,cubeDesign,hiddenIcn,unHideIcn,logoWithText,cctvViewImg,cameraName,ipAddress,location,port,nightVision};
+export {splashBackground,secureEyeText,frameTab,bLogo,userIcon,userLock,cubeDesign,hiddenIcn,unHideIcn,logoWithText,cctvViewImg,cameraName,ipAddress,location,port,nightVision,homeFrame,screenFrame};

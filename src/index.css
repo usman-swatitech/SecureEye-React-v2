@@ -522,7 +522,9 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   top: 0;
   z-index: 100;
 }
-
+.pr-1{
+  padding-right: 10px;
+}
 
 
 

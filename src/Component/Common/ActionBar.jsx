@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import { myHomeSvg, myBlockSvg, activeFac, plusSvg } from "../../Constant/svgs";
 import CameraModal from "./CameraModal";
 import ButtonSubmit from "./ButtonShap";
@@ -12,7 +12,7 @@ const ActionBar = () => {
   };
 
   const handleClose = () => setShow(false);
-  const modalRef = document.getElementsByClassName("fade");
+  // const modalRef = document.getElementsByClassName("fade");
   // modalRef.classList.add("overflow: hidden");
   const [addCamera, setAddCamera] = useState({
     cameraName: "",

@@ -49,7 +49,6 @@ function SignIn () {
                   <div className='pt-2'>
                      <img src={images.userIcon} alt="UserIcon" />
                   </div>
-
                   <div className='w-100'>
                     <input
                       type='text'

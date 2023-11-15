@@ -1,14 +1,14 @@
 import React from "react";
 import video from "../assets/mp4/test.mp4";
 import Table from "../Component/Common/Table";
-import frame from "../Component/frames/frame.png";
+import * as images from "../Constant/images";
 import { singleScreenTableHeading } from "../Constant/table";
 const SingleScreenLayout = () => {
   return (
     <section className="single_screen_view">
       <div className="scrren_cctv_sty">
         <div className="single_camera_frame cards_layout">
-          <img src={frame} al="frame" className="single_camera_frame" />
+          <img src={images.screenFrame} alt="frame" className="single_camera_frame" />
           <div className="frame_inner">
             <label className="text-white ms-3 pb-1">CAMERA 01</label>
             <video
