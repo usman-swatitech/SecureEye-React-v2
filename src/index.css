@@ -490,7 +490,7 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
 
 .main_home_screen {
   height: 100vh;
-  /* background-color: red; */
+  background-color: transparent;
   width: 100%;
   margin-bottom: 10px;
 }
@@ -502,7 +502,7 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
 }
 
 .EmployeeInformation {
-  height: 8vh;
+  height: 5vh;
   /* padding-top: 15px; */
   display: grid;
   align-items: center;
@@ -510,7 +510,7 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
 }
 
 .alert_table {
-  height: 20vh;
+  height: 18vh;
   background-color: black;
   overflow: auto;
   border-radius: 0 0 20px 0px;
@@ -526,7 +526,9 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
 .pr-1{
   padding-right: 10px;
 }
-
+.dotBorderd{
+  width: 99%;
+}
 
 
 
@@ -655,15 +657,15 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   .camera_cards {
     width: 30%;
   }
-
   .table_header {
     height: 32vh;
   }
-
   .emloyee_table {
     height: 33vh;
   }
-  
+  .main_home_screen{
+    width: 99%;
+  }
 }
 
 /* Small devices (tablets) */
@@ -678,11 +680,13 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   .container-sm {
     max-width: 100% !important;
   }
-  
+  .main_home_screen{
+    width: 99%;
+  }
 }
 
 /* Medium devices (desktops) */
-@media only screen and (min-width: 769px) and (max-width: 992px) {
+@media only screen and (min-width: 769px) and (max-width: 993px) {
   .camera_cards {
     width: 32%;
   }
@@ -697,7 +701,7 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
 }
 
 /* Large devices (large desktops) */
-@media only screen and (min-width: 993px) and (max-width: 1200px) {
+@media only screen and (min-width: 994px) and (max-width: 1200px) {
   .camera_cards {
     width: 24%;
   }

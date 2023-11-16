@@ -147,9 +147,7 @@
   color: var(--main-white-color);
 }
 
-.modal_box {
-  /* border: 1px solid var(--main-text-color); */
-}
+
 .custom_checkbox_modal {
   display: inline-block;
   position: relative;
