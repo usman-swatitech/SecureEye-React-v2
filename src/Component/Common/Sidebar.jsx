@@ -5,6 +5,7 @@ import Avatar from "./Avatar";
 import profileDp from "../../assets/images/avatar.png";
 import { Store } from "../../ContextAPI/Context";
 import { logoSvg } from "../../Constant/logo";
+
 const Sidebar = () => {
   const [width, setWidth] = useState(undefined);
   const [smallLogo, setSmallLogo] = useState(false);
@@ -37,7 +38,14 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       {smallLogo ? (
-        <span style={{ display: "flex", justifyContent: "center" }}>
+        <span
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            cursor: "pointer",
+          }}
+          onClick={() => handleActive(0,"HomeLayout")}
+        >
           {logoSvg}
         </span>
       ) : (
@@ -45,6 +53,7 @@ const Sidebar = () => {
           src={logoWithText}
           alt="logo"
           className="sidebar_logo cursor-pointer"
+          onClick={() => handleActive(0,"HomeLayout")}
         />
       )}
 
