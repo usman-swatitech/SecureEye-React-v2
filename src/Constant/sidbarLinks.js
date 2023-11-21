@@ -10,6 +10,7 @@ import {
   activeWorkSvg,
   nonActiveSettingsSvg,
   activeSearchSvg,
+  activeSettingSvg,
 } from "./svgs";
 export const navlinks = [
   {
@@ -53,7 +54,7 @@ export const navlinks = [
     layout: "WorkingLayout",
   },
   {
-    activeIcon: nonActiveSettingsSvg,
+    activeIcon: activeSettingSvg,
     nonActiveIcon: nonActiveSettingsSvg,
     path: "/settings",
     label: "Settings",
