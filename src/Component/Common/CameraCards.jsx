@@ -1,6 +1,7 @@
 import React from "react";
 import video from "../../assets/mp4/test.mp4";
 import { Store } from "../../ContextAPI/Context";
+import Timer from "./Timer";
 const Cards = () => {
   const { setCurrentLayout } = Store();
   return (
@@ -10,7 +11,7 @@ const Cards = () => {
         setCurrentLayout("SingleScreenLayout");
       }}
     >
-      <div className="card-body rounded-0 py-2">
+      <div className="card-body rounded-0 py-2 position-relative">
         <p className="card-title p-0 m-0 text-sm text-white">CAMERA 01</p>
         <div className="cameraCard"></div>
         <video
@@ -21,6 +22,8 @@ const Cards = () => {
         >
           <source src={video} />
         </video>
+
+        <Timer />
       </div>
     </div>
   );
