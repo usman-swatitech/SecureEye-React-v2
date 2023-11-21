@@ -1,5 +1,5 @@
 import Table from "../Component/Common/Table";
-import Cards from "../Component/Common/Cards";
+import Cards from "../Component/Common/CameraCards";
 import * as images from '../Constant/images';
 import { homeTableHeading } from "../Constant/table";
 

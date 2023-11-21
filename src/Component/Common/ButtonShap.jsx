@@ -5,7 +5,7 @@ function Button (props) {
     <>
       <div className='outside-btn m-0 p-0'>
         <div className='inside-btn p-0 m-0'>
-          <button className='sign-btn pt-2 pb-2' style={{fontWeight: "200"}}>{props.name}</button>
+          <button className='sign-btn pt-2 pb-2'>{props.name}</button>
         </div>
       </div>
     </>

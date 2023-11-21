@@ -12,9 +12,7 @@ const Cards = () => {
     >
       <div className="card-body rounded-0 py-2">
         <p className="card-title p-0 m-0 text-sm text-white">CAMERA 01</p>
-        <div
-          style={{ height: "0.5px", width: "100%", backgroundColor: "#dadde3" }}
-        ></div>
+        <div className="cameraCard"></div>
         <video
           autoPlay
           loop

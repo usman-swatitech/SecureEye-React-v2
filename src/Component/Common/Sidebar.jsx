@@ -17,7 +17,7 @@ const Sidebar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   useEffect(() => {
-    if (width > 983) {
+    if (width > 960) {
       setSmallLogo(false);
     } else {
       setSmallLogo(true);
@@ -38,12 +38,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       {smallLogo ? (
-        <span
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            cursor: "pointer",
-          }}
+        <span className="d-flex justify-content-center cursor-pointer"
           onClick={() => handleActive(0,"HomeLayout")}
         >
           {logoSvg}
@@ -61,12 +56,8 @@ const Sidebar = () => {
         <div className="navigation">
           {links.slice(0, 5).map((link, index) => (
             <div
-              className="link"
+              className="link border-5px"
               key={index}
-              style={{
-                borderTopRightRadius: "5px",
-                borderBottomRightRadius: "5px",
-              }}
               onClick={() => {
                 handleActive(index, link.layout);
               }}
@@ -82,15 +73,12 @@ const Sidebar = () => {
           <>
             {links.slice(5, 6).map((link, index) => (
               <div
-                className="link"
+                className="link border-5px"
                 onClick={() => {
                   handleActive(5, "SettingsLayout");
                 }}
                 key={index}
-                style={{
-                  borderTopRightRadius: "5px",
-                  borderBottomRightRadius: "5px",
-                }}
+                
               >
                 <div className={link.isActive ? "line" : null}></div>
                 <span className={link.isActive ? "icon_active" : "icon"}>

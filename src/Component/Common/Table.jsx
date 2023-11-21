@@ -15,56 +15,55 @@ const Table = (props) => {
               ))}
             </tr>
           </thead>
-          <tbody className="">
+          <tbody >
             <tr>
-              <td className="dashboard_td">john doe</td>
-              <td className="dashboard_td">sw254</td>
-              <td className="dashboard_td">1</td>
-              <td className="dashboard_td">Normal</td>
+              <td className="dashboard_td text-primary">john doe</td>
+              <td className="dashboard_td text-primary">sw254</td>
+              <td className="dashboard_td text-primary">1</td>
+              <td className="dashboard_td text-primary">Normal</td>
 
-              <td className="dashboard_td">16:29:04</td>
-              <td className="dashboard_td">16:29:04</td>
-              <td className="dashboard_td">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
             </tr>
             <tr>
-              <td className="dashboard_td">john doe</td>
-              <td className="dashboard_td">sw254</td>
-              <td className="dashboard_td">1</td>
-              <td className="dashboard_td">Normal</td>
-
-              <td className="dashboard_td">16:29:04</td>
-              <td className="dashboard_td">16:29:04</td>
-              <td className="dashboard_td">16:29:04</td>
+              <td className="dashboard_td text-danger">john doe</td>
+              <td className="dashboard_td text-danger">sw254</td>
+              <td className="dashboard_td text-danger">1</td>
+              <td className="dashboard_td text-danger">Detected</td>
+              <td className="dashboard_td text-danger">16:29:04</td>
+              <td className="dashboard_td text-danger">16:29:04</td>
+              <td className="dashboard_td text-danger">16:29:04</td>
             </tr>
             <tr>
-              <td className="dashboard_td">john doe</td>
-              <td className="dashboard_td">sw254</td>
-              <td className="dashboard_td">1</td>
-              <td className="dashboard_td">Normal</td>
+              <td className="dashboard_td text-primary">john doe</td>
+              <td className="dashboard_td text-primary">sw254</td>
+              <td className="dashboard_td text-primary">1</td>
+              <td className="dashboard_td text-primary">Normal</td>
 
-              <td className="dashboard_td">16:29:04</td>
-              <td className="dashboard_td">16:29:04</td>
-              <td className="dashboard_td">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
             </tr>
             <tr>
-              <td className="dashboard_td">john doe</td>
-              <td className="dashboard_td">sw254</td>
-              <td className="dashboard_td">1</td>
-              <td className="dashboard_td">Normal</td>
+              <td className="dashboard_td text-primary">john doe</td>
+              <td className="dashboard_td text-primary">sw254</td>
+              <td className="dashboard_td text-primary">1</td>
+              <td className="dashboard_td text-primary">Normal</td>
 
-              <td className="dashboard_td">16:29:04</td>
-              <td className="dashboard_td">16:29:04</td>
-              <td className="dashboard_td">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
             </tr>
             <tr>
-              <td className="dashboard_td">john doe</td>
-              <td className="dashboard_td">sw254</td>
-              <td className="dashboard_td">1</td>
-              <td className="dashboard_td">Normal</td>
+              <td className="dashboard_td text-primary">john doe</td>
+              <td className="dashboard_td text-primary">sw254</td>
+              <td className="dashboard_td text-primary">1</td>
+              <td className="dashboard_td text-primary">Normal</td>
 
-              <td className="dashboard_td">16:29:04</td>
-              <td className="dashboard_td">16:29:04</td>
-              <td className="dashboard_td">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
             </tr>
           </tbody>
         </table>

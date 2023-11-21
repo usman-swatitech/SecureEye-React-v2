@@ -190,7 +190,9 @@ body {
 .cursor-pointer {
   cursor: pointer;
 }
-
+.border-5px{
+  border-radius: 5px 0 5px 0;
+}
 #swal2-title {
   color: #fff !important;
 }
@@ -271,7 +273,7 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
 
 /* ---------Employee Component Style --------- */
 .dashboard_td {
-  color: var(--main-text-color);
+  /* color: var(--main-text-color); */
   font-size: 12px;
   font-weight: 200;
   line-height: 12px;
@@ -280,7 +282,7 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
 
 @media screen and (max-width: 576px) {
   .dashboard_td {
-    color: var(--main-text-color);
+    /* color: var(--main-text-color); */
     font-size: 10px;
     font-weight: 200;
     line-height: 12px;
@@ -372,10 +374,6 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
 
 .dashboard_th {
   color: #fff !important;
-}
-
-.dashboard_td {
-  color: var(--main-text-color) !important;
 }
 
 .employeeHeading {
@@ -667,7 +665,11 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
     width: 99%;
   }
 }
-
+.cameraCard{
+  height: 0.5px;
+  width: 100%;
+  background-color: #dadde3;
+}
 /* Small devices (tablets) */
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   .camera_cards {
