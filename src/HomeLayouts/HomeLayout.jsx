@@ -23,7 +23,7 @@ const HomeLayout = () => {
         </div>
       </div>
       <img className="dotBorderd" src={images.dotBorderd} alt="border img"/>
-      <label className="EmployeeInformation">Employee Information</label>
+      <label className="EmployeeInformation">Activity Monitor</label>
       <div className="alert_table scrollbar_style">
         <Table heading={homeTableHeading} />
       </div>
