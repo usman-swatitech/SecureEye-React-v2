@@ -1,19 +1,23 @@
 import React, { useState, useEffect } from "react";
 
 const Timer = () => {
-  const [time, setTime] = useState("");
-  let temp = "";
+  const [time, setTime] = useState(formatTime(new Date()));
+
   useEffect(() => {
     const timerId = setInterval(() => {
-      let date = new Date();
-      let hours = date.getHours();
-      let mins = date.getMinutes();
-      let seconds = date.getSeconds();
-      temp = `${hours}:${mins}:${seconds}`;
-      setTime(temp);
+      setTime(formatTime(new Date()));
     }, 1000);
+
     return () => clearInterval(timerId);
   }, []);
+
+  function formatTime(date) {
+    const hours = date.getHours().toString().padStart(2, "0");
+    const mins = date.getMinutes().toString().padStart(2, "0");
+    const seconds = date.getSeconds().toString().padStart(2, "0");
+    return `${hours}:${mins}:${seconds}`;
+  }
+
   return <div className="time_stamp">{time}</div>;
 };
 
