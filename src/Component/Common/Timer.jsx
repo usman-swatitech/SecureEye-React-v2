@@ -1,17 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-<<<<<<< HEAD
 const Timer = ({ cameraStatus }) => {
-=======
-const Timer = () => {
-  const formatTime = (date) => {
-    const hours = date.getHours().toString().padStart(2, "0");
-    const mins = date.getMinutes().toString().padStart(2, "0");
-    const seconds = date.getSeconds().toString().padStart(2, "0");
-    return `${hours}:${mins}:${seconds}`;
-  };
-
->>>>>>> bd0f87968d02a01e2c2f878991c8e308915d8d4e
   const [time, setTime] = useState(formatTime(new Date()));
 
   useEffect(() => {
@@ -22,7 +11,6 @@ const Timer = () => {
     return () => clearInterval(timerId);
   }, []);
 
-<<<<<<< HEAD
   function formatTime(date) {
     const hours = date.getHours().toString().padStart(2, "0");
     const mins = date.getMinutes().toString().padStart(2, "0");
@@ -51,11 +39,7 @@ const Timer = () => {
   };
 
   return <div style={styles}>{time}</div>;
-=======
-  return (
-  <div className="time_stamp">{time}</div>
-  );
->>>>>>> bd0f87968d02a01e2c2f878991c8e308915d8d4e
 };
 
 export default Timer;
+// test commit
