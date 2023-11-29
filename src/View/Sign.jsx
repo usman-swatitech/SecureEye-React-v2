@@ -5,7 +5,7 @@ import sweetAlert from "../helperFun/SweatAlertFun";
 import Button from "../Component/Common/ButtonShap";
 import AuthActions from "../Component/AuthActions";
 
-function SignIn() {
+const SignIn = ({ addCamera, setAddCamera }) => {
   const [signInput, setSignInput] = useState({
     userName: "",
     userPassword: "",
@@ -39,6 +39,11 @@ function SignIn() {
     } else {
       navigate("/home");
     }
+  };
+
+  const handleCheckboxChange = (e) => {
+    const { name, checked } = e.target;
+    setAddCamera(name, checked);
   };
 
   return (
@@ -110,11 +115,16 @@ function SignIn() {
               </div>
 
               <div className="d-flex justify-content-between mt-3">
-                <div class="form-check custom-red-border">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />  
-                    <p className="text-white pt-1 aeionMonoFont">Remember Me</p>
-                  </div>
+             <div className="d-flex gap-2 text-white">
+             <label className='custom_checkbox_modal'>
+                    <input
+                      type='checkbox'
+                    />
+                    <span className='checkmark_modal'></span>
+                  </label>
+                  <p>Remember Me</p>
                   
+             </div>
                  
                 <div>
                   <Link to={'/emailverified'} className="text-white aeionMonoFont">Forgot password?</Link>
