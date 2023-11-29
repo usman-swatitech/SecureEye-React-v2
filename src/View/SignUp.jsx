@@ -203,7 +203,11 @@ function SignUp() {
                 <div className="col-10" onClick={handlerSignUp}>
                   <Button name="SIGN UP" />
                 </div>
-         
+                <AuthActions
+                  textLabel="Already have account?"
+                  linkLabel="Sign in"
+                  linkPath="/sign-in"
+                />
               </div>
             </div>
           </div>
