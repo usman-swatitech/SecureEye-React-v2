@@ -17,7 +17,7 @@ const AppRouter = () => {
         <Route path="/signup" element={<SignUp/>} />
         <Route path="/otpverification" element={<OtpVerification />} />
         <Route path="/emailverified" element={<EmailVerified />} />
-        <Route path="/resetpsw" element={<Resetpassword/> } />
+        <Route path="/forget-password" element={<Resetpassword/> } />
       </Routes>
   );
 };

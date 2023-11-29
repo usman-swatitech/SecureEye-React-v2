@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as images from "../Constant/images";
 import sweetAlert from "../helperFun/SweatAlertFun";
 import Button from "../Component/Common/ButtonShap";
@@ -23,9 +23,9 @@ function SignIn() {
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
-  const handlerSignUp = () => {
-    navigate("/signup");
-  };
+  // const handlerSignUp = () => {
+  //   navigate("/signup");
+  // };
 
   const handlerSignIn = () => {
     const { userName, userPassword } = signInput;
@@ -48,8 +48,8 @@ function SignIn() {
           <div className="row g-0 justify-content-center">
             <div className="screenBoxStyle col-xl-5 col-lg-6 col-md-8 col-sm-12">
               <img src={images.bLogo} alt="logo" className="logo-2" />
-              <p className="mt-lg-5 pt-3 mb-lg-3 screenHeading fw-bold text-white">login</p>
-              <div className="signup-box mt-lg-5 mt-2">
+              <p className="mt-4 screenHeading fw-bold text-white">login</p>
+              <div className="signup-box mt-4">
                 <div className="d-flex">
                   <div className="pt-2">
                     <img src={images.userIcon} alt="UserIcon" />
@@ -72,7 +72,7 @@ function SignIn() {
                 </div>
               </div>
 
-              <div className="signup-box mt-5">
+              <div className="signup-box mt-4">
                 <div className="d-flex">
                   <div className="pt-2">
                     <img src={images.userLock} alt="UserLock" />
@@ -109,17 +109,18 @@ function SignIn() {
                 </div>
               </div>
 
-              <div className="d-flex justify-content-between pt-2">
+              <div className="d-flex justify-content-between mt-3">
                 <div class="form-check custom-red-border">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />  <p className="text-white pt-1">Remember Me</p>
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />  
+                    <p className="text-white pt-1 aeionMonoFont">Remember Me</p>
                   </div>
                   
                  
                 <div>
-                  <p className="text-white">Forgot password?</p>
+                  <Link to={'/emailverified'} className="text-white aeionMonoFont">Forgot password?</Link>
                 </div>
               </div>
-              <div className="row justify-content-center mt-lg-5 mt-3">
+              <div className="row justify-content-center mt-3">
                 <div className=" col-10" onClick={handlerSignIn}>
                   <Button name="SIGN IN" />
                 </div>

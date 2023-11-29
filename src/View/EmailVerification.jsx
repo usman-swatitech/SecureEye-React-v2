@@ -59,7 +59,7 @@ get 6 digit verification code</p>
                 </div>
               </div>
 
-              <div className='row justify-content-center mt-5 pt-3'>
+              <div className='row justify-content-center my-5'>
                 <div className='col-10' onClick={handlerOTP}>
                   <Button name='GET OTP' />
                 </div>

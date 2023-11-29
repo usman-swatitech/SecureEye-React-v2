@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import * as images from "../Constant/images";
 import Button from "../Component/Common/ButtonShap";
 import sweetAlert from "../helperFun/SweatAlertFun";
@@ -76,8 +76,9 @@ function SignUp() {
           <div className="row g-0 justify-content-center">
             <div className="screenBoxStyle col-xl-5 col-lg-6 col-md-8 col-sm-12">
               <img src={images.bLogo} alt="logo" className="logo-2" />
-              <p className="mt-lg-5 pt-3 mb-lg-3 screenHeading fw-bold text-white">Sign Up</p>
-              <div className="signup-box mt-lg-4 mt-2">
+              <p className="mt-4 screenHeading fw-bold text-white">Sign Up</p>
+
+              <div className="signup-box mt-3">
                 <div className="d-flex">
                   <div className="pt-2">
                     <img src={images.mailIcon} alt="mainIcon" />
@@ -101,7 +102,7 @@ function SignUp() {
                 </div>
               </div>
 
-              <div className="signup-box mt-4">
+              <div className="signup-box mt-3">
                 <div className="d-flex">
                   <div className="pt-2">
                     <img src={images.mobileIcon} alt="UserLock" />
@@ -125,7 +126,7 @@ function SignUp() {
                 </div>
               </div>
 
-              <div className="signup-box mt-4">
+              <div className="signup-box mt-3">
                 <div className="d-flex">
                   <div className="pt-2">
                     <img src={images.userLock} alt="UserLock" />
@@ -162,7 +163,7 @@ function SignUp() {
                 </div>
               </div>
 
-              <div className="signup-box mt-4">
+              <div className="signup-box mt-3">
                 <div className="d-flex">
                   <div className="pt-2">
                     <img src={images.userLock} alt="UserLock" />

@@ -81,7 +81,7 @@ please enter 6 digit verification code</p>
                 </div>
               </div>
 
-              <div className='row justify-content-center mt-lg-5 mt-2 pt-3'>
+              <div className='row justify-content-center mt-5'>
 
                 <div className='col-10' onClick={handlerConfirmOTP}>
                   <Button name='VERIFY' />

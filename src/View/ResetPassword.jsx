@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import * as images from "../Constant/images";
 import Button from "../Component/Common/ButtonShap";
 import sweetAlert from "../helperFun/SweatAlertFun";
@@ -7,8 +7,6 @@ import { successSweatAlert } from "../helperFun/SweatAlertFun";
 
 function Resetpassword() {
   const [signInput, setSignInput] = useState({
-    userEmail: "",
-    userPhone: "",
     userPassword: "",
     userConfirmPassword: "",
   });
@@ -34,19 +32,13 @@ function Resetpassword() {
     setShowConfirmPassword(!showConfirmPassword);
   };
   const handlerSignUp = async () => {
-    const { userEmail, userPhone, userPassword, userConfirmPassword } =
+    const { userPassword, userConfirmPassword } =
       signInput;
     if (
-      userEmail === "" &&
-      userPhone === "" &&
       userPassword === "" &&
       userConfirmPassword === ""
     ) {
       sweetAlert("All Inputfield is empty");
-    } else if (userEmail === "") {
-      sweetAlert("Email is empty");
-    } else if (userPhone === "") {
-      sweetAlert("Phone is empty");
     } else if (userPassword === "") {
       sweetAlert("Password is empty");
     } else if (userConfirmPassword === "") {
@@ -54,17 +46,8 @@ function Resetpassword() {
     } else if (userPassword !== userConfirmPassword) {
       sweetAlert("Password is not matched");
     } else {
-      // const responce = await fetch('http://localhost:5000/demo',{
-      //   method: 'POST',
-      //   body:JSON.stringify(signInput),
-      //   headers: {
-      //     'Content-Type': 'application/json'
-      //   }
-      // });
-      // const result = await responce.json();
-      // console.log(result);
-      successSweatAlert("registration completed successfully");
-      navigate("/emailverified");
+      successSweatAlert("Password change successfully");
+      navigate("/signin");
     }
   };
 
@@ -76,9 +59,9 @@ function Resetpassword() {
             <div className="screenBoxStyle col-xl-5 col-lg-6 col-md-8 col-sm-12">
               <img src={images.bLogo} alt="logo" className="logo-2" />
               <p className="mt-5 pt-3 mb-5 screenHeading fw-bold text-white">Reset password</p>
-           
 
-              <div className="signup-box mt-4">
+
+              <div className="signup-box mt-3">
                 <div className="d-flex">
                   <div className="pt-2">
                     <img src={images.userLock} alt="UserLock" />
@@ -115,7 +98,7 @@ function Resetpassword() {
                 </div>
               </div>
 
-              <div className="signup-box mt-4">
+              <div className="signup-box mt-3">
                 <div className="d-flex">
                   <div className="pt-2">
                     <img src={images.userLock} alt="UserLock" />
@@ -151,7 +134,7 @@ function Resetpassword() {
                   </div>
                 </div>
               </div>
-              <div className="row justify-content-center mt-5">
+              <div className="row justify-content-center mt-5 mb-3">
                 <div className="col-10" onClick={handlerSignUp}>
                   <Button name="Reset Password" />
                 </div>
