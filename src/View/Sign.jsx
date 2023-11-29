@@ -115,7 +115,7 @@ function SignIn() {
                 <AuthActions
                   textLabel="Don’t have an account?"
                   linkLabel=" Sign Up"
-                  linkPath="/signup"
+                  linkPath="/sign-up"
                 />
                 {/* <div className=' col-10 mt-4'>
                   <p className='opt-p pt-4 text-uppercase text-gray'>

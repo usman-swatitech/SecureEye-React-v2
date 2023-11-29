@@ -24,6 +24,7 @@ const Search = () => {
         type="text"
         placeholder="SEARCH HERE"
         className="search_input"
+        autoComplete="off"
         name="search"
         onFocus={handleFocus}
         onBlur={handleBlur}

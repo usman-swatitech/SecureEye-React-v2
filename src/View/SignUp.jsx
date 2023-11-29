@@ -204,7 +204,7 @@ function SignUp() {
                 <AuthActions
                   textLabel="Have an account?"
                   linkLabel="sign in"
-                  linkPath="/signin"
+                  linkPath="/sign-in"
                 />
               </div>
             </div>

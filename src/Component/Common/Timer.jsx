@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Timer = () => {
+const Timer = ({ cameraStatus }) => {
   const [time, setTime] = useState(formatTime(new Date()));
 
   useEffect(() => {
@@ -18,7 +18,27 @@ const Timer = () => {
     return `${hours}:${mins}:${seconds}`;
   }
 
-  return <div className="time_stamp">{time}</div>;
+  const styles = {
+    position: "absolute",
+    color: "red",
+    bottom: "8%", // Adjusted to 8% as it was overwritten in the original CSS
+    height: "19px",
+    width: "73px",
+    backgroundColor: cameraStatus === "normal" ? "#002328" : "#200508",
+    fontSize: "10px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    borderLeft:
+      cameraStatus === "normal"
+        ? "3px solid var(--primary)"
+        : "3px solid #630806",
+    color: "white",
+  };
+
+  return <div style={styles}>{time}</div>;
 };
 
 export default Timer;

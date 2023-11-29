@@ -2,17 +2,33 @@ import React from "react";
 import video from "../../assets/mp4/test.mp4";
 import { Store } from "../../ContextAPI/Context";
 import Timer from "./Timer";
-const Cards = () => {
+import NormalFrame from "../../assets/images/layout4.png";
+import DetectedFrame from "../../assets/images/detected.png";
+const Cards = ({ camera }) => {
   const { setCurrentLayout } = Store();
+  const backgroundStyle = {
+    backgroundImage:
+      camera.status === "normal"
+        ? `url(${NormalFrame})`
+        : `url(${DetectedFrame})`,
+  };
+
   return (
     <div
       className="card camera_cards bg-transparent py-0.5 px-0 p-0 "
       onClick={() => {
         setCurrentLayout("SingleScreenLayout");
       }}
+      style={backgroundStyle}
     >
       <div className="card-body rounded-0 py-2 position-relative">
-        <p className="card-title p-0 m-0 text-sm text-white">CAMERA 01</p>
+        <p
+          className={`card-title p-0 m-0 text-sm ${
+            camera.status === "normal" ? "text-white" : "text-danger"
+          }`}
+        >
+          {camera.cameraName}
+        </p>
         <div className="cameraCard"></div>
         <video
           autoPlay
@@ -23,7 +39,7 @@ const Cards = () => {
           <source src={video} />
         </video>
 
-        <Timer />
+        <Timer cameraStatus={camera.status} />
       </div>
     </div>
   );
