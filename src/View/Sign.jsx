@@ -48,8 +48,8 @@ function SignIn() {
           <div className="row g-0 justify-content-center">
             <div className="screenBoxStyle col-xl-5 col-lg-6 col-md-8 col-sm-12">
               <img src={images.bLogo} alt="logo" className="logo-2" />
-              <p className="mt-5 pt-3 mb-3 screenHeading fw-bold text-white">login</p>
-              <div className="signup-box mt-5">
+              <p className="mt-lg-5 pt-3 mb-lg-3 screenHeading fw-bold text-white">login</p>
+              <div className="signup-box mt-lg-5 mt-2">
                 <div className="d-flex">
                   <div className="pt-2">
                     <img src={images.userIcon} alt="UserIcon" />
@@ -110,19 +110,16 @@ function SignIn() {
               </div>
 
               <div className="d-flex justify-content-between pt-2">
-                <div className="gap-5 d-flex align-items-baseline">
-                  <div>
-                    <p className="text-white">Remember Me</p>
+                <div class="form-check custom-red-border">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />  <p className="text-white pt-1">Remember Me</p>
                   </div>
-                  <div class="form-check custom-red-border">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                  </div>
-                </div>
+                  
+                 
                 <div>
-                  <p className="text-white pe-lg-4">Forgot password?</p>
+                  <p className="text-white">Forgot password?</p>
                 </div>
               </div>
-              <div className="row justify-content-center mt-5">
+              <div className="row justify-content-center mt-lg-5 mt-3">
                 <div className=" col-10" onClick={handlerSignIn}>
                   <Button name="SIGN IN" />
                 </div>

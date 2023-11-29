@@ -217,12 +217,32 @@
   line-height: 32px;
 }
 
+@media screen and (max-width: 768px) {
+
+.screenHeading {
+  font-family: sportyXlight;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+}
+}
+
 .screenHeading2 {
   font-family: AeionMono;
   font-size: 14px;
   font-weight: 400;
 }
 
+
+@media screen and (max-width: 768px) {
+
+  .screenHeading2 {
+    font-family: AeionMono;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  }
+  
 
 .custom-red-border .form-check-input {
   border: 2px solid var(--main-underline-color);
