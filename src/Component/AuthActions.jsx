@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const AuthActions = ({ textLabel, linkLabel, linkPath }) => {
   return (
-    <div className="d-flex gap-2 justify-content-center my-1 mt-5">
+    <div className="d-flex gap-2 justify-content-center my-1 mt-lg-5 mt-2">
       <label style={{ color: "white" }}>{textLabel}</label>
       <Link
         to={linkPath}

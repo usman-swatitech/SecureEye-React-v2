@@ -50,7 +50,7 @@ function OtpVerification() {
           <div className='row g-0  justify-content-center'>
             <div className='screenBoxStyle col-xl-5 col-lg-6 col-md-8 col-sm-12'>
               <img src={images.bLogo} alt='logo' className='logo-2' />
-              <p className="mt-5 pt-3 mb-3 screenHeading fw-bold text-white">otp verification</p>
+              <p className="mt-lg-5 mt-2 pt-3 mb-3 screenHeading fw-bold text-white">otp verification</p>
 
               <p className="mt-4 mb-3 screenHeading2 text-capitalize fw-bold text-white">otp has been sent to your registered email, <br/>
 please enter 6 digit verification code</p>
@@ -81,7 +81,7 @@ please enter 6 digit verification code</p>
                 </div>
               </div>
 
-              <div className='row justify-content-center mt-5 pt-3'>
+              <div className='row justify-content-center mt-lg-5 mt-2 pt-3'>
 
                 <div className='col-10' onClick={handlerConfirmOTP}>
                   <Button name='VERIFY' />
