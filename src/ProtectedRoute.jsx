@@ -17,7 +17,7 @@ const ProtectedRoute = (props) => {
         {
             navigate("/");
         }
-    }, [loginKey, navigate]);
+    }, [loginKey,authHome, navigate]);
     return (
         <Component />
     );
