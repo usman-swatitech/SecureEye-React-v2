@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import * as images from '../Constant/images';
 import Button from '../Component/Common/ButtonShap';
 import SweatAlert from '../helperFun/SweatAlertFun';
@@ -7,17 +7,28 @@ import SweatAlert from '../helperFun/SweatAlertFun';
 function OtpVerification() {
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [otpValue, setOTPvalue] = useState('');
   const [isTimerRunning, setIsTimerRunning] = useState(false);
   const [currentTime, setCurrentTime] = useState(10);
+
+  const titlePage = location.state?.titlePage;
+
   const handleChange = (e) => {
     setOTPvalue(e.target.value)
   }
   console.log(otpValue)
   const handlerConfirmOTP = () => {
     if (otpValue === '1111') {
-      navigate('/');
+
+      if(titlePage === "Forgot Password")
+      {
+        navigate('/reset-password');
+      }
+      else{
+        navigate('/');
+      }
     }
     else {
       SweatAlert('Enter Valid OTP');

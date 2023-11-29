@@ -47,7 +47,7 @@ function Resetpassword() {
       sweetAlert("Password is not matched");
     } else {
       successSweatAlert("Password change successfully");
-      navigate("/signin");
+      navigate("/");
     }
   };
 

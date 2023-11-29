@@ -20,7 +20,7 @@ console.log(titlePage);
       SweatAlert('Email is empty');
     }
     else {
-      navigate('/otp-verification')
+      navigate('/otp-verification' , {state: {titlePage: titlePage}})
     }
   }
 
