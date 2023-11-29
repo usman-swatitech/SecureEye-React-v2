@@ -26,10 +26,10 @@ const SingleScreenLayout = () => {
               <source src={video} />
             </video>
           </div>
-          <Timer />
+          <Timer cameraStatus="normal" />
         </div>
       </div>
-      <label className="EmployeeInformation">Employee Information</label>
+      <label className="EmployeeInformation">Activity Monitor</label>
       <div className="scrren_cctv_tabel_sty scrollbar_style">
         <Table heading={singleScreenTableHeading} />
       </div>
