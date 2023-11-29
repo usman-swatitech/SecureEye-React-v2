@@ -48,6 +48,7 @@ function SignIn() {
           <div className="row g-0 justify-content-center">
             <div className="screenBoxStyle col-xl-5 col-lg-6 col-md-8 col-sm-12">
               <img src={images.bLogo} alt="logo" className="logo-2" />
+              <p className="mt-5 pt-3 mb-3 screenHeading fw-bold text-white">login</p>
               <div className="signup-box mt-5">
                 <div className="d-flex">
                   <div className="pt-2">
@@ -57,7 +58,7 @@ function SignIn() {
                     <input
                       type="text"
                       className="custom-input-1"
-                      placeholder="USERNAME"
+                      placeholder="Username"
                       name="userName"
                       value={signInput.userName}
                       onChange={handleChange}
@@ -81,7 +82,7 @@ function SignIn() {
                     <input
                       type={showPassword ? "text" : "password"}
                       className="custom-input-2"
-                      placeholder="PASSWORD"
+                      placeholder="Password"
                       value={signInput.userPassword}
                       name="userPassword"
                       onChange={handleChange}
@@ -108,12 +109,25 @@ function SignIn() {
                 </div>
               </div>
 
+              <div className="d-flex justify-content-between pt-2">
+                <div className="gap-5 d-flex align-items-baseline">
+                  <div>
+                    <p className="text-white">Remember Me</p>
+                  </div>
+                  <div class="form-check custom-red-border">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                  </div>
+                </div>
+                <div>
+                  <p className="text-white pe-lg-4">Forgot password?</p>
+                </div>
+              </div>
               <div className="row justify-content-center mt-5">
                 <div className=" col-10" onClick={handlerSignIn}>
                   <Button name="SIGN IN" />
                 </div>
                 <AuthActions
-                  textLabel="Don’t have an account?"
+                  textLabel="Don’t Have An Account?"
                   linkLabel=" Sign Up"
                   linkPath="/signup"
                 />

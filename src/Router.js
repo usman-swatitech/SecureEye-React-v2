@@ -5,6 +5,7 @@ import SignUp from './View/SignUp';
 import OtpVerification from './View/OtpVerification';
 import EmailVerified from './View/EmailVerification';
 import { Routes, Route } from 'react-router-dom';
+import Resetpassword from './View/ResetPassword';
 
 const AppRouter = () => {
   return (
@@ -15,6 +16,7 @@ const AppRouter = () => {
         <Route path="/signup" element={<SignUp/>} />
         <Route path="/otpverification" element={<OtpVerification />} />
         <Route path="/emailverified" element={<EmailVerified />} />
+        <Route path="/resetpsw" element={<Resetpassword/> } />
       </Routes>
   );
 };

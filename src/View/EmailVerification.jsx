@@ -33,7 +33,7 @@ function EmailVerification () {
               <div className='signup-box mt-5'>
                 <div className='d-flex'>
                   <div className='pt-2'>
-                     <img src={images.userIcon} alt="UserIcon" />
+                     <img src={images.mailIcon} alt="UserIcon" />
                   </div>
 
                   <div className='w-100'>

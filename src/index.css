@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'sportyXlight';
+  font-family: AeionMono;
 }
 
 :root {
@@ -35,6 +35,17 @@
   src: url('./assets/font/sporty-pro-thin.otf');
 }
 
+@font-face {
+  font-family: 'AeionMono';
+  src: url('./assets/font/AeionMonoVariableTest-Bold-BF64c1e6b7525a5.otf');
+}
+
+@font-face {
+  font-family: 'AeionMono';
+  src: url('./assets/font/AeionMonoVariableTest-Regular-BF64c1e6b7a096d.otf');
+}
+
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -53,9 +64,6 @@ input[type="number"]::-webkit-outer-spin-button {
   background-color: #00fffb !important;
 }
 
-body {
-  font-family: 'sportyXlight';
-}
 
 /* ------------ Splas screen Start ------------- */
 
