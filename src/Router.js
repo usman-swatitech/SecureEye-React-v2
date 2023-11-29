@@ -7,6 +7,7 @@ import EmailVerified from './View/EmailVerification';
 import { Routes, Route } from 'react-router-dom';
 import Resetpassword from './View/ResetPassword';
 
+
 const AppRouter = () => {
   return (
       <Routes>
