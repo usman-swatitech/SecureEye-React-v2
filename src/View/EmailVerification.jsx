@@ -30,10 +30,15 @@ function EmailVerification () {
           <div className='row g-0  justify-content-center'>
             <div className='screenBoxStyle col-xl-5 col-lg-6 col-md-8 col-sm-12'>
               <img src={images.bLogo} alt='logo' className='logo-2' />
+              <p className="mt-lg-5 mt-4 pt-3 mb-3 screenHeading fw-bold text-white">Forgot password</p>
+
+<p className="mt-lg-4 mt-2 mb-3 screenHeading2 text-capitalize fw-bold text-white">enter your registered email and <br/>
+get 6 digit verification code</p>
+
               <div className='signup-box mt-5'>
                 <div className='d-flex'>
                   <div className='pt-2'>
-                     <img src={images.userIcon} alt="UserIcon" />
+                     <img src={images.mailIcon} alt="UserIcon" />
                   </div>
 
                   <div className='w-100'>
@@ -54,7 +59,7 @@ function EmailVerification () {
                 </div>
               </div>
 
-              <div className='row justify-content-center mt-5 pt-3'>
+              <div className='row justify-content-center my-5'>
                 <div className='col-10' onClick={handlerOTP}>
                   <Button name='GET OTP' />
                 </div>

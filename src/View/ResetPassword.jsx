@@ -4,12 +4,9 @@ import * as images from "../Constant/images";
 import Button from "../Component/Common/ButtonShap";
 import sweetAlert from "../helperFun/SweatAlertFun";
 import { successSweatAlert } from "../helperFun/SweatAlertFun";
-import AuthActions from "../Component/AuthActions";
 
-function SignUp() {
+function Resetpassword() {
   const [signInput, setSignInput] = useState({
-    userEmail: "",
-    userPhone: "",
     userPassword: "",
     userConfirmPassword: "",
   });
@@ -35,19 +32,13 @@ function SignUp() {
     setShowConfirmPassword(!showConfirmPassword);
   };
   const handlerSignUp = async () => {
-    const { userEmail, userPhone, userPassword, userConfirmPassword } =
+    const { userPassword, userConfirmPassword } =
       signInput;
     if (
-      userEmail === "" &&
-      userPhone === "" &&
       userPassword === "" &&
       userConfirmPassword === ""
     ) {
       sweetAlert("All Inputfield is empty");
-    } else if (userEmail === "") {
-      sweetAlert("Email is empty");
-    } else if (userPhone === "") {
-      sweetAlert("Phone is empty");
     } else if (userPassword === "") {
       sweetAlert("Password is empty");
     } else if (userConfirmPassword === "") {
@@ -55,17 +46,8 @@ function SignUp() {
     } else if (userPassword !== userConfirmPassword) {
       sweetAlert("Password is not matched");
     } else {
-      // const responce = await fetch('http://localhost:5000/demo',{
-      //   method: 'POST',
-      //   body:JSON.stringify(signInput),
-      //   headers: {
-      //     'Content-Type': 'application/json'
-      //   }
-      // });
-      // const result = await responce.json();
-      // console.log(result);
-      successSweatAlert("registration completed successfully");
-      navigate("/emailverified");
+      successSweatAlert("Password change successfully");
+      navigate("/signin");
     }
   };
 
@@ -76,55 +58,8 @@ function SignUp() {
           <div className="row g-0 justify-content-center">
             <div className="screenBoxStyle col-xl-5 col-lg-6 col-md-8 col-sm-12">
               <img src={images.bLogo} alt="logo" className="logo-2" />
-              <p className="mt-4 screenHeading fw-bold text-white">Sign Up</p>
+              <p className="mt-5 pt-3 mb-5 screenHeading fw-bold text-white">Reset password</p>
 
-              <div className="signup-box mt-3">
-                <div className="d-flex">
-                  <div className="pt-2">
-                    <img src={images.mailIcon} alt="mainIcon" />
-                  </div>
-
-                  <div className="w-100">
-                    <input
-                      type="email"
-                      className="custom-input-1"
-                      placeholder="Email"
-                      name="userEmail"
-                      value={signInput.userEmail}
-                      onChange={handleChange}
-                    />
-                  </div>
-
-                  <div className=" d-flex flex-column align-items-start justify-content-end pb-1">
-                    <div className="flexGrows"></div>
-                    <img src={images.cubeDesign} alt="CubeDesign" />
-                  </div>
-                </div>
-              </div>
-
-              <div className="signup-box mt-3">
-                <div className="d-flex">
-                  <div className="pt-2">
-                    <img src={images.mobileIcon} alt="UserLock" />
-                  </div>
-
-                  <div className="w-100">
-                    <input
-                      type="phone"
-                      className="custom-input-1"
-                      placeholder="Phone Number"
-                      name="userPhone"
-                      value={signInput.userPhone}
-                      onChange={handleChange}
-                    />
-                  </div>
-
-                  <div className=" d-flex flex-column align-items-start justify-content-end pb-1">
-                    <div className="flexGrows"></div>
-                    <img src={images.cubeDesign} alt="CubeDesign" />
-                  </div>
-                </div>
-              </div>
 
               <div className="signup-box mt-3">
                 <div className="d-flex">
@@ -136,7 +71,7 @@ function SignUp() {
                     <input
                       type={showPassword ? "text" : "password"}
                       className="custom-input-2"
-                      placeholder="Password"
+                      placeholder="New Password"
                       value={signInput.userPassword}
                       name="userPassword"
                       onChange={handleChange}
@@ -199,11 +134,10 @@ function SignUp() {
                   </div>
                 </div>
               </div>
-              <div className="row justify-content-center mt-5">
+              <div className="row justify-content-center mt-5 mb-3">
                 <div className="col-10" onClick={handlerSignUp}>
-                  <Button name="SIGN UP" />
+                  <Button name="Reset Password" />
                 </div>
-         
               </div>
             </div>
           </div>
@@ -213,4 +147,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default Resetpassword;

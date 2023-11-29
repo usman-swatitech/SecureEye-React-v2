@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as images from "../Constant/images";
 import sweetAlert from "../helperFun/SweatAlertFun";
 import Button from "../Component/Common/ButtonShap";
@@ -23,9 +23,9 @@ function SignIn() {
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
-  const handlerSignUp = () => {
-    navigate("/signup");
-  };
+  // const handlerSignUp = () => {
+  //   navigate("/signup");
+  // };
 
   const handlerSignIn = () => {
     const { userName, userPassword } = signInput;
@@ -48,7 +48,8 @@ function SignIn() {
           <div className="row g-0 justify-content-center">
             <div className="screenBoxStyle col-xl-5 col-lg-6 col-md-8 col-sm-12">
               <img src={images.bLogo} alt="logo" className="logo-2" />
-              <div className="signup-box mt-5">
+              <p className="mt-4 screenHeading fw-bold text-white">login</p>
+              <div className="signup-box mt-4">
                 <div className="d-flex">
                   <div className="pt-2">
                     <img src={images.userIcon} alt="UserIcon" />
@@ -57,7 +58,7 @@ function SignIn() {
                     <input
                       type="text"
                       className="custom-input-1"
-                      placeholder="USERNAME"
+                      placeholder="Username"
                       name="userName"
                       value={signInput.userName}
                       onChange={handleChange}
@@ -71,7 +72,7 @@ function SignIn() {
                 </div>
               </div>
 
-              <div className="signup-box mt-5">
+              <div className="signup-box mt-4">
                 <div className="d-flex">
                   <div className="pt-2">
                     <img src={images.userLock} alt="UserLock" />
@@ -81,7 +82,7 @@ function SignIn() {
                     <input
                       type={showPassword ? "text" : "password"}
                       className="custom-input-2"
-                      placeholder="PASSWORD"
+                      placeholder="Password"
                       value={signInput.userPassword}
                       name="userPassword"
                       onChange={handleChange}
@@ -108,12 +109,23 @@ function SignIn() {
                 </div>
               </div>
 
-              <div className="row justify-content-center mt-5">
+              <div className="d-flex justify-content-between mt-3">
+                <div class="form-check custom-red-border">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />  
+                    <p className="text-white pt-1 aeionMonoFont">Remember Me</p>
+                  </div>
+                  
+                 
+                <div>
+                  <Link to={'/emailverified'} className="text-white aeionMonoFont">Forgot password?</Link>
+                </div>
+              </div>
+              <div className="row justify-content-center mt-3">
                 <div className=" col-10" onClick={handlerSignIn}>
                   <Button name="SIGN IN" />
                 </div>
                 <AuthActions
-                  textLabel="Don’t have an account?"
+                  textLabel="Don’t Have An Account?"
                   linkLabel=" Sign Up"
                   linkPath="/sign-up"
                 />
