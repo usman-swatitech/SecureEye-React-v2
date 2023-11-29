@@ -1,18 +1,21 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import * as images from "../Constant/images";
 import sweetAlert from "../helperFun/SweatAlertFun";
 import Button from "../Component/Common/ButtonShap";
 import AuthActions from "../Component/AuthActions";
 
-const SignIn = ({ addCamera, setAddCamera }) => {
+const SignIn = () => {
+
+  const [isChecked, setIsChecked] = useState(false);
   const [signInput, setSignInput] = useState({
     userName: "",
     userPassword: "",
   });
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
-  console.log(signInput);
+  // console.log(signInput);
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setSignInput((prevState) => ({
@@ -37,14 +40,26 @@ const SignIn = ({ addCamera, setAddCamera }) => {
     } else if (userPassword === "") {
       sweetAlert("Password is empty");
     } else {
-      navigate("/home");
+      if (isChecked) {
+        console.log("kashi",signInput)
+        localStorage.setItem('signInput', JSON.stringify(signInput));
+      }
+      navigate("/home", {state:{authHome:true}});
     }
   };
 
-  const handleCheckboxChange = (e) => {
-    const { name, checked } = e.target;
-    setAddCamera(name, checked);
-  };
+  // const handleCheckboxChange = (e) => {
+  //   const { name, checked } = e.target;
+  //   setAddCamera(name, checked);
+  // };
+  const handlerEmail = () => {
+    navigate("/email-verified", {state: {titlePage: "Forgot Password"}});
+  }
+
+  const handleCheckboxChange = () => {
+
+    setIsChecked(!isChecked);
+  }
 
   return (
     <>
@@ -115,19 +130,22 @@ const SignIn = ({ addCamera, setAddCamera }) => {
               </div>
 
               <div className="d-flex justify-content-between mt-3">
-             <div className="d-flex gap-2 text-white">
-             <label className='custom_checkbox_modal'>
+                <div className="d-flex gap-2 text-white">
+                  <label className='custom_checkbox_modal'>
                     <input
                       type='checkbox'
+                      checked={isChecked}
+                      onChange={handleCheckboxChange}
                     />
                     <span className='checkmark_modal'></span>
                   </label>
                   <p>Remember Me</p>
-                  
-             </div>
-                 
+                </div>
+
                 <div>
-                  <Link to={'/emailverified'} className="text-white aeionMonoFont">Forgot password?</Link>
+                  <p onClick={handlerEmail} className="cursor-pointer text-white aeionMonoFont">
+                    Forgot password?
+                  </p>
                 </div>
               </div>
               <div className="row justify-content-center mt-3">

@@ -65,7 +65,7 @@ function SignUp() {
       // const result = await responce.json();
       // console.log(result);
       successSweatAlert("registration completed successfully");
-      navigate("/emailverified");
+      navigate("/email-verified", {state: {titlePage: "Email Verified"}});
     }
   };
 
@@ -206,7 +206,7 @@ function SignUp() {
                 <AuthActions
                   textLabel="Already have account?"
                   linkLabel="Sign in"
-                  linkPath="/sign-in"
+                  linkPath="/"
                 />
               </div>
             </div>

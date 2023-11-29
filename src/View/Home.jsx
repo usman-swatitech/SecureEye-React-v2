@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 import Sidebar from "../Component/Common/Sidebar";
 import Search from "../Component/Common/Search";
 import ActionBar from "../Component/Common/ActionBar";
@@ -9,17 +8,7 @@ import {HomeLayout,DepartmentLayout,WorkingLayout,EmployeeLayout,SettingsLayout,
 import { Store } from "../ContextAPI/Context";
 
 const App = () => {
-  const loginKey = localStorage.getItem("myKey");
-  const navigate = useNavigate();
-  useEffect(() => {
-    if (loginKey) {
-      navigate("/signin");
-    }
-  }, [loginKey, navigate]);
-
-  if (loginKey) {
-    return null;
-  }
+  // localStorage.clear("signInput");
   const { currentLayout } = Store();
   const RenderComponents = () => {
     switch (currentLayout) {

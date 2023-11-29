@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as images from '../Constant/images';
 import Button from '../Component/Common/ButtonShap';
@@ -7,20 +7,19 @@ import SweatAlert from '../helperFun/SweatAlertFun';
 function OtpVerification() {
 
   const navigate = useNavigate();
-  const [otpValue,setOTPvalue] = useState('');
+
+  const [otpValue, setOTPvalue] = useState('');
   const [isTimerRunning, setIsTimerRunning] = useState(false);
   const [currentTime, setCurrentTime] = useState(10);
-
   const handleChange = (e) => {
     setOTPvalue(e.target.value)
   }
   console.log(otpValue)
   const handlerConfirmOTP = () => {
-    if(otpValue === '1111') {
+    if (otpValue === '1111') {
       navigate('/');
     }
-    else
-    {
+    else {
       SweatAlert('Enter Valid OTP');
     }
   }
@@ -50,17 +49,15 @@ function OtpVerification() {
           <div className='row g-0  justify-content-center'>
             <div className='screenBoxStyle col-xl-5 col-lg-6 col-md-8 col-sm-12'>
               <img src={images.bLogo} alt='logo' className='logo-2' />
-              <p className="mt-lg-5 mt-2 pt-3 mb-3 screenHeading fw-bold text-white">otp verification</p>
+              <p className="mt-5 screenHeading fw-bold text-white">otp verification</p>
 
-              <p className="mt-4 mb-3 screenHeading2 text-capitalize fw-bold text-white">otp has been sent to your registered email, <br/>
-please enter 6 digit verification code</p>
+              <p className="my-3 screenHeading2 text-capitalize fw-bold text-white">otp has been sent to your registered email, <br />
+                please enter 6 digit verification code</p>
 
-              <div
-                className='signup-box mt-5'
-              >
+              <div className='signup-box mt-4' >
                 <div className='d-flex'>
                   <div className='pt-2'>
-                     <img src={images.userOtp} alt="UserIcon" />
+                    <img src={images.userOtp} alt="UserIcon" />
                   </div>
 
                   <div className='w-100'>
@@ -86,13 +83,13 @@ please enter 6 digit verification code</p>
                 <div className='col-10' onClick={handlerConfirmOTP}>
                   <Button name='VERIFY' />
                 </div>
-                {(!isTimerRunning) ? 
-                    <p className='opt-p pt-4 text-white text-capitalize'>
+                {(!isTimerRunning) ?
+                  <p className='opt-p pt-4 text-white text-capitalize'>
                     didn’t receive the code? <span className='otp-span cursor-pointer' onClick={HandleGetOTP}>Resend ?</span>
-                    </p>
-                    :
-                    <p className='text-white pt-4'>Resend OTP <span className='otp-span'>{currentTime} sec</span></p>
-                  }
+                  </p>
+                  :
+                  <p className='text-white pt-4'>Resend OTP <span className='otp-span'>{currentTime} sec</span></p>
+                }
               </div>
             </div>
           </div>

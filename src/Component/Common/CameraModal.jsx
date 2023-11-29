@@ -188,7 +188,7 @@ const CameraModal = ({ addCamera, setAddCamera }) => {
                   <input
                     type={showPassword ? 'text' : 'password'}
                     className='custom-input-2'
-                    placeholder='PASSWORD'
+                    placeholder='Password'
                     value={addCamera.userPassword}
                     name='userPassword'
                     onChange={handleChange}

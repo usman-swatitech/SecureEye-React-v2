@@ -18,10 +18,10 @@ const Timer = ({ cameraStatus }) => {
     return `${hours}:${mins}:${seconds}`;
   }
 
-  const styles = {
+  const cameraFrameSty = {
     position: "absolute",
-    color: "red",
-    bottom: "8%", // Adjusted to 8% as it was overwritten in the original CSS
+    // color: "red",
+    bottom: "8%", 
     height: "19px",
     width: "73px",
     backgroundColor: cameraStatus === "normal" ? "#002328" : "#200508",
@@ -34,11 +34,10 @@ const Timer = ({ cameraStatus }) => {
     borderLeft:
       cameraStatus === "normal"
         ? "3px solid var(--primary)"
-        : "3px solid #630806",
+        : "3px solid #630806", color:'#fff'
   };
 
-  return <div style={styles}>{time}</div>;
+  return <div style={cameraFrameSty}>{time}</div>;
 };
 
 export default Timer;
-// test commit
