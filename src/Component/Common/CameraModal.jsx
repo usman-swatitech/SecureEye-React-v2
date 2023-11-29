@@ -131,7 +131,7 @@ const CameraModal = ({ addCamera, setAddCamera }) => {
                   <input
                     type='text'
                     className='custom-input-2'
-                    placeholder='night vision supported'
+                    placeholder='Night Vision Supported'
                     name='nightVision'
                     value={addCamera.nightVision}
                     onChange={handleChange}

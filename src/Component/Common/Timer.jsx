@@ -35,7 +35,6 @@ const Timer = ({ cameraStatus }) => {
       cameraStatus === "normal"
         ? "3px solid var(--primary)"
         : "3px solid #630806",
-    color: "white",
   };
 
   return <div style={styles}>{time}</div>;
