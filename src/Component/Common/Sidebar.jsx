@@ -5,7 +5,8 @@ import Avatar from "./Avatar";
 import profileDp from "../../assets/images/avatar.png";
 import { Store } from "../../ContextAPI/Context";
 import { logoSvg } from "../../Constant/logo";
-
+import { iconUpSvg } from "../../Constant/svgs";
+import SidebarPopup from "../SidebarPopup";
 const Sidebar = () => {
   const [width, setWidth] = useState(undefined);
   const [smallLogo, setSmallLogo] = useState(false);
@@ -23,7 +24,7 @@ const Sidebar = () => {
       setSmallLogo(true);
     }
   }, [width]);
-  const { setCurrentLayout } = Store();
+  const { setCurrentLayout, isSmall } = Store();
   const [links, setLinks] = useState(navlinks);
   // const [activeIndex, setActiveIndex] = useState(0);
   const handleActive = (index, newLayout) => {
@@ -38,8 +39,9 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       {smallLogo ? (
-        <span className="d-flex justify-content-center cursor-pointer"
-          onClick={() => handleActive(0,"HomeLayout")}
+        <span
+          className="d-flex justify-content-center cursor-pointer"
+          onClick={() => handleActive(0, "HomeLayout")}
         >
           {logoSvg}
         </span>
@@ -48,46 +50,43 @@ const Sidebar = () => {
           src={logoWithText}
           alt="logo"
           className="sidebar_logo cursor-pointer"
-          onClick={() => handleActive(0,"HomeLayout")}
+          onClick={() => handleActive(0, "HomeLayout")}
         />
       )}
 
       <div className="links_main_wrapper">
         <div className="navigation">
-          {links.slice(0, 5).map((link, index) => (
+          {links.slice(0, 6).map((link, index) => (
             <div
-              className="link border-5px"
+              className="nav_link"
               key={index}
               onClick={() => {
                 handleActive(index, link.layout);
               }}
             >
               <div className={link.isActive ? "line" : null}></div>
-              <span className={link.isActive ? "icon_active" : "icon"}>
-                {link.isActive ? link.activeIcon : link.nonActiveIcon}
-              </span>
-            </div>
-          ))}
-        </div>
-        <div className="sidebar_last-row">
-          <>
-            {links.slice(5, 6).map((link, index) => (
               <div
-                className="link border-5px"
-                onClick={() => {
-                  handleActive(5, "SettingsLayout");
-                }}
-                key={index}
-                
+                className={`${
+                  link.isActive ? "active_nav_items" : "normal_nav_item"
+                }`}
               >
-                <div className={link.isActive ? "line" : null}></div>
                 <span className={link.isActive ? "icon_active" : "icon"}>
                   {link.isActive ? link.activeIcon : link.nonActiveIcon}
                 </span>
+                {isSmall ? null : (
+                  <span className="nav_label">{link.label}</span>
+                )}
               </div>
-            ))}
-          </>
-          <Avatar image={profileDp} />
+            </div>
+          ))}
+        </div>
+        <div className="sidebar_last_row d-flex align-items-center justify-content-between">
+          <div className="d-flex align-items-center gap-1">
+            <Avatar image={profileDp} />
+            {isSmall ? null : <h4 className="username">John Doe</h4>}
+          </div>
+          {isSmall ? null : <span className="icon_up">{iconUpSvg}</span>}
+          {/* <SidebarPopup /> */}
         </div>
       </div>
     </div>
@@ -95,3 +94,19 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+
+// <div
+// className={`link ${
+//   link.isActive ? "link_active" : "normal_link"
+// }`}
+// key={index}
+// onClick={() => {
+//   handleActive(index, link.layout);
+// }}
+// >
+// <div className={link.isActive ? "line" : null}></div>
+// <span className={link.isActive ? "icon_active" : "icon"}>
+//   {link.isActive ? link.activeIcon : link.nonActiveIcon}
+// </span>
+// <span className="nav_label">{link.label}</span>
+// </div>
