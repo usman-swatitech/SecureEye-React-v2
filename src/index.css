@@ -496,11 +496,17 @@ a {
   position: relative;
   transition: width 0.2s linear;
 }
-
+.sm_mainComponent_view {
+  width: 89.5%;
+  background-color: black;
+  height: 100vh;
+  transition: width 0.2s linear;
+}
 .mainComponentView {
   width: 85%;
   background-color: black;
   height: 100vh;
+  transition: width 0.2s linear;
 }
 
 .searchBar {

@@ -52,7 +52,11 @@ const App = () => {
                 {isSmall ? openSidebarSvg : hideSidebarSvg}
               </span>
             </div>
-            <div className="mainComponentView">
+            <div
+              className={`${
+                isSmall ? "sm_mainComponent_view" : "mainComponentView"
+              }`}
+            >
               <div className="searchBar">
                 <Search />
               </div>
