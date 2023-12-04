@@ -474,7 +474,7 @@ a {
 /* ----------Home------------ */
 .main_screenView {
   width: 100%;
-  background: black;
+  background: transparent;
   margin: 1%;
   display: flex;
   gap: 20px;
@@ -482,15 +482,17 @@ a {
 }
 .sm_sidebarView {
   width: 6%;
-  background-color: black;
-  height: 100vh;
+  background-color: transparent;
+  height: 90vh;
   position: relative;
   transition: width 0.2s linear;
+  margin-left: 2.5%;
 }
 .sideBarView {
   width: 15%;
-  background-color: black;
-  height: 100vh;
+  background-color: transparent;
+  height: 90vh;
+  margin-left: 2%;
   position: relative;
   transition: width 0.2s linear;
 }

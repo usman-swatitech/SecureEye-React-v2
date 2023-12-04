@@ -45,7 +45,7 @@ const App = () => {
 
         <div className="second-div root_layout_inner_wrapper">
           <img src={images.homeFrame} alt="bg-cover" className="bg_cover" />
-          <div className="main_screenView d-flex justify-content-center">
+          <div className="main_screenView d-flex justify-content-start">
             <div className={`${isSmall ? "sm_sidebarView" : "sideBarView"}`}>
               <Sidebar />
               <span className="hide_sidebar_icon" onClick={handleClickToggle}>
