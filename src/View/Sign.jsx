@@ -139,7 +139,7 @@ const SignIn = () => {
                     />
                     <span className='checkmark_modal'></span>
                   </label>
-                  <p>Remember Me</p>
+                  <p className="aeionMonoFont">Remember Me</p>
                 </div>
 
                 <div>
