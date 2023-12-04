@@ -6,7 +6,7 @@ const NotFound = () => {
   useEffect(() => {
     navigate("/sign-in");
   }, [navigate]);
-  return <div>NotFound</div>;
+  return <div>404 - Found</div>;
 };
 
 export default NotFound;
