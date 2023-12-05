@@ -6,9 +6,15 @@ export const AppContextProvider = ({ children }) => {
   const [currentLayout, setCurrentLayout] = useState("HomeLayout");
   const [isSmall, setIsSmall] = useState(false);
   const [windowWidth, setWindowWidth] = useState(undefined);
+  const [openPopup, setOpenPopup] = useState(false);
+
+  const handleTogglePopup = () => {
+    setOpenPopup(!openPopup);
+  };
 
   const handleClickToggle = () => {
     setIsSmall(!isSmall);
+    setOpenPopup(false);
   };
   useEffect(() => {
     const handleResize = () => {
@@ -22,13 +28,21 @@ export const AppContextProvider = ({ children }) => {
   useEffect(() => {
     if (windowWidth < 1240) {
       setIsSmall(true);
+      setOpenPopup(false);
     } else {
       setIsSmall(false);
     }
   }, [windowWidth]);
   return (
     <AppContext.Provider
-      value={{ currentLayout, setCurrentLayout, isSmall, handleClickToggle }}
+      value={{
+        currentLayout,
+        setCurrentLayout,
+        isSmall,
+        handleClickToggle,
+        handleTogglePopup,
+        openPopup,
+      }}
     >
       {children}
     </AppContext.Provider>
