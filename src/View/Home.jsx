@@ -53,10 +53,7 @@ const App = () => {
               </span>
             </div>
             <div
-              className={`${
-                isSmall ? "sm_mainComponent_view" : "mainComponentView"
-              }`}
-            >
+              className={`${ isSmall ? "sm_mainComponent_view" : "mainComponentView" }`}>
               <div className="searchBar">
                 <Search />
               </div>

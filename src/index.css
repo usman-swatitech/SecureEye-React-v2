@@ -486,7 +486,7 @@ a {
   height: 90vh;
   position: relative;
   transition: width 0.2s linear;
-  margin-left: 2.5%;
+  margin-left: 2%;
 }
 .sideBarView {
   width: 15%;
@@ -497,7 +497,7 @@ a {
   transition: width 0.2s linear;
 }
 .sm_mainComponent_view {
-  width: 89.5%;
+  width: 92%;
   background-color: black;
   height: 100vh;
   transition: width 0.2s linear;
@@ -513,7 +513,12 @@ a {
   height: 8vh;
   background-color: black;
 }
-
+.input_div_width{
+  max-width: 64.5%;
+}
+.sm_input_div_width{
+  max-width: 68%;
+}
 .tabIcons {
   height: 8vh;
   padding-right: 15px;
@@ -525,6 +530,7 @@ a {
   height: 80vh;
   background-color: black;
   margin-bottom: 10px;
+  padding-right: 5px;
 }
 
 .main_home_screen {
