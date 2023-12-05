@@ -73,11 +73,12 @@ const ActionBar = () => {
   return (
     <>
       <div className="action_bar d-flex justify-content-between">
-        <div className="left_portion">
+      <p className="mt-4 screenHeading fw-bold text-white">Secureye dashboard</p>
+        {/* <div className="left_portion">
           <span className="actionbar_icons">{myHomeSvg}</span>
           <span className="actionbar_icons">{myBlockSvg}</span>
           <span className="actionbar_icons">{activeFac}</span>
-        </div>
+        </div> */}
         <button
           type="button"
           className="modal_btn"
@@ -91,6 +92,7 @@ const ActionBar = () => {
               </div>
             </div>
             <h4 className="fs-6 text-white mt-1-2">Add New Camera</h4>
+            
           </div>
         </button>
       </div>
