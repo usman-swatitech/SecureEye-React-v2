@@ -24,7 +24,7 @@ const Sidebar = () => {
       setSmallLogo(true);
     }
   }, [width]);
-  const { setCurrentLayout, isSmall } = Store();
+  const { setCurrentLayout, isSmall, openPopup, handleTogglePopup } = Store();
   const [links, setLinks] = useState(navlinks);
   // const [activeIndex, setActiveIndex] = useState(0);
   const handleActive = (index, newLayout) => {
@@ -38,7 +38,7 @@ const Sidebar = () => {
   };
   return (
     <div className="sidebar">
-      {smallLogo ? (
+      {isSmall ? (
         <span
           className="d-flex justify-content-center cursor-pointer"
           onClick={() => handleActive(0, "HomeLayout")}
@@ -68,7 +68,8 @@ const Sidebar = () => {
               <div
                 className={`${
                   link.isActive ? "active_nav_items" : "normal_nav_item"
-                }`}
+                }
+                 ${isSmall ? "justify-content-center" : null}`}
               >
                 <span className={link.isActive ? "icon_active" : "icon"}>
                   {link.isActive ? link.activeIcon : link.nonActiveIcon}
@@ -85,8 +86,12 @@ const Sidebar = () => {
             <Avatar image={profileDp} />
             {isSmall ? null : <h4 className="username">John Doe</h4>}
           </div>
-          {isSmall ? null : <span className="icon_up">{iconUpSvg}</span>}
-          {/* <SidebarPopup /> */}
+          {isSmall ? null : (
+            <span className="icon_up" onClick={handleTogglePopup}>
+              {iconUpSvg}
+            </span>
+          )}
+          {openPopup && <SidebarPopup />}
         </div>
       </div>
     </div>
