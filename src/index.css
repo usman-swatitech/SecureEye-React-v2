@@ -555,7 +555,7 @@ a {
 }
 
 .alert_table {
-  height: 18vh;
+  height: 13vh;
   background-color: black;
   overflow: auto;
   border-radius: 0 0 20px 0px;
@@ -615,8 +615,12 @@ a {
   margin-bottom: 5px;
   cursor: pointer;
 }
-
-
+.card-title{
+  font-size: 12px;
+}
+.scrollbar_style .table-responsive .table>:not(caption)>*>*{
+  padding: 5px;
+}
 
 
 
@@ -718,7 +722,7 @@ a {
 /* Small devices (tablets) */
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   .camera_cards {
-    width: 32%;
+    width: 33%;
   }
   .background-image-2 {
     background-image: url("assets/Background-signup-sm.png");
@@ -741,7 +745,7 @@ a {
 /* Medium devices (desktops) */
 @media only screen and (min-width: 769px) and (max-width: 993px) {
   .camera_cards {
-    width: 32%;
+    width: 33.3%;
   }
   .background-image-2 {
     background-image: url("assets/Background-signup-sm.png");
@@ -761,7 +765,7 @@ a {
 /* Large devices (large desktops) */
 @media only screen and (min-width: 994px) and (max-width: 1200px) {
   .camera_cards {
-    width: 24%;
+    width: 25%;
   }
   .modal-content {
     background-position: unset;
@@ -782,7 +786,7 @@ a {
     background-position: unset;
   }
   .camera_cards {
-    width: 19.5%;
+    width: 20%;
   }
   .sm_sidebarView{
     width: 6%;

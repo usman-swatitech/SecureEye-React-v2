@@ -350,7 +350,7 @@ SCROLLBAR OF CAMERAS
   flex-wrap: wrap;
   flex-direction: row;
   width: 100%;
-  gap: 10px;
+  /* gap: 10px; */
   /* max-height: 400px;
   overflow-y: scroll; */
 }
