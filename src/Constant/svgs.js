@@ -466,7 +466,7 @@ export const plusSvg = (
   >
     <path
       d="M10.4232 4.51348V6.36966C10.4232 6.5094 10.3099 6.62278 10.17 6.62278H6.73899V10.0538C6.73899 10.1938 6.62561 10.3069 6.48587 10.3069H4.62969C4.49004 10.3069 4.37657 10.1937 4.37657 10.0538V6.62278H0.9455C0.805657 6.62278 0.692383 6.5094 0.692383 6.36966V4.51348C0.692383 4.37372 0.805657 4.26036 0.9455 4.26036H4.37657V0.82929C4.37657 0.68939 4.49001 0.576172 4.62969 0.576172H6.48587C6.62561 0.576172 6.73899 0.68939 6.73899 0.82929V4.26036H10.17C10.31 4.26036 10.4232 4.37372 10.4232 4.51348Z"
-      fill="#00FFFB"
+      fill="#000000"
     />
   </svg>
 );
@@ -541,3 +541,211 @@ export const activeSettingSvg = (
     />
   </svg>
 );
+
+export const iconUpSvg = (
+  <svg
+    width="10"
+    height="6"
+    viewBox="0 0 10 6"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M9 5L5 1L1 5"
+      stroke="#00FFFB"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const hideSidebarSvg = (
+  <svg
+    width="48"
+    height="48"
+    viewBox="0 0 48 48"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g filter="url(#filter0_d_105_8763)">
+      <circle
+        cx="27"
+        cy="19"
+        r="11"
+        transform="rotate(-180 27 19)"
+        fill="#00030A"
+        stroke="#00FFFB"
+        stroke-width="2"
+      />
+      <path
+        d="M31.3583 18.3444L24.1899 18.3444L27.3217 15.1285C27.5719 14.8715 27.5719 14.4497 27.3217 14.1927C27.2623 14.1316 27.1918 14.0832 27.1141 14.0501C27.0365 14.017 26.9533 14 26.8692 14C26.7852 14 26.702 14.017 26.6243 14.0501C26.5467 14.0832 26.4762 14.1316 26.4168 14.1927L22.1877 18.5355C22.1282 18.5965 22.081 18.6689 22.0488 18.7486C22.0166 18.8284 22 18.9138 22 19.0001C22 19.0864 22.0166 19.1719 22.0488 19.2516C22.081 19.3314 22.1282 19.4038 22.1877 19.4647L26.4168 23.8076C26.4762 23.8686 26.5467 23.917 26.6244 23.95C26.702 23.983 26.7852 24 26.8692 24C26.9532 24 27.0365 23.983 27.1141 23.95C27.1917 23.917 27.2622 23.8686 27.3217 23.8076C27.3811 23.7465 27.4282 23.6741 27.4604 23.5944C27.4925 23.5147 27.5091 23.4292 27.5091 23.343C27.5091 23.2567 27.4925 23.1712 27.4604 23.0915C27.4282 23.0118 27.3811 22.9394 27.3217 22.8784L24.1899 19.6624L31.3583 19.6624C31.7112 19.6624 32 19.3659 32 19.0034C32 18.641 31.7112 18.3444 31.3583 18.3444Z"
+        fill="#00FFFB"
+      />
+    </g>
+    <defs>
+      <filter
+        id="filter0_d_105_8763"
+        x="0.6"
+        y="0.6"
+        width="46.8"
+        height="46.8"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
+      >
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dx="-3" dy="5" />
+        <feGaussianBlur stdDeviation="5.7" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_105_8763"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow_105_8763"
+          result="shape"
+        />
+      </filter>
+    </defs>
+  </svg>
+);
+
+export const openSidebarSvg = (
+  <svg
+    width="48"
+    height="48"
+    viewBox="0 0 48 48"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g filter="url(#filter0_d_105_8173)">
+      <circle
+        cx="27"
+        cy="19"
+        r="11"
+        fill="#00030A"
+        stroke="#00FFFB"
+        stroke-width="2"
+      />
+      <path
+        d="M22.6417 19.6556L29.8101 19.6556L26.6783 22.8715C26.4281 23.1285 26.4281 23.5503 26.6783 23.8073C26.7377 23.8684 26.8082 23.9168 26.8859 23.9499C26.9635 23.983 27.0467 24 27.1308 24C27.2148 24 27.298 23.983 27.3757 23.9499C27.4533 23.9168 27.5238 23.8684 27.5832 23.8073L31.8123 19.4645C31.8718 19.4035 31.919 19.3311 31.9512 19.2514C31.9834 19.1716 32 19.0862 32 18.9999C32 18.9136 31.9834 18.8281 31.9512 18.7484C31.919 18.6686 31.8718 18.5962 31.8123 18.5353L27.5832 14.1924C27.5238 14.1314 27.4533 14.083 27.3756 14.05C27.298 14.017 27.2148 14 27.1308 14C27.0468 14 26.9635 14.017 26.8859 14.05C26.8083 14.083 26.7378 14.1314 26.6783 14.1924C26.6189 14.2535 26.5718 14.3259 26.5396 14.4056C26.5075 14.4853 26.4909 14.5708 26.4909 14.657C26.4909 14.7433 26.5075 14.8288 26.5396 14.9085C26.5718 14.9882 26.6189 15.0606 26.6783 15.1216L29.8101 18.3376L22.6417 18.3376C22.2888 18.3376 22 18.6341 22 18.9966C22 19.359 22.2888 19.6556 22.6417 19.6556Z"
+        fill="#00FFFB"
+      />
+    </g>
+    <defs>
+      <filter
+        id="filter0_d_105_8173"
+        x="0.6"
+        y="0.6"
+        width="46.8"
+        height="46.8"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
+      >
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dx="-3" dy="5" />
+        <feGaussianBlur stdDeviation="5.7" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_105_8173"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow_105_8173"
+          result="shape"
+        />
+      </filter>
+    </defs>
+  </svg>
+);
+
+
+export const backBtnSvg = (
+  <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.909 6.95109L3.72288 6.95109L9.04682 1.80561C9.4723 1.39439 9.4723 0.719571 9.04682 0.308354C8.94589 0.210607 8.826 0.133058 8.69403 0.0801464C8.56205 0.0272349 8.42057 0 8.27769 0C8.1348 0 7.99332 0.0272349 7.86134 0.0801464C7.72937 0.133058 7.60948 0.210607 7.50855 0.308354L0.319048 7.25687C0.217911 7.35442 0.137673 7.47028 0.0829265 7.59784C0.02818 7.72539 0 7.86213 0 8.00022C0 8.13832 0.02818 8.27505 0.0829265 8.40261C0.137673 8.53016 0.217911 8.64603 0.319048 8.74358L7.50855 15.6921C7.60955 15.7897 7.72946 15.8671 7.86143 15.92C7.9934 15.9728 8.13484 16 8.27769 16C8.42053 16 8.56197 15.9728 8.69394 15.92C8.82591 15.8671 8.94582 15.7897 9.04682 15.6921C9.14782 15.5945 9.22794 15.4786 9.28261 15.351C9.33727 15.2235 9.36541 15.0868 9.36541 14.9487C9.36541 14.8107 9.33727 14.674 9.28261 14.5464C9.22794 14.4189 9.14782 14.303 9.04682 14.2054L3.72288 9.0599L15.909 9.0599C16.5091 9.0599 17 8.58542 17 8.0055C17 7.42557 16.5091 6.95109 15.909 6.95109Z" fill="#00FFFB" />
+  </svg>
+
+);
+
+export const cameraToolsSvg = [
+  {
+    name: 'recordBtn',
+    svg: (
+      <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path opacity="0.5" d="M12.5 2.5C6.98615 2.5 2.5 6.98615 2.5 12.5C2.5 18.0139 6.98615 22.5 12.5 22.5C18.0139 22.5 22.5 18.0139 22.5 12.5C22.5 6.98615 18.0139 2.5 12.5 2.5ZM12.5 4C17.2031 4 21 7.79685 21 12.5C21 17.2031 17.2031 21 12.5 21C7.79685 21 4 17.2031 4 12.5C4 7.79685 7.79685 4 12.5 4Z" fill="#EF4444" />
+      <rect x="8" y="8" width="9" height="9" fill="#EF4444" />
+    </svg>
+    ),
+  },
+  {
+    name: 'startRecordBtn',
+    svg: (
+      <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_181_2094)">
+      <path d="M12.5 2.5C6.98615 2.5 2.5 6.98615 2.5 12.5C2.5 18.0139 6.98615 22.5 12.5 22.5C18.0139 22.5 22.5 18.0139 22.5 12.5C22.5 6.98615 18.0139 2.5 12.5 2.5ZM12.5 4C17.2031 4 21 7.79685 21 12.5C21 17.2031 17.2031 21 12.5 21C7.79685 21 4 17.2031 4 12.5C4 7.79685 7.79685 4 12.5 4Z" fill="#00FFFB" />
+      <g filter="url(#filter0_d_181_2094)">
+        <path d="M8 12.5C8 10.0236 10.0236 8 12.5 8C14.9764 8 17 10.0236 17 12.5C17 14.9764 14.9764 17 12.5 17C10.0236 17 8 14.9764 8 12.5Z" fill="#00FFFB" />
+      </g>
+    </g>
+    <defs>
+      <filter id="filter0_d_181_2094" x="-4" y="-4" width="33" height="33" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+        <feOffset />
+        <feGaussianBlur stdDeviation="6" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix type="matrix" values="0 0 0 0 0.937255 0 0 0 0 0.266667 0 0 0 0 0.266667 0 0 0 0.5 0" />
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_181_2094" />
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_181_2094" result="shape" />
+      </filter>
+      <clipPath id="clip0_181_2094">
+        <rect width="24" height="24" fill="white" transform="translate(0.5 0.5)" />
+      </clipPath>
+    </defs>
+  </svg>
+    ),
+  },
+  {
+    name: 'addBtn',
+    svg: (
+      <svg width='25' height='25' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+    </svg>
+    
+    ),
+  },
+  {
+    name: 'subBtn',
+    svg: (
+      <svg width='25' height='25' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+</svg>
+
+    ),
+  },
+];

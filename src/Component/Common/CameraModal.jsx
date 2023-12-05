@@ -132,9 +132,10 @@ const CameraModal = ({ addCamera, setAddCamera }) => {
                     type='text'
                     className='custom-input-2'
                     placeholder='Night Vision Supported'
-                    name='nightVision'
-                    value={addCamera.nightVision}
-                    onChange={handleChange}
+                    disabled
+                    // name='nightVision'
+                    // value={addCamera.nightVision}
+                    // onChange={handleChange}
                   />
                   <label className='custom_checkbox_modal'>
                     <input

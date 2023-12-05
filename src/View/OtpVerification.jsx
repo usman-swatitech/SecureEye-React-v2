@@ -62,7 +62,7 @@ function OtpVerification() {
               <img src={images.bLogo} alt='logo' className='logo-2' />
               <p className="mt-5 screenHeading fw-bold text-white">otp verification</p>
 
-              <p className="my-3 screenHeading2 text-capitalize fw-bold text-white">otp has been sent to your registered email, <br />
+              <p className="my-3 screenHeading2 text-capitalize fw-bold text-white">otp has been sent to your     registered email, <br />
                 please enter 6 digit verification code</p>
 
               <div className='signup-box mt-4' >
@@ -95,11 +95,12 @@ function OtpVerification() {
                   <Button name='VERIFY' />
                 </div>
                 {(!isTimerRunning) ?
-                  <p className='opt-p pt-4 text-white text-capitalize'>
-                    didn’t receive the code? <span className='otp-span cursor-pointer' onClick={HandleGetOTP}>Resend ?</span>
+                  <p className='opt-p pt-4 text-white text-capitalize aeionMonoFont'>
+                    didn’t receive the code? <span className='otp-span cursor-pointer aeionMonoFont' 
+                    onClick={HandleGetOTP}>Resend ?</span>
                   </p>
                   :
-                  <p className='text-white pt-4'>Resend OTP <span className='otp-span'>{currentTime} sec</span></p>
+                  <p className='text-white pt-4 aeionMonoFont'>Resend OTP <span className='otp-span'>{currentTime} sec</span></p>
                 }
               </div>
             </div>
