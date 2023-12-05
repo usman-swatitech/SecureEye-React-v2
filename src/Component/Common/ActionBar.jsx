@@ -1,12 +1,27 @@
 import React, {useState } from "react";
-import { myHomeSvg, myBlockSvg, activeFac, plusSvg } from "../../Constant/svgs";
+import {plusSvg,backBtnSvg } from "../../Constant/svgs";
 import CameraModal from "./CameraModal";
 import ButtonSubmit from "./ButtonShap";
 import { Modal } from "react-bootstrap";
 import SweatAlert, { successSweatAlert } from "../../helperFun/SweatAlertFun";
+import { Store } from "../../ContextAPI/Context";
 
 const ActionBar = () => {
+
   const [show, setShow] = useState(false);
+
+  const {currentLayout,setCurrentLayout} = Store();
+
+  const layoutTitles = {
+    HomeLayout: 'Secureye dashboard',
+    EmployeeLayout: 'Employee data',
+    DepartmentLayout: 'Department data',
+    WorkingLayout: ' Working data',
+    SettingsLayout: 'Settings',
+    // Add more layouts as needed
+  };
+  const labelContent = layoutTitles[currentLayout] || 'Camera 01';
+
   const handleShow = () => {
     setShow(true);
   };
@@ -19,7 +34,6 @@ const ActionBar = () => {
     ipAddress: "",
     port: "",
     location: "",
-    // nightVision: "",
     nightMode: false,
     userName: "",
     userPassword: "",
@@ -71,30 +85,44 @@ const ActionBar = () => {
       successSweatAlert("Camera add successfully");
       setShow(false);
     }
+    
   };
+
+  const handlerBack = () => {
+    setCurrentLayout('HomeLayout');
+  }
   return (
     <>
-      <div className="action_bar d-flex justify-content-between">
-        <div className="left_portion">
+      <div className="action_bar d-flex justify-content-between align-items-center">
+        {/* <div className="left_portion">
           <span className="actionbar_icons">{myHomeSvg}</span>
           <span className="actionbar_icons">{myBlockSvg}</span>
           <span className="actionbar_icons">{activeFac}</span>
-        </div>
-        <button
-          type="button"
-          className="modal_btn"
-          variant="primary"
-          onClick={handleShow}
-        >
-          <div className="right_portion d-flex">
-            <div className="main_circle">
-              <div className="plus_circle">
-                <span>{plusSvg}</span>
-              </div>
-            </div>
-            <h4 className="fs-6 text-white mt-1-2">Add New Camera</h4>
+        </div> */}
+        <label className="componentTittle">{labelContent}</label>
+        {(labelContent === "Camera 01") ?
+          <div className="backButton cursor-pointer" onClick={handlerBack}>
+            {backBtnSvg}
+            Back
           </div>
-        </button>
+          :
+          <button
+            type="button"
+            className="modal_btn"
+            variant="primary"
+            onClick={handleShow}
+          >
+            <div className="right_portion d-flex">
+              <div className="main_circle">
+                <div className="plus_circle">
+                  <span>{plusSvg}</span>
+                </div>
+              </div>
+              <h4 className="fs-6 text-white mt-1-2">Add New Camera</h4>
+            </div>
+          </button>
+        }
+        
       </div>
 
       <Modal show={show} onHide={handleClose} size="lg" centered>

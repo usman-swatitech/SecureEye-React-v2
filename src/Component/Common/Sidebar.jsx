@@ -8,22 +8,22 @@ import { logoSvg } from "../../Constant/logo";
 import { iconUpSvg } from "../../Constant/svgs";
 import SidebarPopup from "../SidebarPopup";
 const Sidebar = () => {
-  const [width, setWidth] = useState(undefined);
-  const [smallLogo, setSmallLogo] = useState(false);
+  // const [width, setWidth] = useState(undefined);
+  // const [smallLogo, setSmallLogo] = useState(false);
   useEffect(() => {
     const handleResize = () => {
-      setWidth(window.innerWidth);
+    //   setWidth(window.innerWidth);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  useEffect(() => {
-    if (width > 960) {
-      setSmallLogo(false);
-    } else {
-      setSmallLogo(true);
-    }
-  }, [width]);
+  // useEffect(() => {
+  //   if (width > 960) {
+  //     setSmallLogo(false);
+  //   } else {
+  //     setSmallLogo(true);
+  //   }
+  // }, [width]);
   const { setCurrentLayout, isSmall, openPopup, handleTogglePopup } = Store();
   const [links, setLinks] = useState(navlinks);
   // const [activeIndex, setActiveIndex] = useState(0);

@@ -577,6 +577,75 @@ a {
 .card-body {
   padding: 10px;
 }
+.componentTittle
+{
+  color: #fff;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+.backButton{
+  color: #fff;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  z-index: 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Extra small devices (phones) */
 
@@ -642,6 +711,12 @@ a {
   .main_home_screen {
     width: 99%;
   }
+  .sm_sidebarView{
+    width: 10%;
+  }
+  .sm_mainComponent_view{
+    width: 90%;
+  }
 }
 
 /* Medium devices (desktops) */
@@ -655,6 +730,12 @@ a {
 
   .modal {
     --bs-modal-width: 575px;
+  }
+  .sm_sidebarView{
+    width: 10%;
+  }
+  .sm_mainComponent_view{
+    width: 90%;
   }
 }
 
@@ -683,5 +764,11 @@ a {
   }
   .camera_cards {
     width: 19.5%;
+  }
+  .sm_sidebarView{
+    width: 6%;
+  }
+  .sm_mainComponent_view{
+    width: 92%;
   }
 }

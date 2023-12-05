@@ -4,10 +4,9 @@ import { singleScreenTableHeading } from "../Constant/table";
 
 const EmployeeLayout = () => {
   return (
-    <div className="container bg-dark">
+    <div className="container bg-dark mt-3">
       <div className="row">
         <div className="col-lg-12 col-md-12 col-sm-12 px-0 ">
-            <p className="employeeHeading">Employee Information</p>
             <div className="row table_header pr-1">
               <div className="col-lg-6 col-md-6 col-sm-6">
                 <div className="row g-0">
