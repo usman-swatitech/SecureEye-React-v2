@@ -1,9 +1,11 @@
 import React from "react";
 import video from "../assets/mp4/test.mp4";
-import Table from "../Component/Common/Table";
+// import Table from "../Component/Common/Table";
 import * as images from "../Constant/images";
-import { singleScreenTableHeading } from "../Constant/table";
+// import { singleScreenTableHeading } from "../Constant/table";
 import Timer from "../Component/Common/Timer";
+import { cameraToolsSvg } from '../Constant/svgs';
+
 const SingleScreenLayout = () => {
   return (
     <section className="single_screen_view">
@@ -15,7 +17,7 @@ const SingleScreenLayout = () => {
             className="single_camera_frame"
           />
           <div className="frame_inner">
-            <label className="text-white ms-3 pb-1">CAMERA 01</label>
+            {/* <label className="text-white ms-3 pb-1">CAMERA 01</label> */}
             <video
               autoPlay
               loop
@@ -26,13 +28,20 @@ const SingleScreenLayout = () => {
               <source src={video} />
             </video>
           </div>
-          <Timer cameraStatus="normal" />
+          <div className="cameraTollsView">
+            {cameraToolsSvg.map((item, index) => (
+              <span className="cameraTolls">
+                {item.svg}
+              </span>
+            ))}
+
+          </div>
         </div>
       </div>
-      <label className="EmployeeInformation">Activity Monitor</label>
+      {/* <label className="EmployeeInformation">Activity Monitor</label>
       <div className="scrren_cctv_tabel_sty scrollbar_style">
         <Table heading={singleScreenTableHeading} />
-      </div>
+      </div> */}
     </section>
   );
 };

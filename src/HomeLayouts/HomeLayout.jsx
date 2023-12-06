@@ -4,6 +4,7 @@ import Cards from '../Component/Common/CameraCards';
 import * as images from '../Constant/images';
 import { homeTableHeading } from '../Constant/table';
 import { cameraData } from '../Constant/cameras';
+// import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 

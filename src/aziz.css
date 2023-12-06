@@ -45,49 +45,23 @@ SCROLLBAR OF CAMERAS
 /* sidebar css starts here... */
 
 .sidebar .sidebar_logo {
-  height: 39px;
-  width: 60px;
+  height: 30px;
+  width: 50px;
   object-fit: contain;
   position: relative;
   margin-left: auto;
   margin-right: auto;
 }
 
-.line {
-  position: absolute;
-  left: 0;
-  height: 36px;
-  width: 3px;
-  background-color: var(--primary);
-  border-radius: 0 4px 4px 0;
-}
-
-.icon {
-  width: 40px;
-  height: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-}
-.icon_active {
-  background-color: var(--primary);
-  width: 40px;
-  height: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 6px;
-}
-
 .avatar_frame {
   position: relative;
-  top: 10px;
+  /* top: 10px; */
   height: 30px;
   width: 30px;
   border-radius: 50%;
   padding: 2px;
   cursor: pointer;
+  border: 1px solid var(--primary);
 }
 .avatar_frame .avatar_frame_image {
   height: 100%;
@@ -95,17 +69,25 @@ SCROLLBAR OF CAMERAS
   object-fit: cover;
 }
 .sidebar {
-  position: relative;
+  /* position: relative; */
   left: 25%;
   top: 0;
   height: 106.5vh;
-  width: 65%;
+  width: 100%;
   background-color: rgb(15, 20, 29);
   clip-path: polygon(0% 2.5%, 35% 0%, 100% 0%, 100% 85%, 33% 85%, 0% 82.5%);
   display: flex;
   flex-direction: column;
-  padding: 10px 2px;
+  padding: 10px 10px;
+  font-weight: 500;
   gap: 10px;
+}
+.hide_sidebar_icon {
+  position: absolute;
+  right: -15px;
+  z-index: 999;
+  top: 35px;
+  cursor: pointer;
 }
 .links_main_wrapper {
   flex-grow: 1;
@@ -121,18 +103,127 @@ SCROLLBAR OF CAMERAS
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
-.navigation .link {
+/* new css */
+.nav_link {
+  display: flex;
+  width: 100%;
+  height: 35px;
+  align-items: center;
   cursor: pointer;
 }
-.sidebar_last-row {
+.active_nav_items {
+  height: 100%;
+  flex: 1;
+  background: var(--primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 3px;
+  font-weight: 800;
+}
+.action {
+  height: 60px;
+  width: 60px;
+  background-color: blue;
+  border-radius: 50%;
+  position: absolute;
+  right: -20px;
+  top: 20px;
+  z-index: 99999999;
+}
+.normal_nav_item {
+  height: 100%;
+  flex: 1;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 3px;
+}
+.icon {
+  width: 40px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+.icon_active {
+  width: 40px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.line {
+  position: absolute;
+  left: 0;
+  height: 30px;
+  width: 3px;
+  background-color: var(--primary);
+  border-radius: 0 4px 4px 0;
+}
+
+/* new css for sidebar */
+.navigation .link {
+  cursor: pointer;
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px;
+}
+.link_active {
+  width: 100%;
+  background-color: var(--primary);
+  margin: 0 10px;
+}
+.nav_label {
+  font-size: 10px;
+}
+.sidebar_last_row {
   width: 100%;
   position: relative;
   top: -20%;
+  height: 40px;
+
+  padding-right: 20px;
+  padding-left: 15px;
+}
+.sidebar_last_row .username {
+  font-size: 12px;
+  position: relative;
+  top: 4px;
+  color: white;
+}
+.sidebar_last_row .icon_up {
+  font-size: 15px;
+  cursor: pointer;
+}
+.sidebar_popup {
+  position: absolute;
+  top: -155px;
+  height: 150px;
+  width: 160px;
+  border: 1px solid #155058;
+  background-color: #1b2833;
+  opacity: 100%;
+  left: 0;
+  z-index: 99999999;
+  opacity: 97%;
+  color: white;
+  padding: 7px 7px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  border-radius: 10px;
+  font-size: 17px;
+  gap: 7px;
+}
+.popup_links {
+  height: 40px;
+  cursor: pointer;
 }
 .link {
   cursor: pointer;
@@ -161,7 +252,6 @@ SCROLLBAR OF CAMERAS
 }
 
 .input_div input {
-  /* position: absolute; */
   height: 100%;
   width: 100%;
   outline: none;
@@ -208,11 +298,11 @@ SCROLLBAR OF CAMERAS
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 42px;
-  width: 42px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
-  background-color: rgb(0, 21, 27);
-  border: 7px solid black;
+  background-color: #04181d;
+  /* border: 2px solid black; */
   border-style: double;
 }
 .right_portion .plus_circle {
@@ -220,7 +310,11 @@ SCROLLBAR OF CAMERAS
   height: 70%;
   width: 70%;
   border-radius: 50%;
-  background-color: rgb(0, 37, 43);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #00fffb 0%,
+    rgba(0, 255, 251, 0) 100%
+  );
   display: grid;
   place-content: center;
 }
@@ -256,7 +350,7 @@ SCROLLBAR OF CAMERAS
   flex-wrap: wrap;
   flex-direction: row;
   width: 100%;
-  gap: 10px;
+  /* gap: 10px; */
   /* max-height: 400px;
   overflow-y: scroll; */
 }
@@ -296,15 +390,16 @@ SCROLLBAR OF CAMERAS
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 15px;
 }
 .frame_inner video {
   position: relative;
   width: auto;
-  height: 88%;
+  height: 100%;
   object-fit: cover;
   width: 100%;
 }
+
 .emp-p-tag {
   margin-left: 0;
 }
@@ -492,8 +587,9 @@ SCROLLBAR OF CAMERAS
   width: 100%;
 }
 .scrren_cctv_sty {
-  height: 45vh;
+  height: 72vh;
   background-color: black;
+  margin-right: 5px;
 }
 .scrren_cctv_tabel_sty {
   height: 22vh;

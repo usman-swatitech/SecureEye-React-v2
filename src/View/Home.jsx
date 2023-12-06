@@ -2,14 +2,22 @@ import React from "react";
 import Sidebar from "../Component/Common/Sidebar";
 import Search from "../Component/Common/Search";
 import ActionBar from "../Component/Common/ActionBar";
-import * as images from '../Constant/images';
-import {HomeLayout,DepartmentLayout,WorkingLayout,EmployeeLayout,SettingsLayout,SearchLayout,SingleScreenLayout,
+import * as images from "../Constant/images";
+import { hideSidebarSvg, openSidebarSvg } from "../Constant/svgs";
+import {
+  HomeLayout,
+  DepartmentLayout,
+  WorkingLayout,
+  EmployeeLayout,
+  SettingsLayout,
+  SearchLayout,
+  SingleScreenLayout,
 } from "../HomeLayouts/index";
 import { Store } from "../ContextAPI/Context";
 
 const App = () => {
   // localStorage.clear("signInput");
-  const { currentLayout } = Store();
+  const { currentLayout, isSmall, handleClickToggle } = Store();
   const RenderComponents = () => {
     switch (currentLayout) {
       case "HomeLayout":
@@ -33,28 +41,32 @@ const App = () => {
   return (
     <>
       <section className="w-100 bg-black position-relative main_wrapper ">
-      {/* <div className="abs-div">abs div</div> */}
+        {/* <div className="abs-div">abs div</div> */}
 
-      <div className="second-div root_layout_inner_wrapper">
-        <img src={images.homeFrame} alt="bg-cover" className="bg_cover" />
-        <div className="main_screenView d-flex justify-content-center">
-          <div className="sideBarView">
-            <Sidebar />
-          </div>
-          <div className="mainComponentView">
-            <div className="searchBar">
-              <Search />
+        <div className="second-div root_layout_inner_wrapper">
+          <img src={images.homeFrame} alt="bg-cover" className="bg_cover" />
+          <div className="main_screenView d-flex justify-content-start">
+            <div className={`${isSmall ? "sm_sidebarView" : "sideBarView"}`}>
+              <Sidebar />
+              <span className="hide_sidebar_icon" onClick={handleClickToggle}>
+                {isSmall ? openSidebarSvg : hideSidebarSvg}
+              </span>
             </div>
-            <div className="tabIcons">
-              <ActionBar />
-            </div>
-            <div className="viewComponents">
-              <div className="cameras_layout">{RenderComponents()}</div>
+            <div
+              className={`${ isSmall ? "sm_mainComponent_view" : "mainComponentView" }`}>
+              <div className="searchBar">
+                <Search />
+              </div>
+              <div className="tabIcons">
+                <ActionBar />
+              </div>
+              <div className="viewComponents">
+                <div className="cameras_layout">{RenderComponents()}</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
     </>
   );
 };
