@@ -19,7 +19,7 @@ const ActionBar = () => {
     ipAddress: "",
     port: "",
     location: "",
-    nightVision: "",
+    // nightVision: "",
     nightMode: false,
     userName: "",
     userPassword: "",
@@ -37,7 +37,7 @@ const ActionBar = () => {
       port,
       location,
       userName,
-      nightVision,
+      // nightVision,
       userPassword,
     } = addCamera;
 
@@ -49,9 +49,11 @@ const ActionBar = () => {
       SweatAlert("port is empty");
     } else if (location === "") {
       SweatAlert("location is empty");
-    } else if (nightVision === "") {
-      SweatAlert("nightVision is empty");
-    } else if (userName === "") {
+    } 
+    // else if (nightVision === "") {
+    //   SweatAlert("nightVision is empty");
+    // } 
+    else if (userName === "") {
       SweatAlert("userName is empty");
     } else if (userPassword === "") {
       SweatAlert("userPassword is empty");
@@ -61,7 +63,7 @@ const ActionBar = () => {
         ipAddress: "",
         port: "",
         location: "",
-        nightVision: "",
+        // nightVision: "",
         nightMode: false,
         userName: "",
         userPassword: "",
