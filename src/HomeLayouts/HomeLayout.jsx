@@ -24,9 +24,9 @@ const HomeLayout = () => {
 
   // Adjust itemsPerPage based on the window width
   let itemsPerPage;
-  if (windowWidth < 700) {
+  if (windowWidth < 1000) {
     itemsPerPage = 6; // Show 6 cards for screens below 700px
-  } else if (windowWidth >= 700 && windowWidth < 1200) {
+  } else if (windowWidth >= 800 && windowWidth < 1200) {
     itemsPerPage = 8; // Show 4 cards for screens between 700px and 1200px
   } else {
     itemsPerPage = 10; // Show 10 cards for screens 1200px and above
