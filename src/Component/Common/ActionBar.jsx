@@ -100,7 +100,7 @@ const ActionBar = () => {
           <span className="actionbar_icons">{activeFac}</span>
         </div> */}
         <label className="componentTittle">{labelContent}</label>
-        {(labelContent === "Camera 01") ?
+        {(currentLayout !== "HomeLayout") ?
           <div className="backButton cursor-pointer" onClick={handlerBack}>
             {backBtnSvg}
             Back
