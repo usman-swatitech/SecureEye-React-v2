@@ -4,7 +4,6 @@ import Cards from '../Component/Common/CameraCards';
 import * as images from '../Constant/images';
 import { homeTableHeading } from '../Constant/table';
 import { cameraData } from '../Constant/cameras';
-// import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
@@ -24,7 +23,14 @@ const HomeLayout = () => {
   }, []);
 
   // Adjust itemsPerPage based on the window width
-  const itemsPerPage = windowWidth < 770 ? 6 : 10;
+  let itemsPerPage;
+  if (windowWidth < 700) {
+    itemsPerPage = 6; // Show 6 cards for screens below 700px
+  } else if (windowWidth >= 700 && windowWidth < 1200) {
+    itemsPerPage = 8; // Show 4 cards for screens between 700px and 1200px
+  } else {
+    itemsPerPage = 10; // Show 10 cards for screens 1200px and above
+  }
 
   const [currentPage, setCurrentPage] = useState(1);
 
