@@ -21,6 +21,7 @@ export const navlinks = [
     isActive: true,
     layout: "HomeLayout",
   },
+  // search module commented
   // {
   //   activeIcon: activeSearchSvg,
   //   nonActiveIcon: searchSvg,

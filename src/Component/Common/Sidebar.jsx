@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { navlinks } from "../../Constant/sidbarLinks";
 import { logoWithText } from "../../Constant/images";
 import Avatar from "./Avatar";
@@ -8,27 +8,10 @@ import { logoSvg } from "../../Constant/logo";
 import { iconUpSvg } from "../../Constant/svgs";
 import SidebarPopup from "../SidebarPopup";
 const Sidebar = () => {
-  // const [width, setWidth] = useState(undefined);
-  // const [smallLogo, setSmallLogo] = useState(false);
-  useEffect(() => {
-    const handleResize = () => {
-    //   setWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-  // useEffect(() => {
-  //   if (width > 960) {
-  //     setSmallLogo(false);
-  //   } else {
-  //     setSmallLogo(true);
-  //   }
-  // }, [width]);
   const { setCurrentLayout, isSmall, openPopup, handleTogglePopup } = Store();
   const [links, setLinks] = useState(navlinks);
-  // const [activeIndex, setActiveIndex] = useState(0);
+
   const handleActive = (index, newLayout) => {
-    // setActiveIndex(index);
     const updatedItems = links.map((item, i) => ({
       ...item,
       isActive: i === index,
@@ -37,7 +20,11 @@ const Sidebar = () => {
     setCurrentLayout(newLayout);
   };
   return (
-    <div className={isSmall ? 'sidebar smal_sidebar_view' : 'sidebar large_sidebar_view'}>
+    <div
+      className={
+        isSmall ? "sidebar smal_sidebar_view" : "sidebar large_sidebar_view"
+      }
+    >
       {isSmall ? (
         <span
           className="d-flex justify-content-center cursor-pointer"
