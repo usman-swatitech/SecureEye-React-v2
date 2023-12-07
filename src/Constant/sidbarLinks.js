@@ -30,6 +30,7 @@ export const navlinks = [
   //   isActive: false,
   //   layout: "SearchLayout",
   // },
+
   {
     activeIcon: activeUserSvg,
     nonActiveIcon: nonActiveUserSvg,
