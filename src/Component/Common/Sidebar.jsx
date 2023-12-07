@@ -8,17 +8,23 @@ import { logoSvg } from "../../Constant/logo";
 import { iconUpSvg } from "../../Constant/svgs";
 import SidebarPopup from "../SidebarPopup";
 const Sidebar = () => {
-  const [width, setWidth] = useState(undefined);
-
-  const { setCurrentLayout, isSmall, openPopup, handleTogglePopup } = Store();
+  // const [width, setWidth] = useState(undefined);
+  // const [smallLogo, setSmallLogo] = useState(false);
   useEffect(() => {
     const handleResize = () => {
-      setWidth(window.innerWidth);
+    //   setWidth(window.innerWidth);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
+  // useEffect(() => {
+  //   if (width > 960) {
+  //     setSmallLogo(false);
+  //   } else {
+  //     setSmallLogo(true);
+  //   }
+  // }, [width]);
+  const { setCurrentLayout, isSmall, openPopup, handleTogglePopup } = Store();
   const [links, setLinks] = useState(navlinks);
   // const [activeIndex, setActiveIndex] = useState(0);
   const handleActive = (index, newLayout) => {
@@ -31,7 +37,7 @@ const Sidebar = () => {
     setCurrentLayout(newLayout);
   };
   return (
-    <div className="sidebar">
+    <div className={isSmall ? 'sidebar smal_sidebar_view' : 'sidebar large_sidebar_view'}>
       {isSmall ? (
         <span
           className="d-flex justify-content-center cursor-pointer"
@@ -93,19 +99,3 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
-
-// <div
-// className={`link ${
-//   link.isActive ? "link_active" : "normal_link"
-// }`}
-// key={index}
-// onClick={() => {
-//   handleActive(index, link.layout);
-// }}
-// >
-// <div className={link.isActive ? "line" : null}></div>
-// <span className={link.isActive ? "icon_active" : "icon"}>
-//   {link.isActive ? link.activeIcon : link.nonActiveIcon}
-// </span>
-// <span className="nav_label">{link.label}</span>
-// </div>

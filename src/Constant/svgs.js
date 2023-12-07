@@ -683,3 +683,69 @@ export const openSidebarSvg = (
     </defs>
   </svg>
 );
+
+
+export const backBtnSvg = (
+  <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.909 6.95109L3.72288 6.95109L9.04682 1.80561C9.4723 1.39439 9.4723 0.719571 9.04682 0.308354C8.94589 0.210607 8.826 0.133058 8.69403 0.0801464C8.56205 0.0272349 8.42057 0 8.27769 0C8.1348 0 7.99332 0.0272349 7.86134 0.0801464C7.72937 0.133058 7.60948 0.210607 7.50855 0.308354L0.319048 7.25687C0.217911 7.35442 0.137673 7.47028 0.0829265 7.59784C0.02818 7.72539 0 7.86213 0 8.00022C0 8.13832 0.02818 8.27505 0.0829265 8.40261C0.137673 8.53016 0.217911 8.64603 0.319048 8.74358L7.50855 15.6921C7.60955 15.7897 7.72946 15.8671 7.86143 15.92C7.9934 15.9728 8.13484 16 8.27769 16C8.42053 16 8.56197 15.9728 8.69394 15.92C8.82591 15.8671 8.94582 15.7897 9.04682 15.6921C9.14782 15.5945 9.22794 15.4786 9.28261 15.351C9.33727 15.2235 9.36541 15.0868 9.36541 14.9487C9.36541 14.8107 9.33727 14.674 9.28261 14.5464C9.22794 14.4189 9.14782 14.303 9.04682 14.2054L3.72288 9.0599L15.909 9.0599C16.5091 9.0599 17 8.58542 17 8.0055C17 7.42557 16.5091 6.95109 15.909 6.95109Z" fill="#00FFFB" />
+  </svg>
+
+);
+
+export const cameraToolsSvg = [
+  {
+    name: 'recordBtn',
+    svg: (
+      <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path opacity="0.5" d="M12.5 2.5C6.98615 2.5 2.5 6.98615 2.5 12.5C2.5 18.0139 6.98615 22.5 12.5 22.5C18.0139 22.5 22.5 18.0139 22.5 12.5C22.5 6.98615 18.0139 2.5 12.5 2.5ZM12.5 4C17.2031 4 21 7.79685 21 12.5C21 17.2031 17.2031 21 12.5 21C7.79685 21 4 17.2031 4 12.5C4 7.79685 7.79685 4 12.5 4Z" fill="#EF4444" />
+      <rect x="8" y="8" width="9" height="9" fill="#EF4444" />
+    </svg>
+    ),
+  },
+  {
+    name: 'startRecordBtn',
+    svg: (
+      <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_181_2094)">
+      <path d="M12.5 2.5C6.98615 2.5 2.5 6.98615 2.5 12.5C2.5 18.0139 6.98615 22.5 12.5 22.5C18.0139 22.5 22.5 18.0139 22.5 12.5C22.5 6.98615 18.0139 2.5 12.5 2.5ZM12.5 4C17.2031 4 21 7.79685 21 12.5C21 17.2031 17.2031 21 12.5 21C7.79685 21 4 17.2031 4 12.5C4 7.79685 7.79685 4 12.5 4Z" fill="#00FFFB" />
+      <g filter="url(#filter0_d_181_2094)">
+        <path d="M8 12.5C8 10.0236 10.0236 8 12.5 8C14.9764 8 17 10.0236 17 12.5C17 14.9764 14.9764 17 12.5 17C10.0236 17 8 14.9764 8 12.5Z" fill="#00FFFB" />
+      </g>
+    </g>
+    <defs>
+      <filter id="filter0_d_181_2094" x="-4" y="-4" width="33" height="33" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+        <feOffset />
+        <feGaussianBlur stdDeviation="6" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix type="matrix" values="0 0 0 0 0.937255 0 0 0 0 0.266667 0 0 0 0 0.266667 0 0 0 0.5 0" />
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_181_2094" />
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_181_2094" result="shape" />
+      </filter>
+      <clipPath id="clip0_181_2094">
+        <rect width="24" height="24" fill="white" transform="translate(0.5 0.5)" />
+      </clipPath>
+    </defs>
+  </svg>
+    ),
+  },
+  {
+    name: 'addBtn',
+    svg: (
+      <svg width='25' height='25' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+    </svg>
+    
+    ),
+  },
+  {
+    name: 'subBtn',
+    svg: (
+      <svg width='25' height='25' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+</svg>
+
+    ),
+  },
+];

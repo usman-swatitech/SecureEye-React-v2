@@ -4,6 +4,8 @@ import video from "../assets/mp4/test.mp4";
 import * as images from "../Constant/images";
 // import { singleScreenTableHeading } from "../Constant/table";
 import Timer from "../Component/Common/Timer";
+import { cameraToolsSvg } from '../Constant/svgs';
+
 const SingleScreenLayout = () => {
   return (
     <section className="single_screen_view">
@@ -26,7 +28,14 @@ const SingleScreenLayout = () => {
               <source src={video} />
             </video>
           </div>
-          <Timer cameraStatus="normal" />
+          <div className="cameraTollsView">
+            {cameraToolsSvg.map((item, index) => (
+              <span className="cameraTolls">
+                {item.svg}
+              </span>
+            ))}
+
+          </div>
         </div>
       </div>
       {/* <label className="EmployeeInformation">Activity Monitor</label>

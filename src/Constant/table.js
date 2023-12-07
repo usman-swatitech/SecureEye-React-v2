@@ -1,11 +1,11 @@
 export const homeTableHeading = [
-  "EMPLOYEE NAME",
-  "EMPLOYEE ID",
-  "LEVEL ACCESS",
-  "STATUS",
-  "CHECK-IN",
-  "CHECK-OUT",
-  "CEHCK INTERVAL",
+  "Host Caption",
+  "State",
+  "Status",
+  "Response",
+  "Check-In Time",
+  "Check-Out Time",
+  "Check Interval",
 ];
 
 export const singleScreenTableHeading = [

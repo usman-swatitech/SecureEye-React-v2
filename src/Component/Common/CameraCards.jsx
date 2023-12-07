@@ -29,12 +29,11 @@ const Cards = ({ camera }) => {
         >
           {camera.cameraName}
         </p>
-        <div className="cameraCard"></div>
         <video
           autoPlay
           loop
           muted
-          className="card-img-top rounded-0 mt-2 cursor-pointer"
+          className="card-img-top rounded-0 mt-1 cursor-pointer"
         >
           <source src={video} />
         </video>
