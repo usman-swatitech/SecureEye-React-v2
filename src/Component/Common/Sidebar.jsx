@@ -5,7 +5,7 @@ import Avatar from "./Avatar";
 import profileDp from "../../assets/images/avatar.png";
 import { Store } from "../../ContextAPI/Context";
 import { logoSvg } from "../../Constant/logo";
-import { iconUpSvg } from "../../Constant/svgs";
+import { iconUpSvg, logoutSvg } from "../../Constant/svgs";
 import SidebarPopup from "../SidebarPopup";
 const Sidebar = () => {
   const { setCurrentLayout, isSmall, openPopup, handleTogglePopup } = Store();
@@ -68,16 +68,26 @@ const Sidebar = () => {
             </div>
           ))}
         </div>
-        <div className="sidebar_last_row d-flex align-items-center justify-content-between">
-          <div className="d-flex align-items-center gap-1">
-            <Avatar image={profileDp} />
-            {isSmall ? null : <h4 className="username">John Doe</h4>}
+        <div
+          className={`${
+            isSmall ? "sidebar_last_row_sm" : "sidebar_last_row"
+          }  `}
+        >
+          <div className={`${isSmall ? "logout_sm" : "logout"}`}>
+            <span>{logoutSvg}</span>
+            {isSmall ? null : <h4 className="username">Logout</h4>}
           </div>
-          {isSmall ? null : (
-            <span className="icon_up" onClick={handleTogglePopup}>
-              {iconUpSvg}
-            </span>
-          )}
+          <div className="d-flex  align-items-center justify-content-between">
+            <div className="d-flex align-items-center gap-1">
+              <Avatar image={profileDp} />
+              {isSmall ? null : <h4 className="username">John Doe</h4>}
+            </div>
+            {isSmall ? null : (
+              <span className="icon_up" onClick={handleTogglePopup}>
+                {iconUpSvg}
+              </span>
+            )}
+          </div>
           {openPopup && <SidebarPopup />}
         </div>
       </div>

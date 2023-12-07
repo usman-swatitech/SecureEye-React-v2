@@ -84,9 +84,9 @@ SCROLLBAR OF CAMERAS
 }
 .smal_sidebar_view {
   left: 5%;
-  top: .2%;
+  top: 0.2%;
   height: 105vh;
-  clip-path: polygon(0% 3%, 46% 0%, 100% 0%, 100% 86%, 47% 86%, 0% 83%)
+  clip-path: polygon(0% 3%, 46% 0%, 100% 0%, 100% 86%, 47% 86%, 0% 83%);
 }
 .large_sidebar_view {
   left: 2%;
@@ -194,14 +194,46 @@ SCROLLBAR OF CAMERAS
 .nav_label {
   font-size: 10px;
 }
+.sidebar_last_row_sm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  top: -15%;
+  height: 100px;
+  padding-right: 0;
+  padding-left: 0;
+  /* background: red; */
+}
 .sidebar_last_row {
   width: 100%;
   position: relative;
-  top: -20%;
-  height: 40px;
-
+  top: -15%;
+  height: 100px;
   padding-right: 20px;
   padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.sidebar_last_row .logout {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  align-items: center;
+  margin-left: 10px;
+}
+.sidebar_last_row .logout_sm {
+  display: flex;
+  position: relative;
+  width: 100%;
+  /* gap: 5px; */
+  justify-content: center;
+  /* margin-left: 10px; */
+  background-color: red;
 }
 .sidebar_last_row .username {
   font-size: 12px;
@@ -472,6 +504,42 @@ SCROLLBAR OF CAMERAS
 /* this code is used as js object style in Timer components */
 
 /* end of time stamp css */
+
+/* ....................<>....................... */
+
+/*               Camera tools view css */
+
+.cameraToolsViewWrapper {
+  position: absolute;
+  bottom: 3.5%;
+  right: 1%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 200px;
+  /* background-color: red; */
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.cameraToolsViewButtonToggle {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cameraToolsViewButtonToggle .arrowUpIcon {
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  color: black;
+}
+/* ....................<>....................... */
+
 .dashboard_td {
   color: var(--main-text-color);
   font-size: 12px;
@@ -598,6 +666,7 @@ SCROLLBAR OF CAMERAS
   width: 100%;
 }
 .scrren_cctv_sty {
+  margin-top: 10px;
   height: 72vh;
   background-color: black;
   margin-right: 5px;
