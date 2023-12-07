@@ -37,7 +37,7 @@ const Sidebar = () => {
     setCurrentLayout(newLayout);
   };
   return (
-    <div className="sidebar">
+    <div className={isSmall ? 'sidebar smal_sidebar_view' : 'sidebar large_sidebar_view'}>
       {isSmall ? (
         <span
           className="d-flex justify-content-center cursor-pointer"

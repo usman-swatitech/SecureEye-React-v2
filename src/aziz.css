@@ -69,7 +69,7 @@ SCROLLBAR OF CAMERAS
   object-fit: cover;
 }
 .sidebar {
-  /* position: relative; */
+  position: relative;
   left: 25%;
   top: 0;
   height: 106.5vh;
@@ -81,6 +81,17 @@ SCROLLBAR OF CAMERAS
   padding: 10px 10px;
   font-weight: 500;
   gap: 10px;
+}
+.smal_sidebar_view {
+  left: 5%;
+  top: .2%;
+  height: 105vh;
+  clip-path: polygon(0% 3%, 46% 0%, 100% 0%, 100% 86%, 47% 86%, 0% 83%)
+}
+.large_sidebar_view {
+  left: 2%;
+  top: 0.5%;
+  clip-path: polygon(0% 2.5%, 16% 0%, 100% 0%, 100% 85%, 19% 85%, 0% 82%);
 }
 .hide_sidebar_icon {
   position: absolute;
