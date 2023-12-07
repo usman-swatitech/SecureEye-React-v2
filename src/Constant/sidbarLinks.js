@@ -21,14 +21,14 @@ export const navlinks = [
     isActive: true,
     layout: "HomeLayout",
   },
-  {
-    activeIcon: activeSearchSvg,
-    nonActiveIcon: searchSvg,
-    path: "/search",
-    label: "Search",
-    isActive: false,
-    layout: "SearchLayout",
-  },
+  // {
+  //   activeIcon: activeSearchSvg,
+  //   nonActiveIcon: searchSvg,
+  //   path: "/search",
+  //   label: "Search",
+  //   isActive: false,
+  //   layout: "SearchLayout",
+  // },
   {
     activeIcon: activeUserSvg,
     nonActiveIcon: nonActiveUserSvg,
