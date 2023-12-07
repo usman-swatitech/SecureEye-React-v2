@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import video from "../assets/mp4/test.mp4";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 // import Table from "../Component/Common/Table";
 import * as images from "../Constant/images";
 // import { singleScreenTableHeading } from "../Constant/table";
 import Timer from "../Component/Common/Timer";
-import { cameraToolsSvg } from '../Constant/svgs';
+import { cameraToolsSvg } from "../Constant/svgs";
 
 const SingleScreenLayout = () => {
+  const cameraToolsViewRef = useRef(null);
+  const [open, setOpen] = useState(false);
+  const handleToggleItems = () => {
+    cameraToolsViewRef.current.classList.toggle("hideCameraToolsView");
+    setOpen(!open);
+  };
   return (
     <section className="single_screen_view">
       <div className="scrren_cctv_sty">
@@ -28,13 +36,31 @@ const SingleScreenLayout = () => {
               <source src={video} />
             </video>
           </div>
-          <div className="cameraTollsView">
-            {cameraToolsSvg.map((item, index) => (
-              <span className="cameraTolls">
-                {item.svg}
-              </span>
-            ))}
+          <div className="cameraToolsViewWrapper">
+            <div
+              className="cameraToolsView hideCameraToolsView"
+              ref={cameraToolsViewRef}
+            >
+              {cameraToolsSvg.map((item, index) => (
+                <span className="cameraTools" key={index}>
+                  {item.svg}
+                </span>
+              ))}
+            </div>
 
+            <div className="cameraToolsViewButtonToggle">
+              {open ? (
+                <KeyboardArrowDownIcon
+                  className="arrowUpIcon"
+                  onClick={handleToggleItems}
+                />
+              ) : (
+                <KeyboardArrowUpIcon
+                  className="arrowUpIcon"
+                  onClick={handleToggleItems}
+                />
+              )}
+            </div>
           </div>
         </div>
       </div>

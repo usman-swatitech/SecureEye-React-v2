@@ -513,10 +513,10 @@ a {
   height: 8vh;
   background-color: black;
 }
-.input_div_width{
+.input_div_width {
   max-width: 64.5%;
 }
-.sm_input_div_width{
+.sm_input_div_width {
   max-width: 68%;
 }
 .tabIcons {
@@ -576,26 +576,28 @@ a {
 .card-body {
   padding: 10px;
 }
-.componentTittle
-{
+.componentTittle {
   color: #fff;
   font-size: 26px;
   font-weight: 400;
   line-height: 32px;
   letter-spacing: 0em;
   text-align: left;
-
 }
-.backButton{
+.backButton {
   color: #fff;
   display: flex;
   gap: 5px;
   align-items: center;
   z-index: 10;
 }
-.cameraTollsView{
-  position: absolute;
-  bottom: -10%;
+
+.hideCameraToolsView {
+  transform: translateY(130%);
+}
+.cameraToolsView {
+  /* position: absolute;
+  bottom: -10%; */
   /* height: 19px;
   width: 73px; */
   /* background-color: rgb(0, 35, 40); */
@@ -603,71 +605,27 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  right: 1%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  /* right: 1%; */
+  /* transform: translate(-50%, -50%); */
   color: rgb(255, 255, 255);
   flex-direction: column;
+  /* transform: translateY(200%); */
+  transition: transform 0.4s linear;
+  /* display: none; */
 }
-.cameraTolls{
+.cameraTools {
   background-color: #000;
   padding: 5px;
   margin-bottom: 5px;
   cursor: pointer;
 }
-.card-title{
+.card-title {
   font-size: 12px;
 }
-.scrollbar_style .table-responsive .table>:not(caption)>*>*{
+.scrollbar_style .table-responsive .table > :not(caption) > * > * {
   padding: 5px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Extra small devices (phones) */
 
@@ -733,10 +691,10 @@ a {
   .main_home_screen {
     width: 99%;
   }
-  .sm_sidebarView{
+  .sm_sidebarView {
     width: 10%;
   }
-  .sm_mainComponent_view{
+  .sm_mainComponent_view {
     width: 90%;
   }
 }
@@ -753,10 +711,10 @@ a {
   .modal {
     --bs-modal-width: 575px;
   }
-  .sm_sidebarView{
+  .sm_sidebarView {
     width: 10%;
   }
-  .sm_mainComponent_view{
+  .sm_mainComponent_view {
     width: 90%;
   }
 }
@@ -787,13 +745,13 @@ a {
   .camera_cards {
     width: 20%;
   }
-  .sm_sidebarView{
+  .sm_sidebarView {
     width: 6%;
   }
-  .sm_mainComponent_view{
+  .sm_mainComponent_view {
     width: 92%;
   }
-  .cards_layout{
+  .cards_layout {
     margin-right: 3px;
   }
 }
