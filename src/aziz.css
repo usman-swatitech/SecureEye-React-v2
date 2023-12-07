@@ -194,14 +194,46 @@ SCROLLBAR OF CAMERAS
 .nav_label {
   font-size: 10px;
 }
+.sidebar_last_row_sm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  top: -15%;
+  height: 100px;
+  padding-right: 0;
+  padding-left: 0;
+  /* background: red; */
+}
 .sidebar_last_row {
   width: 100%;
   position: relative;
-  top: -20%;
-  height: 40px;
-
+  top: -15%;
+  height: 100px;
   padding-right: 20px;
   padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.sidebar_last_row .logout {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  align-items: center;
+  margin-left: 10px;
+}
+.sidebar_last_row .logout_sm {
+  display: flex;
+  position: relative;
+  width: 100%;
+  /* gap: 5px; */
+  justify-content: center;
+  /* margin-left: 10px; */
+  background-color: red;
 }
 .sidebar_last_row .username {
   font-size: 12px;
