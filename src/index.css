@@ -520,10 +520,24 @@ a {
   max-width: 68%;
 }
 .tabIcons {
-  height: 8vh;
+  height: 6vh;
   padding-right: 15px;
   padding-left: 2px;
   background-color: black;
+}
+
+.cctv_ameras {
+  min-height: 50vh;
+  background-color: black;
+  /* overflow-y: auto; */
+}
+
+.EmployeeInformation {
+  height: 5vh;
+  /* padding-top: 15px; */
+  display: grid;
+  align-items: center;
+  color: #fff;
 }
 
 .viewComponents {
@@ -539,21 +553,6 @@ a {
   width: 100%;
   margin-bottom: 10px;
 }
-
-.cctv_ameras {
-  height: 48vh;
-  background-color: black;
-  overflow-y: auto;
-}
-
-.EmployeeInformation {
-  height: 5vh;
-  /* padding-top: 15px; */
-  display: grid;
-  align-items: center;
-  color: #fff;
-}
-
 .alert_table {
   height: 13vh;
   background-color: black;
@@ -793,5 +792,8 @@ a {
   }
   .sm_mainComponent_view{
     width: 92%;
+  }
+  .cards_layout{
+    margin-right: 3px;
   }
 }

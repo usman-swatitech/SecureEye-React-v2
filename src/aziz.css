@@ -45,8 +45,8 @@ SCROLLBAR OF CAMERAS
 /* sidebar css starts here... */
 
 .sidebar .sidebar_logo {
-  height: 30px;
-  width: 50px;
+  height: 40px;
+  width: 80px;
   object-fit: contain;
   position: relative;
   margin-left: auto;
@@ -408,7 +408,7 @@ SCROLLBAR OF CAMERAS
   /* max-height: 30%; */
   /* overflow-y: scroll; */
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   flex-wrap: wrap;
   /* gap: 10px; */
   flex: 1;
