@@ -7,10 +7,13 @@ import { Store } from "../../ContextAPI/Context";
 import { logoSvg } from "../../Constant/logo";
 import { iconUpSvg, logoutSvg } from "../../Constant/svgs";
 import SidebarPopup from "../SidebarPopup";
+import { useNavigate } from "react-router";
+
 const Sidebar = () => {
+
   const { setCurrentLayout, isSmall, openPopup, handleTogglePopup } = Store();
   const [links, setLinks] = useState(navlinks);
-
+  const navigate = useNavigate();
   const handleActive = (index, newLayout) => {
     const updatedItems = links.map((item, i) => ({
       ...item,
@@ -19,6 +22,11 @@ const Sidebar = () => {
     setLinks(updatedItems);
     setCurrentLayout(newLayout);
   };
+  const handlerLogout = () =>{
+    localStorage.clear("signInput");
+    navigate('/');
+  }
+
   return (
     <div
       className={
@@ -73,7 +81,7 @@ const Sidebar = () => {
             isSmall ? "sidebar_last_row_sm" : "sidebar_last_row"
           }  `}
         >
-          <div className={`${isSmall ? "logout_sm" : "logout"}`}>
+          <div className={`cursor-pointer ${isSmall ? "logout_sm" : "logout"}`} onClick={handlerLogout}>
             <span>{logoutSvg}</span>
             {isSmall ? null : <h4 className="username">Logout</h4>}
           </div>
