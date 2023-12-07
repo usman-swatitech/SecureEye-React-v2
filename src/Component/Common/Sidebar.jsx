@@ -96,3 +96,19 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+
+// <div
+// className={`link ${
+//   link.isActive ? "link_active" : "normal_link"
+// }`}
+// key={index}
+// onClick={() => {
+//   handleActive(index, link.layout);
+// }}
+// >
+// <div className={link.isActive ? "line" : null}></div>
+// <span className={link.isActive ? "icon_active" : "icon"}>
+//   {link.isActive ? link.activeIcon : link.nonActiveIcon}
+// </span>
+// <span className="nav_label">{link.label}</span>
+// </div>
