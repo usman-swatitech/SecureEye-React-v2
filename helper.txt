@@ -2,3 +2,4 @@ npm install bootstrap@5             // bootstrap 05
 npm install react-router-dom        // routes 
 npm install Sweetalert              // sweat alert
 npm install react-bootstrap         // modal bootstrap
+npm install ui icons                //ui icons
