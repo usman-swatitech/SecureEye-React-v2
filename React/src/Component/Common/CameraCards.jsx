@@ -1,16 +1,11 @@
 import React, { useEffect } from "react";
 import { Store } from "../../ContextAPI/Context";
 import Timer from "./Timer";
-import NormalFrame from "../../assets/images/layout4.png";
-import DetectedFrame from "../../assets/images/detected.png";
+import * as images from '../../Constant/images';
 import JSMpeg from 'jsmpeg-player';
 
 const Cards = ({ camera }) => {
-  const { setCurrentLayout,setSingleScreenIdx } = Store();
-  
-  const backgroundStyle = {
-    backgroundImage: `url(${camera.status === "normal" ? NormalFrame : DetectedFrame})`,
-  };
+  const { setCurrentLayout, setSingleScreenIdx } = Store();
 
   useEffect(() => {
     const containerId = `${camera.cameraName.replace(/\s+/g, '-')}`;
@@ -47,23 +42,14 @@ const Cards = ({ camera }) => {
   };
 
   return (
-    <div
-      className={`card camera_cards bg-transparent py-0.5 px-0 p-0 ${camera.status === "normal" ? "text-white" : "text-danger"}`}
-      onClick={handleSceneClick}
-      style={backgroundStyle}
-    >
-      <div className="card-body rounded-0 py-2 position-relative m-1">
-        <p className="card-title p-0 m-0 text-sm">
-          {camera.cameraName}
-        </p>
-        <video
-          autoPlay
-          loop
-          muted
-          className="card-img-top rounded-0 mt-1 cursor-pointer"
-        ></video>
-        <div className="videoCanvaSmall" id={`${camera.cameraName.replace(/\s+/g, '-')}`}></div>
-        <Timer cameraStatus={camera.status} />
+    <div className="allCameraView" onClick={handleSceneClick}>
+      <img src={images.screenFrame} alt="" />
+      <div className="singleCameraView">
+        <label >{camera.cameraName}</label>
+        <div className="cameraShowSty">
+          <div className="videoCanvaSmall" id={`${camera.cameraName.replace(/\s+/g, '-')}`}></div>
+          <Timer cameraStatus={camera.status} />
+        </div>
       </div>
     </div>
   );

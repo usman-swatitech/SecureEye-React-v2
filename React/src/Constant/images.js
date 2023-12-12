@@ -11,7 +11,9 @@ import logoWithText from "../assets/Splash/logo.png";
 import cctvViewImg from '../assets/ScreenViev.png';
 import homeFrame from '../assets/images/frame.png';
 import screenFrame from '../assets/screenframe.png';
+import screenFrameRed from '../assets/images/detected.png'
 import dotBorderd from '../assets/dot_border.png';
+
 
 // signup page
 import bLogo from '../assets/svg/Logo-1.svg';
@@ -32,4 +34,4 @@ import port from '../assets/svg/port.svg'
 import nightVision from '../assets/svg/nightVision.svg'
 
 export default brandLogo;
-export {splashBackground,secureEyeText,userOtp,frameTab,bLogo,userIcon,mailIcon,mobileIcon,userLock,cubeDesign,hiddenIcn,unHideIcn,logoWithText,cctvViewImg,cameraName,ipAddress,location,port,nightVision,homeFrame,screenFrame,dotBorderd};
+export {splashBackground,secureEyeText,userOtp,frameTab,bLogo,userIcon,mailIcon,mobileIcon,userLock,cubeDesign,hiddenIcn,unHideIcn,logoWithText,cctvViewImg,cameraName,ipAddress,location,port,nightVision,homeFrame,screenFrame,dotBorderd,screenFrameRed};

@@ -1,48 +1,48 @@
 export const cameraData = [
   {
-    cameraName: 'Camera 1',
+    cameraName: 'Camera 01',
     url: 'ws://localhost:9999/',
     status: "normal",
   },
   {
-    cameraName: 'Camera 2',
+    cameraName: 'Camera 02',
     url: 'ws://localhost:9998/',
     status: "normal",
   },
   // {
-  //   cameraName: 'Camera 3',
+  //   cameraName: 'Camera 03',
   //   url: 'ws://localhost:9998/',
   //   status: "normal",
   // },
   // {
-  //   cameraName: 'Camera 4',
+  //   cameraName: 'Camera 04',
   //   url: 'ws://localhost:9998/',
   //   status: "normal",
   // },
   // {
-  //   cameraName: 'Camera 5',
-  //   url: 'ws://localhost:9998/',
-  //   status: "normal",
-  // },
-
-  // {
-  //   cameraName: 'Camera 6',
+  //   cameraName: 'Camera 05',
   //   url: 'ws://localhost:9998/',
   //   status: "normal",
   // },
 
   // {
-  //   cameraName: 'Camera 7',
+  //   cameraName: 'Camera 06',
+  //   url: 'ws://localhost:9998/',
+  //   status: "normal",
+  // },
+
+  // {
+  //   cameraName: 'Camera 07',
   //   url: 'ws://localhost:9998/',
   //   status: "normal",
   // },
   // {
-  //   cameraName: 'Camera 8',
+  //   cameraName: 'Camera 08',
   //   url: 'ws://localhost:9998/',
   //   status: "normal",
   // },
   // {
-  //   cameraName: 'Camera 9',
+  //   cameraName: 'Camera 09',
   //   url: 'ws://localhost:9998/',
   //   status: "normal",
   // },
