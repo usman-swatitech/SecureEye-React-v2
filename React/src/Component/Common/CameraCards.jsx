@@ -3,17 +3,19 @@ import { Store } from "../../ContextAPI/Context";
 import Timer from "./Timer";
 import NormalFrame from "../../assets/images/layout4.png";
 import DetectedFrame from "../../assets/images/detected.png";
-import JSMpeg from 'jsmpeg-player';
+import JSMpeg from "jsmpeg-player";
 
 const Cards = ({ camera }) => {
-  const { setCurrentLayout,setSingleScreenIdx } = Store();
-  
+  const { setCurrentLayout, setSingleScreenIdx } = Store();
+
   const backgroundStyle = {
-    backgroundImage: `url(${camera.status === "normal" ? NormalFrame : DetectedFrame})`,
+    backgroundImage: `url(${
+      camera.status === "normal" ? NormalFrame : DetectedFrame
+    })`,
   };
 
   useEffect(() => {
-    const containerId = `${camera.cameraName.replace(/\s+/g, '-')}`;
+    const containerId = `${camera.cameraName.replace(/\s+/g, "-")}`;
     createVideoElement(containerId, camera.url, camera.cameraName);
   }, [camera.url, camera.cameraName]);
 
@@ -21,9 +23,9 @@ const Cards = ({ camera }) => {
     const container = document.getElementById(containerId);
 
     if (container) {
-      const videoElement = document.createElement('div');
-      videoElement.id = containerId;
-      container.appendChild(videoElement);
+      // const videoElement = document.createElement("div");
+      // videoElement.id = containerId;
+      // container.appendChild(videoElement);
 
       initializeVideoPlayer(`#${containerId}`, url, name);
     }
@@ -48,21 +50,19 @@ const Cards = ({ camera }) => {
 
   return (
     <div
-      className={`card camera_cards bg-transparent py-0.5 px-0 p-0 ${camera.status === "normal" ? "text-white" : "text-danger"}`}
+      className={`card camera_cards bg-transparent py-0.5 px-0 p-0 ${
+        camera.status === "normal" ? "text-white" : "text-danger"
+      }`}
       onClick={handleSceneClick}
       style={backgroundStyle}
     >
-      <div className="card-body rounded-0 py-2 position-relative m-1">
-        <p className="card-title p-0 m-0 text-sm">
-          {camera.cameraName}
-        </p>
-        <video
-          autoPlay
-          loop
-          muted
-          className="card-img-top rounded-0 mt-1 cursor-pointer"
-        ></video>
-        <div className="videoCanvaSmall" id={`${camera.cameraName.replace(/\s+/g, '-')}`}></div>
+      <div className="card-body rounded-0  w-100 h-100 p-1 overflow-hidden ">
+        <p className="card-title p-0 m-0 text-sm ">{camera.cameraName}</p>
+
+        <div
+          className="videoCanvaSmall"
+          id={`${camera.cameraName.replace(/\s+/g, "-")}`}
+        ></div>
         <Timer cameraStatus={camera.status} />
       </div>
     </div>

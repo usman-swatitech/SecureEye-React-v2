@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js"
   },
   "author": "JOJO JOSEPH",
   "license": "ISC",
@@ -11,6 +11,7 @@
     "express": "^4.17.1",
     "node-onvif": "^0.1.7",
     "node-rtsp-stream": "0.0.8",
+    "nodemon": "^3.0.2",
     "rtsp-ffmpeg": "0.0.14",
     "socket.io": "^2.2.0"
   },
