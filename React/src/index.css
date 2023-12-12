@@ -654,6 +654,52 @@ a {
   padding: 5px;
 }
 
+.frame_inner .videoCanvaSty .src-theme-style__canvas{
+  height: 100% !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Extra small devices (phones) */
 
 @media only screen and (max-width: 480px) {
