@@ -299,20 +299,82 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   line-height: 12px;
   letter-spacing: 0em;
 }
-.displayBlock {
+.displayBlock{
   display: none;
 }
-.videoCanvaSty {
+.videoCanvaSty{
   width: 100%;
   height: 100%;
 }
 
-.videoCanvaSmall {
-  width: 96%;
+.videoCanvaSmall{
+  width: 100%;
   height: 88%;
-  position: absolute;
-  /* top: -95px; */
+  position: relative;
+  top: -95px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 576px) {
   .dashboard_td {
@@ -573,10 +635,10 @@ a {
   overflow: auto;
   border-radius: 0 0 20px 0px;
 }
-.tableHeight13 {
+.tableHeight13{
   max-height: 16vh;
 }
-.tableHeight41 {
+.tableHeight41{
   max-height: 40vh;
 }
 .table-responsive {
@@ -594,9 +656,7 @@ a {
   width: 99%;
 }
 .card-body {
-  position: relative;
-  overflow: hidden;
-  max-width: 200px;
+  padding: 10px;
 }
 .componentTittle {
   color: #fff;
@@ -645,11 +705,6 @@ a {
 .card-title {
   font-size: 12px;
 }
-/* video canvas style overidding  */
-.src-theme-style__canvas {
-  height: 91% !important;
-}
-/* canvas  */
 .scrollbar_style .table-responsive .table > :not(caption) > * > * {
   padding: 5px;
 }

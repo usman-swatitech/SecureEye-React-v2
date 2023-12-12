@@ -399,15 +399,13 @@ SCROLLBAR OF CAMERAS
 }
 
 .camera_cards {
+  /* background-image: url("./assets/images/layout4.png"); */
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  height: 150px;
-  width: 200px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  max-width: 200px;
+  /* height: 156; */
+  width: 240px;
+  /* border: 1px solid yellow; */
 }
 .rootLayoutImage {
   width: 95%;
@@ -455,7 +453,7 @@ SCROLLBAR OF CAMERAS
   display: flex;
   justify-content: start;
   flex-wrap: wrap;
-  gap: 10px;
+  /* gap: 10px; */
   flex: 1;
 }
 
