@@ -1,15 +1,14 @@
-import { useState, useEffect } from 'react';
-import Table from '../Component/Common/Table';
-import Cards from '../Component/Common/CameraCards';
-import * as images from '../Constant/images';
-import { homeTableHeading } from '../Constant/table';
-import { cameraData } from '../Constant/cameras';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { useState, useEffect } from "react";
+import Table from "../Component/Common/Table";
+import Cards from "../Component/Common/CameraCards";
+import * as images from "../Constant/images";
+import { homeTableHeading } from "../Constant/table";
+import { cameraData } from "../Constant/cameras";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const HomeLayout = () => {
-
-  const [tableHeight, setTableHeight] = useState('tableHeight13');
+  const [tableHeight, setTableHeight] = useState("tableHeight13");
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -21,10 +20,10 @@ const HomeLayout = () => {
       setWindowWidth(window.innerWidth);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -36,15 +35,16 @@ const HomeLayout = () => {
   } else {
     itemsPerPage = 10;
   }
-  
-  
-  useEffect(() => {
-    let newTableHeight = 'tableHeight13';
 
-    if ((itemsPerPage === 6 && numberOfCameras <= 3) ||
-        (itemsPerPage === 8 && numberOfCameras <= 4) ||
-        (itemsPerPage === 10 && numberOfCameras <= 5)) {
-      newTableHeight = 'tableHeight41';
+  useEffect(() => {
+    let newTableHeight = "tableHeight13";
+
+    if (
+      (itemsPerPage === 6 && numberOfCameras <= 3) ||
+      (itemsPerPage === 8 && numberOfCameras <= 4) ||
+      (itemsPerPage === 10 && numberOfCameras <= 5)
+    ) {
+      newTableHeight = "tableHeight41";
     }
     setTableHeight(newTableHeight);
   }, [itemsPerPage, numberOfCameras]);
@@ -56,27 +56,31 @@ const HomeLayout = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   return (
     <>
-      <div className="d-flex justify-content-end w-100">
+      <div className="d-flex justify-content-end gap-2 w-100">
         <div className="me-3">
           <button
             onClick={() => paginate(currentPage - 1)}
             style={{
-              border: 'none',
-              backgroundColor: 'transparent',
-              color: currentPage === 1 ? '#00FFFB4D' : '#00FFFB',
-              cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
+              border: "none",
+              backgroundColor: "transparent",
+              color: currentPage === 1 ? "#00FFFB4D" : "#00FFFB",
+              cursor: currentPage === 1 ? "not-allowed" : "pointer",
             }}
             disabled={currentPage === 1}
           >
             <ArrowBackIcon />
-          </button>{' '}
+          </button>{" "}
           <button
             onClick={() => paginate(currentPage + 1)}
             style={{
-              border: 'none',
-              backgroundColor: 'transparent',
-              color: indexOfLastItem >= cameraData.length ? '#00FFFB4D' : '#00FFFB',
-              cursor: indexOfLastItem >= cameraData.length ? 'not-allowed' : 'pointer',
+              border: "none",
+              backgroundColor: "transparent",
+              color:
+                indexOfLastItem >= cameraData.length ? "#00FFFB4D" : "#00FFFB",
+              cursor:
+                indexOfLastItem >= cameraData.length
+                  ? "not-allowed"
+                  : "pointer",
             }}
             disabled={indexOfLastItem >= cameraData.length}
           >
