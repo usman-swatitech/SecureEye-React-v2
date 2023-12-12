@@ -20,7 +20,7 @@ const Timer = ({ cameraStatus }) => {
 
   const cameraFrameSty = {
     position: "absolute",
-    // color: "red",
+    zIndex: "1",
     bottom: "8%", 
     height: "19px",
     width: "73px",

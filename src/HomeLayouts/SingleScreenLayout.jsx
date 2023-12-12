@@ -1,20 +1,61 @@
-import React, { useRef, useState } from "react";
-import video from "../assets/mp4/test.mp4";
+import React, { useRef, useState, useEffect } from "react";
+import JSMpeg from 'jsmpeg-player';
+import {cameraData} from '../Constant/cameras';
+import { Store } from "../ContextAPI/Context";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-// import Table from "../Component/Common/Table";
 import * as images from "../Constant/images";
-// import { singleScreenTableHeading } from "../Constant/table";
-import Timer from "../Component/Common/Timer";
+// import Timer from "../Component/Common/Timer";
 import { cameraToolsSvg } from "../Constant/svgs";
 
 const SingleScreenLayout = () => {
+
+  const {singleScreenIdx} = Store();
   const cameraToolsViewRef = useRef(null);
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
+
+  const findCameraByName = (cameraName) => {
+    return cameraData.find(camera => camera.cameraName === cameraName);
+  };
+
+  const cameraSDetails = findCameraByName(singleScreenIdx);
+  console.log(cameraSDetails);
+
   const handleToggleItems = () => {
     cameraToolsViewRef.current.classList.toggle("hideCameraToolsView");
     setOpen(!open);
   };
+
+  // const camera = {
+  //   name: 'Camera 1',
+  //   url: 'ws://localhost:9999/',
+  // };
+
+  useEffect(() => {
+    const containerId = 'video-canvas';
+    createVideoElement(containerId, cameraSDetails.url, cameraSDetails.name);
+  }, [cameraSDetails.name,cameraSDetails.url]);
+
+  const createVideoElement = (containerId, url, name) => {
+    const container = document.getElementById(containerId);
+
+    if (container) {
+      const videoElement = document.createElement('div');
+      videoElement.id = containerId;
+      container.appendChild(videoElement);
+
+      new JSMpeg.VideoElement(`#${containerId}`, url, {
+        autoplay: true,
+        loop: true,
+        onPlay: () => console.log(`${name} video is playing`),
+        onPause: () => console.log(`${name} video is paused`),
+        onEnded: () => console.log(`${name} video has ended`),
+        onStalled: () => console.log(`${name} video has stalled`),
+        onError: (e) => console.error(`${name} video error:`, e),
+      });
+    }
+  };
+
   return (
     <section className="single_screen_view">
       <div className="scrren_cctv_sty">
@@ -25,20 +66,11 @@ const SingleScreenLayout = () => {
             className="single_camera_frame"
           />
           <div className="frame_inner">
-            {/* <label className="text-white ms-3 pb-1">CAMERA 01</label> */}
-            <video
-              autoPlay
-              loop
-              muted
-              className="w-100"
-              onContextMenu={(e) => e.preventDefault()}
-            >
-              <source src={video} />
-            </video>
+            <div className="videoCanvaSty" id="video-canvas"></div>
           </div>
           <div className="cameraToolsViewWrapper">
             <div
-              className="cameraToolsView hideCameraToolsView"
+              className={`cameraToolsView ${open ? "hideCameraToolsView" : ""}`}
               ref={cameraToolsViewRef}
             >
               {cameraToolsSvg.map((item, index) => (
@@ -64,10 +96,6 @@ const SingleScreenLayout = () => {
           </div>
         </div>
       </div>
-      {/* <label className="EmployeeInformation">Activity Monitor</label>
-      <div className="scrren_cctv_tabel_sty scrollbar_style">
-        <Table heading={singleScreenTableHeading} />
-      </div> */}
     </section>
   );
 };

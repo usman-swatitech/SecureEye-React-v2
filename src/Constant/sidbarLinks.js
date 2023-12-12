@@ -1,6 +1,6 @@
 import {
   activeHomeSvg,
-  searchSvg,
+  // searchSvg,
   blockSvg,
   workSvg,
   activeBlockSvg,
@@ -9,7 +9,7 @@ import {
   nonActiveUserSvg,
   activeWorkSvg,
   nonActiveSettingsSvg,
-  activeSearchSvg,
+  // activeSearchSvg,
   activeSettingSvg,
 } from "./svgs";
 export const navlinks = [

@@ -8,7 +8,13 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const HomeLayout = () => {
+
+  const [tableHeight, setTableHeight] = useState('tableHeight13');
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const numberOfCameras = cameraData.length;
+  // console.log(numberOfCameras);
 
   useEffect(() => {
     const handleResize = () => {
@@ -30,8 +36,18 @@ const HomeLayout = () => {
   } else {
     itemsPerPage = 10;
   }
+  
+  
+  useEffect(() => {
+    let newTableHeight = 'tableHeight13';
 
-  const [currentPage, setCurrentPage] = useState(1);
+    if ((itemsPerPage === 6 && numberOfCameras <= 3) ||
+        (itemsPerPage === 8 && numberOfCameras <= 4) ||
+        (itemsPerPage === 10 && numberOfCameras <= 5)) {
+      newTableHeight = 'tableHeight41';
+    }
+    setTableHeight(newTableHeight);
+  }, [itemsPerPage, numberOfCameras]);
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -79,8 +95,8 @@ const HomeLayout = () => {
         </div>
         <img className="dotBorderd" src={images.dotBorderd} alt="border img" />
         <label className="EmployeeInformation">Activity Monitor</label>
-        <div className="alert_table scrollbar_style">
-          <Table heading={homeTableHeading} />
+        <div className={`alert_table scrollbar_style ${tableHeight}`}>
+          <Table heading={homeTableHeading} itemsPerPage={itemsPerPage} />
         </div>
       </section>
     </>

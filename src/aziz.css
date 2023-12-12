@@ -522,6 +522,7 @@ SCROLLBAR OF CAMERAS
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  z-index: 10;
 }
 .cameraToolsViewButtonToggle {
   height: 30px;

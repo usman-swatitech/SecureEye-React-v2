@@ -1,70 +1,65 @@
 export const cameraData = [
   {
-    cameraName: "Camera 01",
+    cameraName: 'Camera 1',
+    url: 'ws://localhost:9999/',
     status: "normal",
   },
   {
-    cameraName: "Camera 02",
+    cameraName: 'Camera 2',
+    url: 'ws://localhost:9998/',
     status: "normal",
   },
-  {
-    cameraName: "Camera 03",
-    status: "normal",
-  },
-  {
-    cameraName: "Camera 04",
-    status: "normal",
-  },
-  {
-    cameraName: "Camera 05",
-    status: "detected",
-  },
-  {
-    cameraName: "Camera 06",
-    status: "normal",
-  },
-  {
-    cameraName: "Camera 07",
-    status: "normal",
-  },
-  {
-    cameraName: "Camera 08",
-    status: "detected",
-  },
-  {
-    cameraName: "Camera 09",
-    status: "normal",
-  },
-  {
-    cameraName: "Camera 10",
-    status: "normal",
-  },
-  {
-    cameraName: "Camera 11",
-    status: "normal",
-  },
-  {
-    cameraName: "Camera 12",
-    status: "detected",
-  },
-  {
-    cameraName: "Camera 13",
-    status: "normal",
-  },
-  {
-    cameraName: "Camera 14",
-    status: "normal",
-  },
-  {
-    cameraName: "Camera 15",
-    status: "normal",
-  },
-  {
-    cameraName: "Camera 16",
-    status: "detected",
-  },
-  {
-    cameraName: "Camera 17",
-    status: "normal",
-  },
+  // {
+  //   cameraName: 'Camera 3',
+  //   url: 'ws://localhost:9998/',
+  //   status: "normal",
+  // },
+  // {
+  //   cameraName: 'Camera 4',
+  //   url: 'ws://localhost:9998/',
+  //   status: "normal",
+  // },
+  // {
+  //   cameraName: 'Camera 5',
+  //   url: 'ws://localhost:9998/',
+  //   status: "normal",
+  // },
+
+  // {
+  //   cameraName: 'Camera 6',
+  //   url: 'ws://localhost:9998/',
+  //   status: "normal",
+  // },
+
+  // {
+  //   cameraName: 'Camera 7',
+  //   url: 'ws://localhost:9998/',
+  //   status: "normal",
+  // },
+  // {
+  //   cameraName: 'Camera 8',
+  //   url: 'ws://localhost:9998/',
+  //   status: "normal",
+  // },
+  // {
+  //   cameraName: 'Camera 9',
+  //   url: 'ws://localhost:9998/',
+  //   status: "normal",
+  // },
+
+  // {
+  //   cameraName: 'Camera 10',
+  //   url: 'ws://localhost:9998/',
+  //   status: "normal",
+  // },
+  // {
+  //   cameraName: 'Camera 11',
+  //   url: 'ws://localhost:9998/',
+  //   status: "normal",
+  // },
+  // {
+  //   cameraName: 'Camera 12',
+  //   url: 'ws://localhost:9998/',
+  //   status: "normal",
+  // },
 ];

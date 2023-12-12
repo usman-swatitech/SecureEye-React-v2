@@ -7,6 +7,7 @@ export const AppContextProvider = ({ children }) => {
   const [isSmall, setIsSmall] = useState(false);
   const [windowWidth, setWindowWidth] = useState(undefined);
   const [openPopup, setOpenPopup] = useState(false);
+  const [singleScreenIdx,setSingleScreenIdx] = useState();
 
   const handleTogglePopup = () => {
     setOpenPopup(!openPopup);
@@ -38,6 +39,8 @@ export const AppContextProvider = ({ children }) => {
       value={{
         currentLayout,
         setCurrentLayout,
+        singleScreenIdx,
+        setSingleScreenIdx,
         isSmall,
         handleClickToggle,
         handleTogglePopup,
