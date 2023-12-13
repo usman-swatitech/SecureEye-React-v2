@@ -102,9 +102,7 @@ const ActionBar = () => {
         {currentLayout !== "HomeLayout" ? (
           <div
             className="backButton cursor-pointer"
-            onClick={() => {
-              handleActiveNav(0, ":HomeLayout");
-            }}
+            onClick={() => handleActiveNav(0, "HomeLayout")}
           >
             {backBtnSvg}
             Back

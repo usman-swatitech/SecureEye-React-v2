@@ -5,7 +5,7 @@ const AppContext = createContext();
 export const AppContextProvider = ({ children }) => {
   const [currentLayout, setCurrentLayout] = useState("HomeLayout");
   const [isSmall, setIsSmall] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(undefined);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [openPopup, setOpenPopup] = useState(false);
   const [singleScreenIdx, setSingleScreenIdx] = useState();
 
@@ -13,8 +13,7 @@ export const AppContextProvider = ({ children }) => {
 
   const handleTogglePopup = () => {
     setOpenPopup(!openPopup);
-  }
-
+  };
 
   // this function is used for detacting active menu on the sidebar
   const handleActiveNav = (index, newLayout) => {
@@ -31,7 +30,6 @@ export const AppContextProvider = ({ children }) => {
     setOpenPopup(false);
   };
 
-
   //useEffects to detetct screen sizes
   useEffect(() => {
     const handleResize = () => {
@@ -42,6 +40,7 @@ export const AppContextProvider = ({ children }) => {
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   useEffect(() => {
     if (windowWidth < 1240) {
       setIsSmall(true);
@@ -63,6 +62,7 @@ export const AppContextProvider = ({ children }) => {
         openPopup,
         handleActiveNav,
         links,
+        setOpenPopup,
       }}
     >
       {children}
