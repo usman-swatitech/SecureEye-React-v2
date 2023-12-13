@@ -1,5 +1,5 @@
 import { useState, useContext, createContext, useEffect } from "react";
-
+import { navlinks } from "../Constant/sidbarLinks";
 const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
@@ -7,16 +7,32 @@ export const AppContextProvider = ({ children }) => {
   const [isSmall, setIsSmall] = useState(false);
   const [windowWidth, setWindowWidth] = useState(undefined);
   const [openPopup, setOpenPopup] = useState(false);
-  const [singleScreenIdx,setSingleScreenIdx] = useState();
+  const [singleScreenIdx, setSingleScreenIdx] = useState();
+
+  const [links, setLinks] = useState(navlinks);
 
   const handleTogglePopup = () => {
     setOpenPopup(!openPopup);
+  }
+
+
+  // this function is used for detacting active menu on the sidebar
+  const handleActiveNav = (index, newLayout) => {
+    const updatedItems = links.map((item, i) => ({
+      ...item,
+      isActive: i === index,
+    }));
+    setLinks(updatedItems);
+    setCurrentLayout(newLayout);
   };
 
   const handleClickToggle = () => {
     setIsSmall(!isSmall);
     setOpenPopup(false);
   };
+
+
+  //useEffects to detetct screen sizes
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -45,6 +61,8 @@ export const AppContextProvider = ({ children }) => {
         handleClickToggle,
         handleTogglePopup,
         openPopup,
+        handleActiveNav,
+        links,
       }}
     >
       {children}

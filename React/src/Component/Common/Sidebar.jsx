@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { navlinks } from "../../Constant/sidbarLinks";
 import { logoWithText } from "../../Constant/images";
 import Avatar from "./Avatar";
 import profileDp from "../../assets/images/avatar.png";
@@ -10,22 +8,14 @@ import SidebarPopup from "../SidebarPopup";
 import { useNavigate } from "react-router";
 
 const Sidebar = () => {
-
-  const { setCurrentLayout, isSmall, openPopup, handleTogglePopup } = Store();
-  const [links, setLinks] = useState(navlinks);
+  const { isSmall, openPopup, handleTogglePopup, handleActiveNav, links } =
+    Store();
   const navigate = useNavigate();
-  const handleActive = (index, newLayout) => {
-    const updatedItems = links.map((item, i) => ({
-      ...item,
-      isActive: i === index,
-    }));
-    setLinks(updatedItems);
-    setCurrentLayout(newLayout);
-  };
-  const handlerLogout = () =>{
+
+  const handlerLogout = () => {
     localStorage.clear("signInput");
-    navigate('/');
-  }
+    navigate("/");
+  };
 
   return (
     <div
@@ -36,7 +26,7 @@ const Sidebar = () => {
       {isSmall ? (
         <span
           className="d-flex justify-content-center cursor-pointer"
-          onClick={() => handleActive(0, "HomeLayout")}
+          onClick={() => handleActiveNav(0, "HomeLayout")}
         >
           {logoSvg}
         </span>
@@ -45,7 +35,7 @@ const Sidebar = () => {
           src={logoWithText}
           alt="logo"
           className="sidebar_logo cursor-pointer"
-          onClick={() => handleActive(0, "HomeLayout")}
+          onClick={() => handleActiveNav(0, "HomeLayout")}
         />
       )}
 
@@ -56,7 +46,7 @@ const Sidebar = () => {
               className="nav_link"
               key={index}
               onClick={() => {
-                handleActive(index, link.layout);
+                handleActiveNav(index, link.layout);
               }}
             >
               <div className={link.isActive ? "line" : null}></div>
@@ -81,7 +71,10 @@ const Sidebar = () => {
             isSmall ? "sidebar_last_row_sm" : "sidebar_last_row"
           }  `}
         >
-          <div className={`cursor-pointer ${isSmall ? "logout_sm" : "logout"}`} onClick={handlerLogout}>
+          <div
+            className={`cursor-pointer ${isSmall ? "logout_sm" : "logout"}`}
+            onClick={handlerLogout}
+          >
             <span>{logoutSvg}</span>
             {isSmall ? null : <h4 className="username">Logout</h4>}
           </div>
