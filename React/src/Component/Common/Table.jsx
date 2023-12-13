@@ -21,7 +21,6 @@ const Table = (props) => {
               <td className="dashboard_td text-primary">sw254</td>
               <td className="dashboard_td text-primary">1</td>
               <td className="dashboard_td text-primary">Normal</td>
-
               <td className="dashboard_td text-primary">16:29:04</td>
               <td className="dashboard_td text-primary">16:29:04</td>
               <td className="dashboard_td text-primary">16:29:04</td>
@@ -40,7 +39,6 @@ const Table = (props) => {
               <td className="dashboard_td text-primary">sw254</td>
               <td className="dashboard_td text-primary">1</td>
               <td className="dashboard_td text-primary">Normal</td>
-
               <td className="dashboard_td text-primary">16:29:04</td>
               <td className="dashboard_td text-primary">16:29:04</td>
               <td className="dashboard_td text-primary">16:29:04</td>
@@ -50,7 +48,6 @@ const Table = (props) => {
               <td className="dashboard_td text-primary">sw254</td>
               <td className="dashboard_td text-primary">1</td>
               <td className="dashboard_td text-primary">Normal</td>
-
               <td className="dashboard_td text-primary">16:29:04</td>
               <td className="dashboard_td text-primary">16:29:04</td>
               <td className="dashboard_td text-primary">16:29:04</td>
@@ -60,11 +57,155 @@ const Table = (props) => {
               <td className="dashboard_td text-primary">sw254</td>
               <td className="dashboard_td text-primary">1</td>
               <td className="dashboard_td text-primary">Normal</td>
-
               <td className="dashboard_td text-primary">16:29:04</td>
               <td className="dashboard_td text-primary">16:29:04</td>
               <td className="dashboard_td text-primary">16:29:04</td>
             </tr>
+            <tr>
+              <td className="dashboard_td text-primary">john doe</td>
+              <td className="dashboard_td text-primary">sw254</td>
+              <td className="dashboard_td text-primary">1</td>
+              <td className="dashboard_td text-primary">Normal</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+            </tr>
+            <tr>
+              <td className="dashboard_td text-primary">john doe</td>
+              <td className="dashboard_td text-primary">sw254</td>
+              <td className="dashboard_td text-primary">1</td>
+              <td className="dashboard_td text-primary">Normal</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+            </tr>
+            <tr>
+              <td className="dashboard_td text-primary">john doe</td>
+              <td className="dashboard_td text-primary">sw254</td>
+              <td className="dashboard_td text-primary">1</td>
+              <td className="dashboard_td text-primary">Normal</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+            </tr>
+            <tr>
+              <td className="dashboard_td text-primary">john doe</td>
+              <td className="dashboard_td text-primary">sw254</td>
+              <td className="dashboard_td text-primary">1</td>
+              <td className="dashboard_td text-primary">Normal</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+            </tr>
+            <tr>
+              <td className="dashboard_td text-primary">john doe</td>
+              <td className="dashboard_td text-primary">sw254</td>
+              <td className="dashboard_td text-primary">1</td>
+              <td className="dashboard_td text-primary">Normal</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+            </tr>
+            <tr>
+              <td className="dashboard_td text-primary">john doe</td>
+              <td className="dashboard_td text-primary">sw254</td>
+              <td className="dashboard_td text-primary">1</td>
+              <td className="dashboard_td text-primary">Normal</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+            </tr>
+            <tr>
+              <td className="dashboard_td text-primary">john doe</td>
+              <td className="dashboard_td text-primary">sw254</td>
+              <td className="dashboard_td text-primary">1</td>
+              <td className="dashboard_td text-primary">Normal</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+            </tr>
+            <tr>
+              <td className="dashboard_td text-primary">john doe</td>
+              <td className="dashboard_td text-primary">sw254</td>
+              <td className="dashboard_td text-primary">1</td>
+              <td className="dashboard_td text-primary">Normal</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+            </tr>
+            <tr>
+              <td className="dashboard_td text-primary">john doe</td>
+              <td className="dashboard_td text-primary">sw254</td>
+              <td className="dashboard_td text-primary">1</td>
+              <td className="dashboard_td text-primary">Normal</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+            </tr>
+            <tr>
+              <td className="dashboard_td text-primary">john doe</td>
+              <td className="dashboard_td text-primary">sw254</td>
+              <td className="dashboard_td text-primary">1</td>
+              <td className="dashboard_td text-primary">Normal</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+            </tr>
+            <tr>
+              <td className="dashboard_td text-primary">john doe</td>
+              <td className="dashboard_td text-primary">sw254</td>
+              <td className="dashboard_td text-primary">1</td>
+              <td className="dashboard_td text-primary">Normal</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+            </tr>
+            <tr>
+              <td className="dashboard_td text-primary">john doe</td>
+              <td className="dashboard_td text-primary">sw254</td>
+              <td className="dashboard_td text-primary">1</td>
+              <td className="dashboard_td text-primary">Normal</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+            </tr>
+            <tr>
+              <td className="dashboard_td text-primary">john doe</td>
+              <td className="dashboard_td text-primary">sw254</td>
+              <td className="dashboard_td text-primary">1</td>
+              <td className="dashboard_td text-primary">Normal</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+            </tr>
+            <tr>
+              <td className="dashboard_td text-primary">john doe</td>
+              <td className="dashboard_td text-primary">sw254</td>
+              <td className="dashboard_td text-primary">1</td>
+              <td className="dashboard_td text-primary">Normal</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+            </tr>
+            <tr>
+              <td className="dashboard_td text-primary">john doe</td>
+              <td className="dashboard_td text-primary">sw254</td>
+              <td className="dashboard_td text-primary">1</td>
+              <td className="dashboard_td text-primary">Normal</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+            </tr>
+            <tr>
+              <td className="dashboard_td text-primary">john doe</td>
+              <td className="dashboard_td text-primary">sw254</td>
+              <td className="dashboard_td text-primary">1</td>
+              <td className="dashboard_td text-primary">Normal</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+              <td className="dashboard_td text-primary">16:29:04</td>
+            </tr>
+            
           </tbody>
         </table>
       </div>
