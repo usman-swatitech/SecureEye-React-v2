@@ -623,7 +623,9 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   height: 18vh;
   /* background-color: #00fffb; */
 }
-
+.table{
+  margin-bottom: 0;
+}
 
 
 
