@@ -1,4 +1,4 @@
-export const homeTableHeading = [
+export const homeHeading = [
   "Host Caption",
   "State",
   "Status",
@@ -8,7 +8,7 @@ export const homeTableHeading = [
   "Check Interval",
 ];
 
-export const singleScreenTableHeading = [
+export const singleScreenHeading = [
   "HOST CAPTION",
   "STATE",
   "STATUS",
@@ -17,11 +17,12 @@ export const singleScreenTableHeading = [
   "CHECK-OUT TIME",
   "CHECK INTERVAL",
 ];
-export const employeTableHeading = [
+export const employeHeading = [
   "EMPLOYEE NAME",
   "EMPLOYEE ID",
   "LEVEL ACCESS",
   "STATUS",
   "CHECK-IN",
   "CHECK-OUT",
+  "Work-Hours",
 ];

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Table from '../Component/Common/Table';
 import Cards from '../Component/Common/CameraCards';
 import * as images from '../Constant/images';
-import { homeTableHeading } from '../Constant/table';
+import { homeHeading } from '../Constant/tableHeading';
 import { cameraData } from '../Constant/cameras';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
@@ -63,24 +63,20 @@ const HomeLayout = () => {
         <div className="me-3">
           <button
             onClick={() => paginate(currentPage - 1)}
-            style={{
-              border: 'none',
-              backgroundColor: 'transparent',
-              color: currentPage === 1 ? '#00FFFB4D' : '#00FFFB',
-              cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
-            }}
+            className={`paginationArrow
+                    ${currentPage === 1
+                    ? 'arrowColorDark'
+                    : 'arrowColorLight'}`}
             disabled={currentPage === 1}
           >
             <ArrowBackIcon />
           </button>{' '}
           <button
             onClick={() => paginate(currentPage + 1)}
-            style={{
-              border: 'none',
-              backgroundColor: 'transparent',
-              color: indexOfLastItem >= cameraData.length ? '#00FFFB4D' : '#00FFFB',
-              cursor: indexOfLastItem >= cameraData.length ? 'not-allowed' : 'pointer',
-            }}
+            className={`paginationArrow
+                    ${indexOfLastItem >= cameraData.length
+                    ? 'arrowColorDark'
+                    : 'arrowColorLight'}`}
             disabled={indexOfLastItem >= cameraData.length}
           >
             <ArrowForwardIcon />
@@ -99,7 +95,7 @@ const HomeLayout = () => {
         <img className="dotBorderd" src={images.dotBorderd} alt="border img" />
         <label className="EmployeeInformation">Activity Monitor</label>
         <div className={`alert_table scrollbar_style ${tableHeight}`}>
-          <Table heading={homeTableHeading} itemsPerPage={itemsPerPage} />
+          <Table heading={homeHeading} itemsPerPage={itemsPerPage} />
         </div>
       </section>
     </>
