@@ -1,5 +1,5 @@
-import React, {useState } from "react";
-import {plusSvg,backBtnSvg } from "../../Constant/svgs";
+import React, { useState } from "react";
+import { plusSvg, backBtnSvg } from "../../Constant/svgs";
 import CameraModal from "./CameraModal";
 import ButtonSubmit from "./ButtonShap";
 import { Modal } from "react-bootstrap";
@@ -7,20 +7,20 @@ import SweatAlert, { successSweatAlert } from "../../helperFun/SweatAlertFun";
 import { Store } from "../../ContextAPI/Context";
 
 const ActionBar = () => {
-
   const [show, setShow] = useState(false);
 
-  const {currentLayout,setCurrentLayout} = Store();
+  const { currentLayout, setCurrentLayout, singleScreenIdx, handleActiveNav } =
+    Store();
 
   const layoutTitles = {
-    HomeLayout: 'Secureye dashboard',
-    EmployeeLayout: 'Employee data',
-    DepartmentLayout: 'Department data',
-    WorkingLayout: ' Working data',
-    SettingsLayout: 'Settings',
+    HomeLayout: "Secureye dashboard",
+    EmployeeLayout: "Employee data",
+    DepartmentLayout: "Department data",
+    WorkingLayout: " Working data",
+    SettingsLayout: "Settings",
     // Add more layouts as needed
   };
-  const labelContent = layoutTitles[currentLayout] || 'Camera 01';
+  const labelContent = layoutTitles[currentLayout] || singleScreenIdx;
 
   const handleShow = () => {
     setShow(true);
@@ -63,10 +63,10 @@ const ActionBar = () => {
       SweatAlert("port is empty");
     } else if (location === "") {
       SweatAlert("location is empty");
-    } 
+    }
     // else if (nightVision === "") {
     //   SweatAlert("nightVision is empty");
-    // } 
+    // }
     else if (userName === "") {
       SweatAlert("userName is empty");
     } else if (userPassword === "") {
@@ -85,12 +85,11 @@ const ActionBar = () => {
       successSweatAlert("Camera add successfully");
       setShow(false);
     }
-    
   };
 
   const handlerBack = () => {
-    setCurrentLayout('HomeLayout');
-  }
+    setCurrentLayout("HomeLayout");
+  };
   return (
     <>
       <div className="action_bar d-flex justify-content-between align-items-center">
@@ -100,12 +99,17 @@ const ActionBar = () => {
           <span className="actionbar_icons">{activeFac}</span>
         </div> */}
         <label className="componentTittle">{labelContent}</label>
-        {(currentLayout !== "HomeLayout") ?
-          <div className="backButton cursor-pointer" onClick={handlerBack}>
+        {currentLayout !== "HomeLayout" ? (
+          <div
+            className="backButton cursor-pointer"
+            onClick={() => {
+              handleActiveNav(0, ":HomeLayout");
+            }}
+          >
             {backBtnSvg}
             Back
           </div>
-          :
+        ) : (
           <button
             type="button"
             className="modal_btn"
@@ -121,8 +125,7 @@ const ActionBar = () => {
               <h4 className="fs-6 text-white mt-1-2">Add New Camera</h4>
             </div>
           </button>
-        }
-        
+        )}
       </div>
 
       <Modal show={show} onHide={handleClose} size="lg" centered>

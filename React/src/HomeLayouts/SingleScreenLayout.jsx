@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
-import JSMpeg from 'jsmpeg-player';
-import {cameraData} from '../Constant/cameras';
+import JSMpeg from "jsmpeg-player";
+import { cameraData } from "../Constant/cameras";
 import { Store } from "../ContextAPI/Context";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -9,14 +9,14 @@ import * as images from "../Constant/images";
 import { cameraToolsSvg } from "../Constant/svgs";
 
 const SingleScreenLayout = () => {
-
-  const {singleScreenIdx} = Store();
+  const { singleScreenIdx } = Store();
   const cameraToolsViewRef = useRef(null);
   const [open, setOpen] = useState(true);
 
   const findCameraByName = (cameraName) => {
-    return cameraData.find(camera => camera.cameraName === cameraName);
+    return cameraData.find((camera) => camera.cameraName === cameraName);
   };
+  
 
   const cameraSDetails = findCameraByName(singleScreenIdx);
   console.log(cameraSDetails);
@@ -32,15 +32,15 @@ const SingleScreenLayout = () => {
   // };
 
   useEffect(() => {
-    const containerId = 'video-canvas';
+    const containerId = "video-canvas";
     createVideoElement(containerId, cameraSDetails.url, cameraSDetails.name);
-  }, [cameraSDetails.name,cameraSDetails.url]);
+  }, [cameraSDetails.name, cameraSDetails.url]);
 
   const createVideoElement = (containerId, url, name) => {
     const container = document.getElementById(containerId);
 
     if (container) {
-      const videoElement = document.createElement('div');
+      const videoElement = document.createElement("div");
       videoElement.id = containerId;
       container.appendChild(videoElement);
 
@@ -82,12 +82,12 @@ const SingleScreenLayout = () => {
 
             <div className="cameraToolsViewButtonToggle">
               {open ? (
-                <KeyboardArrowDownIcon
+                <KeyboardArrowUpIcon
                   className="arrowUpIcon"
                   onClick={handleToggleItems}
                 />
               ) : (
-                <KeyboardArrowUpIcon
+                <KeyboardArrowDownIcon
                   className="arrowUpIcon"
                   onClick={handleToggleItems}
                 />
