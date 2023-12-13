@@ -13,7 +13,7 @@ const HomeLayout = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [currentPage, setCurrentPage] = useState(1);
 
-  const numberOfCameras = cameraData.length;
+  // const numberOfCameras = cameraData.length;
   // console.log(numberOfCameras);
 
   useEffect(() => {
@@ -38,6 +38,14 @@ const HomeLayout = () => {
   }
   
   
+  
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentCameras = cameraData.slice(indexOfFirstItem, indexOfLastItem);
+  const numberOfCameras = currentCameras.length;
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   useEffect(() => {
     let newTableHeight = 'tableHeight13';
 
@@ -48,12 +56,7 @@ const HomeLayout = () => {
     }
     setTableHeight(newTableHeight);
   }, [itemsPerPage, numberOfCameras]);
-
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentCameras = cameraData.slice(indexOfFirstItem, indexOfLastItem);
-
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  
   return (
     <>
       <div className="d-flex justify-content-end w-100">
