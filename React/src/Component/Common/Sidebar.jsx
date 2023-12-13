@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { logoWithText } from "../../Constant/images";
 import Avatar from "./Avatar";
 import profileDp from "../../assets/images/avatar.png";
@@ -8,14 +9,30 @@ import SidebarPopup from "../SidebarPopup";
 import { useNavigate } from "react-router";
 
 const Sidebar = () => {
-  const { isSmall, openPopup, handleTogglePopup, handleActiveNav, links } =
-    Store();
+  const userActionsRef = useRef(null);
+  const {
+    isSmall,
+    openPopup,
+    setOpenPopup,
+    handleTogglePopup,
+    handleActiveNav,
+    links,
+  } = Store();
   const navigate = useNavigate();
 
   const handlerLogout = () => {
     localStorage.clear("signInput");
     navigate("/");
   };
+
+  //detect click outside sidebar popup
+  window.addEventListener("click", (e) => {
+    if (userActionsRef && userActionsRef.current) {
+      if (!userActionsRef.current.contains(e.target)) {
+        setOpenPopup(false);
+      }
+    }
+  });
 
   return (
     <div
@@ -70,6 +87,7 @@ const Sidebar = () => {
           className={`${
             isSmall ? "sidebar_last_row_sm" : "sidebar_last_row"
           }  `}
+          ref={userActionsRef}
         >
           <div
             className={`cursor-pointer ${isSmall ? "logout_sm" : "logout"}`}

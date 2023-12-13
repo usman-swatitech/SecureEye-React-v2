@@ -1,5 +1,5 @@
-import React from "react";
 import links from "../Constant/popupmenus";
+
 const SidebarPopup = () => {
   return (
     <div className="sidebar_popup">

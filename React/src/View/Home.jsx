@@ -17,7 +17,7 @@ import { Store } from "../ContextAPI/Context";
 
 const App = () => {
   // localStorage.clear("signInput");
-  const { currentLayout, isSmall, handleClickToggle } = Store();
+  const { currentLayout, isSmall, handleClickToggle }= Store();
   const RenderComponents = () => {
     switch (currentLayout) {
       case "HomeLayout":
