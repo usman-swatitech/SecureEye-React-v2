@@ -626,11 +626,29 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
 .table{
   margin-bottom: 0;
 }
-
-
-
-
-
+.paginationArrow{
+  border: none;
+  background-color: transparent;
+  color: #00FFFB;
+}
+.arrowColorDark{
+  color: #00FFFB4D;
+}
+.arrowColorlight{
+  color: #00FFFB;
+  cursor: pointer;
+}
+.pagesLabel{
+  font-size: 22px;
+  /* font-weight: bold; */
+}
+.avatar_frame img {
+  border-radius: 25px;
+}
+.cameraUpload{
+  height: 10px !important;
+  width: 15px !important;
+}
 
 
 
