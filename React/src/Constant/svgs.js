@@ -883,13 +883,6 @@ export const homeIcon = (
     />
   </svg>
 );
-<<<<<<< HEAD
-export const profileContainerSvg = (
-  <svg
-    width="792"
-    height="783"
-    viewBox="0 0 792 783"
-=======
 
 export const dotGreater = (
   <svg
@@ -897,20 +890,10 @@ export const dotGreater = (
     width="4"
     height="6"
     viewBox="0 0 4 6"
->>>>>>> ae9120ecf599f72212b4ab19fb7756ebfd0398d4
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-<<<<<<< HEAD
-      d="M791.225 1H1.00012V782.218H791.225V1Z"
-      stroke="#00FFFB"
-      stroke-width="0.5"
-      stroke-miterlimit="10"
-    />
-  </svg>
-);
-=======
       d="M1.85464 5.35376H3.61494V3.59353H1.85464L1.85464 5.35376Z"
       fill="#00FFFB"
     />
@@ -939,4 +922,3 @@ export const tickSign = (
     />
   </svg>
 );
->>>>>>> ae9120ecf599f72212b4ab19fb7756ebfd0398d4
