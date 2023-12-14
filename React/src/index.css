@@ -642,7 +642,13 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   font-size: 22px;
   /* font-weight: bold; */
 }
-
+.avatar_frame img {
+  border-radius: 25px;
+}
+.cameraUpload{
+  height: 10px !important;
+  width: 15px !important;
+}
 
 
 
