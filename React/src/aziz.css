@@ -569,12 +569,10 @@ SCROLLBAR OF CAMERAS
   width: 100%;
   position: relative;
   height: 100vh;
-  /* left: 1%; */
-
   padding: 10px 2px;
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 5px;
 }
 .settingLayoutWrapper .leftCol {
   display: flex;
@@ -654,6 +652,43 @@ SCROLLBAR OF CAMERAS
 .linkInnerWrapper .subHeading {
   font-size: 10px;
   color: #a4a8ab;
+}
+.personalInfoWrapper {
+  width: 97%;
+  height: 100%;
+  flex: 1;
+  background-size: 100% 78%;
+  background-repeat: no-repeat;
+  padding: 10px;
+  position: relative;
+}
+
+.personalInfo {
+  height: 77%;
+  width: 100%;
+  background-color: #001016;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.personalInfo .layoutTitle {
+  font-size: 20px;
+  background-color: black;
+  position: absolute;
+  white-space: nowrap;
+  font-size: 19px;
+  top: -1%;
+  width: 40%;
+  height: 20%;
+  clip-path: polygon(0 0, 100% 0, 87% 100%, 0% 100%);
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.personalInfo .formInputs {
+  top: 90px;
+  margin: 0 20px;
 }
 /* ....................<>Settings Layout Css Ends Here<>............................... */
 

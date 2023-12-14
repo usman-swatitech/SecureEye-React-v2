@@ -28,7 +28,9 @@ const SettingsLayout = () => {
         <UserInfo />
         <Nav />
       </div>
-      <div>{renderLayout()}</div>
+      <div className="w-100 px-1" style={{ padding: "15px 0" }}>
+        {renderLayout()}
+      </div>
     </main>
   );
 };
