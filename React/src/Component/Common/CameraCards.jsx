@@ -42,7 +42,7 @@ const Cards = ({ camera }) => {
   };
 
   return (
-    <div className="allCameraView" onClick={handleSceneClick}>
+    <div className="allCameraView cursor-pointer" onClick={handleSceneClick}>
       <img src={images.screenFrame} alt="" />
       <div className="singleCameraView">
         <label >{camera.cameraName}</label>
