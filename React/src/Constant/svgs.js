@@ -869,3 +869,19 @@ export const cameraSvg = (
     />
   </svg>
 );
+export const profileContainerSvg = (
+  <svg
+    width="792"
+    height="783"
+    viewBox="0 0 792 783"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M791.225 1H1.00012V782.218H791.225V1Z"
+      stroke="#00FFFB"
+      stroke-width="0.5"
+      stroke-miterlimit="10"
+    />
+  </svg>
+);
