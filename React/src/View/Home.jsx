@@ -17,7 +17,7 @@ import { Store } from "../ContextAPI/Context";
 
 const App = () => {
   // localStorage.clear("signInput");
-  const { currentLayout, isSmall, handleClickToggle }= Store();
+  const { currentLayout, isSmall, handleClickToggle } = Store();
   const RenderComponents = () => {
     switch (currentLayout) {
       case "HomeLayout":
@@ -53,7 +53,10 @@ const App = () => {
               </span>
             </div>
             <div
-              className={`${ isSmall ? "sm_mainComponent_view" : "mainComponentView" }`}>
+              className={`${
+                isSmall ? "sm_mainComponent_view" : "mainComponentView"
+              }`}
+            >
               <div className="searchBar">
                 <Search />
               </div>

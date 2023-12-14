@@ -1,15 +1,18 @@
 import { useState, useContext, createContext, useEffect } from "react";
 import { navlinks } from "../Constant/sidbarLinks";
+import { links as settingLinks } from "../Component/Setting/menu";
 const AppContext = createContext();
 
-export const AppContextProvider = ({ children }) => {
+const AppContextProvider = ({ children }) => {
   const [currentLayout, setCurrentLayout] = useState("HomeLayout");
+  const [settingLayout, setSettingsLayout] = useState("PersonalInformation");
   const [isSmall, setIsSmall] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [openPopup, setOpenPopup] = useState(false);
   const [singleScreenIdx, setSingleScreenIdx] = useState();
 
   const [links, setLinks] = useState(navlinks);
+  const [settingNavLinks, setSettingNavLinks] = useState(settingLinks);
 
   const handleTogglePopup = () => {
     setOpenPopup(!openPopup);
@@ -28,6 +31,15 @@ export const AppContextProvider = ({ children }) => {
   const handleClickToggle = () => {
     setIsSmall(!isSmall);
     setOpenPopup(false);
+  };
+
+  const updateSettingLayouts = (index, layout) => {
+    const updatedSettingItems = settingNavLinks.map((link, i) => ({
+      ...link,
+      isActive: i === index,
+    }));
+    setSettingNavLinks(updatedSettingItems);
+    setSettingsLayout(layout);
   };
 
   //useEffects to detetct screen sizes
@@ -49,25 +61,29 @@ export const AppContextProvider = ({ children }) => {
       setIsSmall(false);
     }
   }, [windowWidth]);
-  return (
-    <AppContext.Provider
-      value={{
-        currentLayout,
-        setCurrentLayout,
-        singleScreenIdx,
-        setSingleScreenIdx,
-        isSmall,
-        handleClickToggle,
-        handleTogglePopup,
-        openPopup,
-        handleActiveNav,
-        links,
-        setOpenPopup,
-      }}
-    >
-      {children}
-    </AppContext.Provider>
-  );
+
+  // this object will hold all the global variables
+  const value = {
+    currentLayout,
+    setCurrentLayout,
+    singleScreenIdx,
+    setSingleScreenIdx,
+    isSmall,
+    handleClickToggle,
+    handleTogglePopup,
+    openPopup,
+    handleActiveNav,
+    links,
+    setOpenPopup,
+    settingNavLinks,
+    settingLayout,
+    setSettingsLayout,
+    updateSettingLayouts
+  };
+
+  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
 
-export const Store = () => useContext(AppContext);
+const Store = () => useContext(AppContext);
+
+export { AppContextProvider, Store };
