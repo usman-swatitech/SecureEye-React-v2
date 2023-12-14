@@ -11,55 +11,55 @@ export const cameraData = [
   },
   {
     cameraName: 'Camera 03',
-    url: 'ws://localhost:9998/',
+    url: 'ws://localhost:9997/',
     status: "normal",
   },
   {
     cameraName: 'Camera 04',
-    url: 'ws://localhost:9998/',
+    url: 'ws://localhost:9996/',
     status: "normal",
   },
   {
     cameraName: 'Camera 05',
-    url: 'ws://localhost:9998/',
+    url: 'ws://localhost:9995/',
     status: "normal",
   },
 
   {
     cameraName: 'Camera 06',
-    url: 'ws://localhost:9998/',
+    url: 'ws://localhost:9994/',
     status: "normal",
   },
 
   {
     cameraName: 'Camera 07',
-    url: 'ws://localhost:9998/',
+    url: 'ws://localhost:9993/',
     status: "normal",
   },
   {
     cameraName: 'Camera 08',
-    url: 'ws://localhost:9998/',
+    url: 'ws://localhost:9992/',
     status: "normal",
   },
   {
     cameraName: 'Camera 09',
-    url: 'ws://localhost:9998/',
+    url: 'ws://localhost:9991/',
     status: "normal",
   },
 
   {
     cameraName: 'Camera 10',
-    url: 'ws://localhost:9998/',
+    url: 'ws://localhost:9990/',
     status: "normal",
   },
   {
     cameraName: 'Camera 11',
-    url: 'ws://localhost:9998/',
+    url: 'ws://localhost:9989/',
     status: "normal",
   },
   {
     cameraName: 'Camera 12',
-    url: 'ws://localhost:9998/',
+    url: 'ws://localhost:9988/',
     status: "normal",
   },
 ];
