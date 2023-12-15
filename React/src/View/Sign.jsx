@@ -60,7 +60,6 @@ const SignIn = () => {
 
     setIsChecked(!isChecked);
   }
-
   return (
     <>
       <div className="background-image-2">
