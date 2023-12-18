@@ -1,6 +1,6 @@
 // BRand logo
 import brandLogo from '../assets/secureeyeLogo.png'
-
+import genLinkImg from  '../assets/images/gen.png';
 // Splash Screen 
 import splashBackground from '../assets/Splash/splashbg.png';
 import secureEyeText from '../assets/Splash/logo.png'
@@ -34,4 +34,4 @@ import port from '../assets/svg/port.svg'
 import nightVision from '../assets/svg/nightVision.svg'
 
 export default brandLogo;
-export {splashBackground,secureEyeText,userOtp,frameTab,bLogo,userIcon,mailIcon,mobileIcon,userLock,cubeDesign,hiddenIcn,unHideIcn,logoWithText,cctvViewImg,cameraName,ipAddress,location,port,nightVision,homeFrame,screenFrame,dotBorderd,screenFrameRed};
+export {splashBackground,secureEyeText,userOtp,frameTab,bLogo,userIcon,mailIcon,mobileIcon,userLock,cubeDesign,hiddenIcn,unHideIcn,logoWithText,cctvViewImg,cameraName,ipAddress,location,port,nightVision,homeFrame,screenFrame,dotBorderd,screenFrameRed,genLinkImg};

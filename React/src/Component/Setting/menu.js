@@ -1,10 +1,19 @@
 import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
-import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
+
 import ShieldOutlinedIcon from "@mui/icons-material/ShieldOutlined";
+import AssignmentIndOutlinedIcon from "@mui/icons-material/AssignmentIndOutlined";
+import SaveAsOutlinedIcon from "@mui/icons-material/SaveAsOutlined";
 export const links = [
   {
-    icon: <AdminPanelSettingsOutlinedIcon />,
+    icon: <SaveAsOutlinedIcon />,
     isActive: true,
+    heading: "General",
+    subHeading: "General Information",
+    layout: "General",
+  },
+  {
+    icon: <AssignmentIndOutlinedIcon />,
+    isActive: false,
     heading: "Personal Pnformation",
     subHeading: "Profile Settings",
     layout: "PersonalInformation",
@@ -16,11 +25,12 @@ export const links = [
     subHeading: "Account Security",
     layout: "Security",
   },
+
   {
-    icon: <NotificationsNoneOutlinedIcon />,
+    icon: <AdminPanelSettingsOutlinedIcon />,
     isActive: false,
-    heading: "Notifications",
-    subHeading: "Notification Settings",
-    layout: "Notifications",
+    heading: "Privacy Policy",
+    subHeading: "notifications setting",
+    layout: "PrivacyPolicy",
   },
 ];

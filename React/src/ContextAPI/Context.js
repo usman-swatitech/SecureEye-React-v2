@@ -5,7 +5,7 @@ const AppContext = createContext();
 
 const AppContextProvider = ({ children }) => {
   const [currentLayout, setCurrentLayout] = useState("HomeLayout");
-  const [settingLayout, setSettingsLayout] = useState("PersonalInformation");
+  const [settingLayout, setSettingsLayout] = useState("General");
   const [isSmall, setIsSmall] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [openPopup, setOpenPopup] = useState(false);
@@ -78,7 +78,7 @@ const AppContextProvider = ({ children }) => {
     settingNavLinks,
     settingLayout,
     setSettingsLayout,
-    updateSettingLayouts
+    updateSettingLayouts,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
