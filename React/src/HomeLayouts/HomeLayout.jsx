@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Table from '../Component/Common/Table';
-import Cards from '../Component/Common/CameraCards';
+import Cards from '../Component/Dashboard/CameraCards';
 import * as images from '../Constant/images';
 import { homeHeading } from '../Constant/tableHeading';
 import { cameraData } from '../Constant/cameras';

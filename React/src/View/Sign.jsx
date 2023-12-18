@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import * as images from "../Constant/images";
 import sweetAlert from "../helperFun/SweatAlertFun";
 import Button from "../Component/Common/ButtonShap";
-import AuthActions from "../Component/AuthActions";
+import AuthActions from "../Component/Common/AuthActions";
 
 const SignIn = () => {
 

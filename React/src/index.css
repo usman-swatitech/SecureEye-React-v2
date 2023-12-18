@@ -46,7 +46,9 @@
   font-family: sportyXlight;
   text-transform: capitalize;
 }
-
+p{
+  margin-bottom: .3rem ;
+}
 .aeionMonoFont {
   font-family: AeionMono;
 }

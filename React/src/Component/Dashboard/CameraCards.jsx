@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Store } from "../../ContextAPI/Context";
-import Timer from "./Timer";
+import Timer from "../Common/Timer";
 import * as images from '../../Constant/images';
 import JSMpeg from 'jsmpeg-player';
 

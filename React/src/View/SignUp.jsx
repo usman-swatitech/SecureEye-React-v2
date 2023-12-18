@@ -4,7 +4,7 @@ import * as images from "../Constant/images";
 import Button from "../Component/Common/ButtonShap";
 import sweetAlert from "../helperFun/SweatAlertFun";
 import { successSweatAlert } from "../helperFun/SweatAlertFun";
-import AuthActions from "../Component/AuthActions";
+import AuthActions from "../Component/Common/AuthActions";
 
 function SignUp() {
   const [signInput, setSignInput] = useState({

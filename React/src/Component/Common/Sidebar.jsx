@@ -5,7 +5,7 @@ import profileDp from "../../assets/images/avatar.png";
 import { Store } from "../../ContextAPI/Context";
 import { logoSvg } from "../../Constant/logo";
 import { iconUpSvg, logoutSvg } from "../../Constant/svgs";
-import SidebarPopup from "../SidebarPopup";
+import SidebarPopup from "../Common/SidebarPopup";
 import { useNavigate } from "react-router";
 
 const Sidebar = () => {

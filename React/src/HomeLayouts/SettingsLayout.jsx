@@ -2,12 +2,7 @@ import React from "react";
 import UserInfo from "../Component/Setting/UserInfo";
 import Nav from "../Component/Setting/Nav";
 import { Store } from "../ContextAPI/Context";
-import {
-  PersonalLayout,
-  SecurityLayout,
-  GeneralLayout,
-  PrivacyPolicy,
-} from "../SettingLayouts/index";
+import { PersonalLayout,SecurityLayout,GeneralLayout,PrivacyPolicy,} from "../SettingLayouts/index";
 import * as images from "../Constant/images";
 
 const SettingsLayout = () => {
@@ -27,17 +22,13 @@ const SettingsLayout = () => {
         return <GeneralLayout />;
     }
   };
-  const layouts = {
-    PersonalInformation: "Personal Information",
+  const layoutTitles = {
+    General: "Organization Info",
+    PersonalInformation: "Profile Details",
+    Security:"Security Info",
     PrivacyPolicy: "Privacy Policy",
   };
-  let layoutTitle = settingLayout;
-  if (
-    settingLayout === "PersonalInformation" ||
-    settingLayout === "PrivacyPolicy"
-  ) {
-    layoutTitle = layouts[settingLayout];
-  }
+  const labelContent = layoutTitles[settingLayout] || "Setting";
   return (
     <main className="settingLayoutWrapper">
       <div className="leftCol w-25">
@@ -51,7 +42,7 @@ const SettingsLayout = () => {
         >
           <div className="personalInfo">
             <div className="layoutTitle text-align-center text-white">
-              <p className="text-white">{layoutTitle}</p>
+              <p className="text-white">{labelContent}</p>
             </div>
             {renderLayout()}
           </div>

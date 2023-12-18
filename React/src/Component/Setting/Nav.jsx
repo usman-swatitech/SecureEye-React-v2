@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-
+import React from "react";
 import { Store } from "../../ContextAPI/Context";
+
 const Nav = () => {
   const { settingNavLinks, updateSettingLayouts } = Store();
 

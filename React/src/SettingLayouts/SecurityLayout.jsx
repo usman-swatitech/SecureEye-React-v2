@@ -1,7 +1,22 @@
-import * as React from "react";
-import Switch from "../mui/Switch";
+import React,{ useState} from "react";
+import Switch from "../muiSwitch/Switch";
 import ButtonSm from "../Component/Common/ButtonSm";
+
 const SecurityLayout = () => {
+  const [switchStates, setSwitchStates] = useState({
+    twoStepVerification: false,
+    emailSetup: false,
+    smsSetup: false,
+  });
+  const handleSwitchChange = (switchId) => {
+    // Update the corresponding switch state based on the switch id
+    setSwitchStates((prevSwitchStates) => ({
+      ...prevSwitchStates,
+      [switchId]: !prevSwitchStates[switchId],
+    }));
+  };
+  console.log(switchStates);
+
   return (
     <div className="securityLayoutWrapper">
       {/* two step verification */}
@@ -14,7 +29,7 @@ const SecurityLayout = () => {
             Lorem ipsum dolor sit, amet consec
           </p>
         </div>
-        <Switch />
+        <Switch id="twoStepVerification" onChange={handleSwitchChange}/>
       </div>
       {/* email setup */}
       <div className="options">
@@ -24,7 +39,7 @@ const SecurityLayout = () => {
             Lorem ipsum dolor sit, amet consec
           </p>
         </div>
-        <Switch />
+        <Switch id="emailSetup" onChange={handleSwitchChange}/>
       </div>
       {/* SMS*/}
       <div className="options ">
@@ -34,7 +49,7 @@ const SecurityLayout = () => {
             Lorem ipsum dolor sit, amet consec
           </p>
         </div>
-        <Switch />
+        <Switch id="smsSetup" onChange={handleSwitchChange}/>
       </div>
       {/* button */}
 

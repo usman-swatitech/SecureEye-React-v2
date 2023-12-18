@@ -688,7 +688,7 @@ SCROLLBAR OF CAMERAS
   align-items: center;
 }
 .personalInfo .formInputs {
-  top: 85px;
+  top: 60px;
   /* margin: 0 20px; */
   height: 80%;
 }
@@ -918,3 +918,56 @@ SCROLLBAR OF CAMERAS
   overflow-y: auto;
   background-color: black;
 }
+
+
+/* Basic styling for the switch container start */
+.switch-container {
+  position: relative;
+  display: inline-block;
+  width: 58px;
+  height: 32px;
+}
+.switch-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #001016; 
+  border: 2px solid #00FFFB;
+  border-radius: 17px;
+  cursor: pointer;
+}
+.switch-thumb {
+  position: absolute;
+  top: 50%; 
+  left: 2px;
+  width: 26px;
+  height: 26px; 
+  background-color: #00FFFB; 
+  border-radius: 50%;
+  transform: translateX(0) translateY(-50%); 
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.switch-input:checked + .switch-track {
+  background-color: #00FFFB; 
+}
+.switch-input:checked + .switch-track .switch-thumb {
+  background-color: #001016; 
+  transform: translateX(26px) translateY(-50%); 
+}
+.switch-track.checked {
+  background-color: #00FFFB;
+}
+.switch-input:checked + .switch-track .switch-thumb {
+  background-color: #001016;
+  transform: translateX(26px) translateY(-50%);
+}
+
+/* Basic styling for the switch container end */

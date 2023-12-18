@@ -1,4 +1,4 @@
-import links from "../Constant/popupmenus";
+import links from "../../Constant/popupmenus";
 
 const SidebarPopup = () => {
   return (

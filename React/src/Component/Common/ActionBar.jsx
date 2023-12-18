@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { plusSvg, backBtnSvg } from "../../Constant/svgs";
-import CameraModal from "./CameraModal";
+import CameraModal from "../Dashboard/CameraModal";
 import ButtonSubmit from "./ButtonShap";
 import { Modal } from "react-bootstrap";
 import SweatAlert, { successSweatAlert } from "../../helperFun/SweatAlertFun";
