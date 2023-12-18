@@ -19,7 +19,7 @@ const PersonalInformation = () => {
   return (
     <div className="w-100 d-flex flex-column position-relative formInputs">
       <div className="row ms-3 me-3">
-        <div className="col-lg-12 col-md-12 col-sm-12">
+        <div className="col-lg-12 col-md-12 col-sm-12 px-0">
           <div>
             <p className="privacy_heading">Profile Privacy</p>
             <p className="privacy_heading2">

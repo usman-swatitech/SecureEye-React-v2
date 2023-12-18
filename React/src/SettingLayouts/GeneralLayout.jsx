@@ -19,7 +19,7 @@ const GeneralLayout = () => {
   return (
     <div className="w-100 d-flex flex-column position-relative formInputs">
       <div className="row ms-3 me-3">
-        <div className="col-lg-6 col-md-6 col-sm-12">
+        <div className="col-lg-6 col-md-6 col-sm-12 px-0">
           <div className="signup-box">
             <div className="d-flex">
               <div className="w-100">
@@ -40,7 +40,7 @@ const GeneralLayout = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12">
+        <div className="col-lg-6 col-md-6 col-sm-12 px-0">
           <div className="signup-box">
             <div className="d-flex">
               <div className="w-100">
@@ -60,7 +60,7 @@ const GeneralLayout = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 mt-3">
+        <div className="col-lg-6 col-md-6 col-sm-12 px-0 mt-3">
           <div className="signup-box">
             <div className="d-flex">
               <div className="w-100">
@@ -80,7 +80,7 @@ const GeneralLayout = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 mt-3">
+        <div className="col-lg-6 col-md-6 col-sm-12 px-0 mt-3">
           <div className="signup-box">
             <div className="d-flex">
               <div className="w-100">
@@ -100,7 +100,7 @@ const GeneralLayout = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 mt-3">
+        <div className="col-lg-6 col-md-6 col-sm-12 px-0 mt-3">
           <div className="signup-box">
             <div className="d-flex">
               <div className="w-100">
@@ -120,7 +120,7 @@ const GeneralLayout = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 mt-3">
+        <div className="col-lg-6 col-md-6 col-sm-12 px-0 mt-3">
           <div className="signup-box">
             <div className="d-flex">
               <div className="w-100">
@@ -140,7 +140,7 @@ const GeneralLayout = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 mt-3">
+        <div className="col-lg-6 col-md-6 col-sm-12 px-0 mt-3">
           <div className="signup-box">
             <div className="d-flex">
               <div className="w-100">
@@ -160,7 +160,7 @@ const GeneralLayout = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 mt-3">
+        <div className="col-lg-6 col-md-6 col-sm-12 px-0 mt-3">
           <div className="signup-box">
             <div className="d-flex">
               <div className="w-100">

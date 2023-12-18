@@ -42,7 +42,7 @@ const SettingsLayout = () => {
         >
           <div className="personalInfo">
             <div className="layoutTitle text-align-center text-white">
-              <p className="text-white">{labelContent}</p>
+              <p className="text-white pl-1">{labelContent}</p>
             </div>
             {renderLayout()}
           </div>
