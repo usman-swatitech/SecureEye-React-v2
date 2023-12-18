@@ -1,7 +1,7 @@
 import React from "react";
 import Avatar from "../Common/Avatar";
 import Profile from "../../assets/images/avatar.png";
-import Button from "../Common/ButtonShap";
+import ButtonSm from "../Common/ButtonSm";
 const UserInfo = () => {
   return (
     <div className="userInfo">
@@ -12,7 +12,7 @@ const UserInfo = () => {
       <span class="badge rounded-pill">Admin</span>
       <h6 className="visitDate">last visit 02/03/2023</h6>
       <div className="w-75">
-        <Button name="  Logout " />
+        <ButtonSm name="  Logout " />
       </div>
     </div>
   );
