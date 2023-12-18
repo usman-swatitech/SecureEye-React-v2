@@ -924,8 +924,8 @@ SCROLLBAR OF CAMERAS
 .switch-container {
   position: relative;
   display: inline-block;
-  width: 58px;
-  height: 32px;
+  width: 55px;
+  height: 28px;
 }
 .switch-input {
   opacity: 0;
@@ -947,8 +947,8 @@ SCROLLBAR OF CAMERAS
   position: absolute;
   top: 50%; 
   left: 2px;
-  width: 26px;
-  height: 26px; 
+  width: 25px;
+  height: 25px; 
   background-color: #00FFFB; 
   border-radius: 50%;
   transform: translateX(0) translateY(-50%); 
