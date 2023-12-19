@@ -1,21 +1,27 @@
 import React, { useState } from "react";
 import Button from "../Component/Common/ButtonSm";
+import {successSweatAlert} from '../helperFun/SweatAlertFun';
 
 const PersonalInformation = () => {
-  const [isChecked1, setIsChecked1] = useState(false);
-  const handleCheckboxChange1 = () => {
-    setIsChecked1(!isChecked1);
-  };
+  const[privacyChkbox,setPrivacyChkbox] = useState({
+    makeProfile:false,
+    routePrivate:false,
+    genderPrivate:false,
+  });
 
-  const [isChecked2, setIsChecked2] = useState(false);
-  const handleCheckboxChange2 = () => {
-    setIsChecked2(!isChecked2);
+  const handleCheckboxChange = (event) => {
+    const { name } = event.target;
+    setPrivacyChkbox((preState) => ({
+      ...preState,
+      [name]: !preState[name],
+    }));
   };
+  
+  // console.log(privacyChkbox);
+  const handlerSubmit = () =>{
+    successSweatAlert("information update successfully ");
+  }
 
-  const [isChecked3, setIsChecked3] = useState(false);
-  const handleCheckboxChange3 = () => {
-    setIsChecked3(!isChecked3);
-  };
   return (
     <div className="w-100 d-flex flex-column position-relative formInputs">
       <div className="row ms-3 me-3">
@@ -33,9 +39,10 @@ const PersonalInformation = () => {
               <div className="d-flex gap-2 text-white">
                 <label className="custom_checkbox_modal">
                   <input
+                    name="makeProfile"
                     type="checkbox"
-                    checked={isChecked1}
-                    onChange={handleCheckboxChange1}
+                    checked={privacyChkbox.makeProfile}
+                    onChange={handleCheckboxChange}
                   />
                   <span className="checkmark_modal"></span>
                 </label>
@@ -53,9 +60,10 @@ const PersonalInformation = () => {
               <div className="d-flex gap-2 text-white">
                 <label className="custom_checkbox_modal">
                   <input
+                    name="routePrivate"
                     type="checkbox"
-                    checked={isChecked2}
-                    onChange={handleCheckboxChange2}
+                    checked={privacyChkbox.routePrivate}
+                    onChange={handleCheckboxChange}
                   />
                   <span className="checkmark_modal"></span>
                 </label>
@@ -75,9 +83,10 @@ const PersonalInformation = () => {
               <div className="d-flex gap-2 text-white">
                 <label className="custom_checkbox_modal">
                   <input
+                    name="genderPrivate"
                     type="checkbox"
-                    checked={isChecked3}
-                    onChange={handleCheckboxChange3}
+                    checked={privacyChkbox.genderPrivate}
+                    onChange={handleCheckboxChange}
                   />
                   <span className="checkmark_modal"></span>
                 </label>
@@ -89,7 +98,7 @@ const PersonalInformation = () => {
           </div>
         </div>
         <div className="row justify-content-center mt-4 pt-2">
-          <div className=" col-6">
+          <div className=" col-6" onClick={handlerSubmit}>
             <Button name="Save Changes" />
           </div>
         </div>

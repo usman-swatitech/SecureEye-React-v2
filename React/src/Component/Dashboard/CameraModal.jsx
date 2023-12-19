@@ -3,6 +3,8 @@ import * as images from '../../Constant/images'
 
 const CameraModal = ({ addCamera, setAddCamera }) => {
 
+  const [showPassword, setShowPassword] = useState(false)
+
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     const newValue = type === 'checkbox' ? checked : value;
@@ -13,8 +15,6 @@ const CameraModal = ({ addCamera, setAddCamera }) => {
     const { name, checked } = e.target;
     setAddCamera(name, checked);
   };
-
-  const [showPassword, setShowPassword] = useState(false)
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword)

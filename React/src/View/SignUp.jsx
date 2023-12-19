@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as images from "../Constant/images";
 import Button from "../Component/Common/ButtonShap";
-import sweetAlert from "../helperFun/SweatAlertFun";
+import failSweatAlert from "../helperFun/SweatAlertFun";
 import { successSweatAlert } from "../helperFun/SweatAlertFun";
 import AuthActions from "../Component/Common/AuthActions";
 
@@ -43,17 +43,17 @@ function SignUp() {
       userPassword === "" &&
       userConfirmPassword === ""
     ) {
-      sweetAlert("All Inputfield is empty");
+      failSweatAlert("All Inputfield is empty");
     } else if (userEmail === "") {
-      sweetAlert("Email is empty");
+      failSweatAlert("Email is empty");
     } else if (userPhone === "") {
-      sweetAlert("Phone is empty");
+      failSweatAlert("Phone is empty");
     } else if (userPassword === "") {
-      sweetAlert("Password is empty");
+      failSweatAlert("Password is empty");
     } else if (userConfirmPassword === "") {
-      sweetAlert("Confirm Password is empty");
+      failSweatAlert("Confirm Password is empty");
     } else if (userPassword !== userConfirmPassword) {
-      sweetAlert("Password is not matched");
+      failSweatAlert("Password is not matched");
     } else {
       // const responce = await fetch('http://localhost:5000/demo',{
       //   method: 'POST',

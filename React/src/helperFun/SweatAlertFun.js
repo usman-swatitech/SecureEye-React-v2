@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2';
 
-const SweatAlert = (text) => {
+const failSweatAlert = (text) => {
     Swal.fire({
         icon: 'error',
         title: 'Oops...',
@@ -19,4 +19,4 @@ export const successSweatAlert = (text) => {
       });
 }
 
-export default SweatAlert;
+export default failSweatAlert;

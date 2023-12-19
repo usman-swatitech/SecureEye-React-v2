@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as images from "../Constant/images";
 import Button from "../Component/Common/ButtonShap";
+import {successSweatAlert} from '../helperFun/SweatAlertFun'
 
 const GeneralLayout = () => {
   const [generalInpt,setGeneralInpt] = useState({
@@ -15,11 +16,14 @@ const GeneralLayout = () => {
     }))
   }
 
-  console.log(generalInpt);
+  const handlerSubmit = () =>{
+    successSweatAlert("information update successfully ");
+  }
+  // console.log(generalInpt);
   return (
     <div className="w-100 d-flex flex-column position-relative formInputs">
       <div className="row ms-3 me-3">
-        <div className="col-lg-6 col-md-6 col-sm-12 px-0">
+        <div className="col-lg-6 col-md-6 col-sm-12 pl-0">
           <div className="signup-box">
             <div className="d-flex">
               <div className="w-100">
@@ -40,7 +44,7 @@ const GeneralLayout = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 px-0">
+        <div className="col-lg-6 col-md-6 col-sm-12 pl-0">
           <div className="signup-box">
             <div className="d-flex">
               <div className="w-100">
@@ -60,7 +64,7 @@ const GeneralLayout = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 px-0 mt-3">
+        <div className="col-lg-6 col-md-6 col-sm-12 pl-0 mt-3">
           <div className="signup-box">
             <div className="d-flex">
               <div className="w-100">
@@ -80,7 +84,7 @@ const GeneralLayout = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 px-0 mt-3">
+        <div className="col-lg-6 col-md-6 col-sm-12 pl-0 mt-3">
           <div className="signup-box">
             <div className="d-flex">
               <div className="w-100">
@@ -100,7 +104,7 @@ const GeneralLayout = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 px-0 mt-3">
+        <div className="col-lg-6 col-md-6 col-sm-12 pl-0 mt-3">
           <div className="signup-box">
             <div className="d-flex">
               <div className="w-100">
@@ -120,7 +124,7 @@ const GeneralLayout = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 px-0 mt-3">
+        <div className="col-lg-6 col-md-6 col-sm-12 pl-0 mt-3">
           <div className="signup-box">
             <div className="d-flex">
               <div className="w-100">
@@ -140,7 +144,7 @@ const GeneralLayout = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 px-0 mt-3">
+        <div className="col-lg-6 col-md-6 col-sm-12 pl-0 mt-3">
           <div className="signup-box">
             <div className="d-flex">
               <div className="w-100">
@@ -160,7 +164,7 @@ const GeneralLayout = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 px-0 mt-3">
+        <div className="col-lg-6 col-md-6 col-sm-12 pl-0 mt-3">
           <div className="signup-box">
             <div className="d-flex">
               <div className="w-100">
@@ -181,7 +185,7 @@ const GeneralLayout = () => {
           </div>
         </div>
         <div className="row justify-content-center mt-4 pt-2">
-          <div className=" col-6">
+          <div className="col-6" onClick={handlerSubmit}>
             <Button name="Update information" />
           </div>
         </div>

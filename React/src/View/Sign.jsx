@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as images from "../Constant/images";
-import sweetAlert from "../helperFun/SweatAlertFun";
+import failSweatAlert from "../helperFun/SweatAlertFun";
 import Button from "../Component/Common/ButtonShap";
 import AuthActions from "../Component/Common/AuthActions";
 
@@ -34,11 +34,11 @@ const SignIn = () => {
     const { userName, userPassword } = signInput;
 
     if (userName === "" && userPassword === "") {
-      sweetAlert("Name & Password is empty");
+      failSweatAlert("Name & Password is empty");
     } else if (userName === "") {
-      sweetAlert("Name is empty");
+      failSweatAlert("Name is empty");
     } else if (userPassword === "") {
-      sweetAlert("Password is empty");
+      failSweatAlert("Password is empty");
     } else {
       if (isChecked) {
         console.log("kashi",signInput)

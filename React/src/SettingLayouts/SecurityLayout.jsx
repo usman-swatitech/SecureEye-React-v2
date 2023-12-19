@@ -18,7 +18,7 @@ const SecurityLayout = () => {
   console.log(switchStates);
 
   return (
-    <div className="securityLayoutWrapper">
+    <div className="securityLayoutWrapper ms-3 me-3">
       {/* two step verification */}
       <div className="options">
         <div className="d-flex flex-column p-0 m-0">

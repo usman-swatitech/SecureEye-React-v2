@@ -3,7 +3,7 @@ const Stream = require('node-rtsp-stream');
 const streamConfigs = [
   {
     name: 'stream01',
-    streamUrl: 'rtsp://React:Live+123@192.168.20.214:554',
+    streamUrl: 'rtsp://React:Live+123@192.168.20.232:554',
     wsPort: 9999,
   },
   {
@@ -13,12 +13,12 @@ const streamConfigs = [
   },
   {
     name: 'stream03',
-    streamUrl: 'rtsp://React:Live+123@192.168.20.216:554',
+    streamUrl: 'rtsp://React:Live+123@192.168.20.234:554',
     wsPort: 9997,
   },
   {
     name: 'stream04',
-    streamUrl: 'rtsp://React:Live+123@192.168.20.217:554',
+    streamUrl: 'rtsp://React:Live+123@192.168.20.226:554',
     wsPort: 9996,
   },
   {
