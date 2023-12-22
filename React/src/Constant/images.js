@@ -31,7 +31,13 @@ import cameraName from '../assets/svg/cameraName.svg'
 import ipAddress from '../assets/svg/ipAddress.svg'
 import location from '../assets/svg/location.svg'
 import port from '../assets/svg/port.svg'
+import workingHrs from '../assets/svg/workingtime.svg'
+import status from '../assets/svg/status.svg'
+import access from '../assets/svg/access.svg'
+import departmentlvl from '../assets/svg/departmentLvl.svg'
 import nightVision from '../assets/svg/nightVision.svg'
 
+import uploadEmployeeImg from '../assets/images/uploadEmployee.png'
+
 export default brandLogo;
-export {splashBackground,secureEyeText,userOtp,frameTab,bLogo,userIcon,mailIcon,mobileIcon,userLock,cubeDesign,hiddenIcn,unHideIcn,logoWithText,cctvViewImg,cameraName,ipAddress,location,port,nightVision,homeFrame,screenFrame,dotBorderd,screenFrameRed,genLinkImg};
+export {splashBackground,secureEyeText,userOtp,frameTab,bLogo,userIcon,mailIcon,mobileIcon,userLock,cubeDesign,hiddenIcn,unHideIcn,logoWithText,cctvViewImg,cameraName,ipAddress,location,port,nightVision,homeFrame,screenFrame,dotBorderd,screenFrameRed,genLinkImg,uploadEmployeeImg,workingHrs,departmentlvl,status,access};

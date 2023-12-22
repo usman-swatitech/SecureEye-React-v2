@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { plusSvg, backBtnSvg } from "../../Constant/svgs";
 import CameraModal from "../Dashboard/CameraModal";
+import EmployeeModal from '../Dashboard/EmpolyeeModal';
+import DepartmentModal from '../Dashboard/DepartmentModal';
 import ButtonSubmit from "./ButtonShap";
 import { Modal } from "react-bootstrap";
 import SweatAlert, { successSweatAlert } from "../../helperFun/SweatAlertFun";
@@ -9,7 +11,7 @@ import { Store } from "../../ContextAPI/Context";
 const ActionBar = () => {
   const [show, setShow] = useState(false);
 
-  const { currentLayout, setCurrentLayout, singleScreenIdx, handleActiveNav } =
+  const { currentLayout, singleScreenIdx, handleActiveNav } =
     Store();
 
   const layoutTitles = {
@@ -18,26 +20,21 @@ const ActionBar = () => {
     DepartmentLayout: "Department data",
     WorkingLayout: " Working data",
     SettingsLayout: "Settings",
-    // Add more layouts as needed
   };
+  const tittleLayout = {
+    HomeLayout: "Camera",
+    EmployeeLayout: "Employee",
+    DepartmentLayout: "Department"
+  }
   const labelContent = layoutTitles[currentLayout] || singleScreenIdx;
-
+  const modalTittle = tittleLayout[currentLayout];
   const handleShow = () => {
     setShow(true);
   };
 
   const handleClose = () => setShow(false);
-  // const modalRef = document.getElementsByClassName("fade");
-  // modalRef.classList.add("overflow: hidden");
-  const [addCamera, setAddCamera] = useState({
-    cameraName: "",
-    ipAddress: "",
-    port: "",
-    location: "",
-    nightMode: false,
-    userName: "",
-    userPassword: "",
-  });
+  const [addCamera, setAddCamera] = useState({cameraName: "", ipAddress: "",port: "",location: "",
+    nightMode: false,userName: "",userPassword: "",});
 
   const handleInputChange = (name, value) => {
     setAddCamera({ ...addCamera, [name]: value });
@@ -46,14 +43,7 @@ const ActionBar = () => {
 
   const handleAddCamera = () => {
     const {
-      cameraName,
-      ipAddress,
-      port,
-      location,
-      userName,
-      // nightVision,
-      userPassword,
-    } = addCamera;
+      cameraName, ipAddress, port, location, userName, userPassword} = addCamera;
 
     if (cameraName === "") {
       SweatAlert("Camera Name is empty");
@@ -64,42 +54,39 @@ const ActionBar = () => {
     } else if (location === "") {
       SweatAlert("location is empty");
     }
-    // else if (nightVision === "") {
-    //   SweatAlert("nightVision is empty");
-    // }
     else if (userName === "") {
       SweatAlert("userName is empty");
     } else if (userPassword === "") {
       SweatAlert("userPassword is empty");
     } else {
       setAddCamera({
-        cameraName: "",
-        ipAddress: "",
-        port: "",
-        location: "",
-        // nightVision: "",
-        nightMode: false,
-        userName: "",
-        userPassword: "",
+        cameraName: "", ipAddress: "",port: "",location: "",nightMode: false,userName: "",userPassword: "",
       });
       successSweatAlert("Camera add successfully");
       setShow(false);
     }
   };
 
-  const handlerBack = () => {
-    setCurrentLayout("HomeLayout");
-  };
   return (
     <>
       <div className="action_bar d-flex justify-content-between align-items-center">
-        {/* <div className="left_portion">
-          <span className="actionbar_icons">{myHomeSvg}</span>
-          <span className="actionbar_icons">{myBlockSvg}</span>
-          <span className="actionbar_icons">{activeFac}</span>
-        </div> */}
         <label className="componentTittle">{labelContent}</label>
-        {currentLayout !== "HomeLayout" ? (
+        {(currentLayout === "HomeLayout" || currentLayout === "EmployeeLayout" || currentLayout === "DepartmentLayout") ? (
+          <button
+            type="button"
+            className="modal_btn"
+            variant="primary"
+            onClick={handleShow} >
+            <div className="right_portion d-flex">
+              <div className="main_circle">
+                <div className="plus_circle">
+                  <span>{plusSvg}</span>
+                </div>
+              </div>
+              <h4 className="fs-6 text-white mt-1-2">{`Add New ${modalTittle}`}</h4>
+            </div>
+          </button>
+        ) : (
           <div
             className="backButton cursor-pointer"
             onClick={() => handleActiveNav(0, "HomeLayout")}
@@ -107,31 +94,18 @@ const ActionBar = () => {
             {backBtnSvg}
             Back
           </div>
-        ) : (
-          <button
-            type="button"
-            className="modal_btn"
-            variant="primary"
-            onClick={handleShow}
-          >
-            <div className="right_portion d-flex">
-              <div className="main_circle">
-                <div className="plus_circle">
-                  <span>{plusSvg}</span>
-                </div>
-              </div>
-              <h4 className="fs-6 text-white mt-1-2">Add New Camera</h4>
-            </div>
-          </button>
         )}
       </div>
 
       <Modal show={show} onHide={handleClose} size="lg" centered>
         <Modal.Header>
-          <Modal.Title>Add New Camera</Modal.Title>
+          <Modal.Title>{`Add New ${modalTittle}`}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <CameraModal addCamera={addCamera} setAddCamera={handleInputChange} />
+          {modalTittle==="Camera" ? <CameraModal addCamera={addCamera} setAddCamera={handleInputChange}/> : modalTittle ==="Employee" ? <EmployeeModal addCamera={addCamera} setAddCamera={handleInputChange}/> : 
+          <DepartmentModal addCamera={addCamera} setAddCamera={handleInputChange} />
+          }
+          
         </Modal.Body>
         <Modal.Footer>
           <span
@@ -139,7 +113,7 @@ const ActionBar = () => {
             className="modalBtn mt-2 w-100 d-flex justify-content-center"
             onClick={handleAddCamera}
           >
-            <ButtonSubmit name="add camera" />
+            <ButtonSubmit name={`add ${modalTittle}`}/>
           </span>
         </Modal.Footer>
       </Modal>

@@ -657,8 +657,27 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   height: 10px !important;
   width: 15px !important;
 }
+.uploadEmpolyeeImg {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid #00FFFB;
+  border-radius: 10px;
+  /* padding: 10px 0; */
+  cursor: pointer;
+}
+.employeeImg{
+  border-radius: 10px;
+}
+.uploadEmpolyeeImg:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 
-
+.addDepartment option{
+  background-color: #00151b;;
+  color: #fff;
+}
 
 
 
