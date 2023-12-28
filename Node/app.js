@@ -3,7 +3,7 @@ const Stream = require('node-rtsp-stream');
 const streamConfigs = [
   {
     name: 'stream01',
-    streamUrl: 'rtsp://React:Live+123@192.168.20.214:554',
+    streamUrl: 'rtsp://admin:Secure+123@192.168.20.2:554',
     wsPort: 9999,
   },
   {
@@ -13,12 +13,12 @@ const streamConfigs = [
   },
   {
     name: 'stream03',
-    streamUrl: 'rtsp://React:Live+123@192.168.20.216:554',
+    streamUrl: 'rtsp://React:Live+123@192.168.20.231:554',
     wsPort: 9997,
   },
   {
     name: 'stream04',
-    streamUrl: 'rtsp://React:Live+123@192.168.20.217:554',
+    streamUrl: 'rtsp://React:Live+123@192.168.20.233:554',
     wsPort: 9996,
   },
   {
@@ -28,17 +28,17 @@ const streamConfigs = [
   },
   {
     name: 'stream06',
-    streamUrl: 'rtsp://React:Live+123@192.168.20.219:554',
+    streamUrl: 'rtsp://React:Live+123@192.168.20.227:554',
     wsPort: 9994,
   },
   {
     name: 'stream07',
-    streamUrl: 'rtsp://React:Live+123@192.168.20.220:554',
+    streamUrl: 'rtsp://React:Live+123@192.168.20.226:554',
     wsPort: 9993,
   },
   {
     name: 'stream08',
-    streamUrl: 'rtsp://React:Live+123@192.168.20.221:554',
+    streamUrl: 'rtsp://React:Live+123@192.168.20.232:554',
     wsPort: 9992,
   },
   {
@@ -48,17 +48,17 @@ const streamConfigs = [
   },
   {
     name: 'stream10',
-    streamUrl: 'rtsp://React:Live+123@192.168.20.223:554',
+    streamUrl: 'rtsp://React:Live+123@192.168.20.234:554',
     wsPort: 9990,
   },
   {
     name: 'stream11',
-    streamUrl: 'rtsp://React:Live+123@192.168.20.224:554',
+    streamUrl: 'rtsp://admin:Secure+1234@192.168.20.217:554',
     wsPort: 9989,
   },
   {
     name: 'stream12',
-    streamUrl: 'rtsp://React:Live+123@192.168.20.225:554',
+    streamUrl: 'rtsp://React:Live+123@192.168.20.228:554',
     wsPort: 9988,
   },
   
